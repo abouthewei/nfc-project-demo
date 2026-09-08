@@ -1,6 +1,6 @@
-# Basketball player pages
+# nfc-project-demo
 
-Three independent static deployments are included:
+All independent static deployments are included:
 
 - `Kobe/` — Kobe Bryant
 - `Curry/` — Stephen Curry
