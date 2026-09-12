@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="zh-HK"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="譚詠麟 ALAN TAM — 無言感激，歲歲如歌｜半世歌聲與赤誠。致敬譚校長。A tribute to the Principal of Cantopop.">
+<title>譚詠麟 ALAN TAM | 無言感激，歲歲如歌</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Noto+Sans+TC:wght@300;400;700&amp;family=Noto+Serif+TC:wght@400;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet">
+<style>
+/* ============ RESET & BASE ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg-dark:#0a0a0a;
+  --bg-card:#121210;
+  --bg-elevated:#1a1816;
+  --text-primary:#e8dcc8;
+  --text-secondary:#9a8e7e;
+  --text-muted:#5a5249;
+  --gold:#c9a961;
+  --gold-bright:#e5b454;
+  --gold-dim:#8a7240;
+  --burgundy:#8b1538;
+  --burgundy-dark:#5a0e25;
+  --border:#2a2826;
+  --border-light:#3a3835;
+  --font-serif-en:'Playfair Display',serif;
+  --font-serif-zh:'Noto Serif TC',serif;
+  --font-sans-en:'Inter',sans-serif;
+  --font-sans-zh:'Noto Sans TC',sans-serif;
+  --font-display:'Bebas Neue',sans-serif;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  background:var(--bg-dark);
+  color:var(--text-primary);
+  font-family:var(--font-sans-zh),var(--font-sans-en);
+  line-height:1.8;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+iframe{border:none}
+
+/* ============ LANGUAGE TOGGLE ============ */
+body.lang-zh .en{display:none}
+body.lang-en .zh{display:none}
+body.lang-zh{font-family:var(--font-sans-zh),var(--font-sans-en)}
+body.lang-en{font-family:var(--font-sans-en),var(--font-sans-zh)}
+
+/* ============ NAVIGATION ============ */
+.navbar{
+  position:fixed;top:0;left:0;width:100%;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 5%;background:rgba(10,10,10,0.85);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  transition:transform .4s ease,background .3s ease;
+}
+.navbar.hide-nav{transform:translateY(-100%)}
+.nav-logo{
+  font-family:var(--font-display);
+  font-size:1.3rem;letter-spacing:.12em;
+  color:var(--gold);
+}
+.nav-logo .zh{font-family:var(--font-serif-zh);font-weight:900;letter-spacing:.05em}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{
+  font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--text-secondary);transition:color .3s;
+  position:relative;padding:4px 0;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:0;left:0;width:0;height:1px;
+  background:var(--gold);transition:width .3s;
+}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{width:100%}
+.lang-toggle{
+  background:transparent;border:1px solid var(--gold-dim);
+  color:var(--gold);padding:6px 16px;border-radius:2px;
+  font-family:var(--font-sans-en);font-size:.8rem;font-weight:600;
+  letter-spacing:.1em;cursor:pointer;transition:all .3s;
+}
+.lang-toggle:hover{background:rgba(201,169,97,.12);border-color:var(--gold)}
+.mobile-menu-btn{display:none;background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;min-height:100vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+  padding:120px 20px 80px;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-image:url('images/hero-alan-stage.jpg');
+  background-size:cover;background-position:center;
+  filter:brightness(.38) saturate(1.1);
+}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse at center,rgba(139,21,56,.15),transparent 70%),
+             linear-gradient(to bottom,rgba(10,10,10,.5) 0%,rgba(10,10,10,.85) 100%);
+}
+.hero-glow{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,169,97,.08),transparent 70%);
+  pointer-events:none;
+}
+.hero-content{position:relative;z-index:2;max-width:900px}
+.hero-eyebrow{
+  font-family:var(--font-sans-en);font-size:.8rem;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:2rem;
+  opacity:0;animation:fadeUp 1s ease .3s forwards;
+}
+.hero-name-en{
+  display:block;font-family:var(--font-display);
+  font-size:clamp(3.5rem,12vw,8rem);letter-spacing:.05em;
+  line-height:1;color:var(--text-primary);
+  text-shadow:0 0 40px rgba(201,169,97,.15);
+  opacity:0;animation:fadeUp 1.2s ease .5s forwards;
+}
+.hero-name-zh{
+  display:block;font-family:var(--font-serif-zh);font-weight:900;
+  font-size:clamp(2rem,5vw,3.5rem);letter-spacing:.15em;
+  color:var(--gold);margin-top:.5rem;
+  opacity:0;animation:fadeUp 1.2s ease .7s forwards;
+}
+.hero-divider{
+  width:60px;height:1px;background:var(--gold);
+  margin:2.5rem auto;opacity:0;animation:fadeIn 1s ease .9s forwards;
+}
+.hero-tagline{
+  font-size:clamp(1rem,2.5vw,1.35rem);
+  color:var(--text-secondary);max-width:700px;margin:0 auto;
+  line-height:1.9;
+  opacity:0;animation:fadeUp 1s ease 1s forwards;
+}
+.hero-cta{
+  display:inline-block;margin-top:3rem;
+  padding:14px 40px;border:1px solid var(--gold-dim);
+  color:var(--gold);font-size:.85rem;letter-spacing:.15em;
+  text-transform:uppercase;transition:all .4s;
+  opacity:0;animation:fadeUp 1s ease 1.2s forwards;
+}
+.hero-cta:hover{background:var(--gold);color:var(--bg-dark);border-color:var(--gold)}
+.hero-scroll{
+  position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--text-muted);z-index:2;
+}
+.scroll-line{width:1px;height:40px;background:var(--gold-dim);position:relative;overflow:hidden}
+.scroll-line::after{content:'';position:absolute;top:0;left:0;width:100%;height:50%;background:var(--gold);animation:scrollDown 2s ease-in-out infinite}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes scrollDown{0%{transform:translateY(-100%)}100%{transform:translateY(200%)}}
+
+/* ============ MEDIA CAPTION ============ */
+.media-caption{
+  font-size:.72rem;color:var(--text-muted);letter-spacing:.04em;
+  margin-top:.5rem;line-height:1.6;
+}
+.media-caption a{color:var(--gold-dim);text-decoration:underline}
+.media-caption a:hover{color:var(--gold)}
+.theme-media{
+  margin:-2.5rem -2.5rem 1.5rem;overflow:hidden;
+  border-bottom:1px solid var(--border);
+}
+.theme-media img{width:100%;aspect-ratio:16/10;object-fit:cover;transition:transform .6s}
+.theme-card:hover .theme-media img{transform:scale(1.04)}
+.theme-media video{width:100%;aspect-ratio:16/9;display:block;background:#000}
+.theme-card .media-caption{padding:0 0 0 .2rem}
+
+/* ============ SECTION COMMON ============ */
+section{padding:7rem 5%;position:relative}
+.section-header{text-align:center;margin-bottom:5rem;max-width:800px;margin-left:auto;margin-right:auto}
+.section-eyebrow{
+  font-family:var(--font-sans-en);font-size:.75rem;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;
+}
+.section-title{
+  font-family:var(--font-display);font-size:clamp(2.5rem,6vw,4.5rem);
+  line-height:1.1;color:var(--text-primary);letter-spacing:.02em;
+}
+body.lang-zh .section-title{font-family:var(--font-serif-zh);font-weight:900;letter-spacing:.05em}
+.section-subtitle{
+  margin-top:1.2rem;font-size:1rem;color:var(--text-secondary);
+  font-style:italic;
+}
+.section-divider{width:50px;height:1px;background:var(--gold);margin:2rem auto 0}
+
+/* ============ FADE-IN ANIMATION ============ */
+.fade-in{opacity:0;transform:translateY(40px);transition:opacity .9s ease,transform .9s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+.fade-in:nth-child(2){transition-delay:.1s}
+.fade-in:nth-child(3){transition-delay:.2s}
+
+/* ============ INTRO SECTION ============ */
+.intro{background:var(--bg-dark)}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;max-width:1200px;margin:0 auto;align-items:center}
+.intro-text p{margin-bottom:1.5rem;font-size:1.05rem;line-height:2;color:var(--text-secondary)}
+.intro-text p:first-of-type{font-size:1.15rem;color:var(--text-primary)}
+.intro-image{
+  position:relative;aspect-ratio:1/1;overflow:hidden;
+  border:1px solid var(--border);
+}
+.intro-image img{width:100%;height:100%;object-fit:cover;object-position:72% 50%;filter:saturate(.9) brightness(.85)}
+.intro-image::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,10,10,.6),transparent 50%);
+}
+.profile-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;
+  margin-top:3rem;padding-top:3rem;border-top:1px solid var(--border);
+}
+.profile-item{}
+.profile-label{
+  font-family:var(--font-sans-en);font-size:.72rem;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;
+}
+body.lang-zh .profile-label{font-family:var(--font-sans-zh)}
+.profile-value{font-size:.95rem;color:var(--text-primary)}
+
+/* ============ TIMELINE SECTION ============ */
+.timeline{background:var(--bg-dark)}
+.timeline-container{max-width:1200px;margin:0 auto;position:relative}
+.timeline-line{position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--border-light);transform:translateX(-50%)}
+.timeline-item{
+  display:flex;align-items:center;margin-bottom:5rem;position:relative;
+}
+.timeline-item:nth-child(odd){justify-content:flex-start}
+.timeline-item:nth-child(even){justify-content:flex-end}
+.timeline-item:last-child{margin-bottom:0}
+.timeline-card{
+  width:45%;position:relative;
+  background:var(--bg-card);border:1px solid var(--border);
+  padding:2.5rem;transition:all .4s;
+}
+.timeline-card:hover{border-color:var(--gold-dim);transform:translateY(-4px);box-shadow:0 10px 40px rgba(0,0,0,.4)}
+.timeline-year{
+  font-family:var(--font-display);font-size:2.5rem;color:var(--gold);
+  line-height:1;margin-bottom:1rem;letter-spacing:.02em;
+}
+.timeline-card h3{
+  font-family:var(--font-serif-zh);font-weight:700;font-size:1.4rem;
+  color:var(--text-primary);margin-bottom:1rem;letter-spacing:.03em;
+}
+body.lang-en .timeline-card h3{font-family:var(--font-serif-en)}
+.timeline-card-image{
+  margin:-2.5rem -2.5rem 1.5rem;aspect-ratio:16/10;overflow:hidden;
+}
+.timeline-card-image img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.timeline-card:hover .timeline-card-image img{transform:scale(1.05)}
+.timeline-card p{color:var(--text-secondary);font-size:.95rem;line-height:1.9;margin-bottom:1rem}
+.timeline-card blockquote{
+  border-left:2px solid var(--gold);padding-left:1.2rem;
+  margin-top:1.2rem;font-style:italic;color:var(--gold-bright);
+  font-size:.95rem;line-height:1.8;
+}
+.timeline-dot{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:14px;height:14px;border-radius:50%;background:var(--bg-dark);
+  border:2px solid var(--gold);z-index:2;
+}
+.timeline-video{margin-top:1.5rem}
+
+/* ============ VIDEO EMBED ============ */
+.video-embed{
+  position:relative;width:100%;padding-bottom:56.25%;
+  height:0;overflow:hidden;background:var(--bg-elevated);
+  border:1px solid var(--border);
+}
+.video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+.video-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;cursor:pointer;transition:transform .5s,filter .3s}
+.video-embed:hover .video-poster{transform:scale(1.03);filter:brightness(.85)}
+.video-play-btn{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:64px;height:64px;border-radius:50%;pointer-events:none;
+  background:rgba(0,0,0,.55);border:2px solid var(--gold);
+  transition:transform .3s,background .3s;
+}
+.video-play-btn::after{
+  content:'';position:absolute;top:50%;left:54%;transform:translate(-50%,-50%);
+  border-left:20px solid var(--gold);border-top:12px solid transparent;border-bottom:12px solid transparent;
+}
+.video-embed:hover .video-play-btn{transform:translate(-50%,-50%) scale(1.12);background:rgba(0,0,0,.75)}
+.album-cover{display:block;position:relative;overflow:hidden}
+.album-cover img{display:block;width:100%;aspect-ratio:1;object-fit:cover;transition:transform .6s}
+.album-cover:hover img{transform:scale(1.05)}
+.album-cover-hint{
+  position:absolute;left:0;right:0;bottom:0;padding:.45rem .6rem;
+  font-size:.68rem;letter-spacing:.05em;color:var(--gold);
+  background:linear-gradient(transparent,rgba(0,0,0,.82));
+}
+.bili-link{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:10px 20px;border:1px solid var(--gold-dim);
+  color:var(--gold);font-size:.8rem;letter-spacing:.1em;
+  text-transform:uppercase;transition:all .3s;margin-top:1rem;
+}
+.bili-link:hover{background:rgba(201,169,97,.1);border-color:var(--gold)}
+
+/* ============ SONGS SECTION ============ */
+.songs{background:var(--bg-card)}
+.songs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3rem;max-width:1200px;margin:0 auto}
+.song-card{
+  background:var(--bg-elevated);border:1px solid var(--border);
+  padding:2.5rem;transition:all .4s;
+}
+.song-card:hover{border-color:var(--gold-dim);transform:translateY(-4px)}
+.song-card-wide{grid-column:span 2}
+.song-card h3{
+  font-family:var(--font-serif-zh);font-weight:700;font-size:1.5rem;
+  color:var(--text-primary);margin-bottom:1.5rem;letter-spacing:.03em;
+}
+body.lang-en .song-card h3{font-family:var(--font-serif-en)}
+.song-video{margin-bottom:1.5rem}
+.song-quote{
+  border-left:2px solid var(--gold);padding-left:1.2rem;
+  font-style:italic;color:var(--gold-bright);margin-bottom:1.2rem;
+  font-size:.95rem;line-height:1.8;
+}
+.song-card p{color:var(--text-secondary);font-size:.95rem;line-height:1.9}
+.song-sublist{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:1.5rem}
+.song-sub-item h4{
+  font-family:var(--font-serif-zh);font-weight:700;font-size:1.1rem;
+  color:var(--gold);margin-bottom:1rem;
+}
+body.lang-en .song-sub-item h4{font-family:var(--font-serif-en)}
+.song-sub-item .video-embed{margin-bottom:1rem}
+.song-sub-item p{font-size:.88rem;line-height:1.8}
+
+/* ============ COMPANIONSHIP & SINCERITY SECTIONS ============ */
+.themes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;max-width:1200px;margin:0 auto}
+.theme-card{
+  background:var(--bg-elevated);border:1px solid var(--border);
+  padding:2.5rem;position:relative;overflow:hidden;
+  transition:all .4s;
+}
+.theme-card::before{
+  content:'';position:absolute;top:0;left:0;width:100%;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  transform:translateX(-100%);transition:transform .6s;
+}
+.theme-card:hover{border-color:var(--gold-dim);transform:translateY(-4px)}
+.theme-card:hover::before{transform:translateX(0)}
+.theme-card h3{
+  font-family:var(--font-serif-zh);font-weight:700;font-size:1.25rem;
+  color:var(--text-primary);margin-bottom:1.2rem;letter-spacing:.03em;
+}
+body.lang-en .theme-card h3{font-family:var(--font-serif-en)}
+.theme-card blockquote{
+  border-left:2px solid var(--gold);padding-left:1rem;
+  font-style:italic;color:var(--gold-bright);margin-bottom:1.2rem;
+  font-size:.88rem;line-height:1.7;
+}
+.theme-card p{color:var(--text-secondary);font-size:.9rem;line-height:1.9}
+
+/* ============ CLOSING SECTION ============ */
+.closing{
+  min-height:100vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+  padding:8rem 5%;position:relative;overflow:hidden;
+}
+.closing-bg{
+  position:absolute;inset:0;
+  background-image:url('https://i2.hdslb.com/bfs/archive/cf30cd0b3f050063f2dd4f27b16bc8904e386c5a.jpg');
+  background-size:cover;background-position:center;
+  filter:brightness(.3) saturate(1.1);
+}
+.closing-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(10,10,10,.7),rgba(10,10,10,.9));
+}
+.closing-content{position:relative;z-index:2;max-width:800px}
+.closing-eyebrow{
+  font-family:var(--font-sans-en);font-size:.75rem;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:2rem;
+}
+.closing h2{
+  font-family:var(--font-display);font-size:clamp(2.5rem,7vw,5rem);
+  line-height:1.1;color:var(--text-primary);margin-bottom:2rem;letter-spacing:.02em;
+}
+body.lang-zh .closing h2{font-family:var(--font-serif-zh);font-weight:900;letter-spacing:.08em}
+.closing p{font-size:1.1rem;color:var(--text-secondary);line-height:2;margin-bottom:1.5rem}
+.closing p:last-of-type{color:var(--gold-bright);font-style:italic}
+.closing-video{margin-top:3rem;max-width:700px;margin-left:auto;margin-right:auto}
+.closing-footer{
+  margin-top:4rem;padding-top:3rem;border-top:1px solid var(--border);
+  font-family:var(--font-display);font-size:1.5rem;letter-spacing:.1em;
+  color:var(--gold);
+}
+body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
+
+/* ============ FOOTER ============ */
+.footer{
+  padding:3rem 5%;text-align:center;
+  border-top:1px solid var(--border);background:var(--bg-dark);
+}
+.footer p{font-size:.8rem;color:var(--text-muted);letter-spacing:.05em}
+.footer-credit{margin-top:.8rem;font-size:.72rem!important;opacity:.75;line-height:1.8}
+.footer-credit a{color:var(--gold);text-decoration:none;border-bottom:1px dotted var(--gold-dim)}
+.footer-credit a:hover{color:var(--gold-light)}
+
+/* ============ BACK TO TOP ============ */
+.back-top{
+  position:fixed;bottom:30px;right:30px;width:44px;height:44px;
+  border:1px solid var(--gold-dim);background:rgba(10,10,10,.8);
+  color:var(--gold);font-size:1.2rem;cursor:pointer;z-index:999;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:all .3s;border-radius:2px;
+}
+.back-top.show{opacity:1;pointer-events:auto}
+.back-top:hover{background:rgba(201,169,97,.15);border-color:var(--gold)}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1024px){
+  .nav-links{gap:1.5rem}
+  .nav-links a{font-size:.75rem}
+  .intro-grid{grid-template-columns:1fr;gap:3rem}
+  .songs-grid{grid-template-columns:1fr;gap:2rem}
+  .song-card-wide{grid-column:span 1}
+  .song-sublist{grid-template-columns:1fr;gap:1.5rem}
+  .themes-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .mobile-menu-btn{display:block}
+  .nav-links.mobile-open{
+    display:flex;flex-direction:column;position:fixed;
+    top:60px;left:0;width:100%;background:rgba(10,10,10,.97);
+    padding:2rem;gap:1.5rem;border-bottom:1px solid var(--border);
+  }
+  section{padding:5rem 5%}
+  .timeline-line{left:20px}
+  .timeline-item:nth-child(odd),.timeline-item:nth-child(even){justify-content:flex-start}
+  .timeline-card{width:calc(100% - 50px);margin-left:50px}
+  .timeline-dot{left:20px}
+  .profile-grid{grid-template-columns:1fr;gap:1.5rem}
+  .themes-grid{grid-template-columns:1fr}
+  .song-card,.timeline-card,.theme-card{padding:1.5rem}
+  .timeline-card-image{margin:-1.5rem -1.5rem 1.2rem}
+}
+@media(max-width:480px){
+  .hero-name-en{font-size:3rem}
+  .hero-name-zh{font-size:2rem}
+}
+
+/* ============ MOBILE MENU ============ */
+.mobile-menu-overlay{
+  display:none;position:fixed;inset:0;z-index:999;
+  background:rgba(10,10,10,.97);backdrop-filter:blur(20px);
+}
+.mobile-menu-overlay.open{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+.mobile-menu-overlay a{font-size:1.5rem;color:var(--text-secondary)}
+.mobile-menu-overlay a:hover{color:var(--gold)}
+.mobile-close{position:absolute;top:20px;right:20px;background:none;border:none;color:var(--gold);font-size:2rem;cursor:pointer}
+</style>
+</head>
+<body class="lang-zh">
+
+<!-- ============ NAVIGATION ============ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">
+    <span class="zh">譚詠麟</span>
+    <span class="en">ALAN TAM</span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#timeline"><span class="zh">時光刻度</span><span class="en">Timeline</span></a></li>
+    <li><a href="#songs"><span class="zh">旋律私語</span><span class="en">Songs</span></a></li>
+    <li><a href="#companionship"><span class="zh">歲月相守</span><span class="en">Bond</span></a></li>
+    <li><a href="#sincerity"><span class="zh">少年赤誠</span><span class="en">Sincerity</span></a></li>
+  </ul>
+  <button class="lang-toggle" id="langToggle">EN</button>
+  <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+</nav>
+
+<div class="mobile-menu-overlay" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">×</button>
+  <a href="#timeline"><span class="zh">時光刻度</span><span class="en">Timeline</span></a>
+  <a href="#songs"><span class="zh">旋律私語</span><span class="en">Songs</span></a>
+  <a href="#companionship"><span class="zh">歲月相守</span><span class="en">Bond</span></a>
+  <a href="#sincerity"><span class="zh">少年赤誠</span><span class="en">Sincerity</span></a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="zh">致敬譚校長</span>
+      <span class="en">A Tribute to the Principal</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="hero-name-en">ALAN TAM</span>
+      <span class="hero-name-zh zh">譚詠麟</span>
+    </h1>
+    <div class="hero-divider"></div>
+    <p class="hero-tagline">
+      <span class="zh">無言感激，歲歲如歌｜半世歌聲與赤誠</span>
+      <span class="en">Silent Gratitude, Songs Through the Years<br>Half a Life in Song and Sincerity</span>
+    </p>
+    <a href="#intro" class="hero-cta">
+      <span class="zh">探索歲月</span>
+      <span class="en">Explore the Legacy</span>
+    </a>
+  </div>
+  <div class="hero-scroll">
+    <span class="zh">向下滾動</span>
+    <span class="en">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============ INTRO ============ -->
+<section class="intro" id="intro">
+  <div class="intro-grid">
+    <div class="intro-text fade-in visible">
+      <div class="section-eyebrow" style="text-align:left">
+        <span class="zh">以歌為禮，致永遠的赤誠</span>
+        <span class="en">A Tribute in Song, to Eternal Sincerity</span>
+      </div>
+      <p>
+        <span class="zh">剝離所有榜單堆砌與浮華包裝，只留存真實的歲月、親口的坦言、扎根心底的執念。以老友相伴的視角，紀實半生本心，不美化、不渲染，以最純粹的文字，致敬最赤誠的歲月。</span>
+        <span class="en">Stripping away chart rankings and flashy packaging, retaining only the real years, his own candid words, and the convictions rooted in his heart. Through the lens of an old friend, documenting half a lifetime of true intent—no embellishment, no dramatization—with the purest words, paying tribute to the most sincere of eras.</span>
+      </p>
+      <p>
+        <span class="zh">半世歌聲，一生赤誠。從寒門少年到樂壇校長，從溫拿樂隊到獨步江湖，譚詠麟用半個世紀的歌聲，寫就了一部港樂的活歷史。</span>
+        <span class="en">Half a life in song, a lifetime of sincerity. From a humble youth to the Principal of Cantopop, from the Wynners to a solo legend, Alan Tam has spent half a century writing the living history of Hong Kong music.</span>
+      </p>
+      <div class="profile-grid">
+        <div class="profile-item">
+          <div class="profile-label"><span class="zh">出　生</span><span class="en">Born</span></div>
+          <div class="profile-value">1950年8月23日 / AUG 23, 1950</div>
+        </div>
+        <div class="profile-item">
+          <div class="profile-label"><span class="zh">籍　貫</span><span class="en">Hometown</span></div>
+          <div class="profile-value"><span class="zh">廣東新會</span><span class="en">Xinhui, Guangdong</span></div>
+        </div>
+        <div class="profile-item">
+          <div class="profile-label"><span class="zh">身　份</span><span class="en">Role</span></div>
+          <div class="profile-value"><span class="zh">歌手·音樂人·演員</span><span class="en">Singer · Musician · Actor</span></div>
+        </div>
+        <div class="profile-item">
+          <div class="profile-label"><span class="zh">唱　片</span><span class="en">Label</span></div>
+          <div class="profile-value"><span class="zh">寶麗金</span><span class="en">PolyGram</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="fade-in visible">
+      <div class="intro-image">
+        <img src="images/alan-stage-silhouette.jpg" alt="譚詠麟舞台側影真實照片，燈光如雨中傾灑 Alan Tam" loading="lazy">
+      </div>
+      <p class="media-caption">
+        <span class="zh">真實照片：譚詠麟舞台側影，燈光傾灑如雨（歌迷提供攝影作品）</span>
+        <span class="en">Real photo: Alan Tam in profile on stage, light falling like rain (fan-contributed photography)</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section class="timeline" id="timeline">
+  <div class="section-header fade-in visible">
+    <div class="section-eyebrow"><span class="zh">時光刻度</span><span class="en">Timeline of Melody</span></div>
+    <h2 class="section-title"><span class="zh">歲月為證</span><span class="en">Built by Years</span></h2>
+    <p class="section-subtitle"><span class="zh">每一段歲月，都是一首歌</span><span class="en">Every year, a song</span></p>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="timeline-container">
+    <div class="timeline-line"></div>
+
+    <!-- 1960s -->
+    <div class="timeline-item fade-in visible">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-card-image">
+          <img src="images/loosers-band.jpg" alt="1960年代末Loosers失敗者樂隊合影，前排中為少年譚詠麟" loading="lazy">
+        </div>
+        <p class="media-caption">
+          <span class="zh">真實照片：1960年代末Loosers（失敗者）樂隊合影——溫拿前身，少年譚詠麟的音樂起點</span></p>
+        <div class="timeline-year">1960s</div>
+        <h3><span class="zh">寒門逐夢，始於不甘</span><span class="en">Humble Beginnings, Born of Defiance</span></h3>
+        <p><span class="zh">年少務工養家，課餘深耕音樂，憑一張撿拾的比賽報名表入行。初組樂隊定名Loosers，以自嘲直面低谷碰壁，在清貧堅持中扎根初心。</span>
+        <span class="en">Working odd jobs to support his family in his youth, dedicating his spare time to music, he entered the industry on a scavenged competition entry form. His first band was named Loosers—a self-deprecating embrace of setbacks, planting his original resolve in poverty and persistence.</span></p>
+        <blockquote><span class="zh">「我不是天才，我只是比別人更肯捱、更肯熬。」</span><span class="en">"I'm no genius. I just endure more, and grind harder than others."</span></blockquote>
+      </div>
+    </div>
+
+    <!-- 1973 -->
+    <div class="timeline-item fade-in visible">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-year">1973</div>
+        <h3><span class="zh">溫拿歲月，純粹年少</span><span class="en">The Wynners Years, Pure Youth</span></h3>
+        <p><span class="zh">1973年溫拿樂隊成型，五人同分酬勞、共赴逐夢，低谷彼此兜底。恪守五年一聚之約，半世紀堅守不渝，純粹情義從未褪色。</span>
+        <span class="en">The Wynners took shape in 1973—five members splitting earnings equally, chasing dreams together, and catching each other through the lows. Honoring a pact to reunite every five years, a half-century of unwavering devotion, their pure bond never fading.</span></p>
+        <blockquote><span class="zh">「溫拿的日子，是我這輩子最乾淨、最沒有功利心的時光。」</span><span class="en">"The Wynners days were the cleanest, least utilitarian time of my life."</span></blockquote>
+        <div class="timeline-video">
+          <div class="video-embed">
+            <img class="video-poster" src="https://i0.hdslb.com/bfs/archive/ac1775b0c6ed3e8229a251bc1d360c060ce26e58.jpg" alt="溫拿樂隊《朋友》演出視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1FK4y1k7Fx&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          </div>
+          <p class="media-caption">
+            <span class="zh">真實影像：溫拿樂隊《朋友》寶麗金20週年演唱會現場</span><span class="en">Real footage: The Wynners "Friends" live at PolyGram 20th Anniversary Concert (<a href="https://www.bilibili.com/video/BV1FK4y1k7Fx/" target="_blank" rel="noopener">Bilibili</a>)</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1984 -->
+    <div class="timeline-item fade-in visible">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-year">1984</div>
+        <h3><span class="zh">黃金三專，時代巔峰</span><span class="en">The Golden Trilogy, Pinnacle of an Era</span></h3>
+        <p><span class="zh">1984–1986年，《霧之戀》《愛的根源》《愛情陷阱》三張神專問世，定義港樂黃金時代。1985年紅館20場、1989年38場巡演，刷新樂壇紀錄，場場萬人合唱，「校長」之名由此沉澱。</span>
+        <span class="en">From 1984 to 1986, three landmark albums—"Mist of Love," "Root of Love," and "Love Trap"—defined the golden age of Cantopop. 20 Coliseum shows in 1985, 38 in 1989—shattering industry records, every night a sing-along of tens of thousands. The title "Principal" was forged in those moments.</span></p>
+        <div class="timeline-video">
+          <div class="video-embed">
+            <img class="video-poster" src="https://i2.hdslb.com/bfs/archive/cf30cd0b3f050063f2dd4f27b16bc8904e386c5a.jpg" alt="譚詠麟1984演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1odNgzpE8P&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          </div>
+          <p class="media-caption">
+            <span class="zh">真實影像：譚詠麟1984年首登紅館演唱會現場</span><span class="en">Real footage: Alan Tam's first Coliseum concert, 1984 (<a href="https://www.bilibili.com/video/BV1odNgzpE8P/" target="_blank" rel="noopener">Bilibili</a>)</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1988 -->
+    <div class="timeline-item fade-in visible">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-card-image">
+          <img src="https://y.gtimg.cn/music/photo_new/T002R800x800M000002FBcIb3sA7x3.jpg" alt="譚詠麟專輯《第一滴淚》真實唱片封面" loading="lazy">
+        </div>
+        <p class="media-caption">
+          <span class="zh">真實唱片封面：1986年專輯《第一滴淚》，收錄《無言感激》</span><span class="en">Real album cover: "First Drop of Tears" (1986), featuring "Silent Gratitude" (Source: <a href="https://y.qq.com/n/ryqq/albumDetail/002FBcIb3sA7x3" target="_blank" rel="noopener">QQ Music</a>)</span>
+        </p>
+        <div class="timeline-year">1988</div>
+        <h3><span class="zh">無人復刻的格局</span><span class="en">A Vision Beyond Replication</span></h3>
+        <p><span class="zh">1988年，事業鼎盛之際，宣布退出所有競爭性頒獎禮。一曲《無言感激》含淚壓軸，放下名利枷鎖，純粹歸心歌唱。</span>
+        <span class="en">At the peak of his career in 1988, he announced his withdrawal from all competitive music awards. With "Silent Gratitude" as the tearful closing number, he set down the burden of accolades and returned, pure-hearted, to singing.</span></p>
+        <blockquote><span class="zh">「獎項是一時的，歌聲是一輩子的。我不想再和後輩爭輸贏，想把機會留給新人，讓樂壇有更多新聲音。」</span><span class="en">"Awards are fleeting. Songs last a lifetime. I don't want to compete with the next generation—I want to leave room for new voices, let the industry breathe."</span></blockquote>
+      </div>
+    </div>
+
+    <!-- 1991 -->
+    <div class="timeline-item fade-in visible">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-year">1991</div>
+        <h3><span class="zh">歌聲跨海，扎根山河</span><span class="en">Voices Crossing Seas, Rooted in the Land</span></h3>
+        <p><span class="zh">1991年央視春晚，一曲《水中花》唱響全國，讓粵語旋律走入大眾視野。廣州越秀山露天演唱會，以無華舞台、純粹歌聲，定格數萬人共聽金曲的國民經典場面。</span>
+        <span class="en">At the 1991 CCTV Spring Festival Gala, "Flower in Water" resonated across the nation, bringing Cantonese melodies into the mainstream. At the Yuexiu Hill open-air concert in Guangzhou, with an unadorned stage and pure vocals, he captured a national moment—tens of thousands sharing in the golden classics.</span></p>
+        <div class="timeline-video">
+          <div class="video-embed">
+            <img class="video-poster" src="https://i0.hdslb.com/bfs/archive/4f7ebaf3a9747ea9dc9167826f6d1369e8dcc0f3.jpg" alt="《水中花》MV視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV17FKgzREQ9&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          </div>
+          <p class="media-caption">
+            <span class="zh">真實影像：《水中花》（粵）原版MV</span><span class="en">Real footage: "Flower in Water" original MV (<a href="https://www.bilibili.com/video/BV17FKgzREQ9/" target="_blank" rel="noopener">Bilibili</a>)</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1996 -->
+    <div class="timeline-item fade-in visible">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-year">1996</div>
+        <h3><span class="zh">樂壇封頂，榮譽加冕</span><span class="en">The Pinnacle, Crowned in Honor</span></h3>
+        <p><span class="zh">深耕樂壇數十載，斬獲香港樂壇最高榮譽金針獎。褪去所有競賽浮華，以終身作品與行業底蘊，坐穩港樂殿堂級席位。</span>
+        <span class="en">After decades of dedication to the music industry, he received the Golden Needle Award—Hong Kong's highest musical honor. Stripped of all competitive glamour, his lifetime body of work and industry standing secured his place in the Cantopop hall of fame.</span></p>
+        <div class="timeline-video">
+          <div class="video-embed">
+            <img class="video-poster" src="https://i0.hdslb.com/bfs/archive/4fe16fe8484aab8985c4594322a95e1eacf259bc.jpg" alt="1996金針獎頒獎禮視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1Hv411e7k4&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          </div>
+          <p class="media-caption">
+            <span class="zh">真實影像：1996年第19屆十大中文金曲頒獎禮，譚詠麟獲金針獎</span><span class="en">Real footage: Alan Tam receives the Golden Needle Award at the 19th Top Ten Chinese Gold Songs Awards, 1996 (<a href="https://www.bilibili.com/video/BV1Hv411e7k4" target="_blank" rel="noopener">Bilibili</a>)</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2003 -->
+    <div class="timeline-item fade-in visible">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-year">2003</div>
+        <h3><span class="zh">左麟右李，薪火巔峰</span><span class="en">Alan &amp; Hacken, Passing the Torch</span></h3>
+        <p><span class="zh">與後輩正式組建「左麟右李」組合，開啟跨時代樂壇搭檔新模式。首場連開12場，加場續演、場場爆滿，百場巡演橫掃海內外，成為港樂傳承最成功的範本。</span>
+        <span class="en">Partnering with junior artist Hacken Lee, they formed the "Alan &amp; Hacken" duo, pioneering a new model of cross-generational musical partnership. 12 consecutive shows from the start, with added dates and sold-out nights—a hundred-date tour spanning the globe, becoming the most successful template for Cantopop's legacy.</span></p>
+        <blockquote><span class="zh">「港樂不是一個人的盛世，是一代代人的接力。」</span><span class="en">"Cantopop isn't one person's golden age—it's a relay across generations."</span></blockquote>
+        <div class="timeline-video">
+          <div class="video-embed">
+            <img class="video-poster" src="https://i1.hdslb.com/bfs/archive/b9a15eded76b91d134ecaaf8bf599f25aa095c79.jpg" alt="左麟右李2003演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1xNDxBkEZq&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          </div>
+          <p class="media-caption">
+            <span class="zh">真實影像：左麟右李演唱會2003全場</span>
+            <span class="en">Real footage: Alan &amp; Hacken Live 2003 full concert (<a href="https://www.bilibili.com/video/BV1xNDxBkEZq/" target="_blank" rel="noopener">Bilibili</a>)</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2013 -->
+    <div class="timeline-item fade-in visible">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-card-image">
+          <img src="https://i0.hdslb.com/bfs/archive/208cb2ce72bef8d8f6b9511679a776197e7742d3.jpg" alt="左麟右李十周年演唱會官方海報" loading="lazy">
+        </div>
+        <p class="media-caption">
+          <span class="zh">真實海報：左麟右李十周年演唱會·香港有聲音，2013</span>
+          <span class="en">Real poster: "Alan &amp; Hacken" 10th Anniversary Concert, 2013 (Source: <a href="https://www.bilibili.com/video/BV1cu9uYTEt4/" target="_blank" rel="noopener">Bilibili</a>)</span>
+        </p>
+        <div class="timeline-year">2013</div>
+        <h3><span class="zh">十載同行，經典續章</span><span class="en">A Decade Together, Classic Continued</span></h3>
+        <p><span class="zh">左麟右李組合十週年，紅館連開13場紀念演唱會。十年雙向成全、彼此成就，用舞台紀實港樂的生生不息。</span>
+        <span class="en">The 10th anniversary of Alan &amp; Hacken—13 consecutive commemorative shows at the Coliseum. Ten years of mutual fulfillment and shared achievement, using the stage to document Cantopop's enduring vitality.</span></p>
+        <div class="timeline-video">
+          <div class="video-embed">
+            <img class="video-poster" src="https://i0.hdslb.com/bfs/archive/208cb2ce72bef8d8f6b9511679a776197e7742d3.jpg" alt="左麟右李十周年演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1cu9uYTEt4&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          </div>
+          <p class="media-caption">
+            <span class="zh">真實影像：左麟右李十週年演唱會2013《香港有聲音》</span><span class="en">Real footage: Alan &amp; Hacken 10th Anniversary Concert 2013 "Hong Kong Has a Voice" (<a href="https://www.bilibili.com/video/BV1cu9uYTEt4/" target="_blank" rel="noopener">Bilibili</a>)</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2010s -->
+    <div class="timeline-item fade-in visible">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-card-image">
+          <img src="https://i0.hdslb.com/bfs/archive/704d01cbe33db7470dc51583834d5083104dad72.jpg" alt="2010年紅館再度感動演唱會現場真實照片" loading="lazy">
+        </div>
+        <p class="media-caption">
+          <span class="zh">真實照片：2010年紅館「再度感動」演唱會現場</span><span class="en">Real photo: "Moved Again" concert live at the Coliseum, 2010 (Source: <a href="https://www.bilibili.com/video/BV1yT421S7qs/" target="_blank" rel="noopener">Bilibili</a>)</span>
+        </p>
+        <div class="timeline-year">2010s</div>
+        <h3><span class="zh">持續深耕，老歌新生</span><span class="en">Sustained Dedication, Old Songs Reborn</span></h3>
+        <p><span class="zh">持續出新專輯、開巡迴演出，改編翻新經典金曲。不困守年代濾鏡，主動適配新時代聽眾，讓老歌持續擁有新生命力。</span>
+        <span class="en">Continuing to release new albums and mount tours, reimagining and refreshing classic hits. Refusing to be trapped by nostalgia filters, actively adapting to new generations of listeners, giving old songs renewed life.</span></p>
+      </div>
+    </div>
+
+    <!-- 2020s -->
+    <div class="timeline-item fade-in visible">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-card-image">
+          <img src="https://i2.hdslb.com/bfs/archive/a670cdff6abd7ab9dee205d209cae756e49fc6cd.jpg" alt="譚詠麟2024年上海虹口足球場演唱會現場照片" loading="lazy">
+        </div>
+        <p class="media-caption">
+          <span class="zh">真實照片：譚詠麟2024年9月上海虹口足球場演唱會現場</span><span class="en">Real photo: Alan Tam live at Shanghai Hongkou Football Stadium, September 2024 (Source: <a href="https://www.bilibili.com/video/BV1bWske9ECE/" target="_blank" rel="noopener">Bilibili</a>)</span>
+        </p>
+        <div class="timeline-year">2020s</div>
+        <h3><span class="zh">堅守舞台，熱愛至終</span><span class="en">Holding the Stage, Devotion to the End</span></h3>
+        <p><span class="zh">褪去流量熱度，依舊保持常態化巡演、音樂創作。以高齡堅守舞台初心，每場演出全程傾力、零敷衍。用半生踐行諾言：只要身體允許，歌聲便永不落幕。</span>
+        <span class="en">Beyond the metrics of trending traffic, maintaining regular touring and creative output. Holding fast to the stage's original calling well into his seventies, pouring everything into every performance—zero shortcuts. Fulfilling a half-lifetime promise: as long as his health allows, the songs will never end.</span></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SONGS ============ -->
+<section class="songs" id="songs">
+  <div class="section-header fade-in visible">
+    <div class="section-eyebrow"><span class="zh">旋律私語</span><span class="en">Melody Whispers</span></div>
+    <h2 class="section-title"><span class="zh">以聲憶往</span><span class="en">Voices Remembering</span></h2>
+    <p class="section-subtitle"><span class="zh">每一首歌，都是一段人生</span><span class="en">Each song, a chapter of life</span></p>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="songs-grid">
+    <!-- 01 无言感激 -->
+    <div class="song-card fade-in visible">
+      <h3><span class="zh">無言感激，半生答謝</span><span class="en">Silent Gratitude, A Lifetime of Thanks</span></h3>
+      <div class="song-video">
+        <div class="video-embed">
+          <img class="video-poster" src="https://i1.hdslb.com/bfs/archive/36241da447fc9cc4816ef02372a1bc64f3105889.jpg" alt="《無言感激》2010再度感動演唱會現場視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1XN41167Aa&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+        </div>
+      </div>
+      <blockquote class="song-quote"><span class="zh">「這首歌不是唱給獎盃，不是唱給舞台，是唱給每一個默默陪我的人。」</span><span class="en">"This song isn't for trophies. It isn't for the stage. It's for every person who quietly stood by me."</span></blockquote>
+      <p><span class="zh">因後台默默守候、無私付出的平凡歌迷動容，以此曲寄情半生陪伴。數十年演唱會固定壓軸，是最真摯的歲月答謝。</span>
+      <span class="en">Moved by the unsung dedication of ordinary fans waiting backstage, he channeled half a lifetime of companionship into this song. For decades, it has been the closing number at every concert—his most heartfelt thank-you to the years.</span></p>
+    </div>
+
+    <!-- 02 朋友 -->
+    <div class="song-card fade-in visible">
+      <h3><span class="zh">朋友，一生底色</span><span class="en">Friends, The Color of a Lifetime</span></h3>
+      <div class="song-video">
+        <div class="video-embed">
+          <img class="video-poster" src="https://i0.hdslb.com/bfs/archive/8a8a8897d334cb3d393be50d63d1fb16a77607cd.jpg" alt="溫拿《朋友》LIVE視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1cG411f7px&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+        </div>
+      </div>
+      <blockquote class="song-quote"><span class="zh">「名利都是虛的，朋友才是真的。」</span><span class="en">"Fame and fortune are illusions. Friends are real."</span></blockquote>
+      <p><span class="zh">歷經樂壇冷暖、人事起落，始終篤信情義為本。舊友相聚、歲月送別，皆以這首旋律，銘記相守與相逢。</span>
+      <span class="en">Through the warmth and cold of the industry, through comings and goings, he has always believed that loyalty is the foundation. Whether reuniting with old friends or bidding them farewell, this melody marks every meeting and every parting.</span></p>
+    </div>
+
+    <!-- 03 一首歌一个故事 -->
+    <div class="song-card fade-in visible">
+      <h3><span class="zh">一首歌，一個故事</span><span class="en">One Song, One Story</span></h3>
+      <div class="song-video">
+        <img src="https://i0.hdslb.com/bfs/archive/08bfeb30445c86a1e3ff556526c51ad66577600e.jpg" alt="左麟右李2013十周年演唱會現場真實照片" style="aspect-ratio:16/9;object-fit:cover;border:1px solid var(--border)" loading="lazy">
+        <p class="media-caption">
+          <span class="zh">真實照片：左麟右李2013十周年演唱會現場（來源：<a href="https://www.bilibili.com/video/BV1sp4y1M7aj/" target="_blank" rel="noopener">Bilibili</a>）</span>
+          <span class="en">Real photo: Alan &amp; Hacken 10th Anniversary Concert live, 2013 (Source: <a href="https://www.bilibili.com/video/BV1sp4y1M7aj/" target="_blank" rel="noopener">Bilibili</a>)</span>
+        </p>
+      </div>
+      <blockquote class="song-quote"><span class="zh">「我唱的每一首歌，都對應我人生的一段經歷、一種心情、一次遇見或離別。」</span><span class="en">"Every song I sing corresponds to a chapter of my life—a feeling, an encounter, or a farewell."</span></blockquote>
+      <p><span class="zh">以曲載歲，以聲憶往，所有浮沉聚散、感恩釋懷，皆藏於旋律之中，是最真實的音樂自傳。</span>
+      <span class="en">Songs carrying years, voices remembering pasts—all the rises and falls, the gratitude and letting go, are hidden within the melodies. This is his most authentic musical autobiography.</span></p>
+    </div>
+
+    <!-- 04 时代金曲 -->
+    <div class="song-card song-card-wide fade-in visible">
+      <h3><span class="zh">時代金曲，世代共鳴</span><span class="en">Era-Defining Hits, Generational Resonance</span></h3>
+      <p style="margin-bottom:1.5rem"><span class="zh">三首跨越世代的國民金曲，承載無數人的青春與離別記憶。</span><span class="en">Three era-defining national hits, carrying the youth and farewell memories of generations.</span></p>
+      <div class="song-sublist">
+        <div class="song-sub-item">
+          <h4>《講不出再見》<br><span style="font-size:.75rem;color:var(--text-muted)">Can't Say Goodbye</span></h4>
+          <div class="video-embed">
+            <img class="video-poster" src="https://i2.hdslb.com/bfs/archive/f298c3b464ffaa1deb448b2e40eb4ac46f2bff3e.jpg" alt="《講不出再見》94演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1uU4y1U7Kc&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          </div>
+          <p><span class="zh">貫穿華人世代的離別主題曲，每一場終場大合唱，都是歲月的集體動容。</span><span class="en">The parting anthem spanning generations of Chinese communities—every closing sing-along, a collective moment of being moved by time.</span></p>
+        </div>
+        <div class="song-sub-item">
+          <h4>《愛在深秋》<br><span style="font-size:.75rem;color:var(--text-muted)">Love in Deep Autumn</span></h4>
+          <div class="video-embed">
+            <img class="video-poster" src="https://i1.hdslb.com/bfs/archive/21e509e03f3d43ecfa9ac1f6c29310d80b153dd4.jpg" alt="《愛在深秋》MV視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1j84y1t7BT&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          </div>
+          <p><span class="zh">東方意境港樂典範，隱忍溫柔，道盡成年人的遺憾與釋然。</span><span class="en">The model of Eastern-aesthetic Cantopop—restrained and tender, voicing the regrets and acceptance of adulthood.</span></p>
+        </div>
+        <div class="song-sub-item">
+          <h4>《難捨難分》<br><span style="font-size:.75rem;color:var(--text-muted)">Hard to Part</span></h4>
+          <div class="video-embed" style="padding-bottom:0;height:auto;background:var(--bg-dark)">
+            <a href="https://y.qq.com/n/ryqq/albumDetail/003zMSAb1ckQdw" target="_blank" rel="noopener" class="album-cover">
+              <img src="https://y.gtimg.cn/music/photo_new/T002R800x800M000003zMSAb1ckQdw.jpg" alt="《難捨難分》真實唱片封面，1990" loading="lazy">
+              <span class="album-cover-hint"><span class="zh">《難捨難分》專輯 · QQ音樂 ↗</span><span class="en">Album "Hard to Part" · QQ Music ↗</span></span>
+            </a>
+          </div>
+          <p><span class="zh">九十年代國民金曲，承載一代人的青春與離別記憶。</span><span class="en">A national hit of the 1990s, carrying a generation's memories of youth and farewell.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 曲随本心 -->
+    <div class="song-card song-card-wide fade-in visible">
+      <h3><span class="zh">曲隨本心，百態人生</span><span class="en">Songs Following the Heart, A Life of Many Colors</span></h3>
+      <p style="margin-bottom:1.5rem"><span class="zh">三首映照本心的金曲，詮釋音樂本該有的多面與真實。</span><span class="en">Three hits reflecting his true self, showing the many faces of music as it should be.</span></p>
+      <div class="song-sublist">
+        <div class="song-sub-item">
+          <h4>《卡拉永遠OK》<br><span style="font-size:.75rem;color:var(--text-muted)">Karaoke Forever OK</span></h4>
+          <div class="video-embed" style="padding-bottom:0;height:auto;background:var(--bg-dark)">
+            <a href="https://y.qq.com/n/ryqq/albumDetail/0046SvA41Mh5co" target="_blank" rel="noopener" class="album-cover">
+              <img src="https://y.gtimg.cn/music/photo_new/T002R800x800M0000046SvA41Mh5co.jpg" alt="《夢幻舞台》真實唱片封面，收錄《卡拉永遠OK》，1990" loading="lazy">
+              <span class="album-cover-hint"><span class="zh">《夢幻舞台》專輯 · QQ音樂 ↗</span><span class="en">Album "Dream Stage" · QQ Music ↗</span></span>
+            </a>
+          </div>
+          <p><span class="zh">褪去深情枷鎖，映照樂觀鬆弛的本心，詮釋音樂本該有的治癒與熱烈。</span><span class="en">Shedding the weight of deep emotion, reflecting an optimistic, relaxed true self—showing what music's healing and warmth should be.</span></p>
+        </div>
+        <div class="song-sub-item">
+          <h4>《一生中最愛》<br><span style="font-size:.75rem;color:var(--text-muted)">The Love of My Life</span></h4>
+          <div class="video-embed">
+            <img class="video-poster" src="https://i1.hdslb.com/bfs/archive/a5de135683cd16c14ca899bd437b2c716e4403cb.jpg" alt="《一生中最愛》MV視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV11E421N7iz&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          </div>
+          <p><span class="zh">依託《雙城故事》劇情，詮釋成年人克制隱忍、溫柔成全的情感觀。</span><span class="en">Set against the film "Comrades: Almost a Love Story," interpreting the restrained, tender, and selfless love of adults.</span></p>
+        </div>
+        <div class="song-sub-item">
+          <h4>《忘不了您》<br><span style="font-size:.75rem;color:var(--text-muted)">Can't Forget You</span></h4>
+          <div class="video-embed" style="padding-bottom:0;height:auto;background:var(--bg-dark)">
+            <a href="https://y.qq.com/n/ryqq/albumDetail/00149Lqt3vL7qH" target="_blank" rel="noopener" class="album-cover">
+              <img src="https://y.gtimg.cn/music/photo_new/T002R800x800M00000149Lqt3vL7qH.jpg" alt="《忘不了您》真實唱片封面，1981" loading="lazy">
+              <span class="album-cover-hint"><span class="zh">《忘不了您》專輯 · QQ音樂 ↗</span><span class="en">Album "Can't Forget You" · QQ Music ↗</span></span>
+            </a>
+          </div>
+          <p><span class="zh">事業低谷突圍的轉折之作，見證從沉寂到破曉的逐夢之路。</span><span class="en">The turning point from career lows, witnessing the journey from silence to dawn.</span></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ COMPANIONSHIP ============ -->
+<section id="companionship" style="background:var(--bg-dark)">
+  <div class="section-header fade-in visible">
+    <div class="section-eyebrow"><span class="zh">歲月相守</span><span class="en">Years of Companionship</span></div>
+    <h2 class="section-title"><span class="zh">情義為本</span><span class="en">Bonds That Endure</span></h2>
+    <p class="section-subtitle"><span class="zh">半世情義，貫穿一生</span><span class="en">Half a life of loyalty, spanning a lifetime</span></p>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="themes-grid">
+    <div class="theme-card fade-in visible">
+      <div class="theme-media">
+        <img src="images/wynners-1970s.jpg" alt="溫拿五虎1970年代合影：譚詠麟、鍾鎮濤、彭健新、陳友、葉智強" loading="lazy">
+        <p class="media-caption">
+          <span class="zh">真實照片：溫拿五虎1970年代合影——譚詠麟、鍾鎮濤、彭健新、陳友、葉智強（來源：</span><span class="en">Real photo: The Wynners in the 1970s—Alan Tam, Kenny Bee, Bennett Pang, Anthony Chan, and Danny Yip (Source: <a href="https://m.sohu.com/a/220417313_775101/" target="_blank" rel="noopener">Sohu "Encountering Classics"</a>)</span>
+        </p>
+      </div>
+      <h3><span class="zh">五人之約，半世手足</span><span class="en">The Pact of Five, Brothers for Life</span></h3>
+      <blockquote><span class="zh">「我們五個現在各自有生活、有成就，但只要聚在一起，就變回十幾歲的小孩。」</span><span class="en">"The five of us all have our own lives and achievements now, but when we're together, we become teenagers again."</span></blockquote>
+      <p><span class="zh">半世紀堅守五年一聚、五年一作的約定，無利益捆綁、無輿論紛爭，純粹情義貫穿一生。</span>
+      <span class="en">Half a century of honoring the five-year reunion pact—no financial ties, no media drama—pure friendship spanning a lifetime.</span></p>
+    </div>
+
+    <div class="theme-card fade-in visible">
+      <div class="theme-media">
+        <div class="video-embed">
+          <img class="video-poster" src="https://i0.hdslb.com/bfs/archive/08bfeb30445c86a1e3ff556526c51ad66577600e.jpg" alt="《珍惜的珍惜》2013演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1sp4y1M7aj&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+        </div>
+        <p class="media-caption">
+          <span class="zh">真實影像：譚詠麟、李克勤《珍惜的珍惜》左麟右李十週年演唱會2013</span><span class="en">Real footage: Alan Tam &amp; Hacken Lee "Cherish What You Cherish," Alan &amp; Hacken 10th Anniversary Concert 2013 (<a href="https://www.bilibili.com/video/BV1sp4y1M7aj/" target="_blank" rel="noopener">Bilibili</a>)</span>
+        </p>
+      </div>
+      <h3><span class="zh">港樂薪火，溫柔成全</span><span class="en">Passing the Torch, Gentle Fulfillment</span></h3>
+      <blockquote><span class="zh">「港樂不是一個人的盛世，是一代代人的接力。」</span><span class="en">"Cantopop isn't one person's golden age—it's a relay across generations."</span></blockquote>
+      <p><span class="zh">俯身提攜後輩，不擺資歷、不藏私藏，舞台讓位、經驗傾授。左麟右李的跨時代並肩，成就港樂最動人的傳承範本。</span>
+      <span class="en">Bending down to lift up the next generation—no posturing, no holding back. Yielding the stage, sharing wisdom. The Alan &amp; Hacken partnership became Cantopop's most moving model of legacy.</span></p>
+    </div>
+
+    <div class="theme-card fade-in visible">
+      <div class="theme-media">
+        <div class="video-embed">
+          <img class="video-poster" src="https://i2.hdslb.com/bfs/archive/c10d5fce46f6d564b5537f8d4ea1950f5142f576.jpg" alt="《一生何求》聲生不息舞台視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1ECBLYVEQY&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+        </div>
+        <p class="media-caption">
+          <span class="zh">真實影像：譚詠麟演繹故友陳百強作品《一生何求》，《聲生不息·大灣區季》2024</span><span class="en">Real footage: Alan Tam performs late friend Danny Chan's "What One Asks in Life," Infinity and Beyond 2024 (<a href="https://www.bilibili.com/video/BV1ECBLYVEQY/" target="_blank" rel="noopener">Bilibili</a>)</span>
+        </p>
+      </div>
+      <h3><span class="zh">歲歲懷人，靜默惦念</span><span class="en">Remembering Through the Years, Silent Remembrance</span></h3>
+      <blockquote><span class="zh">與黃金時代舊友並肩逐夢，見證星河同輝，也歷經斯人遠去。</span><span class="en">Standing side by side with old friends through the golden era, witnessing stars shine together, and also seeing them depart.</span></blockquote>
+      <p><span class="zh">從不消費離別、不刻意煽情，只於舞台、於歲月間默默追憶。最好的懷念，是不遺忘、不打擾，歲歲留白於心。</span>
+      <span class="en">Never exploiting farewells, never manufacturing sentiment—only quietly remembering, on stage and through the years. The best remembrance is not forgetting, not disturbing, leaving space in the heart year after year.</span></p>
+    </div>
+
+    <div class="theme-card fade-in visible">
+      <div class="theme-media">
+        <div class="video-embed">
+          <img class="video-poster" src="https://i0.hdslb.com/bfs/archive/42f55dfe771c2fb44f6aedcfae9aff9eca3eb97e.jpg" alt="《披著羊皮的狼》慈善演出視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1T34y197cQ&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+        </div>
+        <p class="media-caption">
+          <span class="zh">真實影像：譚詠麟2004年《歡樂滿東華》慈善演出《披著羊皮的狼》</span><span class="en">Real footage: Alan Tam's charity performance at Tung Wah Charity Gala 2004 (<a href="https://www.bilibili.com/video/BV1T34y197cQ/" target="_blank" rel="noopener">Bilibili</a>)</span>
+        </p>
+      </div>
+      <h3><span class="zh">低調善意，本心本分</span><span class="en">Quiet Kindness, Simple Duty</span></h3>
+      <blockquote><span class="zh">「得到社會太多偏愛，力所能及回饋，是本分，不是功勞。」</span><span class="en">"Society has given me so much. Giving back within my means is a duty, not a merit."</span></blockquote>
+      <p><span class="zh">數十年深耕公益，零酬勞義演、默默助學賑災，不以善行立人設，只以本心溫柔渡人。</span>
+      <span class="en">Decades of quiet philanthropy—benefit performances without pay, quietly supporting education and disaster relief. Not building a persona around charity, but gently helping others with genuine intent.</span></p>
+    </div>
+
+    <div class="theme-card fade-in visible">
+      <div class="theme-media">
+        <div class="video-embed">
+          <img class="video-poster" src="https://i0.hdslb.com/bfs/archive/bc55fef3ddd042f5fc5aea15fddfd49bda1bec4a.jpg" alt="聲生不息大灣區季節目視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1KUz1YLETN&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+        </div>
+        <p class="media-caption">
+          <span class="zh">真實影像：《聲生不息·大灣區季》第一期，譚詠麟登台推廣港樂，2024</span><span class="en">Real footage: Alan Tam promotes Cantopop on "Infinity and Beyond: Greater Bay Area," EP01, 2024 (<a href="https://www.bilibili.com/video/BV1KUz1YLETN/" target="_blank" rel="noopener">Bilibili</a>)</span>
+        </p>
+      </div>
+      <h3><span class="zh">守望港樂，不負熱土</span><span class="en">Watching Over Cantopop, True to the Soil</span></h3>
+      <p><span class="zh">親歷港樂巔峰與式微，不求自身榮光永續，只盼行業薪火不絕。主動為新生代鋪路、改編經典、推廣港樂，以半生餘力，守護這片滋養自己的樂壇熱土。</span>
+      <span class="en">Having witnessed both the peak and the decline of Cantopop, he doesn't seek his own glory to last forever—only hopes the industry's flame never dies. Actively paving the way for new artists, reimagining classics, promoting Cantopop—with half a lifetime's remaining energy, guarding the musical soil that nurtured him.</span></p>
+    </div>
+
+    <div class="theme-card fade-in visible">
+      <div class="theme-media">
+        <img src="images/alan-stage-live.jpg" alt="譚詠麟舞台演唱真實照片" loading="lazy">
+        <p class="media-caption">
+          <span class="zh">真實照片：譚詠麟舞台演唱瞬間（歌迷攝影作品，Alan Tang Photography）</span>
+          <span class="en">Real photo: Alan Tam performing on stage (fan photography, Alan Tang Photography)</span>
+        </p>
+      </div>
+      <h3><span class="zh">惜緣隨緣，通透人生</span><span class="en">Cherishing Fate, Letting Go, A Life of Clarity</span></h3>
+      <blockquote><span class="zh">「緣分來了珍惜，緣分走了祝福，不強留、不糾纏、不遺憾。」</span><span class="en">"When fate comes, cherish it. When it goes, bless it. Don't force it to stay, don't cling, don't regret."</span></blockquote>
+      <p><span class="zh">閱盡樂壇更迭、人事聚散，看淡輿論浮沉與得失榮辱，以溫柔通透之心，接納人生所有無常。</span>
+      <span class="en">Having seen the industry's cycles, the comings and goings, indifferent to gossip and gains and losses—accepting all of life's impermanence with a gentle, clear heart.</span></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SINCERITY ============ -->
+<section id="sincerity" style="background:var(--bg-card)">
+  <div class="section-header fade-in visible">
+    <div class="section-eyebrow"><span class="zh">少年赤誠</span><span class="en">Youthful Sincerity</span></div>
+    <h2 class="section-title"><span class="zh">初心不变</span><span class="en">The Heart Unchanged</span></h2>
+    <p class="section-subtitle"><span class="zh">歲月可以老去，赤誠永遠年輕</span><span class="en">Time may age, but sincerity stays forever young</span></p>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="themes-grid">
+    <div class="theme-card fade-in visible">
+      <div class="theme-media">
+        <div class="video-embed">
+          <img class="video-poster" src="https://i2.hdslb.com/bfs/archive/18321be50c362878c143a27146397f6f0a565772.jpg" alt="譚詠麟足球比賽視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1HZ4y1z7rM&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+        </div>
+        <p class="media-caption">
+          <span class="zh">真實影像：譚詠麟代表香港明星足球隊淩空抽射破門</span><span class="en">Real footage: Alan Tam scores a volley for the Hong Kong All Star Soccer Team (<a href="https://www.bilibili.com/video/BV1HZ4y1z7rM/" target="_blank" rel="noopener">Bilibili</a>)</span>
+        </p>
+      </div>
+      <h3><span class="zh">球場自由，純粹熱愛</span><span class="en">Freedom on the Pitch, Pure Passion</span></h3>
+      <blockquote><span class="zh">「舞台上永遠有身份、有責任、有期待，只有足球場，是完全屬於我自己的自由。」</span><span class="en">"On stage, there's always an identity, a responsibility, expectations. Only the football pitch is entirely my own freedom."</span></blockquote>
+      <p><span class="zh">數十年堅持球場馳騁，拋開舞台光環與名利枷鎖，以奔跑治癒浮沉，留存最本真的鬆弛與熱烈。</span>
+      <span class="en">Decades of running on the pitch—shedding the stage's spotlight and the burden of fame, healing through running, keeping the most authentic ease and passion.</span></p>
+    </div>
+
+    <div class="theme-card fade-in visible">
+      <div class="theme-media">
+        <div class="video-embed">
+          <img class="video-poster" src="https://i1.hdslb.com/bfs/archive/8c164cba44347099e9e31ef6612dde8c2fc5ad19.jpg" alt="《講不出再見》跨時空混剪視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1yKsjegEkv&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+        </div>
+        <p class="media-caption">
+          <span class="zh">真實影像：《講不出再見》1994–2022跨時空混剪，二十八年心境如初</span><span class="en">Real footage: "Can't Say Goodbye" cross-time mix, 1994–2022—28 years, same heart (<a href="https://www.bilibili.com/video/BV1yKsjegEkv/" target="_blank" rel="noopener">Bilibili</a>)</span>
+        </p>
+      </div>
+      <h3><span class="zh">二十五歲，一生心境</span><span class="en">Twenty-Five, A Lifelong State of Mind</span></h3>
+      <blockquote><span class="zh">「二十五歲有衝勁、有熱忱、敢嘗試、願意相信美好，我希望自己一輩子都保持這種狀態。」</span><span class="en">"At twenty-five, you have drive, passion, courage to try, willingness to believe in beauty. I hope to stay that way my whole life."</span></blockquote>
+      <p><span class="zh">不以年歲困本心，不以資歷固自我。暮年仍深耕舞台、接納新潮流，始終鮮活熱忱、純粹坦蕩。</span>
+      <span class="en">Not letting age confine the heart, not letting seniority fix the self. Even in later years, still deepening his craft, embracing new trends—always vivid, passionate, and purely open.</span></p>
+    </div>
+
+    <div class="theme-card fade-in visible">
+      <div class="theme-media">
+        <div class="video-embed">
+          <img class="video-poster" src="https://i1.hdslb.com/bfs/archive/b18ac6ac2fab9ab80d61d6eb19b02866ca38c927.jpg" alt="2023蓉港公益足球賽視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1Ps4y1F7Qa&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+        </div>
+        <p class="media-caption">
+          <span class="zh">真實影像：2023蓉港公益足球賽，73歲譚詠麟主罰任意球助攻隊友率先破門——父親譚江柏為1936年柏林奧運國足隊員，足球家風傳承可見</span><span class="en">Real footage: At the 2023 Chengdu–Hong Kong charity football match, 73-year-old Alan Tam's free-kick assists the opening goal—his father Tam Kong-pak played for China at the 1936 Berlin Olympics (<a href="https://www.bilibili.com/video/BV1Ps4y1F7Qa/" target="_blank" rel="noopener">Bilibili</a>)</span>
+        </p>
+      </div>
+      <h3><span class="zh">家風入骨，溫柔向善</span><span class="en">Family Values in the Bones, Gentle Goodness</span></h3>
+      <p><span class="zh">承襲父輩家國風骨與踏實品性，得勢不驕、失勢不餒。年少親歷至親離別，早懂世事無常、人間不易。歷經風雨依舊善良謙卑，常懷感恩、懂惜珍重。</span>
+      <span class="en">Inheriting his father's principled character and grounded nature—never arrogant in success, never defeated in setback. Experiencing the loss of loved ones early, understanding life's impermanence and difficulty young. Through all storms, remaining kind and humble—always grateful, always treasuring what matters.</span></p>
+    </div>
+
+    <div class="theme-card fade-in visible">
+      <div class="theme-media">
+        <div class="video-embed">
+          <img class="video-poster" src="https://i2.hdslb.com/bfs/archive/a7dd7f90f866db3bfb407cf407e091fd3b088dbd.jpg" alt="譚詠麟谷村新司《Born Free》演出視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1nX4y1s7Z2&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+        </div>
+        <p class="media-caption">
+          <span class="zh">真實影像：譚詠麟與日本音樂家谷村新司同台合唱《Born Free》，1996金針獎頒獎禮</span><span class="en">Real footage: Alan Tam and Japanese musician Shinji Tanimura perform "Born Free" at the 1996 Golden Needle Award ceremony (<a href="https://www.bilibili.com/video/BV1nX4y1s7Z2/" target="_blank" rel="noopener">Bilibili</a>)</span>
+        </p>
+      </div>
+      <h3><span class="zh">不爭之度，樂壇格局</span><span class="en">The Grace of Not Competing, Industry Vision</span></h3>
+      <blockquote><span class="zh">「樂壇不需要誰贏誰輸，只需要更多好歌、更多真心。」</span><span class="en">"The industry doesn't need winners and losers. It just needs more good songs, more sincerity."</span></blockquote>
+      <p><span class="zh">親歷黃金時代競技浪潮，始終彼此尊重、互不詆毀，不踩同行、不辯是非，以作品立身、以格局待人。</span>
+      <span class="en">Through the competitive wave of the golden era, always respecting peers, never disparaging—standing on works, treating people with vision.</span></p>
+    </div>
+
+    <div class="theme-card fade-in visible">
+      <div class="theme-media">
+        <div class="video-embed">
+          <img class="video-poster" src="https://i0.hdslb.com/bfs/archive/704d01cbe33db7470dc51583834d5083104dad72.jpg" alt="譚詠麟2010《再度感動》演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1yT421S7qs&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+        </div>
+        <p class="media-caption">
+          <span class="zh">真實影像：譚詠麟2010《再度感動》演唱會紅館現場，溫拿同台</span><span class="en">Real footage: Alan Tam "Moved Again" Concert live at the Coliseum, 2010, with the Wynners (<a href="https://www.bilibili.com/video/BV1yT421S7qs/" target="_blank" rel="noopener">Bilibili</a>)</span>
+        </p>
+      </div>
+      <h3><span class="zh">接納起落，與歲和解</span><span class="en">Accepting the Tides, Making Peace with Time</span></h3>
+      <p><span class="zh">親歷萬丈高光，也坦然接納時代更迭、熱度流轉。不執念巔峰，不沉溺過往。高光時不負熱愛，平淡時不負本心，與歲月溫柔自洽。</span>
+      <span class="en">Having experienced soaring highs, he calmly accepts the shifting of eras and the flow of attention. Not clinging to the peak, not dwelling on the past. In the spotlight, not betraying the passion. In the quiet, not betraying the heart. Making gentle peace with the years.</span></p>
+    </div>
+
+    <div class="theme-card fade-in visible">
+      <div class="theme-media">
+        <div class="video-embed">
+          <img class="video-poster" src="https://i1.hdslb.com/bfs/archive/3bf2268330964cdc174fa546160086de08e00844.jpg" alt="譚詠麟慈善演唱會《80歲後》視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1uSdMB7EfP&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+        </div>
+        <p class="media-caption">
+          <span class="zh">真實影像：譚詠麟好友慈善演唱會《80歲後》現場</span><span class="en">Real footage: Alan Tam performs "After Eighty" at a charity concert with friends (<a href="https://www.bilibili.com/video/BV1uSdMB7EfP/" target="_blank" rel="noopener">Bilibili</a>)</span>
+        </p>
+      </div>
+      <h3><span class="zh">歌聲不止，熱愛終生</span><span class="en">The Songs Don't Stop, A Lifetime of Devotion</span></h3>
+      <blockquote><span class="zh">「我會一直唱，唱到八十歲、九十歲，只要身體允許，歌聲不止。」</span><span class="en">"I'll keep singing—until eighty, ninety. As long as my health allows, the songs won't stop."</span></blockquote>
+      <p><span class="zh">數十年初心未改，持續出新、突破舞台、精進演唱。於人生而言，音樂不是職業，是貫穿一生的信仰與熱愛。</span>
+      <span class="en">Decades of unchanged resolve—continually creating, breaking new ground on stage, refining his craft. For him, music was never a profession. It's a faith and passion that spans a lifetime.</span></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<section class="closing" id="closing">
+  <div class="closing-bg"></div>
+  <div class="closing-overlay"></div>
+  <div class="closing-content fade-in visible">
+    <div class="closing-eyebrow">
+      <span class="zh">歲歲如歌，感恩相逢</span>
+      <span class="en">Songs Through the Years, Grateful for the Encounter</span>
+    </div>
+    <h2>
+      <span class="zh">歌聲永不落幕<br>熱愛永遠滾燙</span>
+      <span class="en">The Songs Never End<br>The Passion Burns Forever</span>
+    </h2>
+    <p>
+      <span class="zh">浮華終會散去，唯有真實的選擇、赤誠的本心、綿長的情義，恆久留存。</span>
+      <span class="en">Glamour fades eventually. Only genuine choices, sincere hearts, and enduring bonds remain—forever.</span>
+    </p>
+    <p>
+      <span class="zh">半生歌唱，以溫柔渡歲月；一世為人，以坦蕩赴山河。</span>
+      <span class="en">Half a life in song, carrying the years with gentleness. A lifetime of being, facing the world with openness.</span>
+    </p>
+    <p>
+      <span class="zh">一曲《講不出再見》，藏盡半生聚散。歌聲永不落幕，熱愛永遠滾燙，初心始終如初。</span>
+      <span class="en">One song, "Can't Say Goodbye," holding within it a lifetime of meetings and partings. The songs never end. The passion burns forever. The heart remains as it was.</span>
+    </p>
+    <div class="closing-video">
+      <div class="video-embed">
+        <img class="video-poster" src="https://i2.hdslb.com/bfs/archive/f298c3b464ffaa1deb448b2e40eb4ac46f2bff3e.jpg" alt="《講不出再見》94演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1uU4y1U7Kc&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="closing-footer">
+      <span class="zh">譚詠麟　校長永不老</span>
+      <span class="en">ALAN TAM　The Eternal Principal</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <p>
+    <span class="zh">致敬譚詠麟｜無言感激，歲歲如歌　·　本頁為粉絲致敬頁面，非官方網站</span>
+    <span class="en">A Tribute to Alan Tam | Silent Gratitude, Songs Through the Years · This is a fan tribute page, not an official website</span>
+  </p>
+  <p class="footer-credit">
+    <span class="zh">媒體來源聲明：本頁影像均為 <a href="https://www.bilibili.com" target="_blank" rel="noopener">Bilibili</a>（哔哩哔哩）公開之真實演出及活動視頻，照片包括 Bilibili 公開視頻之真實畫面、唱片封面來自 <a href="https://y.qq.com" target="_blank" rel="noopener">QQ音樂</a> 公開專輯資料、Loosers及溫拿歷史合影來自 <a href="https://m.sohu.com/a/220417313_775101/" target="_blank" rel="noopener">搜狐網</a> 公開報道，另有歌迷提供之舞台攝影作品（Alan Tang Photography），媒體下方均附來源說明，可點擊查證。</span>
+    <span class="en">Media Credits: All videos are real performance and event footage publicly available on <a href="https://www.bilibili.com" target="_blank" rel="noopener">Bilibili</a>. Photos include authentic stills from Bilibili videos, album covers from public album data on <a href="https://y.qq.com" target="_blank" rel="noopener">QQ Music</a>, historical group photos of the Loosers and the Wynners from a public <a href="https://m.sohu.com/a/220417313_775101/" target="_blank" rel="noopener">Sohu</a> report, and fan-contributed stage photography (Alan Tang Photography). Sources are credited beneath each media item.</span>
+  </p>
+</footer>
+
+<!-- ============ BACK TO TOP ============ -->
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+<script>
+// ============ LANGUAGE TOGGLE ============
+const langToggle = document.getElementById('langToggle');
+const body = document.body;
+let currentLang = 'zh';
+
+langToggle.addEventListener('click', () => {
+  currentLang = currentLang === 'zh' ? 'en' : 'zh';
+  body.className = 'lang-' + currentLang;
+  langToggle.textContent = currentLang === 'zh' ? 'EN' : '繁中';
+});
+
+// ============ NAVBAR SCROLL ============
+let lastScroll = 0;
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  const scroll = window.pageYOffset;
+  if (scroll > lastScroll && scroll > 200) {
+    navbar.classList.add('hide-nav');
+  } else {
+    navbar.classList.remove('hide-nav');
+  }
+  lastScroll = scroll;
+}, { passive: true });
+
+// ============ FADE-IN ON SCROLL ============
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -80px 0px' });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ============ BACK TO TOP ============
+const backTop = document.getElementById('backTop');
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 600) {
+    backTop.classList.add('show');
+  } else {
+    backTop.classList.remove('show');
+  }
+}, { passive: true });
+
+backTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ============ MOBILE MENU ============
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
+
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.add('open');
+});
+
+mobileClose.addEventListener('click', () => {
+  mobileMenu.classList.remove('open');
+});
+
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+  });
+});
+
+// ============ VIDEO POSTER CLICK-TO-PLAY ============
+// Bilibili's mobile external player rejects non-whitelisted iframe referrers.
+// Send phone and tablet visitors to Bilibili's own video page instead, where
+// the platform can use its supported mobile player.
+const isMobileDevice =
+  navigator.userAgentData?.mobile === true ||
+  /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+document.querySelectorAll('.video-poster').forEach(poster => {
+  poster.addEventListener('click', () => {
+    const embed = poster.closest('.video-embed');
+    const src = poster.getAttribute('data-src');
+    if (!embed || !src) return;
+
+    const bvid = new URL(src).searchParams.get('bvid');
+    if (isMobileDevice && bvid) {
+      window.location.assign(`https://www.bilibili.com/video/${encodeURIComponent(bvid)}/`);
+      return;
+    }
+
+    const iframe = document.createElement('iframe');
+    iframe.src = src;
+    iframe.setAttribute('scrolling', 'no');
+    iframe.setAttribute('border', '0');
+    iframe.setAttribute('frameborder', 'no');
+    iframe.setAttribute('framespacing', '0');
+    iframe.setAttribute('allowfullscreen', 'true');
+    embed.innerHTML = '';
+    embed.appendChild(iframe);
+  });
+});
+</script>
+
+
+</body></html>
