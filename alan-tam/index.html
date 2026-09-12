@@ -2,7 +2,6 @@
 <html lang="zh-HK"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="no-referrer">
 <meta name="description" content="譚詠麟 ALAN TAM — 無言感激，歲歲如歌｜半世歌聲與赤誠。致敬譚校長。A tribute to the Principal of Cantopop.">
 <title>譚詠麟 ALAN TAM | 無言感激，歲歲如歌</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -289,6 +288,22 @@ body.lang-en .timeline-card h3{font-family:var(--font-serif-en)}
   border-left:20px solid var(--gold);border-top:12px solid transparent;border-bottom:12px solid transparent;
 }
 .video-embed:hover .video-play-btn{transform:translate(-50%,-50%) scale(1.12);background:rgba(0,0,0,.75)}
+.video-help{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.8rem 0;color:var(--text-muted);font-size:.72rem;line-height:1.6;
+}
+.video-help-copy{flex:1}
+.video-help-actions{display:flex;align-items:center;gap:.75rem;flex-shrink:0}
+.video-help a,.video-help button{
+  min-height:44px;display:inline-flex;align-items:center;justify-content:center;
+  color:var(--gold);font:inherit;white-space:nowrap;
+}
+.video-help a{text-decoration:underline;text-underline-offset:3px}
+.video-help button{
+  padding:7px 12px;background:transparent;border:1px solid var(--border-light);
+  cursor:pointer;
+}
+.video-help button:hover{border-color:var(--gold-dim);color:var(--gold-bright)}
 .album-cover{display:block;position:relative;overflow:hidden}
 .album-cover img{display:block;width:100%;aspect-ratio:1;object-fit:cover;transition:transform .6s}
 .album-cover:hover img{transform:scale(1.05)}
@@ -445,6 +460,8 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
   .themes-grid{grid-template-columns:1fr}
   .song-card,.timeline-card,.theme-card{padding:1.5rem}
   .timeline-card-image{margin:-1.5rem -1.5rem 1.2rem}
+  .video-help{align-items:flex-start;flex-direction:column}
+  .video-help-actions{width:100%;justify-content:space-between}
 }
 @media(max-width:480px){
   .hero-name-en{font-size:3rem}
@@ -606,7 +623,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
         <blockquote><span class="zh">「溫拿的日子，是我這輩子最乾淨、最沒有功利心的時光。」</span><span class="en">"The Wynners days were the cleanest, least utilitarian time of my life."</span></blockquote>
         <div class="timeline-video">
           <div class="video-embed">
-            <img class="video-poster" src="https://i0.hdslb.com/bfs/archive/ac1775b0c6ed3e8229a251bc1d360c060ce26e58.jpg" alt="溫拿樂隊《朋友》演出視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1FK4y1k7Fx&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+            <img referrerpolicy="no-referrer" class="video-poster" src="https://i0.hdslb.com/bfs/archive/ac1775b0c6ed3e8229a251bc1d360c060ce26e58.jpg" alt="溫拿樂隊《朋友》演出視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1FK4y1k7Fx&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
           </div>
           <p class="media-caption">
             <span class="zh">真實影像：溫拿樂隊《朋友》寶麗金20週年演唱會現場</span><span class="en">Real footage: The Wynners "Friends" live at PolyGram 20th Anniversary Concert (<a href="https://www.bilibili.com/video/BV1FK4y1k7Fx/" target="_blank" rel="noopener">Bilibili</a>)</span>
@@ -625,7 +642,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
         <span class="en">From 1984 to 1986, three landmark albums—"Mist of Love," "Root of Love," and "Love Trap"—defined the golden age of Cantopop. 20 Coliseum shows in 1985, 38 in 1989—shattering industry records, every night a sing-along of tens of thousands. The title "Principal" was forged in those moments.</span></p>
         <div class="timeline-video">
           <div class="video-embed">
-            <img class="video-poster" src="https://i2.hdslb.com/bfs/archive/cf30cd0b3f050063f2dd4f27b16bc8904e386c5a.jpg" alt="譚詠麟1984演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1odNgzpE8P&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+            <img referrerpolicy="no-referrer" class="video-poster" src="https://i2.hdslb.com/bfs/archive/cf30cd0b3f050063f2dd4f27b16bc8904e386c5a.jpg" alt="譚詠麟1984演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1odNgzpE8P&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
           </div>
           <p class="media-caption">
             <span class="zh">真實影像：譚詠麟1984年首登紅館演唱會現場</span><span class="en">Real footage: Alan Tam's first Coliseum concert, 1984 (<a href="https://www.bilibili.com/video/BV1odNgzpE8P/" target="_blank" rel="noopener">Bilibili</a>)</span>
@@ -639,7 +656,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
       <div class="timeline-dot"></div>
       <div class="timeline-card">
         <div class="timeline-card-image">
-          <img src="https://y.gtimg.cn/music/photo_new/T002R800x800M000002FBcIb3sA7x3.jpg" alt="譚詠麟專輯《第一滴淚》真實唱片封面" loading="lazy">
+          <img referrerpolicy="no-referrer" src="https://y.gtimg.cn/music/photo_new/T002R800x800M000002FBcIb3sA7x3.jpg" alt="譚詠麟專輯《第一滴淚》真實唱片封面" loading="lazy">
         </div>
         <p class="media-caption">
           <span class="zh">真實唱片封面：1986年專輯《第一滴淚》，收錄《無言感激》</span><span class="en">Real album cover: "First Drop of Tears" (1986), featuring "Silent Gratitude" (Source: <a href="https://y.qq.com/n/ryqq/albumDetail/002FBcIb3sA7x3" target="_blank" rel="noopener">QQ Music</a>)</span>
@@ -662,7 +679,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
         <span class="en">At the 1991 CCTV Spring Festival Gala, "Flower in Water" resonated across the nation, bringing Cantonese melodies into the mainstream. At the Yuexiu Hill open-air concert in Guangzhou, with an unadorned stage and pure vocals, he captured a national moment—tens of thousands sharing in the golden classics.</span></p>
         <div class="timeline-video">
           <div class="video-embed">
-            <img class="video-poster" src="https://i0.hdslb.com/bfs/archive/4f7ebaf3a9747ea9dc9167826f6d1369e8dcc0f3.jpg" alt="《水中花》MV視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV17FKgzREQ9&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+            <img referrerpolicy="no-referrer" class="video-poster" src="https://i0.hdslb.com/bfs/archive/4f7ebaf3a9747ea9dc9167826f6d1369e8dcc0f3.jpg" alt="《水中花》MV視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV17FKgzREQ9&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
           </div>
           <p class="media-caption">
             <span class="zh">真實影像：《水中花》（粵）原版MV</span><span class="en">Real footage: "Flower in Water" original MV (<a href="https://www.bilibili.com/video/BV17FKgzREQ9/" target="_blank" rel="noopener">Bilibili</a>)</span>
@@ -681,7 +698,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
         <span class="en">After decades of dedication to the music industry, he received the Golden Needle Award—Hong Kong's highest musical honor. Stripped of all competitive glamour, his lifetime body of work and industry standing secured his place in the Cantopop hall of fame.</span></p>
         <div class="timeline-video">
           <div class="video-embed">
-            <img class="video-poster" src="https://i0.hdslb.com/bfs/archive/4fe16fe8484aab8985c4594322a95e1eacf259bc.jpg" alt="1996金針獎頒獎禮視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1Hv411e7k4&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+            <img referrerpolicy="no-referrer" class="video-poster" src="https://i0.hdslb.com/bfs/archive/4fe16fe8484aab8985c4594322a95e1eacf259bc.jpg" alt="1996金針獎頒獎禮視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1Hv411e7k4&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
           </div>
           <p class="media-caption">
             <span class="zh">真實影像：1996年第19屆十大中文金曲頒獎禮，譚詠麟獲金針獎</span><span class="en">Real footage: Alan Tam receives the Golden Needle Award at the 19th Top Ten Chinese Gold Songs Awards, 1996 (<a href="https://www.bilibili.com/video/BV1Hv411e7k4" target="_blank" rel="noopener">Bilibili</a>)</span>
@@ -701,7 +718,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
         <blockquote><span class="zh">「港樂不是一個人的盛世，是一代代人的接力。」</span><span class="en">"Cantopop isn't one person's golden age—it's a relay across generations."</span></blockquote>
         <div class="timeline-video">
           <div class="video-embed">
-            <img class="video-poster" src="https://i1.hdslb.com/bfs/archive/b9a15eded76b91d134ecaaf8bf599f25aa095c79.jpg" alt="左麟右李2003演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1xNDxBkEZq&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+            <img referrerpolicy="no-referrer" class="video-poster" src="https://i1.hdslb.com/bfs/archive/b9a15eded76b91d134ecaaf8bf599f25aa095c79.jpg" alt="左麟右李2003演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1xNDxBkEZq&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
           </div>
           <p class="media-caption">
             <span class="zh">真實影像：左麟右李演唱會2003全場</span>
@@ -716,7 +733,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
       <div class="timeline-dot"></div>
       <div class="timeline-card">
         <div class="timeline-card-image">
-          <img src="https://i0.hdslb.com/bfs/archive/208cb2ce72bef8d8f6b9511679a776197e7742d3.jpg" alt="左麟右李十周年演唱會官方海報" loading="lazy">
+          <img referrerpolicy="no-referrer" src="https://i0.hdslb.com/bfs/archive/208cb2ce72bef8d8f6b9511679a776197e7742d3.jpg" alt="左麟右李十周年演唱會官方海報" loading="lazy">
         </div>
         <p class="media-caption">
           <span class="zh">真實海報：左麟右李十周年演唱會·香港有聲音，2013</span>
@@ -728,7 +745,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
         <span class="en">The 10th anniversary of Alan &amp; Hacken—13 consecutive commemorative shows at the Coliseum. Ten years of mutual fulfillment and shared achievement, using the stage to document Cantopop's enduring vitality.</span></p>
         <div class="timeline-video">
           <div class="video-embed">
-            <img class="video-poster" src="https://i0.hdslb.com/bfs/archive/208cb2ce72bef8d8f6b9511679a776197e7742d3.jpg" alt="左麟右李十周年演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1cu9uYTEt4&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+            <img referrerpolicy="no-referrer" class="video-poster" src="https://i0.hdslb.com/bfs/archive/208cb2ce72bef8d8f6b9511679a776197e7742d3.jpg" alt="左麟右李十周年演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1cu9uYTEt4&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
           </div>
           <p class="media-caption">
             <span class="zh">真實影像：左麟右李十週年演唱會2013《香港有聲音》</span><span class="en">Real footage: Alan &amp; Hacken 10th Anniversary Concert 2013 "Hong Kong Has a Voice" (<a href="https://www.bilibili.com/video/BV1cu9uYTEt4/" target="_blank" rel="noopener">Bilibili</a>)</span>
@@ -742,7 +759,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
       <div class="timeline-dot"></div>
       <div class="timeline-card">
         <div class="timeline-card-image">
-          <img src="https://i0.hdslb.com/bfs/archive/704d01cbe33db7470dc51583834d5083104dad72.jpg" alt="2010年紅館再度感動演唱會現場真實照片" loading="lazy">
+          <img referrerpolicy="no-referrer" src="https://i0.hdslb.com/bfs/archive/704d01cbe33db7470dc51583834d5083104dad72.jpg" alt="2010年紅館再度感動演唱會現場真實照片" loading="lazy">
         </div>
         <p class="media-caption">
           <span class="zh">真實照片：2010年紅館「再度感動」演唱會現場</span><span class="en">Real photo: "Moved Again" concert live at the Coliseum, 2010 (Source: <a href="https://www.bilibili.com/video/BV1yT421S7qs/" target="_blank" rel="noopener">Bilibili</a>)</span>
@@ -759,7 +776,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
       <div class="timeline-dot"></div>
       <div class="timeline-card">
         <div class="timeline-card-image">
-          <img src="https://i2.hdslb.com/bfs/archive/a670cdff6abd7ab9dee205d209cae756e49fc6cd.jpg" alt="譚詠麟2024年上海虹口足球場演唱會現場照片" loading="lazy">
+          <img referrerpolicy="no-referrer" src="https://i2.hdslb.com/bfs/archive/a670cdff6abd7ab9dee205d209cae756e49fc6cd.jpg" alt="譚詠麟2024年上海虹口足球場演唱會現場照片" loading="lazy">
         </div>
         <p class="media-caption">
           <span class="zh">真實照片：譚詠麟2024年9月上海虹口足球場演唱會現場</span><span class="en">Real photo: Alan Tam live at Shanghai Hongkou Football Stadium, September 2024 (Source: <a href="https://www.bilibili.com/video/BV1bWske9ECE/" target="_blank" rel="noopener">Bilibili</a>)</span>
@@ -789,7 +806,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
       <h3><span class="zh">無言感激，半生答謝</span><span class="en">Silent Gratitude, A Lifetime of Thanks</span></h3>
       <div class="song-video">
         <div class="video-embed">
-          <img class="video-poster" src="https://i1.hdslb.com/bfs/archive/36241da447fc9cc4816ef02372a1bc64f3105889.jpg" alt="《無言感激》2010再度感動演唱會現場視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1XN41167Aa&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          <img referrerpolicy="no-referrer" class="video-poster" src="https://i1.hdslb.com/bfs/archive/36241da447fc9cc4816ef02372a1bc64f3105889.jpg" alt="《無言感激》2010再度感動演唱會現場視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1XN41167Aa&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
       </div>
       <blockquote class="song-quote"><span class="zh">「這首歌不是唱給獎盃，不是唱給舞台，是唱給每一個默默陪我的人。」</span><span class="en">"This song isn't for trophies. It isn't for the stage. It's for every person who quietly stood by me."</span></blockquote>
@@ -802,7 +819,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
       <h3><span class="zh">朋友，一生底色</span><span class="en">Friends, The Color of a Lifetime</span></h3>
       <div class="song-video">
         <div class="video-embed">
-          <img class="video-poster" src="https://i0.hdslb.com/bfs/archive/8a8a8897d334cb3d393be50d63d1fb16a77607cd.jpg" alt="溫拿《朋友》LIVE視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1cG411f7px&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          <img referrerpolicy="no-referrer" class="video-poster" src="https://i0.hdslb.com/bfs/archive/8a8a8897d334cb3d393be50d63d1fb16a77607cd.jpg" alt="溫拿《朋友》LIVE視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1cG411f7px&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
       </div>
       <blockquote class="song-quote"><span class="zh">「名利都是虛的，朋友才是真的。」</span><span class="en">"Fame and fortune are illusions. Friends are real."</span></blockquote>
@@ -814,7 +831,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <div class="song-card fade-in visible">
       <h3><span class="zh">一首歌，一個故事</span><span class="en">One Song, One Story</span></h3>
       <div class="song-video">
-        <img src="https://i0.hdslb.com/bfs/archive/08bfeb30445c86a1e3ff556526c51ad66577600e.jpg" alt="左麟右李2013十周年演唱會現場真實照片" style="aspect-ratio:16/9;object-fit:cover;border:1px solid var(--border)" loading="lazy">
+        <img referrerpolicy="no-referrer" src="https://i0.hdslb.com/bfs/archive/08bfeb30445c86a1e3ff556526c51ad66577600e.jpg" alt="左麟右李2013十周年演唱會現場真實照片" style="aspect-ratio:16/9;object-fit:cover;border:1px solid var(--border)" loading="lazy">
         <p class="media-caption">
           <span class="zh">真實照片：左麟右李2013十周年演唱會現場（來源：<a href="https://www.bilibili.com/video/BV1sp4y1M7aj/" target="_blank" rel="noopener">Bilibili</a>）</span>
           <span class="en">Real photo: Alan &amp; Hacken 10th Anniversary Concert live, 2013 (Source: <a href="https://www.bilibili.com/video/BV1sp4y1M7aj/" target="_blank" rel="noopener">Bilibili</a>)</span>
@@ -833,14 +850,14 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
         <div class="song-sub-item">
           <h4>《講不出再見》<br><span style="font-size:.75rem;color:var(--text-muted)">Can't Say Goodbye</span></h4>
           <div class="video-embed">
-            <img class="video-poster" src="https://i2.hdslb.com/bfs/archive/f298c3b464ffaa1deb448b2e40eb4ac46f2bff3e.jpg" alt="《講不出再見》94演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1uU4y1U7Kc&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+            <img referrerpolicy="no-referrer" class="video-poster" src="https://i2.hdslb.com/bfs/archive/f298c3b464ffaa1deb448b2e40eb4ac46f2bff3e.jpg" alt="《講不出再見》94演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1uU4y1U7Kc&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
           </div>
           <p><span class="zh">貫穿華人世代的離別主題曲，每一場終場大合唱，都是歲月的集體動容。</span><span class="en">The parting anthem spanning generations of Chinese communities—every closing sing-along, a collective moment of being moved by time.</span></p>
         </div>
         <div class="song-sub-item">
           <h4>《愛在深秋》<br><span style="font-size:.75rem;color:var(--text-muted)">Love in Deep Autumn</span></h4>
           <div class="video-embed">
-            <img class="video-poster" src="https://i1.hdslb.com/bfs/archive/21e509e03f3d43ecfa9ac1f6c29310d80b153dd4.jpg" alt="《愛在深秋》MV視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1j84y1t7BT&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+            <img referrerpolicy="no-referrer" class="video-poster" src="https://i1.hdslb.com/bfs/archive/21e509e03f3d43ecfa9ac1f6c29310d80b153dd4.jpg" alt="《愛在深秋》MV視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1j84y1t7BT&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
           </div>
           <p><span class="zh">東方意境港樂典範，隱忍溫柔，道盡成年人的遺憾與釋然。</span><span class="en">The model of Eastern-aesthetic Cantopop—restrained and tender, voicing the regrets and acceptance of adulthood.</span></p>
         </div>
@@ -848,7 +865,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
           <h4>《難捨難分》<br><span style="font-size:.75rem;color:var(--text-muted)">Hard to Part</span></h4>
           <div class="video-embed" style="padding-bottom:0;height:auto;background:var(--bg-dark)">
             <a href="https://y.qq.com/n/ryqq/albumDetail/003zMSAb1ckQdw" target="_blank" rel="noopener" class="album-cover">
-              <img src="https://y.gtimg.cn/music/photo_new/T002R800x800M000003zMSAb1ckQdw.jpg" alt="《難捨難分》真實唱片封面，1990" loading="lazy">
+              <img referrerpolicy="no-referrer" src="https://y.gtimg.cn/music/photo_new/T002R800x800M000003zMSAb1ckQdw.jpg" alt="《難捨難分》真實唱片封面，1990" loading="lazy">
               <span class="album-cover-hint"><span class="zh">《難捨難分》專輯 · QQ音樂 ↗</span><span class="en">Album "Hard to Part" · QQ Music ↗</span></span>
             </a>
           </div>
@@ -866,7 +883,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
           <h4>《卡拉永遠OK》<br><span style="font-size:.75rem;color:var(--text-muted)">Karaoke Forever OK</span></h4>
           <div class="video-embed" style="padding-bottom:0;height:auto;background:var(--bg-dark)">
             <a href="https://y.qq.com/n/ryqq/albumDetail/0046SvA41Mh5co" target="_blank" rel="noopener" class="album-cover">
-              <img src="https://y.gtimg.cn/music/photo_new/T002R800x800M0000046SvA41Mh5co.jpg" alt="《夢幻舞台》真實唱片封面，收錄《卡拉永遠OK》，1990" loading="lazy">
+              <img referrerpolicy="no-referrer" src="https://y.gtimg.cn/music/photo_new/T002R800x800M0000046SvA41Mh5co.jpg" alt="《夢幻舞台》真實唱片封面，收錄《卡拉永遠OK》，1990" loading="lazy">
               <span class="album-cover-hint"><span class="zh">《夢幻舞台》專輯 · QQ音樂 ↗</span><span class="en">Album "Dream Stage" · QQ Music ↗</span></span>
             </a>
           </div>
@@ -875,7 +892,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
         <div class="song-sub-item">
           <h4>《一生中最愛》<br><span style="font-size:.75rem;color:var(--text-muted)">The Love of My Life</span></h4>
           <div class="video-embed">
-            <img class="video-poster" src="https://i1.hdslb.com/bfs/archive/a5de135683cd16c14ca899bd437b2c716e4403cb.jpg" alt="《一生中最愛》MV視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV11E421N7iz&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+            <img referrerpolicy="no-referrer" class="video-poster" src="https://i1.hdslb.com/bfs/archive/a5de135683cd16c14ca899bd437b2c716e4403cb.jpg" alt="《一生中最愛》MV視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV11E421N7iz&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
           </div>
           <p><span class="zh">依託《雙城故事》劇情，詮釋成年人克制隱忍、溫柔成全的情感觀。</span><span class="en">Set against the film "Comrades: Almost a Love Story," interpreting the restrained, tender, and selfless love of adults.</span></p>
         </div>
@@ -883,7 +900,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
           <h4>《忘不了您》<br><span style="font-size:.75rem;color:var(--text-muted)">Can't Forget You</span></h4>
           <div class="video-embed" style="padding-bottom:0;height:auto;background:var(--bg-dark)">
             <a href="https://y.qq.com/n/ryqq/albumDetail/00149Lqt3vL7qH" target="_blank" rel="noopener" class="album-cover">
-              <img src="https://y.gtimg.cn/music/photo_new/T002R800x800M00000149Lqt3vL7qH.jpg" alt="《忘不了您》真實唱片封面，1981" loading="lazy">
+              <img referrerpolicy="no-referrer" src="https://y.gtimg.cn/music/photo_new/T002R800x800M00000149Lqt3vL7qH.jpg" alt="《忘不了您》真實唱片封面，1981" loading="lazy">
               <span class="album-cover-hint"><span class="zh">《忘不了您》專輯 · QQ音樂 ↗</span><span class="en">Album "Can't Forget You" · QQ Music ↗</span></span>
             </a>
           </div>
@@ -921,7 +938,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <div class="theme-card fade-in visible">
       <div class="theme-media">
         <div class="video-embed">
-          <img class="video-poster" src="https://i0.hdslb.com/bfs/archive/08bfeb30445c86a1e3ff556526c51ad66577600e.jpg" alt="《珍惜的珍惜》2013演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1sp4y1M7aj&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          <img referrerpolicy="no-referrer" class="video-poster" src="https://i0.hdslb.com/bfs/archive/08bfeb30445c86a1e3ff556526c51ad66577600e.jpg" alt="《珍惜的珍惜》2013演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1sp4y1M7aj&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
           <span class="zh">真實影像：譚詠麟、李克勤《珍惜的珍惜》左麟右李十週年演唱會2013</span><span class="en">Real footage: Alan Tam &amp; Hacken Lee "Cherish What You Cherish," Alan &amp; Hacken 10th Anniversary Concert 2013 (<a href="https://www.bilibili.com/video/BV1sp4y1M7aj/" target="_blank" rel="noopener">Bilibili</a>)</span>
@@ -936,7 +953,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <div class="theme-card fade-in visible">
       <div class="theme-media">
         <div class="video-embed">
-          <img class="video-poster" src="https://i2.hdslb.com/bfs/archive/c10d5fce46f6d564b5537f8d4ea1950f5142f576.jpg" alt="《一生何求》聲生不息舞台視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1ECBLYVEQY&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          <img referrerpolicy="no-referrer" class="video-poster" src="https://i2.hdslb.com/bfs/archive/c10d5fce46f6d564b5537f8d4ea1950f5142f576.jpg" alt="《一生何求》聲生不息舞台視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1ECBLYVEQY&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
           <span class="zh">真實影像：譚詠麟演繹故友陳百強作品《一生何求》，《聲生不息·大灣區季》2024</span><span class="en">Real footage: Alan Tam performs late friend Danny Chan's "What One Asks in Life," Infinity and Beyond 2024 (<a href="https://www.bilibili.com/video/BV1ECBLYVEQY/" target="_blank" rel="noopener">Bilibili</a>)</span>
@@ -951,7 +968,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <div class="theme-card fade-in visible">
       <div class="theme-media">
         <div class="video-embed">
-          <img class="video-poster" src="https://i0.hdslb.com/bfs/archive/42f55dfe771c2fb44f6aedcfae9aff9eca3eb97e.jpg" alt="《披著羊皮的狼》慈善演出視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1T34y197cQ&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          <img referrerpolicy="no-referrer" class="video-poster" src="https://i0.hdslb.com/bfs/archive/42f55dfe771c2fb44f6aedcfae9aff9eca3eb97e.jpg" alt="《披著羊皮的狼》慈善演出視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1T34y197cQ&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
           <span class="zh">真實影像：譚詠麟2004年《歡樂滿東華》慈善演出《披著羊皮的狼》</span><span class="en">Real footage: Alan Tam's charity performance at Tung Wah Charity Gala 2004 (<a href="https://www.bilibili.com/video/BV1T34y197cQ/" target="_blank" rel="noopener">Bilibili</a>)</span>
@@ -966,7 +983,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <div class="theme-card fade-in visible">
       <div class="theme-media">
         <div class="video-embed">
-          <img class="video-poster" src="https://i0.hdslb.com/bfs/archive/bc55fef3ddd042f5fc5aea15fddfd49bda1bec4a.jpg" alt="聲生不息大灣區季節目視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1KUz1YLETN&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          <img referrerpolicy="no-referrer" class="video-poster" src="https://i0.hdslb.com/bfs/archive/bc55fef3ddd042f5fc5aea15fddfd49bda1bec4a.jpg" alt="聲生不息大灣區季節目視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1KUz1YLETN&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
           <span class="zh">真實影像：《聲生不息·大灣區季》第一期，譚詠麟登台推廣港樂，2024</span><span class="en">Real footage: Alan Tam promotes Cantopop on "Infinity and Beyond: Greater Bay Area," EP01, 2024 (<a href="https://www.bilibili.com/video/BV1KUz1YLETN/" target="_blank" rel="noopener">Bilibili</a>)</span>
@@ -1007,7 +1024,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <div class="theme-card fade-in visible">
       <div class="theme-media">
         <div class="video-embed">
-          <img class="video-poster" src="https://i2.hdslb.com/bfs/archive/18321be50c362878c143a27146397f6f0a565772.jpg" alt="譚詠麟足球比賽視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1HZ4y1z7rM&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          <img referrerpolicy="no-referrer" class="video-poster" src="https://i2.hdslb.com/bfs/archive/18321be50c362878c143a27146397f6f0a565772.jpg" alt="譚詠麟足球比賽視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1HZ4y1z7rM&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
           <span class="zh">真實影像：譚詠麟代表香港明星足球隊淩空抽射破門</span><span class="en">Real footage: Alan Tam scores a volley for the Hong Kong All Star Soccer Team (<a href="https://www.bilibili.com/video/BV1HZ4y1z7rM/" target="_blank" rel="noopener">Bilibili</a>)</span>
@@ -1022,7 +1039,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <div class="theme-card fade-in visible">
       <div class="theme-media">
         <div class="video-embed">
-          <img class="video-poster" src="https://i1.hdslb.com/bfs/archive/8c164cba44347099e9e31ef6612dde8c2fc5ad19.jpg" alt="《講不出再見》跨時空混剪視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1yKsjegEkv&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          <img referrerpolicy="no-referrer" class="video-poster" src="https://i1.hdslb.com/bfs/archive/8c164cba44347099e9e31ef6612dde8c2fc5ad19.jpg" alt="《講不出再見》跨時空混剪視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1yKsjegEkv&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
           <span class="zh">真實影像：《講不出再見》1994–2022跨時空混剪，二十八年心境如初</span><span class="en">Real footage: "Can't Say Goodbye" cross-time mix, 1994–2022—28 years, same heart (<a href="https://www.bilibili.com/video/BV1yKsjegEkv/" target="_blank" rel="noopener">Bilibili</a>)</span>
@@ -1037,7 +1054,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <div class="theme-card fade-in visible">
       <div class="theme-media">
         <div class="video-embed">
-          <img class="video-poster" src="https://i1.hdslb.com/bfs/archive/b18ac6ac2fab9ab80d61d6eb19b02866ca38c927.jpg" alt="2023蓉港公益足球賽視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1Ps4y1F7Qa&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          <img referrerpolicy="no-referrer" class="video-poster" src="https://i1.hdslb.com/bfs/archive/b18ac6ac2fab9ab80d61d6eb19b02866ca38c927.jpg" alt="2023蓉港公益足球賽視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1Ps4y1F7Qa&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
           <span class="zh">真實影像：2023蓉港公益足球賽，73歲譚詠麟主罰任意球助攻隊友率先破門——父親譚江柏為1936年柏林奧運國足隊員，足球家風傳承可見</span><span class="en">Real footage: At the 2023 Chengdu–Hong Kong charity football match, 73-year-old Alan Tam's free-kick assists the opening goal—his father Tam Kong-pak played for China at the 1936 Berlin Olympics (<a href="https://www.bilibili.com/video/BV1Ps4y1F7Qa/" target="_blank" rel="noopener">Bilibili</a>)</span>
@@ -1051,7 +1068,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <div class="theme-card fade-in visible">
       <div class="theme-media">
         <div class="video-embed">
-          <img class="video-poster" src="https://i2.hdslb.com/bfs/archive/a7dd7f90f866db3bfb407cf407e091fd3b088dbd.jpg" alt="譚詠麟谷村新司《Born Free》演出視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1nX4y1s7Z2&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          <img referrerpolicy="no-referrer" class="video-poster" src="https://i2.hdslb.com/bfs/archive/a7dd7f90f866db3bfb407cf407e091fd3b088dbd.jpg" alt="譚詠麟谷村新司《Born Free》演出視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1nX4y1s7Z2&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
           <span class="zh">真實影像：譚詠麟與日本音樂家谷村新司同台合唱《Born Free》，1996金針獎頒獎禮</span><span class="en">Real footage: Alan Tam and Japanese musician Shinji Tanimura perform "Born Free" at the 1996 Golden Needle Award ceremony (<a href="https://www.bilibili.com/video/BV1nX4y1s7Z2/" target="_blank" rel="noopener">Bilibili</a>)</span>
@@ -1066,7 +1083,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <div class="theme-card fade-in visible">
       <div class="theme-media">
         <div class="video-embed">
-          <img class="video-poster" src="https://i0.hdslb.com/bfs/archive/704d01cbe33db7470dc51583834d5083104dad72.jpg" alt="譚詠麟2010《再度感動》演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1yT421S7qs&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          <img referrerpolicy="no-referrer" class="video-poster" src="https://i0.hdslb.com/bfs/archive/704d01cbe33db7470dc51583834d5083104dad72.jpg" alt="譚詠麟2010《再度感動》演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1yT421S7qs&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
           <span class="zh">真實影像：譚詠麟2010《再度感動》演唱會紅館現場，溫拿同台</span><span class="en">Real footage: Alan Tam "Moved Again" Concert live at the Coliseum, 2010, with the Wynners (<a href="https://www.bilibili.com/video/BV1yT421S7qs/" target="_blank" rel="noopener">Bilibili</a>)</span>
@@ -1080,7 +1097,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <div class="theme-card fade-in visible">
       <div class="theme-media">
         <div class="video-embed">
-          <img class="video-poster" src="https://i1.hdslb.com/bfs/archive/3bf2268330964cdc174fa546160086de08e00844.jpg" alt="譚詠麟慈善演唱會《80歲後》視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1uSdMB7EfP&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+          <img referrerpolicy="no-referrer" class="video-poster" src="https://i1.hdslb.com/bfs/archive/3bf2268330964cdc174fa546160086de08e00844.jpg" alt="譚詠麟慈善演唱會《80歲後》視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1uSdMB7EfP&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
           <span class="zh">真實影像：譚詠麟好友慈善演唱會《80歲後》現場</span><span class="en">Real footage: Alan Tam performs "After Eighty" at a charity concert with friends (<a href="https://www.bilibili.com/video/BV1uSdMB7EfP/" target="_blank" rel="noopener">Bilibili</a>)</span>
@@ -1122,7 +1139,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     </p>
     <div class="closing-video">
       <div class="video-embed">
-        <img class="video-poster" src="https://i2.hdslb.com/bfs/archive/f298c3b464ffaa1deb448b2e40eb4ac46f2bff3e.jpg" alt="《講不出再見》94演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1uU4y1U7Kc&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
+        <img referrerpolicy="no-referrer" class="video-poster" src="https://i2.hdslb.com/bfs/archive/f298c3b464ffaa1deb448b2e40eb4ac46f2bff3e.jpg" alt="《講不出再見》94演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1uU4y1U7Kc&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
       </div>
     </div>
     <div class="closing-footer">
@@ -1218,14 +1235,6 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 });
 
 // ============ VIDEO POSTER CLICK-TO-PLAY ============
-// Bilibili's mobile external player rejects non-whitelisted iframe referrers.
-// Send phone and tablet visitors to Bilibili's own video page instead, where
-// the platform can use its supported mobile player.
-const isMobileDevice =
-  navigator.userAgentData?.mobile === true ||
-  /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
-  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-
 document.querySelectorAll('.video-poster').forEach(poster => {
   poster.addEventListener('click', () => {
     const embed = poster.closest('.video-embed');
@@ -1233,20 +1242,43 @@ document.querySelectorAll('.video-poster').forEach(poster => {
     if (!embed || !src) return;
 
     const bvid = new URL(src).searchParams.get('bvid');
-    if (isMobileDevice && bvid) {
-      window.location.assign(`https://www.bilibili.com/video/${encodeURIComponent(bvid)}/`);
-      return;
-    }
+    const videoPageUrl = bvid
+      ? `https://www.bilibili.com/video/${encodeURIComponent(bvid)}/`
+      : 'https://www.bilibili.com/';
+    const posterContent = Array.from(embed.childNodes);
 
     const iframe = document.createElement('iframe');
     iframe.src = src;
-    iframe.setAttribute('scrolling', 'no');
-    iframe.setAttribute('border', '0');
-    iframe.setAttribute('frameborder', 'no');
-    iframe.setAttribute('framespacing', '0');
-    iframe.setAttribute('allowfullscreen', 'true');
-    embed.innerHTML = '';
-    embed.appendChild(iframe);
+    iframe.title = `${poster.alt || '視頻'} — 哔哩哔哩视频`;
+    iframe.loading = 'lazy';
+    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+    iframe.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
+    iframe.allowFullscreen = true;
+
+    const help = document.createElement('div');
+    help.className = 'video-help';
+    help.setAttribute('aria-live', 'polite');
+    help.innerHTML = `
+      <span class="video-help-copy">
+        <span class="zh">視頻在當前頁面播放；如載入失敗，可直接前往哔哩哔哩。</span>
+        <span class="en">Playing on this page. If loading fails, open Bilibili directly.</span>
+      </span>
+      <span class="video-help-actions">
+        <a href="${videoPageUrl}" target="_blank" rel="noopener noreferrer">
+          <span class="zh">打開哔哩哔哩 ↗</span><span class="en">OPEN BILIBILI ↗</span>
+        </a>
+        <button class="video-back" type="button">
+          <span class="zh">返回封面</span><span class="en">BACK</span>
+        </button>
+      </span>`;
+
+    help.querySelector('.video-back').addEventListener('click', () => {
+      embed.replaceChildren(...posterContent);
+      help.remove();
+    });
+
+    embed.replaceChildren(iframe);
+    embed.insertAdjacentElement('afterend', help);
   });
 });
 </script>
