@@ -1,0 +1,34 @@
+#lebron-moment-4 .lebron-poster img,
+#lebron-moment-5 .lebron-poster img {
+  object-position: center top !important;
+}
+
+.lebron-era img[src$="heat-2010-practice.jpg"] {
+  object-position: center 35%;
+}
+
+.lebron-motion-copy {
+  margin-top: 18px;
+  max-width: 250px;
+}
+
+.lebron-motion-copy p {
+  color: #54474a;
+  font: 400 14px/1.55 var(--lbj-serif);
+}
+
+.lebron-motion-copy a {
+  display: inline-flex;
+  margin-top: 13px;
+  color: var(--lbj-oxblood);
+  font: 600 11px/1.3 var(--lbj-sans);
+  letter-spacing: .08em;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media(max-width:850px) {
+  .lebron-motion-copy {
+    max-width: none;
+  }
+}
