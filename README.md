@@ -9,6 +9,7 @@ Independent static projects. Each project is self-contained and can be deployed 
 - `Curry/` — Stephen Curry
 - `Jordan/` — Michael Jordan
 - `Babu-Art/` — Babu Art architectural heritage practice journal
+- `Archive/` — Babu Art bilingual field archive photo album
 - `UK-Sketches/` — Ye Gang's bilingual British travel sketchbook
 
 ## Live demos
