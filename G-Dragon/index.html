@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0b0a" />
+    <meta name="description" content="G-DRAGON, a three-language editorial archive of music, moments, and reinvention. 한국어 · 中文 · English." />
+    <title>G-DRAGON — Artist Archive</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23c9ff3d'/%3E%3Ctext x='50%25' y='55%25' font-family='Arial' font-size='27' font-weight='700' text-anchor='middle' fill='%230b0b0a'%3EGD%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">본문으로 건너뛰기</a>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="G-DRAGON home">
+        <span class="brand-mark">GD</span>
+        <span class="brand-name">G-DRAGON<span> / KWON JI YONG</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#story" data-i18n="navStory">이야기</a>
+        <a href="#timeline" data-i18n="navTimeline">타임라인</a>
+        <a href="#works" data-i18n="navWorks">작품</a>
+        <a href="#archive" data-i18n="navArchive">아카이브</a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="Language">
+        <button type="button" data-language="ko" aria-pressed="true">KO</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-language="zh" aria-pressed="false">中文</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-language="en" aria-pressed="false">EN</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero section-shell" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span><span data-i18n="heroKicker">ARTIST ARCHIVE · 2006—2025</span></p>
+          <p class="hero-pretitle" data-i18n="heroOverline">무대 위의 이름, 권지용</p>
+          <h1 id="hero-title">G-<span>DRAGON</span></h1>
+          <div class="hero-intro">
+            <p data-i18n="heroIntro">음악과 이미지, 태도와 변신. 한 사람의 이름이 하나의 장면이 되어온 시간.</p>
+          </div>
+          <a class="text-link hero-link" href="#story"><span data-i18n="heroLink">아카이브 둘러보기</span><span aria-hidden="true">↘</span></a>
+        </div>
+        <figure class="hero-portrait">
+          <img src="assets/gd-2012-alive.jpg" alt="2012년 Alive World Tour 무대의 G-Dragon" fetchpriority="high" />
+          <figcaption><span>01 / 03</span><span data-i18n="heroPhotoCaption">ALIVE WORLD TOUR · 2012</span></figcaption>
+        </figure>
+        <div class="hero-bottomline" aria-hidden="true"><span>SEOUL, KR</span><span>37°33′N 126°58′E</span><span>SCROLL TO EXPLORE ↓</span></div>
+        <span class="hero-index" aria-hidden="true">01</span>
+      </section>
+
+      <section class="intro-section section-shell" id="story" aria-labelledby="story-title">
+        <div class="section-marker"><span>01</span><span data-i18n="storyMarker">THE PERSONA</span></div>
+        <div class="intro-grid">
+          <h2 id="story-title" data-i18n="storyTitle">이름을 넘어,<br />하나의 언어로.</h2>
+          <div class="intro-copy">
+            <p class="intro-lead" data-i18n="storyLead">권지용과 G-DRAGON. 두 이름 사이에서 음악은 스타일이 되고, 스타일은 다시 자기표현의 방식이 된다.</p>
+            <p class="intro-body" data-i18n="storyBody">이 페이지는 한 아티스트의 시간을 음반과 무대, 그리고 변화의 순간으로 엮은 작은 편집 아카이브입니다. 시작부터 현재까지, 각 장면이 다음 장면의 가능성을 열어온 흐름을 따라갑니다.</p>
+            <div class="intro-signature"><span>KWON JI YONG</span><span class="signature-line"></span><span>ARTIST / SONGWRITER</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="timeline-section section-shell" id="timeline" aria-labelledby="timeline-title">
+        <div class="section-heading">
+          <div class="section-marker"><span>02</span><span data-i18n="timelineMarker">A LIFE IN CHAPTERS</span></div>
+          <div class="heading-row"><h2 id="timeline-title" data-i18n="timelineTitle">시간의 궤적</h2><p data-i18n="timelineIntro">한 해가 하나의 장면이 되고,<br />장면은 다음 시대의 문을 연다.</p></div>
+        </div>
+        <nav class="year-rail" id="year-rail" aria-label="Timeline years"></nav>
+        <div class="timeline-list" id="timeline-list"></div>
+        <div class="timeline-end"><span aria-hidden="true">✳</span><p data-i18n="timelineEnd">다음 장은 아직 쓰이고 있습니다.</p></div>
+      </section>
+
+      <section class="works-section section-shell" id="works" aria-labelledby="works-title">
+        <div class="section-heading">
+          <div class="section-marker"><span>03</span><span data-i18n="worksMarker">SELECTED DISCOGRAPHY</span></div>
+          <div class="heading-row"><h2 id="works-title" data-i18n="worksTitle">작품의 인덱스</h2><p data-i18n="worksIntro">발매작을 따라가며<br />사운드의 변화를 듣습니다.</p></div>
+        </div>
+        <div class="works-layout">
+          <div class="work-list" id="work-list" role="list" aria-label="Selected releases"></div>
+          <aside class="work-feature" aria-live="polite" aria-atomic="true">
+            <div class="feature-image-wrap">
+              <img src="assets/gd-2015-infinite-challenge.jpg" alt="2015년 무대의 G-Dragon" id="work-feature-image" loading="lazy" />
+              <span class="feature-image-label" data-i18n="workImageLabel">EDITORIAL PORTRAIT · 2015</span>
+              <span class="feature-year" id="feature-year">2009</span>
+            </div>
+            <div class="feature-copy">
+              <p class="eyebrow" data-i18n="workFeatureKicker">SELECTED WORK</p>
+              <h3 id="feature-title">Heartbreaker</h3>
+              <p id="feature-description"></p>
+              <a id="feature-link" class="text-link" href="https://music.apple.com/us/album/heartbreaker/1337476494" target="_blank" rel="noreferrer"><span data-i18n="listenLink">Apple Music에서 보기</span><span aria-hidden="true">↗</span></a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="archive-section section-shell" id="archive" aria-labelledby="archive-title">
+        <div class="section-heading">
+          <div class="section-marker"><span>04</span><span data-i18n="archiveMarker">THE VISUAL ARCHIVE</span></div>
+          <div class="heading-row"><h2 id="archive-title" data-i18n="archiveTitle">무대의 잔상</h2><p data-i18n="archiveIntro">기록된 순간, 계속 움직이는 이미지.</p></div>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item gallery-featured">
+            <div class="gallery-image gallery-image-2017"><img src="assets/gd-2017-motte-sydney.jpg" alt="2017년 시드니 M.O.T.T.E 월드투어 무대 전경" loading="lazy" /></div>
+            <figcaption><span class="gallery-count">01</span><span class="gallery-caption"><strong data-i18n="gallery2017Title">M.O.T.T.E WORLD TOUR</strong><small data-i18n="gallery2017Caption">SYDNEY · 2017 — 무대의 스케일과 빛</small></span><span class="gallery-arrow" aria-hidden="true">↗</span></figcaption>
+          </figure>
+          <figure class="gallery-item gallery-secondary">
+            <div class="gallery-image gallery-image-2015"><img src="assets/gd-2015-infinite-challenge.jpg" alt="2015년 Infinite Challenge Yeongdong Expressway Music Festival 당시 G-Dragon" loading="lazy" /></div>
+            <figcaption><span class="gallery-count">02</span><span class="gallery-caption"><strong data-i18n="gallery2015Title">A MOMENT, IN COLOR</strong><small data-i18n="gallery2015Caption">YEONGDONG EXPRESSWAY MUSIC FESTIVAL · 2015</small></span><span class="gallery-arrow" aria-hidden="true">↗</span></figcaption>
+          </figure>
+        </div>
+        <p class="gallery-note" data-i18n="galleryNote">사진은 원본 기록을 바탕으로 사용했으며, 출처와 라이선스 정보는 하단 크레딧에서 확인할 수 있습니다.</p>
+      </section>
+
+      <section class="closing-section section-shell" aria-labelledby="closing-title">
+        <div class="closing-top"><span data-i18n="closingLabel">END OF THIS CHAPTER</span><span>G-DRAGON / 01—04</span></div>
+        <h2 id="closing-title" data-i18n="closingTitle">계속해서,<br /><em>다르게.</em></h2>
+        <p data-i18n="closingText">이 아카이브는 한 사람의 다음 장면을 기다립니다.</p>
+        <a class="round-link" href="#top" aria-label="Back to top"><span aria-hidden="true">↑</span><small data-i18n="backToTop">처음으로</small></a>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell" id="credits">
+      <div class="footer-top">
+        <a class="brand footer-brand" href="#top"><span class="brand-mark">GD</span><span class="brand-name">G-DRAGON<span> / KWON JI YONG</span></span></a>
+        <p data-i18n="footerDisclaimer">독립적으로 제작된 팬 아카이브이며, 아티스트·소속사와 제휴 또는 공식 관계가 없습니다.</p>
+      </div>
+      <div class="footer-bottom">
+        <div class="photo-credits">
+          <span class="credit-label" data-i18n="creditsLabel">PHOTO CREDITS</span>
+          <p><a href="https://commons.wikimedia.org/wiki/File:G-Dragon_2012.jpg" target="_blank" rel="noreferrer">nicole voon</a> / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a> <span data-i18n="credit2012">(2012 Alive World Tour · 색상/크롭 조정)</span></p>
+          <p><a href="https://commons.wikimedia.org/wiki/File:G-Dragon_Infinite_Challenge_2015.jpg" target="_blank" rel="noreferrer">8thGravity</a> / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a> <span data-i18n="credit2015">(2015 · 크롭 조정)</span></p>
+          <p><a href="https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_13.jpg" target="_blank" rel="noreferrer">Black Flower</a> / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a> <span data-i18n="credit2017">(2017 M.O.T.T.E 시드니 공연 · 색상/크롭 조정)</span></p>
+        </div>
+        <div class="footer-links">
+          <span class="credit-label" data-i18n="sourceLabel">REFERENCE</span>
+          <a href="https://music.apple.com/us/artist/g-dragon/320373708" target="_blank" rel="noreferrer">Apple Music · G-DRAGON ↗</a>
+          <a href="https://www.ygfamily.com/en/news/notice/4930" target="_blank" rel="noreferrer">YG Entertainment · Coup d’Etat ↗</a>
+        </div>
+        <div class="copyright"><span>© 2026 G-DRAGON ARCHIVE</span><a href="#top" data-i18n="footerBack">BACK TO TOP ↑</a></div>
+      </div>
+    </footer>
+  </body>
+</html>

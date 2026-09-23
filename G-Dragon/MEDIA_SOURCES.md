@@ -1,0 +1,19 @@
+# G-DRAGON archive — source notes
+
+## Editorial scope
+
+This responsive fan-made editorial page follows a concise arc from BIGBANG's 2006 debut through the 2025 album *Übermensch*. It is not an official artist or agency website. Artist and release descriptions are original editorial summaries, not quotations.
+
+Release years and album titles were cross-checked against the [G-DRAGON artist catalog on Apple Music](https://music.apple.com/us/artist/g-dragon/320373708). Direct release links in the page point to Apple Music. The 2013 album announcement is linked to [YG Entertainment](https://www.ygfamily.com/en/news/notice/4930).
+
+## Photographs
+
+All photographs are bundled locally so the static page does not depend on a third-party image host. Cropping and color adjustments are disclosed below and in the page footer. These are editorial photographs, not album covers.
+
+| File | Credit and source | License | Changes |
+| --- | --- | --- | --- |
+| `assets/gd-2012-alive.jpg` | [nicole voon, G-Dragon 2012](https://commons.wikimedia.org/wiki/File:G-Dragon_2012.jpg), Wikimedia Commons | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | CSS crop, slight saturation and contrast adjustment |
+| `assets/gd-2015-infinite-challenge.jpg` | [8thGravity, G-Dragon Infinite Challenge 2015](https://commons.wikimedia.org/wiki/File:G-Dragon_Infinite_Challenge_2015.jpg), Wikimedia Commons | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | CSS crop and slight saturation adjustment |
+| `assets/gd-2017-motte-sydney.jpg` | [Black Flower, M.O.T.T.E World Tour in Sydney 2017 — 13](https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_13.jpg), Wikimedia Commons | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | CSS crop, color and contrast adjustment |
+
+The respective Commons file pages contain the underlying image metadata and licensing history. This project makes no claim of endorsement by the photographers, artist, or agency.
