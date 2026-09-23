@@ -90,8 +90,14 @@ const languages = {
 
 const byId = (id) => document.getElementById(id);
 const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
+function getSavedLanguage() {
+  try { return localStorage.getItem("gdragon-language"); } catch { return null; }
+}
+function saveLanguage(value) {
+  try { localStorage.setItem("gdragon-language", value); } catch { /* Language selection still works for this visit. */ }
+}
 const urlLanguage = new URLSearchParams(location.search).get("lang");
-let language = ["ko", "zh", "en"].includes(urlLanguage) ? urlLanguage : (localStorage.getItem("gdragon-language") || "ko");
+let language = ["ko", "zh", "en"].includes(urlLanguage) ? urlLanguage : (getSavedLanguage() || "ko");
 let selectedWork = "2009";
 
 function renderTimeline(copy) {
@@ -157,10 +163,12 @@ function applyLanguage(nextLanguage, updateAddress = false) {
   renderTimeline(copy);
   renderWorks(copy);
   if (updateAddress) {
-    localStorage.setItem("gdragon-language", language);
-    const params = new URLSearchParams(location.search);
-    params.set("lang", language);
-    history.replaceState(null, "", `${location.pathname}?${params}${location.hash}`);
+    saveLanguage(language);
+    try {
+      const params = new URLSearchParams(location.search);
+      params.set("lang", language);
+      history.replaceState(null, "", `${location.pathname}?${params}${location.hash}`);
+    } catch { /* Some local file previews do not allow URL changes. */ }
   }
 }
 
@@ -169,6 +177,6 @@ document.querySelectorAll("[data-language]").forEach((button) => {
 });
 window.addEventListener("popstate", () => {
   const requested = new URLSearchParams(location.search).get("lang");
-  applyLanguage(["ko", "zh", "en"].includes(requested) ? requested : (localStorage.getItem("gdragon-language") || "ko"));
+  applyLanguage(["ko", "zh", "en"].includes(requested) ? requested : (getSavedLanguage() || "ko"));
 });
 applyLanguage(language);
