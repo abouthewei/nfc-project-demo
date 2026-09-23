@@ -13,17 +13,17 @@
   <body>
     <a class="skip-link" href="#main" data-i18n="skip">본문으로 건너뛰기</a>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="G-DRAGON home">
+      <a class="brand" href="#top" aria-label="G-DRAGON home" data-i18n-aria="homeLabel">
         <span class="brand-mark">GD</span>
         <span class="brand-name">G-DRAGON<span> / KWON JI YONG</span></span>
       </a>
-      <nav class="main-nav" aria-label="Main navigation">
+      <nav class="main-nav" aria-label="Main navigation" data-i18n-aria="mainNavLabel">
         <a href="#story" data-i18n="navStory">이야기</a>
         <a href="#timeline" data-i18n="navTimeline">타임라인</a>
         <a href="#works" data-i18n="navWorks">작품</a>
         <a href="#archive" data-i18n="navArchive">아카이브</a>
       </nav>
-      <div class="language-switch" role="group" aria-label="Language">
+      <div class="language-switch" role="group" aria-label="Language" data-i18n-aria="languageLabel">
         <button type="button" data-language="ko" aria-pressed="true">KO</button>
         <span aria-hidden="true">/</span>
         <button type="button" data-language="zh" aria-pressed="false">中文</button>
@@ -44,7 +44,7 @@
           <a class="text-link hero-link" href="#story"><span data-i18n="heroLink">아카이브 둘러보기</span><span aria-hidden="true">↘</span></a>
         </div>
         <figure class="hero-portrait">
-          <img src="assets/gd-2012-alive.jpg" alt="2012년 Alive World Tour 무대의 G-Dragon" fetchpriority="high" />
+          <img src="assets/gd-2012-alive.jpg" alt="2012년 Alive World Tour 무대의 G-Dragon" data-i18n-alt="heroAlt" fetchpriority="high" />
           <figcaption><span>01 / 03</span><span data-i18n="heroPhotoCaption">ALIVE WORLD TOUR · 2012</span></figcaption>
         </figure>
         <div class="hero-bottomline" aria-hidden="true"><span>SEOUL, KR</span><span>37°33′N 126°58′E</span><span>SCROLL TO EXPLORE ↓</span></div>
@@ -68,7 +68,7 @@
           <div class="section-marker"><span>02</span><span data-i18n="timelineMarker">A LIFE IN CHAPTERS</span></div>
           <div class="heading-row"><h2 id="timeline-title" data-i18n="timelineTitle">시간의 궤적</h2><p data-i18n="timelineIntro">한 해가 하나의 장면이 되고,<br />장면은 다음 시대의 문을 연다.</p></div>
         </div>
-        <nav class="year-rail" id="year-rail" aria-label="Timeline years"></nav>
+        <nav class="year-rail" id="year-rail" aria-label="Timeline years" data-i18n-aria="timelineNavLabel"></nav>
         <div class="timeline-list" id="timeline-list"></div>
         <div class="timeline-end"><span aria-hidden="true">✳</span><p data-i18n="timelineEnd">다음 장은 아직 쓰이고 있습니다.</p></div>
       </section>
@@ -79,10 +79,10 @@
           <div class="heading-row"><h2 id="works-title" data-i18n="worksTitle">작품의 인덱스</h2><p data-i18n="worksIntro">발매작을 따라가며<br />사운드의 변화를 듣습니다.</p></div>
         </div>
         <div class="works-layout">
-          <div class="work-list" id="work-list" role="list" aria-label="Selected releases"></div>
+          <div class="work-list" id="work-list" role="group" aria-label="Selected releases" data-i18n-aria="selectedReleasesLabel"></div>
           <aside class="work-feature" aria-live="polite" aria-atomic="true">
             <div class="feature-image-wrap">
-              <img src="assets/gd-2015-infinite-challenge.jpg" alt="2015년 무대의 G-Dragon" id="work-feature-image" loading="lazy" />
+              <img src="assets/gd-2015-infinite-challenge.jpg" alt="2015년 무대의 G-Dragon" id="work-feature-image" data-i18n-alt="workPortraitAlt" loading="lazy" />
               <span class="feature-image-label" data-i18n="workImageLabel">EDITORIAL PORTRAIT · 2015</span>
               <span class="feature-year" id="feature-year">2009</span>
             </div>
@@ -103,11 +103,11 @@
         </div>
         <div class="gallery-grid">
           <figure class="gallery-item gallery-featured">
-            <div class="gallery-image gallery-image-2017"><img src="assets/gd-2017-motte-sydney.jpg" alt="2017년 시드니 M.O.T.T.E 월드투어 무대 전경" loading="lazy" /></div>
+            <div class="gallery-image gallery-image-2017"><img src="assets/gd-2017-motte-sydney.jpg" alt="2017년 시드니 M.O.T.T.E 월드투어 무대 전경" data-i18n-alt="gallery2017Alt" loading="lazy" /></div>
             <figcaption><span class="gallery-count">01</span><span class="gallery-caption"><strong data-i18n="gallery2017Title">M.O.T.T.E WORLD TOUR</strong><small data-i18n="gallery2017Caption">SYDNEY · 2017 — 무대의 스케일과 빛</small></span><span class="gallery-arrow" aria-hidden="true">↗</span></figcaption>
           </figure>
           <figure class="gallery-item gallery-secondary">
-            <div class="gallery-image gallery-image-2015"><img src="assets/gd-2015-infinite-challenge.jpg" alt="2015년 Infinite Challenge Yeongdong Expressway Music Festival 당시 G-Dragon" loading="lazy" /></div>
+            <div class="gallery-image gallery-image-2015"><img src="assets/gd-2015-infinite-challenge.jpg" alt="2015년 Infinite Challenge Yeongdong Expressway Music Festival 당시 G-Dragon" data-i18n-alt="gallery2015Alt" loading="lazy" /></div>
             <figcaption><span class="gallery-count">02</span><span class="gallery-caption"><strong data-i18n="gallery2015Title">A MOMENT, IN COLOR</strong><small data-i18n="gallery2015Caption">YEONGDONG EXPRESSWAY MUSIC FESTIVAL · 2015</small></span><span class="gallery-arrow" aria-hidden="true">↗</span></figcaption>
           </figure>
         </div>
@@ -118,13 +118,13 @@
         <div class="closing-top"><span data-i18n="closingLabel">END OF THIS CHAPTER</span><span>G-DRAGON / 01—04</span></div>
         <h2 id="closing-title" data-i18n="closingTitle">계속해서,<br /><em>다르게.</em></h2>
         <p data-i18n="closingText">이 아카이브는 한 사람의 다음 장면을 기다립니다.</p>
-        <a class="round-link" href="#top" aria-label="Back to top"><span aria-hidden="true">↑</span><small data-i18n="backToTop">처음으로</small></a>
+        <a class="round-link" href="#top" aria-label="Back to top" data-i18n-aria="backToTopLabel"><span aria-hidden="true">↑</span><small data-i18n="backToTop">처음으로</small></a>
       </section>
     </main>
 
     <footer class="site-footer section-shell" id="credits">
       <div class="footer-top">
-        <a class="brand footer-brand" href="#top"><span class="brand-mark">GD</span><span class="brand-name">G-DRAGON<span> / KWON JI YONG</span></span></a>
+        <a class="brand footer-brand" href="#top" aria-label="G-DRAGON home" data-i18n-aria="homeLabel"><span class="brand-mark">GD</span><span class="brand-name">G-DRAGON<span> / KWON JI YONG</span></span></a>
         <p data-i18n="footerDisclaimer">독립적으로 제작된 팬 아카이브이며, 아티스트·소속사와 제휴 또는 공식 관계가 없습니다.</p>
       </div>
       <div class="footer-bottom">
