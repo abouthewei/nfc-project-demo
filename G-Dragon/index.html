@@ -14,14 +14,15 @@
     <a class="skip-link" href="#main" data-i18n="skip">본문으로 건너뛰기</a>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="G-DRAGON home" data-i18n-aria="homeLabel">
-        <span class="brand-mark">GD</span>
-        <span class="brand-name">G-DRAGON<span> / KWON JI YONG</span></span>
+        <span class="brand-name">G-DRAGON</span>
       </a>
-      <nav class="main-nav" aria-label="Main navigation" data-i18n-aria="mainNavLabel">
-        <a href="#story" data-i18n="navStory">이야기</a>
-        <a href="#timeline" data-i18n="navTimeline">타임라인</a>
-        <a href="#works" data-i18n="navWorks">작품</a>
-        <a href="#archive" data-i18n="navArchive">아카이브</a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu" data-i18n-aria="menuOpenLabel">
+        <span data-i18n="menuLabel">MENU</span><span class="menu-icon" aria-hidden="true"></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation" data-i18n-aria="mainNavLabel">
+        <a href="#story" data-i18n="navStory">STORY</a>
+        <a href="#works" data-i18n="navWorks">WORKS</a>
+        <a href="#archive" data-i18n="navArchive">VISUALS</a>
       </nav>
       <div class="language-switch" role="group" aria-label="Language" data-i18n-aria="languageLabel">
         <button type="button" data-language="ko" aria-pressed="true">KO</button>
@@ -33,22 +34,19 @@
     </header>
 
     <main id="main">
-      <section class="hero section-shell" id="top" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="live-dot"></span><span data-i18n="heroKicker">ARTIST ARCHIVE · 2006—2025</span></p>
-          <p class="hero-pretitle" data-i18n="heroOverline">무대 위의 이름, 권지용</p>
-          <h1 id="hero-title">G-<span>DRAGON</span></h1>
-          <div class="hero-intro">
-            <p data-i18n="heroIntro">음악과 이미지, 태도와 변신. 한 사람의 이름이 하나의 장면이 되어온 시간.</p>
-          </div>
-          <a class="text-link hero-link" href="#story"><span data-i18n="heroLink">아카이브 둘러보기</span><span aria-hidden="true">↘</span></a>
-        </div>
+      <section class="hero" id="top" aria-labelledby="hero-title">
         <figure class="hero-portrait">
           <img src="assets/gd-2012-alive.jpg" alt="2012년 Alive World Tour 무대의 G-Dragon" data-i18n-alt="heroAlt" fetchpriority="high" />
-          <figcaption><span>01 / 03</span><span data-i18n="heroPhotoCaption">ALIVE WORLD TOUR · 2012</span></figcaption>
+          <figcaption data-i18n="heroPhotoCaption">ALIVE WORLD TOUR · 2012</figcaption>
         </figure>
-        <div class="hero-bottomline" aria-hidden="true"><span>SEOUL, KR</span><span>37°33′N 126°58′E</span><span>SCROLL TO EXPLORE ↓</span></div>
-        <span class="hero-index" aria-hidden="true">01</span>
+        <div class="hero-copy">
+          <h1 id="hero-title">G-DRAGON</h1>
+          <div class="hero-intro"><p data-i18n="heroIntro">음악과 이미지, 태도와 변신. 한 사람의 이름이 하나의 장면이 되어온 시간.</p></div>
+        </div>
+        <a class="hero-link" href="#story"><span data-i18n="heroLink">아카이브 둘러보기</span><span aria-hidden="true">→</span></a>
+        <nav class="hero-years" aria-label="Selected years" data-i18n-aria="heroYearsLabel">
+          <a href="#year-2006" aria-current="true">2006</a><a href="#year-2009">2009</a><a href="#year-2013">2013</a><a href="#year-2017">2017</a><a href="#year-2024">2024</a><a href="#year-2025">2025</a>
+        </nav>
       </section>
 
       <section class="intro-section section-shell" id="story" aria-labelledby="story-title">

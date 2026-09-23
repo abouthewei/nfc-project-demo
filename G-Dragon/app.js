@@ -1,8 +1,8 @@
 const languages = {
   ko: {
-    title: "G-DRAGON — 아티스트 아카이브", homeLabel: "G-DRAGON 홈", mainNavLabel: "주요 탐색", languageLabel: "언어 선택", timelineNavLabel: "연도별 타임라인", selectedReleasesLabel: "대표 발매작", backToTopLabel: "맨 위로",
+    title: "G-DRAGON — 아티스트 아카이브", homeLabel: "G-DRAGON 홈", mainNavLabel: "주요 탐색", languageLabel: "언어 선택", timelineNavLabel: "연도별 타임라인", heroYearsLabel: "주요 연도", menuLabel: "메뉴", menuOpenLabel: "메뉴 열기", menuCloseLabel: "메뉴 닫기", selectedReleasesLabel: "대표 발매작", backToTopLabel: "맨 위로",
     heroAlt: "2012년 Alive World Tour 무대의 G-Dragon", workPortraitAlt: "2015년 음악 페스티벌 당시 G-Dragon의 초상", gallery2017Alt: "2017년 시드니 M.O.T.T.E 월드투어 무대 전경", gallery2015Alt: "2015년 Infinite Challenge Yeongdong Expressway Music Festival 당시 G-Dragon",
-    skip: "본문으로 건너뛰기", navStory: "이야기", navTimeline: "타임라인", navWorks: "작품", navArchive: "아카이브",
+    skip: "본문으로 건너뛰기", navStory: "이야기", navWorks: "작품", navArchive: "영상",
     heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "무대 위의 이름, 권지용", heroIntro: "음악과 이미지, 태도와 변신. 한 사람의 이름이 하나의 장면이 되어온 시간.", heroLink: "아카이브 둘러보기", heroPhotoCaption: "ALIVE WORLD TOUR · 2012",
     storyMarker: "THE PERSONA", storyTitle: "이름을 넘어,<br />하나의 언어로.", storyLead: "권지용과 G-DRAGON. 두 이름 사이에서 음악은 스타일이 되고, 스타일은 다시 자기표현의 방식이 된다.", storyBody: "이 페이지는 한 아티스트의 시간을 음반과 무대, 그리고 변화의 순간으로 엮은 작은 편집 아카이브입니다. 시작부터 현재까지, 각 장면이 다음 장면의 가능성을 열어온 흐름을 따라갑니다.",
     timelineMarker: "A LIFE IN CHAPTERS", timelineTitle: "시간의 궤적", timelineIntro: "한 해가 하나의 장면이 되고,<br />장면은 다음 시대의 문을 연다.", timelineEnd: "다음 장은 아직 쓰이고 있습니다.",
@@ -29,9 +29,9 @@ const languages = {
     ]
   },
   zh: {
-    title: "G-DRAGON — 艺术家档案", homeLabel: "G-DRAGON 首页", mainNavLabel: "主导航", languageLabel: "语言选择", timelineNavLabel: "年份时间线", selectedReleasesLabel: "代表作品", backToTopLabel: "回到顶部",
+    title: "G-DRAGON — 艺术家档案", homeLabel: "G-DRAGON 首页", mainNavLabel: "主导航", languageLabel: "语言选择", timelineNavLabel: "年份时间线", heroYearsLabel: "代表年份", menuLabel: "菜单", menuOpenLabel: "打开菜单", menuCloseLabel: "关闭菜单", selectedReleasesLabel: "代表作品", backToTopLabel: "回到顶部",
     heroAlt: "G-Dragon 在 2012 年 Alive World Tour 的舞台上", workPortraitAlt: "G-Dragon 在 2015 年音乐节上的肖像", gallery2017Alt: "2017 年悉尼 M.O.T.T.E 世界巡演舞台全景", gallery2015Alt: "G-Dragon 在 2015 年 Infinite Challenge Yeongdong Expressway 音乐节现场",
-    skip: "跳转至正文", navStory: "人物", navTimeline: "时间线", navWorks: "作品", navArchive: "影像档案",
+    skip: "跳转至正文", navStory: "故事", navWorks: "作品", navArchive: "影像",
     heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "舞台上的名字，权志龙", heroIntro: "音乐与影像、态度与蜕变。一个名字逐渐成为一个时代切面的过程。", heroLink: "进入档案", heroPhotoCaption: "ALIVE WORLD TOUR · 2012",
     storyMarker: "THE PERSONA", storyTitle: "超越名字，<br />成为一种语言。", storyLead: "权志龙与 G-DRAGON。在两个名字之间，音乐成为风格，风格又成为表达自我的方式。", storyBody: "这是一份小型编辑档案，以唱片、舞台和变化的瞬间串起一位艺术家的时间。从初次登场到今天，每个片段都为下一幕打开新的可能。",
     timelineMarker: "A LIFE IN CHAPTERS", timelineTitle: "时间的轨迹", timelineIntro: "一年成为一个片段，<br />片段又推开下一个时代。", timelineEnd: "下一章，仍在书写。",
@@ -58,9 +58,9 @@ const languages = {
     ]
   },
   en: {
-    title: "G-DRAGON — Artist Archive", homeLabel: "G-DRAGON home", mainNavLabel: "Main navigation", languageLabel: "Language selection", timelineNavLabel: "Timeline by year", selectedReleasesLabel: "Selected releases", backToTopLabel: "Back to top",
+    title: "G-DRAGON — Artist Archive", homeLabel: "G-DRAGON home", mainNavLabel: "Main navigation", languageLabel: "Language selection", timelineNavLabel: "Timeline by year", heroYearsLabel: "Selected years", menuLabel: "MENU", menuOpenLabel: "Open menu", menuCloseLabel: "Close menu", selectedReleasesLabel: "Selected releases", backToTopLabel: "Back to top",
     heroAlt: "G-Dragon performing on the 2012 Alive World Tour", workPortraitAlt: "Portrait of G-Dragon at a 2015 music festival", gallery2017Alt: "Stage view from the 2017 M.O.T.T.E World Tour in Sydney", gallery2015Alt: "G-Dragon at the 2015 Infinite Challenge Yeongdong Expressway Music Festival",
-    skip: "Skip to content", navStory: "Portrait", navTimeline: "Timeline", navWorks: "Works", navArchive: "Archive",
+    skip: "Skip to content", navStory: "Story", navWorks: "Works", navArchive: "Visuals",
     heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "A name on stage: Kwon Ji Yong", heroIntro: "Music and image, attitude and reinvention. The years in which one name became its own cultural scene.", heroLink: "Explore the archive", heroPhotoCaption: "ALIVE WORLD TOUR · 2012",
     storyMarker: "THE PERSONA", storyTitle: "Beyond a name,<br />a language of his own.", storyLead: "Kwon Ji Yong and G-DRAGON. Between the two names, music becomes style, and style becomes a way of speaking for oneself.", storyBody: "This compact editorial archive traces an artist through records, stages, and moments of change. From the opening chapter to the present, each scene points toward the possibilities of the next.",
     timelineMarker: "A LIFE IN CHAPTERS", timelineTitle: "A timeline in motion", timelineIntro: "A year becomes a scene;<br />a scene opens another era.", timelineEnd: "The next chapter is still being written.",
@@ -160,6 +160,8 @@ function applyLanguage(nextLanguage, updateAddress = false) {
   document.querySelectorAll("[data-language]").forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.language === language));
   });
+  const menuToggle = byId("menu-toggle");
+  if (menuToggle) menuToggle.setAttribute("aria-label", copy[menuToggle.getAttribute("aria-expanded") === "true" ? "menuCloseLabel" : "menuOpenLabel"]);
   renderTimeline(copy);
   renderWorks(copy);
   if (updateAddress) {
@@ -175,6 +177,19 @@ function applyLanguage(nextLanguage, updateAddress = false) {
 document.querySelectorAll("[data-language]").forEach((button) => {
   button.addEventListener("click", () => applyLanguage(button.dataset.language, true));
 });
+const menuToggle = byId("menu-toggle");
+const mainNav = byId("main-nav");
+menuToggle?.addEventListener("click", () => {
+  const expanded = menuToggle.getAttribute("aria-expanded") !== "true";
+  menuToggle.setAttribute("aria-expanded", String(expanded));
+  menuToggle.setAttribute("aria-label", languages[language][expanded ? "menuCloseLabel" : "menuOpenLabel"]);
+  mainNav?.classList.toggle("is-open", expanded);
+});
+mainNav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+  menuToggle?.setAttribute("aria-expanded", "false");
+  if (menuToggle) menuToggle.setAttribute("aria-label", languages[language].menuOpenLabel);
+  mainNav.classList.remove("is-open");
+}));
 window.addEventListener("popstate", () => {
   const requested = new URLSearchParams(location.search).get("lang");
   applyLanguage(["ko", "zh", "en"].includes(requested) ? requested : (getSavedLanguage() || "ko"));
