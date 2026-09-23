@@ -106,6 +106,14 @@ function renderTimeline(copy) {
     </article>`).join("");
 }
 
+function updateWorkFeature(copy) {
+  const work = copy.works.find(([year]) => year === selectedWork) || copy.works[0];
+  byId("feature-year").textContent = work[0];
+  byId("feature-title").textContent = work[1];
+  byId("feature-description").textContent = work[3];
+  byId("feature-link").href = work[4];
+}
+
 function renderWorks(copy) {
   const list = byId("work-list");
   list.innerHTML = copy.works.map(([year, title, kind], index) => `
@@ -117,14 +125,13 @@ function renderWorks(copy) {
   list.querySelectorAll("[data-work-index]").forEach((button) => {
     button.addEventListener("click", () => {
       selectedWork = copy.works[Number(button.dataset.workIndex)][0];
-      renderWorks(copy);
+      list.querySelectorAll("[data-work-index]").forEach((row) => {
+        row.setAttribute("aria-pressed", String(copy.works[Number(row.dataset.workIndex)][0] === selectedWork));
+      });
+      updateWorkFeature(copy);
     });
   });
-  const work = copy.works.find(([year]) => year === selectedWork) || copy.works[0];
-  byId("feature-year").textContent = work[0];
-  byId("feature-title").textContent = work[1];
-  byId("feature-description").textContent = work[3];
-  byId("feature-link").href = work[4];
+  updateWorkFeature(copy);
 }
 
 function applyLanguage(nextLanguage, updateAddress = false) {
