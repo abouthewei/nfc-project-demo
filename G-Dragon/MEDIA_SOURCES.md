@@ -21,13 +21,13 @@ All photographs are bundled locally so the static page does not depend on a thir
 
 The respective Commons file pages contain the underlying image metadata and licensing history. This project makes no claim of endorsement by the photographers, artist, or agency.
 
-The opening carousel uses the 2015 individual portrait as its first frame so the artist, rather than a large group-stage screen, leads the story. The other two frames use the credited 2012 portrait and 2017 Sydney stage photograph. The closing chapter reuses the credited 2015 portrait with a dark monochrome treatment as a background image.
+The opening carousel uses the 2015 individual portrait as its first frame so the artist, rather than a large group-stage screen, leads the story. The other two frames use the credited 2012 portrait and 2017 Sydney stage photograph. The closing chapter uses an original CSS stage-light treatment instead of repeating a photograph from earlier sections.
 
 The visual archive cards open an in-page detail view. Each detail view includes a short editorial note and links to the corresponding Commons file page, where the photographer credit and license are recorded.
 
 ## Representative videos and preview frames
 
-Each timeline year and selected release now has a video preview card linking directly to its official YouTube video. The hero and release rows use the matching YouTube preview image (`i.ytimg.com`); preview images are not stored in this repository and remain copyrighted by their respective rights holders.
+Each timeline year has a video preview card linking to its official YouTube video. Selected releases use a click-to-load YouTube privacy-enhanced embed so playback stays in the page. Preview images are not stored in this repository and remain copyrighted by their respective rights holders.
 
 | Year | Selection | Official video |
 | --- | --- | --- |

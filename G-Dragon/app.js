@@ -1,9 +1,9 @@
 const languages = {
   ko: {
-    title: "G-DRAGON — 아티스트 아카이브", homeLabel: "G-DRAGON 홈", mainNavLabel: "주요 탐색", languageLabel: "언어 선택", timelineNavLabel: "연도별 타임라인", heroYearsLabel: "주요 연도", menuLabel: "메뉴", menuOpenLabel: "메뉴 열기", menuCloseLabel: "메뉴 닫기", selectedReleasesLabel: "대표 발매작", backToTopLabel: "맨 위로",
+    title: "G-DRAGON — 아티스트 아카이브", homeLabel: "G-DRAGON 홈", mainNavLabel: "주요 탐색", languageLabel: "언어 선택", timelineNavLabel: "연도별 타임라인", menuLabel: "메뉴", menuOpenLabel: "메뉴 열기", menuCloseLabel: "메뉴 닫기", selectedReleasesLabel: "대표 발매작", backToTopLabel: "맨 위로",
     heroAlt: "2012년 Alive World Tour 무대의 G-Dragon", work2017Alt: "2017년 M.O.T.T.E 시드니 공연 중인 G-Dragon", timeline2017Alt: "M.O.T.T.E 시드니 공연의 무대 스크린과 G-Dragon", gallery2017Alt: "2017년 시드니 M.O.T.T.E 월드투어 무대 전경", gallery2015Alt: "2015년 Infinite Challenge Yeongdong Expressway Music Festival 당시 G-Dragon", gallery2017ScreensAlt: "M.O.T.T.E 시드니 공연에서 화면 연출과 함께 퍼포먼스하는 G-Dragon", gallery2017LightsAlt: "M.O.T.T.E 시드니 공연의 무대 조명과 퍼포머", gallery2017CrowdAlt: "M.O.T.T.E 시드니 공연과 관객 전경",
     skip: "본문으로 건너뛰기", navStory: "이야기", navWorks: "작품", navArchive: "영상",
-    heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "무대 위의 이름, 권지용", heroIntro: "음악과 이미지, 태도와 변신. 한 사람의 이름이 하나의 장면이 되어온 시간.", heroLink: "아카이브 둘러보기", heroPhotoCaption: "ALIVE WORLD TOUR · 2012", videoThumbnailAlt: "공식 대표 영상 이미지", videoFrameLabel: "공식 대표 영상",
+    heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "무대 위의 이름, 권지용", heroIntro: "음악과 이미지, 태도와 변신. 한 사람의 이름이 하나의 장면이 되어온 시간.", heroLink: "아카이브 둘러보기", heroPhotoCaption: "ALIVE WORLD TOUR · 2012", videoThumbnailAlt: "공식 대표 영상 이미지", videoFrameLabel: "공식 대표 영상", playVideoLabel: "공식 영상 재생", workVideoHint: "눌러서 페이지에서 재생", timelineSourceLabel: "REFERENCE",
     storyMarker: "THE PERSONA", storyTitle: "이름을 넘어,<br />하나의 언어로.", storyLead: "권지용과 G-DRAGON. 두 이름 사이에서 음악은 스타일이 되고, 스타일은 다시 자기표현의 방식이 된다.", storyBody: "이 페이지는 한 아티스트의 시간을 음반과 무대, 그리고 변화의 순간으로 엮은 작은 편집 아카이브입니다. 시작부터 현재까지, 각 장면이 다음 장면의 가능성을 열어온 흐름을 따라갑니다.",
     timelineMarker: "A LIFE IN CHAPTERS", timelineTitle: "사운드를 바꾼 시간", timelineIntro: "한 해가 하나의 장면이 되고,<br />장면은 다음 시대의 문을 연다.", timelineEnd: "다음 장은 아직 쓰이고 있습니다.",
     worksMarker: "SELECTED DISCOGRAPHY", worksTitle: "시대를 만든 작품", worksIntro: "대표작을 따라가며 사운드의 변화를 듣습니다.", workImageLabel: "OFFICIAL VIDEO STILL", listenLink: "Apple Music에서 보기",
@@ -29,10 +29,10 @@ const languages = {
     ]
   },
   zh: {
-    title: "G-DRAGON — 艺术家档案", homeLabel: "G-DRAGON 首页", mainNavLabel: "主导航", languageLabel: "语言选择", timelineNavLabel: "年份时间线", heroYearsLabel: "代表年份", menuLabel: "菜单", menuOpenLabel: "打开菜单", menuCloseLabel: "关闭菜单", selectedReleasesLabel: "代表作品", backToTopLabel: "回到顶部",
+    title: "G-DRAGON — 艺术家档案", homeLabel: "G-DRAGON 首页", mainNavLabel: "主导航", languageLabel: "语言选择", timelineNavLabel: "年份时间线", menuLabel: "菜单", menuOpenLabel: "打开菜单", menuCloseLabel: "关闭菜单", selectedReleasesLabel: "代表作品", backToTopLabel: "回到顶部",
     heroAlt: "G-Dragon 在 2012 年 Alive World Tour 的舞台上", work2017Alt: "G-Dragon 在 2017 年 M.O.T.T.E 悉尼演出现场", timeline2017Alt: "M.O.T.T.E 悉尼演出的舞台屏幕与 G-Dragon", gallery2017Alt: "2017 年悉尼 M.O.T.T.E 世界巡演舞台全景", gallery2015Alt: "G-Dragon 在 2015 年 Infinite Challenge Yeongdong Expressway 音乐节现场", gallery2017ScreensAlt: "G-Dragon 在 M.O.T.T.E 悉尼场的屏幕影像前表演", gallery2017LightsAlt: "M.O.T.T.E 悉尼场的舞台灯光与表演者", gallery2017CrowdAlt: "M.O.T.T.E 悉尼演出现场与观众全景",
     skip: "跳转至正文", navStory: "故事", navWorks: "作品", navArchive: "影像",
-    heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "舞台上的名字，权志龙", heroIntro: "音乐与影像、态度与蜕变。一个名字逐渐成为一个时代切面的过程。", heroLink: "进入档案", heroPhotoCaption: "ALIVE WORLD TOUR · 2012", videoThumbnailAlt: "官方代表视频画面", videoFrameLabel: "官方代表视频",
+    heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "舞台上的名字，权志龙", heroIntro: "音乐与影像、态度与蜕变。一个名字逐渐成为一个时代切面的过程。", heroLink: "进入档案", heroPhotoCaption: "ALIVE WORLD TOUR · 2012", videoThumbnailAlt: "官方代表视频画面", videoFrameLabel: "官方代表视频", playVideoLabel: "播放官方视频", workVideoHint: "点击播放 · 页内观看", timelineSourceLabel: "资料来源",
     storyMarker: "THE PERSONA", storyTitle: "超越名字，<br />成为一种语言。", storyLead: "权志龙与 G-DRAGON。在两个名字之间，音乐成为风格，风格又成为表达自我的方式。", storyBody: "这是一份小型编辑档案，以唱片、舞台和变化的瞬间串起一位艺术家的时间。从初次登场到今天，每个片段都为下一幕打开新的可能。",
     timelineMarker: "A LIFE IN CHAPTERS", timelineTitle: "改变声音的岁月", timelineIntro: "一年成为一个片段，<br />片段又推开下一个时代。", timelineEnd: "下一章，仍在书写。",
     worksMarker: "SELECTED DISCOGRAPHY", worksTitle: "标记时代的作品", worksIntro: "沿着代表作品，聆听声音的变化。", workImageLabel: "OFFICIAL VIDEO STILL", listenLink: "在 Apple Music 收听",
@@ -58,10 +58,10 @@ const languages = {
     ]
   },
   en: {
-    title: "G-DRAGON — Artist Archive", homeLabel: "G-DRAGON home", mainNavLabel: "Main navigation", languageLabel: "Language selection", timelineNavLabel: "Timeline by year", heroYearsLabel: "Selected years", menuLabel: "MENU", menuOpenLabel: "Open menu", menuCloseLabel: "Close menu", selectedReleasesLabel: "Selected releases", backToTopLabel: "Back to top",
+    title: "G-DRAGON — Artist Archive", homeLabel: "G-DRAGON home", mainNavLabel: "Main navigation", languageLabel: "Language selection", timelineNavLabel: "Timeline by year", menuLabel: "MENU", menuOpenLabel: "Open menu", menuCloseLabel: "Close menu", selectedReleasesLabel: "Selected releases", backToTopLabel: "Back to top",
     heroAlt: "G-Dragon performing on the 2012 Alive World Tour", work2017Alt: "G-Dragon performing at the 2017 M.O.T.T.E Sydney show", timeline2017Alt: "G-Dragon and the stage screens at the M.O.T.T.E Sydney show", gallery2017Alt: "Stage view from the 2017 M.O.T.T.E World Tour in Sydney", gallery2015Alt: "G-Dragon at the 2015 Infinite Challenge Yeongdong Expressway Music Festival", gallery2017ScreensAlt: "G-Dragon performing with the visual screens at the M.O.T.T.E Sydney show", gallery2017LightsAlt: "Stage lights and performers at the M.O.T.T.E Sydney show", gallery2017CrowdAlt: "The M.O.T.T.E Sydney performance and audience",
     skip: "Skip to content", navStory: "Story", navWorks: "Works", navArchive: "Visuals",
-    heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "A name on stage: Kwon Ji Yong", heroIntro: "Music and image, attitude and reinvention. The years in which one name became its own cultural scene.", heroLink: "Explore the archive", heroPhotoCaption: "ALIVE WORLD TOUR · 2012", videoThumbnailAlt: "official representative video still", videoFrameLabel: "Official representative video",
+    heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "A name on stage: Kwon Ji Yong", heroIntro: "Music and image, attitude and reinvention. The years in which one name became its own cultural scene.", heroLink: "Explore the archive", heroPhotoCaption: "ALIVE WORLD TOUR · 2012", videoThumbnailAlt: "official representative video still", videoFrameLabel: "Official representative video", playVideoLabel: "Play official video", workVideoHint: "CLICK TO WATCH · IN PAGE", timelineSourceLabel: "SOURCE",
     storyMarker: "THE PERSONA", storyTitle: "Beyond a name,<br />a language of his own.", storyLead: "Kwon Ji Yong and G-DRAGON. Between the two names, music becomes style, and style becomes a way of speaking for oneself.", storyBody: "This compact editorial archive traces an artist through records, stages, and moments of change. From the opening chapter to the present, each scene points toward the possibilities of the next.",
     timelineMarker: "A LIFE IN CHAPTERS", timelineTitle: "THE YEARS THAT SHAPED THE SOUND", timelineIntro: "A year becomes a scene;<br />a scene opens another era.", timelineEnd: "The next chapter is still being written.",
     worksMarker: "SELECTED DISCOGRAPHY", worksTitle: "WORKS THAT MARKED AN ERA", worksIntro: "Follow the releases and hear the sound shift.", workImageLabel: "OFFICIAL VIDEO STILL", listenLink: "Listen on Apple Music",
@@ -99,7 +99,6 @@ function saveLanguage(value) {
 const urlLanguage = new URLSearchParams(location.search).get("lang");
 let language = ["ko", "zh", "en"].includes(urlLanguage) ? urlLanguage : (getSavedLanguage() || "ko");
 let selectedWork = "2017";
-let selectedHeroYear = "2006";
 let selectedTimelineYear = "2017";
 let activeHeroSlide = 0;
 let heroAutoplayEnabled = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -115,10 +114,20 @@ const representativeVideos = {
   "2025": { id: "o9DhvbqYzns", label: "G-DRAGON — TOO BAD" }
 };
 
+const timelineSources = {
+  "2006": { label: "YG ENTERTAINMENT · OFFICIAL VIDEO", href: "https://www.youtube.com/watch?v=bjTEMBB-mjY" },
+  "2009": { label: "MELON MUSIC AWARDS · 2009", href: "https://www.melon.com/mma/result.htm?mmaYear=2009" },
+  "2012": { label: "2012 MAMA · WINNERS", href: "https://prtimes.jp/main/html/rd/p/000000098.000003711.html" },
+  "2013": { label: "2013 MAMA · AWARDS", href: "https://yg-life.com/archives/25004?lang=en" },
+  "2017": { label: "YG LIFE · DOME TOUR REPORT", href: "https://yg-life.com/archives/95912?lang=en" },
+  "2024": { label: "CJ ENM · 2024 MAMA", href: "https://cjenm.com/en/news/2024-mama-awards-wrap-up-historic-run-with-iconic-performances-and-milestone-moments/" },
+  "2025": { label: "CJ ENM · 2025 MAMA", href: "https://tvnsports-front.cjenm.com/en/news/2025-mama-awards-demonstrates-musics-power-to-heal-and-unite-in-moving-two-nights-performances/" }
+};
+
 const interfaceCopy = {
-  ko: { heroCarouselLabel: "권지용 아카이브 사진 슬라이드", heroPrevious: "이전 사진", heroNext: "다음 사진", heroPause: "자동 재생 일시정지", heroPlay: "자동 재생 시작", heroDots: "사진 선택", galleryOpenLabel: "이미지 상세 보기", galleryCloseLabel: "상세 닫기", gallerySourceLabel: "사진 원본 및 라이선스", galleryDialogKicker: "VISUAL ARCHIVE", timelineAchievement: "CAREER MILESTONE", timelineStoryLabel: "THE STORY", timelineChapter: "CHAPTER" },
-  zh: { heroCarouselLabel: "权志龙档案影像轮播", heroPrevious: "上一张图片", heroNext: "下一张图片", heroPause: "暂停自动播放", heroPlay: "开始自动播放", heroDots: "选择图片", galleryOpenLabel: "查看影像详情", galleryCloseLabel: "关闭详情", gallerySourceLabel: "原始照片与授权", galleryDialogKicker: "影像档案", timelineAchievement: "成就与荣誉", timelineStoryLabel: "这一章节", timelineChapter: "章节" },
-  en: { heroCarouselLabel: "Kwon Ji Yong photo carousel", heroPrevious: "Previous photo", heroNext: "Next photo", heroPause: "Pause autoplay", heroPlay: "Start autoplay", heroDots: "Choose a photo", galleryOpenLabel: "View image details", galleryCloseLabel: "Close details", gallerySourceLabel: "Original photo and license", galleryDialogKicker: "VISUAL ARCHIVE", timelineAchievement: "CAREER MILESTONE", timelineStoryLabel: "THE STORY", timelineChapter: "CHAPTER" }
+  ko: { heroCarouselLabel: "권지용 아카이브 사진 슬라이드", heroPause: "자동 재생 일시정지", heroPlay: "자동 재생 시작", heroDots: "사진 선택", galleryOpenLabel: "이미지 상세 보기", galleryCloseLabel: "상세 닫기", gallerySourceLabel: "사진 원본 및 라이선스", galleryDialogKicker: "VISUAL ARCHIVE", timelineAchievement: "CAREER MILESTONE", timelineStoryLabel: "THE STORY", timelineChapter: "CHAPTER" },
+  zh: { heroCarouselLabel: "权志龙档案影像轮播", heroPause: "暂停自动播放", heroPlay: "开始自动播放", heroDots: "选择图片", galleryOpenLabel: "查看影像详情", galleryCloseLabel: "关闭详情", gallerySourceLabel: "原始照片与授权", galleryDialogKicker: "影像档案", timelineAchievement: "成就与荣誉", timelineStoryLabel: "这一章节", timelineChapter: "章节" },
+  en: { heroCarouselLabel: "Kwon Ji Yong photo carousel", heroPause: "Pause autoplay", heroPlay: "Start autoplay", heroDots: "Choose a photo", galleryOpenLabel: "View image details", galleryCloseLabel: "Close details", gallerySourceLabel: "Original photo and license", galleryDialogKicker: "VISUAL ARCHIVE", timelineAchievement: "CAREER MILESTONE", timelineStoryLabel: "THE STORY", timelineChapter: "CHAPTER" }
 };
 
 const heroSlides = [
@@ -212,15 +221,6 @@ function setThumbnailFallback(image, year) {
   };
 }
 
-function renderHero(copy) {
-  const milestone = copy.timeline.find(([year]) => year === selectedHeroYear) || copy.timeline[0];
-  const [year, title, tag, description] = milestone;
-  byId("hero-era").innerHTML = `<p><span class="hero-era-kicker">${escapeHTML(year)} · ${escapeHTML(tag)}</span><strong>${escapeHTML(title)}</strong><span>${escapeHTML(description)}</span></p>`;
-  document.querySelectorAll("[data-hero-year]").forEach((button) => {
-    button.setAttribute("aria-pressed", String(button.dataset.heroYear === year));
-  });
-}
-
 function renderHeroCarousel(copy) {
   const slide = heroSlides[activeHeroSlide];
   const localizedSlide = slide[language];
@@ -233,8 +233,6 @@ function renderHeroCarousel(copy) {
   byId("hero-caption").textContent = localizedSlide.caption;
   byId("hero-slide-count").textContent = `${String(activeHeroSlide + 1).padStart(2, "0")} / ${String(heroSlides.length).padStart(2, "0")}`;
   window.setTimeout(() => image.classList.remove("is-changing"), 450);
-  byId("hero-prev").setAttribute("aria-label", copy.heroPrevious);
-  byId("hero-next").setAttribute("aria-label", copy.heroNext);
   const dots = byId("hero-dots");
   dots.setAttribute("aria-label", copy.heroDots);
   dots.innerHTML = heroSlides.map((item, index) => `<button type="button" data-hero-slide="${index}" aria-label="${escapeHTML(`${index + 1}: ${item[language].caption}`)}" aria-pressed="${index === activeHeroSlide}"></button>`).join("");
@@ -276,6 +274,7 @@ function renderTimelinePanel(copy) {
   const item = copy.timeline[activeIndex] || copy.timeline[0];
   const [year, title, tag, description] = item;
   const video = representativeVideos[year];
+  const source = timelineSources[year];
   const editorial = timelineEditorial[language][activeIndex];
   byId("timeline-list").innerHTML = `
     <article class="timeline-item timeline-feature" aria-live="polite" aria-label="${escapeHTML(`${copy.timelineTitle} · ${year}`)}">
@@ -289,12 +288,13 @@ function renderTimelinePanel(copy) {
       </figure>
       <div class="timeline-info">
         <div class="timeline-year">${escapeHTML(year)}</div>
-        <div class="timeline-content">
+        <div class="timeline-heading">
           <h3 class="timeline-title">${escapeHTML(title)}</h3>
           <span class="timeline-tag">${escapeHTML(tag)}</span>
-          <div class="timeline-story-copy"><span class="timeline-story-label">${escapeHTML(copy.timelineStoryLabel)}</span><p class="timeline-description">${escapeHTML(description)}</p><p class="timeline-context">${escapeHTML(editorial.detail)}</p></div>
-          <aside class="timeline-achievement"><span class="timeline-achievement-label">${escapeHTML(copy.timelineAchievement)}</span><strong>${escapeHTML(editorial.heading)}</strong></aside>
         </div>
+        <div class="timeline-story-copy"><span class="timeline-story-label">${escapeHTML(copy.timelineStoryLabel)}</span><p class="timeline-description">${escapeHTML(description)}</p><p class="timeline-context">${escapeHTML(editorial.detail)}</p></div>
+        <aside class="timeline-achievement"><span class="timeline-achievement-label">${escapeHTML(copy.timelineAchievement)}</span><strong>${escapeHTML(editorial.heading)}</strong></aside>
+        <a class="timeline-source" href="${escapeHTML(source.href)}" target="_blank" rel="noreferrer"><span>${escapeHTML(copy.timelineSourceLabel)}</span><strong>${escapeHTML(source.label)}</strong><span aria-hidden="true">↗</span></a>
       </div>
     </article>`;
   const thumbnail = byId("timeline-list").querySelector(".timeline-visual img");
@@ -318,12 +318,47 @@ function openGalleryDetail(index) {
   byId("gallery-dialog").showModal();
 }
 
+function showVideoPoster(player) {
+  const button = document.createElement("button");
+  button.className = "work-video-trigger";
+  button.type = "button";
+  button.setAttribute("aria-label", `${player.dataset.playLabel}: ${player.dataset.videoTitle} (${player.dataset.videoYear})`);
+  const image = document.createElement("img");
+  image.src = player.dataset.videoThumbnail;
+  image.alt = player.dataset.videoAlt;
+  image.loading = "lazy";
+  const play = document.createElement("span");
+  play.className = "work-play";
+  play.setAttribute("aria-hidden", "true");
+  play.textContent = "▶";
+  button.append(image, play);
+  button.addEventListener("click", () => playInlineVideo(player));
+  player.replaceChildren(button);
+  setThumbnailFallback(image, player.dataset.videoYear);
+}
+
+function playInlineVideo(player) {
+  const frame = document.createElement("iframe");
+  frame.className = "inline-video-frame";
+  frame.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(player.dataset.videoId)}?autoplay=1&rel=0`;
+  frame.title = `${player.dataset.videoTitle} · G-DRAGON official video`;
+  frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  frame.referrerPolicy = "strict-origin-when-cross-origin";
+  frame.allowFullscreen = true;
+  player.replaceChildren(frame);
+}
+
+function resetInlineVideo(item) {
+  const player = item.querySelector(".work-player");
+  if (player?.querySelector("iframe")) showVideoPoster(player);
+}
+
 function renderWorks(copy) {
   const list = byId("work-list");
   list.innerHTML = copy.works.map(([year, title, kind, description, href], index) => {
     const selected = year === selectedWork;
     const video = representativeVideos[year];
-    const media = `<figure class="work-visual"><a href="https://www.youtube.com/watch?v=${video.id}" target="_blank" rel="noreferrer" aria-label="${escapeHTML(`${copy.videoFrameLabel}: ${title} (${year})`)}"><img src="${videoThumbnail(year)}" alt="${escapeHTML(`${title} · ${year} ${copy.videoThumbnailAlt}`)}" loading="lazy" /><span class="work-play" aria-hidden="true">▶</span></a><figcaption>${escapeHTML(video.label)} · ${escapeHTML(copy.workImageLabel)}</figcaption></figure>`;
+    const media = `<figure class="work-visual"><div class="work-player" data-video-id="${escapeHTML(video.id)}" data-video-year="${escapeHTML(year)}" data-video-title="${escapeHTML(title)}" data-video-thumbnail="${escapeHTML(videoThumbnail(year))}" data-video-alt="${escapeHTML(`${title} · ${year} ${copy.videoThumbnailAlt}`)}" data-play-label="${escapeHTML(copy.playVideoLabel)}"></div><figcaption>${escapeHTML(video.label)} · ${escapeHTML(copy.workVideoHint)}</figcaption></figure>`;
     return `
       <article class="work-item${selected ? " is-selected" : ""}">
         <div class="work-row-wrap">
@@ -341,19 +376,20 @@ function renderWorks(copy) {
         </div>
       </article>`;
   }).join("");
+  list.querySelectorAll(".work-player").forEach(showVideoPoster);
   list.querySelectorAll("[data-work-index]").forEach((button) => {
     button.addEventListener("click", () => {
       selectedWork = copy.works[Number(button.dataset.workIndex)][0];
       list.querySelectorAll(".work-item").forEach((item) => {
         const row = item.querySelector("[data-work-index]");
         const active = copy.works[Number(row.dataset.workIndex)][0] === selectedWork;
+        if (!active) resetInlineVideo(item);
         item.classList.toggle("is-selected", active);
         row.setAttribute("aria-expanded", String(active));
         item.querySelector(".work-details").hidden = !active;
       });
     });
   });
-  list.querySelectorAll(".work-visual img").forEach((image, index) => setThumbnailFallback(image, copy.works[index][0]));
 }
 
 function applyLanguage(nextLanguage, updateAddress = false) {
@@ -378,7 +414,6 @@ function applyLanguage(nextLanguage, updateAddress = false) {
   });
   const menuToggle = byId("menu-toggle");
   if (menuToggle) menuToggle.setAttribute("aria-label", copy[menuToggle.getAttribute("aria-expanded") === "true" ? "menuCloseLabel" : "menuOpenLabel"]);
-  renderHero(copy);
   renderHeroCarousel(copy);
   renderTimeline(copy);
   renderWorks(copy);
@@ -403,14 +438,6 @@ function applyLanguage(nextLanguage, updateAddress = false) {
 document.querySelectorAll("[data-language]").forEach((button) => {
   button.addEventListener("click", () => applyLanguage(button.dataset.language, true));
 });
-document.querySelectorAll("[data-hero-year]").forEach((button) => {
-  button.addEventListener("click", () => {
-    selectedHeroYear = button.dataset.heroYear;
-    renderHero(languages[language]);
-  });
-});
-byId("hero-prev").addEventListener("click", () => setHeroSlide(activeHeroSlide - 1, { ...languages[language], ...interfaceCopy[language] }));
-byId("hero-next").addEventListener("click", () => setHeroSlide(activeHeroSlide + 1, { ...languages[language], ...interfaceCopy[language] }));
 byId("hero-autoplay").addEventListener("click", () => {
   heroAutoplayEnabled = !heroAutoplayEnabled;
   const copy = { ...languages[language], ...interfaceCopy[language] };
