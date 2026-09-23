@@ -12,22 +12,22 @@ All photographs are bundled locally so the static page does not depend on a thir
 
 | File | Credit and source | License | Changes |
 | --- | --- | --- | --- |
-| `assets/gd-2012-alive.jpg` | [nicole voon, G-Dragon 2012](https://commons.wikimedia.org/wiki/File:G-Dragon_2012.jpg), Wikimedia Commons | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | CSS crop, slight saturation and contrast adjustment |
-| `assets/gd-2015-infinite-challenge.jpg` | [8thGravity, G-Dragon Infinite Challenge 2015](https://commons.wikimedia.org/wiki/File:G-Dragon_Infinite_Challenge_2015.jpg), Wikimedia Commons | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | CSS crop and slight saturation adjustment |
-| `assets/gd-2017-motte-sydney.jpg` | [Black Flower, M.O.T.T.E World Tour in Sydney 2017 — 13](https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_13.jpg), Wikimedia Commons | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | CSS crop, color and contrast adjustment |
+| `assets/gd-2014-kcon.webp` | [mduangdara, G-Dragon — 3 KCON '14](https://commons.wikimedia.org/wiki/File:G-Dragon_-_3_KCON_%2714.jpg), Wikimedia Commons · source: 1,819 × 2,440 px | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | Optimized to WebP; color and CSS crop adjusted |
+| `assets/gd-2017-motte-sydney.jpg` | [Black Flower, M.O.T.T.E World Tour in Sydney 2017 — 13](https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_13.jpg), Wikimedia Commons · 2,048 × 1,536 px | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | CSS crop, color and contrast adjustment |
+| `assets/gd-2017-motte-sydney-red.webp` | [Black Flower, M.O.T.T.E World Tour in Sydney 2017 — 3](https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_3.jpg), Wikimedia Commons · source: 4,032 × 3,024 px | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | Resized to 2,048 × 1,536 px, optimized to WebP; color and CSS crop adjusted |
 | `assets/gd-2017-motte-sydney-screens.jpg` | [Black Flower, M.O.T.T.E World Tour in Sydney 2017 — 10](https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_10.jpg), Wikimedia Commons | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | CSS crop, monochrome and contrast adjustment |
 | `assets/gd-2017-motte-sydney-lights.jpg` | [Black Flower, M.O.T.T.E World Tour in Sydney 2017 — 17](https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_17.jpg), Wikimedia Commons | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | CSS crop, monochrome and contrast adjustment |
 | `assets/gd-2017-motte-sydney-crowd.jpg` | [Black Flower, M.O.T.T.E World Tour in Sydney 2017 — 22](https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_22.jpg), Wikimedia Commons | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | CSS crop, monochrome and contrast adjustment |
 
 The respective Commons file pages contain the underlying image metadata and licensing history. This project makes no claim of endorsement by the photographers, artist, or agency.
 
-The opening carousel uses the 2015 individual portrait as its first frame so the artist, rather than a large group-stage screen, leads the story. The other two frames use the credited 2012 portrait and 2017 Sydney stage photograph. The closing chapter uses an original CSS stage-light treatment instead of repeating a photograph from earlier sections.
+The opening carousel leads with a high-resolution 2014 KCON portrait, followed by a 2017 Sydney M.O.T.T.E stage image. The former 2015 crop (418 × 331 px) and 2012 portrait (959 × 1,365 px) were removed from the carousel and visual archive because they appeared soft at their rendered size. Both carousel images are stored locally: the KCON portrait is 1,819 × 2,440 px and the Sydney frame is 2,048 × 1,536 px. Neither is enlarged beyond its source dimensions. The visual archive uses another Sydney frame, shot 3, resized from 4,032 × 3,024 px to 2,048 × 1,536 px, so the opening carousel and archive do not repeat the same photograph. The closing chapter uses an original CSS stage-light treatment instead of repeating a photograph from earlier sections.
 
 The visual archive cards open an in-page detail view. Each detail view includes a short editorial note and links to the corresponding Commons file page, where the photographer credit and license are recorded.
 
 ## Representative videos and preview frames
 
-Each timeline year has a video preview card linking to its official YouTube video. Selected releases use a click-to-load YouTube privacy-enhanced embed so playback stays in the page. Preview images are not stored in this repository and remain copyrighted by their respective rights holders.
+Each timeline year has a video preview card that loads its official video in a YouTube privacy-enhanced embed after the visitor presses play. Selected releases in the discography use the same click-to-load in-page playback. Video streams and preview images remain hosted by YouTube and copyrighted by their respective rights holders; they are not downloaded into this repository.
 
 | Year | Selection | Official video |
 | --- | --- | --- |
