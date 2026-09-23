@@ -20,3 +20,17 @@ All photographs are bundled locally so the static page does not depend on a thir
 | `assets/gd-2017-motte-sydney-crowd.jpg` | [Black Flower, M.O.T.T.E World Tour in Sydney 2017 — 22](https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_22.jpg), Wikimedia Commons | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | CSS crop, monochrome and contrast adjustment |
 
 The respective Commons file pages contain the underlying image metadata and licensing history. This project makes no claim of endorsement by the photographers, artist, or agency.
+
+## Representative videos and preview frames
+
+Each timeline year and selected release now has a video preview card linking directly to its official YouTube video. The hero and release rows use the matching YouTube preview image (`i.ytimg.com`); preview images are not stored in this repository and remain copyrighted by their respective rights holders.
+
+| Year | Selection | Official video |
+| --- | --- | --- |
+| 2006 | BIGBANG — We Belong Together | [YG Entertainment](https://www.youtube.com/watch?v=bjTEMBB-mjY) |
+| 2009 | G-DRAGON — Heartbreaker | [YG Entertainment](https://www.youtube.com/watch?v=LOXEVd-Z7NE) |
+| 2012 | G-DRAGON — One of a Kind | [BIGBANG official channel](https://www.youtube.com/watch?v=rJnICByeL8Q) |
+| 2013 | G-DRAGON — Coup d’Etat | [BIGBANG official channel](https://www.youtube.com/watch?v=C8T6771Sdj8) |
+| 2017 | G-DRAGON — Untitled, 2014 | [YG LIFE / official M/V](https://www.youtube.com/watch?v=9kaCAbIXuyg) |
+| 2024 | G-DRAGON — POWER | [OfficialGDRAGON](https://www.youtube.com/watch?v=NMjhjrBIrG8) |
+| 2025 | G-DRAGON — TOO BAD | [OfficialGDRAGON](https://www.youtube.com/watch?v=o9DhvbqYzns) |
