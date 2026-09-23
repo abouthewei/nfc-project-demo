@@ -101,6 +101,9 @@ let language = ["ko", "zh", "en"].includes(urlLanguage) ? urlLanguage : (getSave
 let selectedWork = "2017";
 let selectedHeroYear = "2006";
 let selectedTimelineYear = "2017";
+let activeHeroSlide = 0;
+let heroAutoplayEnabled = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let heroAutoplayTimer = null;
 
 const representativeVideos = {
   "2006": { id: "bjTEMBB-mjY", label: "BIGBANG — WE BELONG TOGETHER" },
@@ -111,6 +114,95 @@ const representativeVideos = {
   "2024": { id: "NMjhjrBIrG8", label: "G-DRAGON — POWER" },
   "2025": { id: "o9DhvbqYzns", label: "G-DRAGON — TOO BAD" }
 };
+
+const interfaceCopy = {
+  ko: { heroCarouselLabel: "권지용 아카이브 사진 슬라이드", heroPrevious: "이전 사진", heroNext: "다음 사진", heroPause: "자동 재생 일시정지", heroPlay: "자동 재생 시작", heroDots: "사진 선택", galleryOpenLabel: "이미지 상세 보기", galleryCloseLabel: "상세 닫기", gallerySourceLabel: "사진 원본 및 라이선스", galleryDialogKicker: "VISUAL ARCHIVE", timelineAchievement: "CAREER MILESTONE", timelineStoryLabel: "THE STORY", timelineChapter: "CHAPTER" },
+  zh: { heroCarouselLabel: "权志龙档案影像轮播", heroPrevious: "上一张图片", heroNext: "下一张图片", heroPause: "暂停自动播放", heroPlay: "开始自动播放", heroDots: "选择图片", galleryOpenLabel: "查看影像详情", galleryCloseLabel: "关闭详情", gallerySourceLabel: "原始照片与授权", galleryDialogKicker: "影像档案", timelineAchievement: "成就与荣誉", timelineStoryLabel: "这一章节", timelineChapter: "章节" },
+  en: { heroCarouselLabel: "Kwon Ji Yong photo carousel", heroPrevious: "Previous photo", heroNext: "Next photo", heroPause: "Pause autoplay", heroPlay: "Start autoplay", heroDots: "Choose a photo", galleryOpenLabel: "View image details", galleryCloseLabel: "Close details", gallerySourceLabel: "Original photo and license", galleryDialogKicker: "VISUAL ARCHIVE", timelineAchievement: "CAREER MILESTONE", timelineStoryLabel: "THE STORY", timelineChapter: "CHAPTER" }
+};
+
+const heroSlides = [
+  {
+    src: "assets/gd-2015-infinite-challenge.jpg",
+    ko: { alt: "2015년 예능 무대에서 카메라를 응시하는 권지용", caption: "A MOMENT, IN COLOR · 2015" },
+    zh: { alt: "2015 年舞台上的权志龙肖像", caption: "A MOMENT, IN COLOR · 2015" },
+    en: { alt: "Kwon Ji Yong in a 2015 performance portrait", caption: "A MOMENT, IN COLOR · 2015" }
+  },
+  {
+    src: "assets/gd-2012-alive.jpg",
+    ko: { alt: "2012년 ALIVE WORLD TOUR 무대 위의 G-DRAGON", caption: "ALIVE WORLD TOUR · 2012" },
+    zh: { alt: "2012 年 ALIVE WORLD TOUR 舞台上的 G-DRAGON", caption: "ALIVE WORLD TOUR · 2012" },
+    en: { alt: "G-DRAGON on stage during the ALIVE WORLD TOUR in 2012", caption: "ALIVE WORLD TOUR · 2012" }
+  },
+  {
+    src: "assets/gd-2017-motte-sydney.jpg",
+    ko: { alt: "2017년 M.O.T.T.E 월드투어 시드니 공연의 G-DRAGON과 무대", caption: "ACT III, M.O.T.T.E · SYDNEY 2017" },
+    zh: { alt: "2017 年 M.O.T.T.E 世界巡演悉尼站的 G-DRAGON 与舞台", caption: "ACT III, M.O.T.T.E · SYDNEY 2017" },
+    en: { alt: "G-DRAGON and the stage at the Sydney date of the 2017 M.O.T.T.E tour", caption: "ACT III, M.O.T.T.E · SYDNEY 2017" }
+  }
+];
+
+const timelineEditorial = {
+  ko: [
+    { heading: "BIGBANG의 데뷔", detail: "다섯 멤버가 한 팀으로 처음 소개되며 권지용의 음악 여정도 공개적인 무대 위에 놓였습니다. 팀의 랩과 작사·작곡에 참여하며 아티스트로서의 기반을 다졌습니다." },
+    { heading: "MELON MUSIC AWARDS · 올해의 앨범", detail: "첫 솔로 정규 앨범 《Heartbreaker》가 2009 Melon Music Awards에서 올해의 앨범으로 선정됐습니다. 솔로 보컬과 프로덕션, 강한 시각 콘셉트를 결합해 독립적인 음악 세계를 각인시켰습니다." },
+    { heading: "MAMA · 남자 가수상", detail: "《One of a Kind》와 〈Crayon〉으로 솔로 음악의 폭을 넓혔고, 2012 MAMA에서 남자 가수상을 받았습니다. 이 시기의 실험적인 스타일은 이후 솔로 무대의 시그니처가 됐습니다." },
+    { heading: "MAMA · 올해의 가수상, 4관왕", detail: "2013 MAMA에서 올해의 가수상과 남자 가수상, 남자 솔로 댄스 퍼포먼스상, 뮤직비디오상을 수상했습니다. 같은 해 첫 솔로 월드투어 《ONE OF A KIND》로 일본 4개 돔 공연을 포함한 대형 투어를 이어갔습니다." },
+    { heading: "M.O.T.T.E · 일본 돔 투어 26만 관객", detail: "《KWON JI YONG》과 《ACT III, M.O.T.T.E》는 무대의 화려함 뒤에 있는 권지용의 내면을 전면에 내세웠습니다. 일본 3개 도시의 돔에서 열린 다섯 공연에는 약 26만 명이 모였습니다." },
+    { heading: "MAMA · MUSIC VISIONARY OF THE YEAR", detail: "〈POWER〉로 솔로 활동을 재개한 뒤, 2024 MAMA는 G-DRAGON에게 Music Visionary of the Year를 수여했습니다. 이 상은 한 해의 특정 곡보다 음악과 대중문화에 남긴 영향력을 기리는 부문입니다." },
+    { heading: "MAMA · 올해의 가수상 외 2관왕", detail: "정규 앨범 《Übermensch》와 〈TOO BAD〉로 다음 장을 열었습니다. 2025 MAMA에서 올해의 가수상, 남자 가수상, 남자 솔로 댄스 퍼포먼스상을 받았습니다." }
+  ],
+  zh: [
+    { heading: "BIGBANG 正式出道", detail: "五位成员以 BIGBANG 的名义首次登上公众舞台，权志龙的音乐旅程也由此被更多人看见。他参与团队的 Rap、作词与作曲，在组合表达中逐渐建立个人创作身份。" },
+    { heading: "Melon Music Awards · 年度专辑", detail: "首张个人正规专辑《Heartbreaker》获得 2009 Melon Music Awards 年度专辑奖。个人演唱、制作与鲜明视觉概念合为一体，确立了独立的音乐表达。" },
+    { heading: "MAMA · 最佳男歌手", detail: "《One of a Kind》与《Crayon》拓宽了他作为 Solo 音乐人的表达边界，并让他获得 2012 MAMA 最佳男歌手奖。这一时期的实验风格逐渐成为个人舞台标识。" },
+    { heading: "MAMA · 年度艺人，四项获奖", detail: "他在 2013 MAMA 获得年度艺人、最佳男歌手、最佳男 Solo 舞蹈表演及最佳音乐录影带四项奖项。同年，首轮 Solo 世界巡演《ONE OF A KIND》展开，包含日本四座巨蛋场馆演出。" },
+    { heading: "M.O.T.T.E · 日本巨蛋巡演 26 万观众", detail: "《KWON JI YONG》与《ACT III, M.O.T.T.E》将聚光灯背后的权志龙带到作品中央。日本三座城市的五场巨蛋演出共吸引约 26 万名观众。" },
+    { heading: "MAMA · 年度音乐愿景人物", detail: "凭借《POWER》回归 Solo 活动后，G-DRAGON 获得 2024 MAMA Music Visionary of the Year。该荣誉关注他对音乐与流行文化的长期影响。" },
+    { heading: "MAMA · 年度艺人等三项大奖", detail: "正规专辑《Übermensch》与歌曲《TOO BAD》开启新的篇章。2025 MAMA 上，他获得年度艺人、最佳男歌手及最佳男 Solo 舞蹈表演三项奖项。" }
+  ],
+  en: [
+    { heading: "BIGBANG debuts", detail: "The five members are introduced as BIGBANG, bringing Kwon Ji Yong’s music into public view. His early contributions to rap, writing, and composition help establish his creative identity within the group." },
+    { heading: "Melon Music Awards · Album of the Year", detail: "His first solo studio album, Heartbreaker, is named Album of the Year at the 2009 Melon Music Awards. Solo vocals, production, and a vivid visual concept announce a distinct musical world." },
+    { heading: "MAMA · Best Male Artist", detail: "One of a Kind and Crayon expand his range as a solo artist, and he receives Best Male Artist at the 2012 MAMA. The era’s experimental styling becomes a signature of his solo stage." },
+    { heading: "MAMA · Artist of the Year, four awards", detail: "At the 2013 MAMA, he wins Artist of the Year, Best Male Artist, Best Dance Performance – Male Solo, and Best Music Video. That year, his first solo world tour, ONE OF A KIND, includes shows at four major domes in Japan." },
+    { heading: "M.O.T.T.E · 260,000 at Japan dome shows", detail: "KWON JI YONG and ACT III, M.O.T.T.E bring the person behind the stage persona into focus. Five concerts across three Japanese dome cities draw approximately 260,000 people." },
+    { heading: "MAMA · Music Visionary of the Year", detail: "After returning to solo activity with POWER, G-DRAGON receives the 2024 MAMA Music Visionary of the Year honor, recognizing a lasting influence on music and popular culture." },
+    { heading: "MAMA · Artist of the Year and two more", detail: "The studio album Übermensch and TOO BAD open a new chapter. At the 2025 MAMA, he wins Artist of the Year, Best Male Artist, and Best Dance Performance – Male Solo." }
+  ]
+};
+
+const galleryStories = {
+  ko: [
+    "시드니 공연의 넓은 무대와 레이저 빛은 ACT III, M.O.T.T.E의 거대한 스케일을 보여줍니다. 세 번째 솔로 투어는 화려한 페르소나와 그 안쪽의 권지용을 함께 무대에 올렸습니다.",
+    "2015년 예능 프로젝트 무대에서 포착한 권지용의 초상입니다. 강한 색과 표정이 콘서트 사진과 다른, 카메라 앞의 순간을 남깁니다.",
+    "공연장 스크린은 음악을 보조하는 배경을 넘어 각 곡의 감정과 장면을 확장합니다. 관객의 시선과 퍼포먼스가 같은 화면 안에서 움직입니다.",
+    "조명이 켜지는 순간, 무대는 하나의 독립된 풍경으로 바뀝니다. 흑백으로 남긴 빛의 흔적을 따라 공연의 공간감을 살펴봅니다.",
+    "객석과 무대를 한 프레임에 담아 공연의 규모를 기록합니다. 약 26만 명이 함께한 일본 돔 투어의 현장감이 이미지 바깥까지 이어집니다."
+  ],
+  zh: [
+    "悉尼站的宽阔舞台与激光灯光呈现了 ACT III, M.O.T.T.E 的演出尺度。这是他的第三轮 Solo 世界巡演，作品同时展开耀眼的舞台人格与其背后的权志龙。",
+    "这张肖像记录了权志龙在 2015 年综艺企划舞台上的一刻。鲜明的色彩和神情，留下了与演唱会现场不同的镜头瞬间。",
+    "舞台屏幕不只是音乐背后的布景，也延伸出每首歌的情绪与视觉场景。观众的视线和表演者在同一画面中交汇。",
+    "灯光亮起时，舞台变成一片独立的风景。黑白影像留下光束的轨迹，也记录下演出的空间感。",
+    "画面同时收进观众席与舞台，记录演出的规模。日本巨蛋巡演五场共约 26 万名观众，现场能量延伸到镜头之外。"
+  ],
+  en: [
+    "The broad stage and laser beams in Sydney reveal the scale of ACT III, M.O.T.T.E. His third solo tour put the spectacle of the persona beside the quieter story of Kwon Ji Yong.",
+    "A portrait of Kwon Ji Yong during the 2015 television music project. Its color and expression preserve a camera-side moment apart from the concert stage.",
+    "The stage screens extend each song into a visual scene instead of sitting behind the performance. The audience’s gaze and the artist’s movement share one frame.",
+    "As the lights rise, the stage becomes a landscape of its own. This monochrome frame follows the beams and the sense of space around the performance.",
+    "The frame holds both audience and stage to show the scale of the room. The five Japan dome shows drew about 260,000 people, and the energy continues beyond the image."
+  ]
+};
+
+const galleryPhotos = [
+  { src: "assets/gd-2017-motte-sydney.jpg", source: "https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_13.jpg" },
+  { src: "assets/gd-2015-infinite-challenge.jpg", source: "https://commons.wikimedia.org/wiki/File:G-Dragon_Infinite_Challenge_2015.jpg" },
+  { src: "assets/gd-2017-motte-sydney-screens.jpg", source: "https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_10.jpg" },
+  { src: "assets/gd-2017-motte-sydney-lights.jpg", source: "https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_17.jpg" },
+  { src: "assets/gd-2017-motte-sydney-crowd.jpg", source: "https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_22.jpg" }
+];
 
 const videoThumbnail = (year, quality = "maxresdefault") => `https://i.ytimg.com/vi/${representativeVideos[year].id}/${quality}.jpg`;
 
@@ -123,16 +215,46 @@ function setThumbnailFallback(image, year) {
 function renderHero(copy) {
   const milestone = copy.timeline.find(([year]) => year === selectedHeroYear) || copy.timeline[0];
   const [year, title, tag, description] = milestone;
-  const video = representativeVideos[year];
-  const heroImage = byId("hero-image");
-  heroImage.src = videoThumbnail(year);
-  heroImage.alt = `${title} · ${year} ${copy.videoThumbnailAlt}`;
-  setThumbnailFallback(heroImage, year);
   byId("hero-era").innerHTML = `<p><span class="hero-era-kicker">${escapeHTML(year)} · ${escapeHTML(tag)}</span><strong>${escapeHTML(title)}</strong><span>${escapeHTML(description)}</span></p>`;
-  document.querySelector(".hero-portrait figcaption").textContent = `${video.label} · ${year}`;
   document.querySelectorAll("[data-hero-year]").forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.heroYear === year));
   });
+}
+
+function renderHeroCarousel(copy) {
+  const slide = heroSlides[activeHeroSlide];
+  const localizedSlide = slide[language];
+  const figure = document.querySelector(".hero-portrait");
+  const image = byId("hero-image");
+  figure.setAttribute("aria-label", copy.heroCarouselLabel);
+  image.classList.add("is-changing");
+  image.src = slide.src;
+  image.alt = localizedSlide.alt;
+  byId("hero-caption").textContent = localizedSlide.caption;
+  byId("hero-slide-count").textContent = `${String(activeHeroSlide + 1).padStart(2, "0")} / ${String(heroSlides.length).padStart(2, "0")}`;
+  window.setTimeout(() => image.classList.remove("is-changing"), 450);
+  byId("hero-prev").setAttribute("aria-label", copy.heroPrevious);
+  byId("hero-next").setAttribute("aria-label", copy.heroNext);
+  const dots = byId("hero-dots");
+  dots.setAttribute("aria-label", copy.heroDots);
+  dots.innerHTML = heroSlides.map((item, index) => `<button type="button" data-hero-slide="${index}" aria-label="${escapeHTML(`${index + 1}: ${item[language].caption}`)}" aria-pressed="${index === activeHeroSlide}"></button>`).join("");
+  dots.querySelectorAll("[data-hero-slide]").forEach((button) => button.addEventListener("click", () => setHeroSlide(Number(button.dataset.heroSlide), copy)));
+  const toggle = byId("hero-autoplay");
+  toggle.setAttribute("aria-pressed", String(heroAutoplayEnabled));
+  toggle.setAttribute("aria-label", heroAutoplayEnabled ? copy.heroPause : copy.heroPlay);
+  toggle.querySelector("span").textContent = heroAutoplayEnabled ? "Ⅱ" : "▶";
+}
+
+function setHeroSlide(index, copy) {
+  activeHeroSlide = (index + heroSlides.length) % heroSlides.length;
+  renderHeroCarousel(copy);
+}
+
+function updateHeroAutoplay(copy) {
+  window.clearInterval(heroAutoplayTimer);
+  heroAutoplayTimer = null;
+  if (!heroAutoplayEnabled || document.hidden || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  heroAutoplayTimer = window.setInterval(() => setHeroSlide(activeHeroSlide + 1, copy), 6500);
 }
 
 function renderTimeline(copy) {
@@ -150,15 +272,14 @@ function renderTimeline(copy) {
 }
 
 function renderTimelinePanel(copy) {
-  const item = copy.timeline.find(([year]) => year === selectedTimelineYear) || copy.timeline[0];
+  const activeIndex = Math.max(0, copy.timeline.findIndex(([year]) => year === selectedTimelineYear));
+  const item = copy.timeline[activeIndex] || copy.timeline[0];
   const [year, title, tag, description] = item;
   const video = representativeVideos[year];
+  const editorial = timelineEditorial[language][activeIndex];
   byId("timeline-list").innerHTML = `
-    <article class="timeline-item timeline-feature" aria-live="polite">
-      <div class="timeline-info">
-        <div class="timeline-year">${escapeHTML(year)}</div>
-        <div class="timeline-content"><h3 class="timeline-title">${escapeHTML(title)}</h3><span class="timeline-tag">${escapeHTML(tag)}</span><p class="timeline-description">${escapeHTML(description)}</p></div>
-      </div>
+    <article class="timeline-item timeline-feature" aria-live="polite" aria-label="${escapeHTML(`${copy.timelineTitle} · ${year}`)}">
+      <div class="timeline-story-top"><span>${escapeHTML(`${copy.timelineChapter} ${String(activeIndex + 1).padStart(2, "0")} / ${String(copy.timeline.length).padStart(2, "0")}`)}</span><span>${escapeHTML(tag)}</span></div>
       <figure class="timeline-visual">
         <a href="https://www.youtube.com/watch?v=${video.id}" target="_blank" rel="noreferrer" aria-label="${escapeHTML(`${copy.videoFrameLabel}: ${title} (${year})`)}">
           <img src="${videoThumbnail(year)}" alt="${escapeHTML(`${title} · ${year} ${copy.videoThumbnailAlt}`)}" loading="lazy" />
@@ -166,9 +287,35 @@ function renderTimelinePanel(copy) {
         </a>
         <figcaption>${escapeHTML(video.label)} · ${escapeHTML(copy.videoFrameLabel)} ↗</figcaption>
       </figure>
+      <div class="timeline-info">
+        <div class="timeline-year">${escapeHTML(year)}</div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">${escapeHTML(title)}</h3>
+          <span class="timeline-tag">${escapeHTML(tag)}</span>
+          <div class="timeline-story-copy"><span class="timeline-story-label">${escapeHTML(copy.timelineStoryLabel)}</span><p class="timeline-description">${escapeHTML(description)}</p><p class="timeline-context">${escapeHTML(editorial.detail)}</p></div>
+          <aside class="timeline-achievement"><span class="timeline-achievement-label">${escapeHTML(copy.timelineAchievement)}</span><strong>${escapeHTML(editorial.heading)}</strong></aside>
+        </div>
+      </div>
     </article>`;
   const thumbnail = byId("timeline-list").querySelector(".timeline-visual img");
   setThumbnailFallback(thumbnail, year);
+}
+
+function openGalleryDetail(index) {
+  const copy = { ...languages[language], ...interfaceCopy[language] };
+  const photo = galleryPhotos[index];
+  const image = document.querySelectorAll(".gallery-image img")[index];
+  const titleKey = document.querySelector(`[data-gallery-open="${index}"][data-gallery-title]`)?.dataset.galleryTitle;
+  const title = titleKey ? copy[titleKey] : image?.alt || "G-DRAGON";
+  const caption = image?.closest(".gallery-item")?.querySelector("small")?.textContent || "";
+  byId("gallery-dialog-image").src = photo.src;
+  byId("gallery-dialog-image").alt = image?.alt || title;
+  byId("gallery-dialog-caption").textContent = caption;
+  byId("gallery-dialog-kicker").textContent = `${copy.galleryDialogKicker} · ${String(index + 1).padStart(2, "0")} / ${String(galleryPhotos.length).padStart(2, "0")}`;
+  byId("gallery-dialog-title").textContent = title;
+  byId("gallery-dialog-description").textContent = galleryStories[language][index];
+  byId("gallery-dialog-source").href = photo.source;
+  byId("gallery-dialog").showModal();
 }
 
 function renderWorks(copy) {
@@ -211,7 +358,7 @@ function renderWorks(copy) {
 
 function applyLanguage(nextLanguage, updateAddress = false) {
   language = nextLanguage;
-  const copy = languages[language];
+  const copy = { ...languages[language], ...interfaceCopy[language] };
   document.documentElement.lang = language === "zh" ? "zh-Hans" : language;
   document.title = copy.title;
   document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -232,8 +379,17 @@ function applyLanguage(nextLanguage, updateAddress = false) {
   const menuToggle = byId("menu-toggle");
   if (menuToggle) menuToggle.setAttribute("aria-label", copy[menuToggle.getAttribute("aria-expanded") === "true" ? "menuCloseLabel" : "menuOpenLabel"]);
   renderHero(copy);
+  renderHeroCarousel(copy);
   renderTimeline(copy);
   renderWorks(copy);
+  document.querySelectorAll("[data-gallery-open]").forEach((button) => {
+    const index = Number(button.dataset.galleryOpen);
+    const key = document.querySelector(`[data-gallery-open="${index}"][data-gallery-title]`)?.dataset.galleryTitle;
+    const title = key ? copy[key] : copy.galleryOpenLabel;
+    button.setAttribute("aria-label", `${copy.galleryOpenLabel}: ${title}`);
+  });
+  byId("gallery-dialog-close").setAttribute("aria-label", copy.galleryCloseLabel);
+  updateHeroAutoplay(copy);
   if (updateAddress) {
     saveLanguage(language);
     try {
@@ -252,6 +408,22 @@ document.querySelectorAll("[data-hero-year]").forEach((button) => {
     selectedHeroYear = button.dataset.heroYear;
     renderHero(languages[language]);
   });
+});
+byId("hero-prev").addEventListener("click", () => setHeroSlide(activeHeroSlide - 1, { ...languages[language], ...interfaceCopy[language] }));
+byId("hero-next").addEventListener("click", () => setHeroSlide(activeHeroSlide + 1, { ...languages[language], ...interfaceCopy[language] }));
+byId("hero-autoplay").addEventListener("click", () => {
+  heroAutoplayEnabled = !heroAutoplayEnabled;
+  const copy = { ...languages[language], ...interfaceCopy[language] };
+  renderHeroCarousel(copy);
+  updateHeroAutoplay(copy);
+});
+document.addEventListener("visibilitychange", () => updateHeroAutoplay({ ...languages[language], ...interfaceCopy[language] }));
+document.querySelectorAll("[data-gallery-open]").forEach((button) => {
+  button.addEventListener("click", () => openGalleryDetail(Number(button.dataset.galleryOpen)));
+});
+byId("gallery-dialog-close").addEventListener("click", () => byId("gallery-dialog").close());
+byId("gallery-dialog").addEventListener("click", (event) => {
+  if (event.target === byId("gallery-dialog")) byId("gallery-dialog").close();
 });
 const menuToggle = byId("menu-toggle");
 const mainNav = byId("main-nav");
