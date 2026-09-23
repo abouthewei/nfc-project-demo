@@ -7,8 +7,8 @@
     <meta name="description" content="G-DRAGON, a three-language editorial archive of music, moments, and reinvention. 한국어 · 中文 · English." />
     <title>G-DRAGON — Artist Archive</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23c9ff3d'/%3E%3Ctext x='50%25' y='55%25' font-family='Arial' font-size='27' font-weight='700' text-anchor='middle' fill='%230b0b0a'%3EGD%3C/text%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="styles.css?v=20260923-local-video-hd" />
-    <script defer src="app.js?v=20260923-local-video-hd"></script>
+    <link rel="stylesheet" href="styles.css?v=20260923-portrait-zoom" />
+    <script defer src="app.js?v=20260923-portrait-zoom"></script>
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="skip">본문으로 건너뛰기</a>
@@ -36,11 +36,11 @@
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
         <figure class="hero-portrait" aria-roledescription="carousel" aria-label="G-DRAGON photo carousel">
-          <img id="hero-image" src="assets/gd-2014-kcon.webp" alt="2014년 KCON 무대에서 공연하는 권지용" fetchpriority="high" />
-          <figcaption id="hero-caption">KCON · LOS ANGELES · 2014</figcaption>
+          <img id="hero-image" src="assets/gd-2025-cultural-portrait.webp" alt="2025년 대한민국 대중문화예술상에서 턱시도를 입은 권지용의 인물 사진" fetchpriority="high" />
+          <figcaption id="hero-caption">KWON JI YONG · 2025 CULTURAL AWARDS</figcaption>
           <div class="hero-carousel-controls">
             <div class="hero-carousel-dots" id="hero-dots" role="group" aria-label="사진 선택"></div>
-            <span class="hero-carousel-count" id="hero-slide-count" aria-live="polite">01 / 02</span>
+            <span class="hero-carousel-count" id="hero-slide-count" aria-live="polite">01 / 04</span>
             <button class="hero-carousel-toggle" id="hero-autoplay" type="button" aria-pressed="true" aria-label="자동 재생 일시정지"><span aria-hidden="true">Ⅱ</span></button>
           </div>
         </figure>
@@ -112,8 +112,22 @@
         <dialog class="gallery-dialog" id="gallery-dialog" aria-labelledby="gallery-dialog-title">
           <div class="gallery-dialog-shell">
             <button class="gallery-dialog-close" id="gallery-dialog-close" type="button" aria-label="닫기">×</button>
-            <figure class="gallery-dialog-figure"><img id="gallery-dialog-image" src="" alt="" /><figcaption id="gallery-dialog-caption"></figcaption></figure>
-            <div class="gallery-dialog-copy"><span class="gallery-dialog-kicker" id="gallery-dialog-kicker"></span><h3 id="gallery-dialog-title"></h3><p id="gallery-dialog-description"></p><a id="gallery-dialog-source" href="" target="_blank" rel="noreferrer"><span data-i18n="gallerySourceLabel">사진 원본 및 라이선스</span><span aria-hidden="true">↗</span></a></div>
+            <figure class="gallery-dialog-figure" id="gallery-dialog-figure">
+              <img id="gallery-dialog-image" src="" alt="" draggable="false" />
+              <div class="gallery-dialog-video-frame" id="gallery-dialog-video-frame" hidden><iframe title="" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+              <div class="gallery-viewer-controls">
+                <button class="gallery-viewer-nav" id="gallery-dialog-prev" type="button" aria-label="上一张照片">←</button>
+                <div class="gallery-zoom-controls">
+                  <button id="gallery-zoom-out" type="button" aria-label="缩小照片">−</button>
+                  <output id="gallery-zoom-level" aria-live="polite">100%</output>
+                  <button id="gallery-zoom-in" type="button" aria-label="放大照片">＋</button>
+                  <button id="gallery-zoom-reset" type="button" aria-label="恢复原始大小">↺</button>
+                </div>
+                <button class="gallery-viewer-nav" id="gallery-dialog-next" type="button" aria-label="下一张照片">→</button>
+              </div>
+              <figcaption id="gallery-dialog-caption"></figcaption>
+            </figure>
+            <div class="gallery-dialog-copy"><span class="gallery-dialog-kicker" id="gallery-dialog-kicker"></span><h3 id="gallery-dialog-title"></h3><p id="gallery-dialog-description"></p><div class="gallery-dialog-actions"><button class="gallery-dialog-video-toggle" id="gallery-dialog-video-toggle" type="button" aria-pressed="false">播放 M.O.T.T.E 官方巡演预告</button><a id="gallery-dialog-source" href="" target="_blank" rel="noreferrer"><span data-i18n="gallerySourceLabel">照片原始来源与授权</span><span aria-hidden="true">↗</span></a></div></div>
           </div>
         </dialog>
       </section>
@@ -135,15 +149,18 @@
         <div class="photo-credits">
           <span class="credit-label" data-i18n="creditsLabel">PHOTO CREDITS</span>
           <p><a href="https://commons.wikimedia.org/wiki/File:G-Dragon_-_3_KCON_%2714.jpg" target="_blank" rel="noreferrer">mduangdara</a> / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a> <span data-i18n="credit2014">(2014 KCON · 색상/크롭 조정)</span></p>
+          <p><a href="https://commons.wikimedia.org/wiki/File:G-Dragon_in_October_2025.jpg" target="_blank" rel="noreferrer">티비텐 TV10</a> / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a> <span data-i18n="credit2025">(2025 Cultural Awards · optimized to WebP)</span></p>
           <p><a href="https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_3.jpg" target="_blank" rel="noreferrer">Black Flower</a> / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a> <span data-i18n="credit2017Red">(2017 M.O.T.T.E 시드니 공연 · 색상/크롭 조정)</span></p>
           <p><a href="https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_13.jpg" target="_blank" rel="noreferrer">Black Flower</a> / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a> <span data-i18n="credit2017">(2017 M.O.T.T.E 시드니 공연 · 색상/크롭 조정)</span></p>
           <p><a href="https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_10.jpg" target="_blank" rel="noreferrer">Black Flower</a> / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a> <span data-i18n="credit2017Screens">(2017 M.O.T.T.E 시드니 공연 · 흑백/크롭 조정)</span></p>
           <p><a href="https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_17.jpg" target="_blank" rel="noreferrer">Black Flower</a> / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a> <span data-i18n="credit2017Lights">(2017 M.O.T.T.E 시드니 공연 · 흑백/크롭 조정)</span></p>
           <p><a href="https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_22.jpg" target="_blank" rel="noreferrer">Black Flower</a> / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a> <span data-i18n="credit2017Crowd">(2017 M.O.T.T.E 시드니 공연 · 흑백/크롭 조정)</span></p>
+          <p><a href="https://commons.wikimedia.org/wiki/File:G-Dragon_-_M.O.T.T.E_World_Tour_in_Sydney_2017_-_21.jpg" target="_blank" rel="noreferrer">Black Flower</a> / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a> <span data-i18n="credit2017Hero">(2017 M.O.T.T.E 시드니 공연 · 고해상도 크롭)</span></p>
           <p class="video-credit-note" data-i18n="videoCredits">대표 영상과 프리뷰 화면은 YG ENTERTAINMENT 및 OfficialGDRAGON 공식 YouTube 채널의 게시물을 연결합니다. 권리는 각 권리자에게 있습니다.</p>
         </div>
         <div class="footer-links">
           <span class="credit-label" data-i18n="sourceLabel">REFERENCE</span>
+          <a href="https://yg-life.com/archives/88675?lang=en" target="_blank" rel="noreferrer">YG LIFE · M.O.T.T.E Tour Trailer ↗</a>
           <a href="https://music.apple.com/us/artist/g-dragon/320373708" target="_blank" rel="noreferrer">Apple Music · G-DRAGON ↗</a>
           <a href="https://www.ygfamily.com/en/news/notice/4930" target="_blank" rel="noreferrer">YG Entertainment · Coup d’Etat ↗</a>
           <a href="https://www.melon.com/mma/result.htm?mmaYear=2009" target="_blank" rel="noreferrer">Melon Music Awards · 2009 Album of the Year ↗</a>
