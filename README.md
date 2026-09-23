@@ -11,11 +11,13 @@ Independent static projects. Each project is self-contained and can be deployed 
 - `Babu-Art/` — Babu Art architectural heritage practice journal
 - `Archive/` — Babu Art bilingual field archive photo album
 - `UK-Sketches/` — Ye Gang's bilingual British travel sketchbook
+- `G-Dragon/` — G-DRAGON Korean / Chinese / English artist archive
 
 ## Live demos
 
 - [Alan Tam](https://abouthewei.github.io/nfc-project-demo/alan-tam/)
 - [Kobe Bryant](https://nfc-project-demo.iwownow.com/kobe-bryant/index.html)
+- [G-DRAGON](https://abouthewei.github.io/nfc-project-demo/G-Dragon/)
 
 ## Deployment
 
