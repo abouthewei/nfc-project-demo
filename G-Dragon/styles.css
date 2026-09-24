@@ -133,8 +133,8 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--lime); outline-
 .work-row-wrap { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 25px; }
 .work-row { width: 100%; display: grid; grid-template-columns: 75px minmax(180px, 1.1fr) minmax(90px, .36fr) 30px; align-items: center; gap: 18px; padding: 21px 0; color: #8a8b84; border: 0; background: transparent; text-align: left; cursor: pointer; transition: color .2s; }
 .work-row:hover, .work-row[aria-expanded="true"] { color: var(--paper); }
-.work-row[aria-expanded="true"] .work-year, .work-row[aria-expanded="true"] .work-arrow { color: var(--lime); }
-.work-year { font: 500 14px/1 "Barlow Condensed", Impact, sans-serif; font-variant-numeric: tabular-nums; letter-spacing: .08em; }
+.work-row[aria-expanded="true"] .work-sequence, .work-row[aria-expanded="true"] .work-arrow { color: var(--lime); }
+.work-sequence { font: 500 14px/1 "Barlow Condensed", Impact, sans-serif; font-variant-numeric: tabular-nums; letter-spacing: .08em; }
 .work-title { font: 800 clamp(26px, 4vw, 52px)/1 "Barlow Condensed", Impact, sans-serif; letter-spacing: -.025em; text-transform: uppercase; }
 .work-kind { color: #a6a7a0; font: 10px/1.4 var(--sans); letter-spacing: .11em; }
 .work-arrow { display: grid; place-items: center; justify-self: end; width: 38px; height: 38px; border: 1px solid #777871; border-radius: 50%; color: var(--paper); font-size: 18px; line-height: 1; transition: border-color .2s, color .2s, transform .2s; }
@@ -323,7 +323,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--lime); outline-
   .work-item.is-selected::before { left: -12px; }
   .work-row-wrap { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .work-row { grid-template-columns: 43px minmax(0, 1fr) 20px; gap: 9px; padding: 17px 0 10px; }
-  .work-year { grid-column: 1; grid-row: 1 / span 2; }
+  .work-sequence { grid-column: 1; grid-row: 1 / span 2; }
   .work-title { grid-column: 2; grid-row: 1; font-size: 25px; }
   .work-kind { grid-column: 2; grid-row: 2; margin-top: 4px; font-size: 10px; }
   .work-arrow { grid-column: 3; grid-row: 1 / span 2; width: 30px; height: 30px; font-size: 15px; }
