@@ -34,23 +34,33 @@ All photographs are bundled locally so the static page does not depend on a thir
 
 The respective Commons file pages contain the underlying image metadata and licensing history. This project makes no claim of endorsement by the photographers, artist, or agency.
 
-The five-frame opening carousel keeps the 2015 Yeongdong Expressway Music Festival close-up (732 × 1,098 px) as its lead image. The remaining frames now show G-Dragon seated in a blue suit at WE11DONE in Paris (2020), a pearl-embellished world-tour portrait (2025), a car-side off-stage moment (2025), and YG's BiiiG iii visual (2026). For the pearl portrait, an exact 1,080 × 1,350 px version was found on KENH14 with the HelloGDkitty watermark intact; it is displayed without cropping. The other three use the files supplied for this page at their original pixel dimensions. The car photo supplied by the user contains image-viewer controls in opposite corners, which the hero crop hides; it is not retouched. These new portraits are sharper than the prior carousel images at the current hero size, though the supplied 683–956 px originals are not full-resolution press assets for large Retina displays. The Getty reference for the WE11DONE photo is rights-managed, and a publication license was not independently verified for the new supplied/reposted photos; the source table records that limitation rather than implying permission. The visual archive still uses four Sydney frames and loads their source-resolution WebP versions only when the visitor opens the detail viewer, preserving lightweight page thumbnails while allowing close inspection. In the viewer, visitors can zoom with the controls, mouse wheel, double-click, or mobile pinch, pan a zoomed image, and move through the Sydney photo set. The detail panel also plays the [official M.O.T.T.E tour trailer published by YG LIFE](https://yg-life.com/archives/88675?lang=en) in an embedded player. The closing chapter uses an original CSS stage-light treatment instead of repeating a photograph from earlier sections.
+The five-frame opening carousel keeps the 2015 Yeongdong Expressway Music Festival close-up (732 × 1,098 px) as its lead image. The remaining frames now show G-Dragon seated in a blue suit at WE11DONE in Paris (2020), a pearl-embellished world-tour portrait (2025), a car-side off-stage moment (2025), and YG's BiiiG iii visual (2026). For the pearl portrait, an exact 1,080 × 1,350 px version was found on KENH14 with the HelloGDkitty watermark intact; it is displayed without cropping. The other three use the files supplied for this page at their original pixel dimensions. The car photo supplied by the user contains image-viewer controls in opposite corners, which the hero crop hides; it is not retouched. These new portraits are sharper than the prior carousel images at the current hero size, though the supplied 683–956 px originals are not full-resolution press assets for large Retina displays. The Getty reference for the WE11DONE photo is rights-managed, and a publication license was not independently verified for the new supplied/reposted photos; the source table records that limitation rather than implying permission. The visual archive still uses four Sydney frames and loads their source-resolution WebP versions only when the visitor opens the detail viewer, preserving lightweight page thumbnails while allowing close inspection. In the viewer, visitors can zoom with the controls, mouse wheel, double-click, or mobile pinch, pan a zoomed image, and move through the Sydney photo set. The detail panel also plays a [Bilibili upload of the M.O.T.T.E tour trailer](https://www.bilibili.com/video/BV1YW411E7P7/?p=1) in an embedded player. The closing chapter uses an original CSS stage-light treatment instead of repeating a photograph from earlier sections.
 
 The visual archive cards open an in-page detail view. Each detail view includes a short editorial note and links to the corresponding Commons file page, where the photographer credit and license are recorded.
 
 ## Representative videos and preview frames
 
-Each timeline year has a video preview card that loads its official video in a YouTube privacy-enhanced embed after the visitor presses play. Selected releases in the discography use the same click-to-load in-page playback. Video streams and preview images remain hosted by YouTube and copyrighted by their respective rights holders; they are not downloaded into this repository.
+Each timeline year has a video preview card that loads the corresponding Bilibili upload after the visitor presses play. The six collaboration cards and the gallery's M.O.T.T.E trailer use the same Bilibili external player. Bilibili streams and cover images remain on its servers and are not bundled in this repository. These are user uploads or subtitled reposts of the named works; this page does not represent the uploads as artist or label accounts. Each card also links to the matching Bilibili page. Video rights remain with their respective owners. Bilibili availability and playback quality can vary by region and account.
 
-| Year | Selection | Official video |
+| Year | Selection | Bilibili upload and selected part |
 | --- | --- | --- |
-| 2006 | BIGBANG — We Belong Together | [YG Entertainment](https://www.youtube.com/watch?v=bjTEMBB-mjY) |
-| 2009 | G-DRAGON — Heartbreaker | [YG Entertainment](https://www.youtube.com/watch?v=LOXEVd-Z7NE) |
-| 2012 | G-DRAGON — One of a Kind | [BIGBANG official channel](https://www.youtube.com/watch?v=rJnICByeL8Q) |
-| 2013 | G-DRAGON — Coup d’Etat | [BIGBANG official channel](https://www.youtube.com/watch?v=C8T6771Sdj8) |
-| 2017 | G-DRAGON — Untitled, 2014 | [YG LIFE / official M/V](https://www.youtube.com/watch?v=9kaCAbIXuyg) |
-| 2024 | G-DRAGON — POWER | [OfficialGDRAGON](https://www.youtube.com/watch?v=NMjhjrBIrG8) |
-| 2025 | G-DRAGON — TOO BAD | [OfficialGDRAGON](https://www.youtube.com/watch?v=o9DhvbqYzns) |
+| 2006 | BIGBANG — We Belong Together | [诶里A梨, MV collection, part 23](https://www.bilibili.com/video/BV19p411d7S9/?p=23) |
+| 2009 | G-DRAGON — Heartbreaker | [Antony_安东尼, MV](https://www.bilibili.com/video/BV1EW411b7ms/) |
+| 2012 | G-DRAGON — One of a Kind | [发财吧啵, MV](https://www.bilibili.com/video/BV1Lx411S7vk/) |
+| 2013 | G-DRAGON — Coup d’Etat | [Zoeychaaan, subtitled MV](https://www.bilibili.com/video/BV1hs411M74C/) |
+| 2017 | G-DRAGON — Untitled, 2014 | [麻辣窝努今天次饭了嘛, MV, part 1](https://www.bilibili.com/video/BV1nC4y1t7rs/?p=1) |
+| 2024 | G-DRAGON — POWER | [GDTOP百度知道团队, subtitled MV](https://www.bilibili.com/video/BV1JJSnYsEQm/) |
+| 2025 | G-DRAGON — TOO BAD | [BIGBANG_四季五时资源站, subtitled MV](https://www.bilibili.com/video/BV1mV9bYNEqZ/) |
+
+| Collaboration or gallery | Selection | Bilibili upload |
+| --- | --- | --- |
+| GD × Taeyang | GOOD BOY | [XIANVXIA, restored MV, part 1](https://www.bilibili.com/video/BV1G54y1x7d8/?p=1) |
+| GD × T.O.P | ZUTTER | [莫呼洛迦, subtitled MV](https://www.bilibili.com/video/BV1Rs411Q718/) |
+| IU feat. G-DRAGON | PALETTE | [明天就跑路, MV, part 1](https://www.bilibili.com/video/BV1Nx411U7a3/?p=1) |
+| Zion.T feat. G-DRAGON | COMPLEX | [Lynnzzy, audio with subtitles](https://www.bilibili.com/video/BV1vs41187Zq/) |
+| BIGBANG | LOSER | [xnine_5, MV](https://www.bilibili.com/video/BV1Ks411J7aM/) |
+| BIGBANG | STILL LIFE | [GDTOP百度知道团队, subtitled MV](https://www.bilibili.com/video/BV1Vu411e7Tv/) |
+| M.O.T.T.E gallery | 2017 tour trailer | [账号已注销, trailer, part 1](https://www.bilibili.com/video/BV1YW411E7P7/?p=1) |
 
 ## Career milestones and awards
 

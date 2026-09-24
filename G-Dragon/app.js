@@ -3,13 +3,13 @@ const languages = {
     title: "G-DRAGON — 아티스트 아카이브", homeLabel: "G-DRAGON 홈", mainNavLabel: "주요 탐색", languageLabel: "언어 선택", timelineNavLabel: "연도별 타임라인", menuLabel: "메뉴", menuOpenLabel: "메뉴 열기", menuCloseLabel: "메뉴 닫기", selectedReleasesLabel: "협업 작품", backToTopLabel: "맨 위로",
     heroAlt: "2012년 Alive World Tour 무대의 G-Dragon", work2017Alt: "2017년 M.O.T.T.E 시드니 공연 중인 G-Dragon", timeline2017Alt: "M.O.T.T.E 시드니 공연의 무대 스크린과 G-Dragon", gallery2017Alt: "2017년 시드니 M.O.T.T.E 월드투어 무대 전경", gallery2017ScreensAlt: "M.O.T.T.E 시드니 공연에서 화면 연출과 함께 퍼포먼스하는 G-Dragon", gallery2017LightsAlt: "M.O.T.T.E 시드니 공연의 무대 조명과 퍼포머", gallery2017CrowdAlt: "M.O.T.T.E 시드니 공연과 관객 전경",
     skip: "본문으로 건너뛰기", navStory: "이야기", navWorks: "작품", navArchive: "영상",
-    heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "무대 위의 이름, 권지용", heroIntro: "음악과 이미지, 태도와 변신. 한 사람의 이름이 하나의 장면이 되어온 시간.", heroLink: "아카이브 둘러보기", heroPhotoCaption: "KCON · LOS ANGELES · 2014", videoThumbnailAlt: "공식 대표 영상 이미지", workVideoAlt: "공식 영상 썸네일", videoFrameLabel: "공식 대표 영상", playVideoLabel: "공식 영상 재생", workVideoHint: "눌러서 페이지에서 재생", timelineSourceLabel: "REFERENCE",
+    heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "무대 위의 이름, 권지용", heroIntro: "음악과 이미지, 태도와 변신. 한 사람의 이름이 하나의 장면이 되어온 시간.", heroLink: "아카이브 둘러보기", heroPhotoCaption: "KCON · LOS ANGELES · 2014", videoThumbnailAlt: "Bilibili 대표 영상 이미지", workVideoAlt: "Bilibili 영상 썸네일", videoFrameLabel: "Bilibili 영상", playVideoLabel: "Bilibili 영상 재생", workVideoHint: "눌러서 페이지에서 재생", timelineSourceLabel: "REFERENCE",
     storyMarker: "THE PERSONA", storyTitle: "이름을 넘어,<br />하나의 언어로.", storyLead: "권지용과 G-DRAGON. 두 이름 사이에서 음악은 스타일이 되고, 스타일은 다시 자기표현의 방식이 된다.", storyBody: "이 페이지는 한 아티스트의 시간을 음반과 무대, 그리고 변화의 순간으로 엮은 작은 편집 아카이브입니다. 시작부터 현재까지, 각 장면이 다음 장면의 가능성을 열어온 흐름을 따라갑니다.",
     timelineMarker: "A LIFE IN CHAPTERS", timelineTitle: "사운드를 바꾼 시간", timelineIntro: "한 해가 하나의 장면이 되고,<br />장면은 다음 시대의 문을 연다.", timelineEnd: "다음 장은 아직 쓰이고 있습니다.",
-    worksMarker: "COLLABORATIONS & FEATURES", worksTitle: "함께 만든 장면", worksIntro: "유닛과 피처링을 따라가며, 다른 목소리와 만나는 순간을 듣습니다.", workImageLabel: "OFFICIAL VIDEO STILL", listenLink: "Apple Music에서 보기",
+    worksMarker: "COLLABORATIONS & FEATURES", worksTitle: "함께 만든 장면", worksIntro: "유닛과 피처링을 따라가며, 다른 목소리와 만나는 순간을 듣습니다.", workImageLabel: "BILIBILI VIDEO STILL", listenLink: "Apple Music에서 보기",
     archiveMarker: "THE VISUAL ARCHIVE", archiveTitle: "무대의 잔상", archiveIntro: "기록된 순간, 계속 움직이는 이미지.", gallery2017Title: "M.O.T.T.E WORLD TOUR", gallery2017Caption: "SYDNEY · 2017 — 무대의 스케일과 빛", gallery2017ScreensTitle: "A SCENE IN MOTION", gallery2017ScreensCaption: "M.O.T.T.E WORLD TOUR · 2017", gallery2017LightsTitle: "LIGHTS ON STAGE", gallery2017LightsCaption: "SYDNEY · 2017", gallery2017CrowdTitle: "THE ROOM, THE SOUND", gallery2017CrowdCaption: "M.O.T.T.E WORLD TOUR · 2017", galleryNote: "사진 출처와 확인 가능한 사용 조건은 하단 크레딧에 표시했습니다.",
     closingLabel: "END OF THIS CHAPTER", closingTitle: "계속해서,<br /><em>다르게.</em>", closingText: "이 아카이브는 한 사람의 다음 장면을 기다립니다.", backToTop: "처음으로",
-    footerDisclaimer: "독립적으로 제작된 팬 아카이브이며, 아티스트·소속사와 제휴 또는 공식 관계가 없습니다.", creditsLabel: "사진 및 영상 출처", sourceLabel: "참고 자료", videoCredits: "대표 영상은 공식 YouTube 게시물을 페이지 안에서 재생합니다. 영상의 저작권은 각 권리자에게 있습니다.", creditHero2020: "(사용자 제공 파일 · 683 × 1,024 px · Getty 대응 사진은 권리 관리 이미지)", creditHeroPearl: "(HelloGDkitty · KENH14 게시본 · 동일 사진 1,080 × 1,350 px · 원본 워터마크 유지)", creditHeroCar: "(사용자 제공 파일 · 956 × 1,138 px · 가장자리 화면 컨트롤은 구성 크롭으로 제외)", creditHeroBiiig: "(사용자 제공 파일 · 710 × 992 px · YG의 BiiiG iii 비주얼과 동일 이미지)", credit2015: "(2015 영동고속도로 가요제 · 고해상도 크롭)", credit2014: "(2014 KCON · 색상/크롭 조정)", credit2025: "(2025 대한민국 대중문화예술상 · WebP 최적화)", credit2012Stage: "(2012 ALIVE WORLD TOUR · 상체 중심 크롭)", credit2012Portrait: "(2012 ALIVE WORLD TOUR · 인물 중심 크롭)", credit2017Red: "(2017 M.O.T.T.E 시드니 공연 · 색상/크롭 조정)", credit2017: "(2017 M.O.T.T.E 시드니 공연 · 색상/크롭 조정)", credit2017Screens: "(2017 M.O.T.T.E 시드니 공연 · 흑백/크롭 조정)", credit2017Lights: "(2017 M.O.T.T.E 시드니 공연 · 흑백/크롭 조정)", credit2017Crowd: "(2017 M.O.T.T.E 시드니 공연 · 흑백/크롭 조정)", credit2017Hero: "(2017 M.O.T.T.E 시드니 공연 · 고해상도 크롭)", footerBack: "처음으로 ↑",
+    footerDisclaimer: "독립적으로 제작된 팬 아카이브이며, 아티스트·소속사와 제휴 또는 공식 관계가 없습니다.", creditsLabel: "사진 및 영상 출처", sourceLabel: "참고 자료", videoCredits: "대표 영상은 Bilibili에 게시된 영상으로 재생됩니다. 업로드 출처는 하단 기록에 표시하며, 영상의 권리는 각 권리자에게 있습니다.", creditHero2020: "(사용자 제공 파일 · 683 × 1,024 px · Getty 대응 사진은 권리 관리 이미지)", creditHeroPearl: "(HelloGDkitty · KENH14 게시본 · 동일 사진 1,080 × 1,350 px · 원본 워터마크 유지)", creditHeroCar: "(사용자 제공 파일 · 956 × 1,138 px · 가장자리 화면 컨트롤은 구성 크롭으로 제외)", creditHeroBiiig: "(사용자 제공 파일 · 710 × 992 px · YG의 BiiiG iii 비주얼과 동일 이미지)", credit2015: "(2015 영동고속도로 가요제 · 고해상도 크롭)", credit2014: "(2014 KCON · 색상/크롭 조정)", credit2025: "(2025 대한민국 대중문화예술상 · WebP 최적화)", credit2012Stage: "(2012 ALIVE WORLD TOUR · 상체 중심 크롭)", credit2012Portrait: "(2012 ALIVE WORLD TOUR · 인물 중심 크롭)", credit2017Red: "(2017 M.O.T.T.E 시드니 공연 · 색상/크롭 조정)", credit2017: "(2017 M.O.T.T.E 시드니 공연 · 색상/크롭 조정)", credit2017Screens: "(2017 M.O.T.T.E 시드니 공연 · 흑백/크롭 조정)", credit2017Lights: "(2017 M.O.T.T.E 시드니 공연 · 흑백/크롭 조정)", credit2017Crowd: "(2017 M.O.T.T.E 시드니 공연 · 흑백/크롭 조정)", credit2017Hero: "(2017 M.O.T.T.E 시드니 공연 · 고해상도 크롭)", footerBack: "처음으로 ↑",
     timeline: [
       ["2006", "BIGBANG", "GROUP DEBUT", "그룹 BIGBANG의 데뷔와 함께 첫 장이 열립니다. 개인의 목소리는 팀의 무대 안에서 더 넓은 관객을 만납니다."],
       ["2009", "Heartbreaker", "SOLO DEBUT ALBUM", "첫 솔로 정규 앨범. 선명한 시각 언어와 전자음악의 질감으로 독립적인 아티스트의 출발을 알립니다."],
@@ -20,25 +20,25 @@ const languages = {
       ["2025", "Übermensch", "STUDIO ALBUM · 2025", "새 정규 앨범. 지나온 페르소나를 돌아보면서도 다음 변화의 가능성을 열어둡니다."]
     ],
     works: [
-      ["good-boy", "GOOD BOY", "DUET SINGLE", "태양과 함께한 유닛 싱글. 둘의 랩과 퍼포먼스가 충돌하며 솔로 아티스트의 무대를 두 사람의 대결처럼 확장합니다.", "https://music.apple.com/us/album/good-boy-single/1313615274", "1ZRb1we80kM", "GD X TAEYANG — GOOD BOY · OFFICIAL M/V"],
-      ["zutter", "ZUTTER", "UNIT TRACK", "T.O.P와 함께 만든 유닛 트랙. 거친 플로우와 과장된 캐릭터 플레이로 BIGBANG 안의 또 다른 결을 보여줍니다.", "https://music.apple.com/us/search?term=BIGBANG%20GD%20TOP%20ZUTTER", "D8t8A8E_Tqc", "GD&T.O.P — ZUTTER · OFFICIAL M/V"],
-      ["palette", "PALETTE", "FEATURE · IU", "아이유의 시선에 G-DRAGON의 랩이 더해진 피처링 곡. 서로 다른 세대의 감각이 차분한 대화처럼 이어집니다.", "https://music.apple.com/us/search?term=IU%20Palette%20G-DRAGON", "d9IxdwEFk1c", "IU feat. G-DRAGON — PALETTE · OFFICIAL M/V"],
-      ["complex", "COMPLEX", "FEATURE · ZION.T", "자이언티의 곡에 참여해 익숙한 자신감과 유머를 비튼 랩을 들려줍니다. 정식 뮤직비디오 대신 공식 오디오를 연결합니다.", "https://music.apple.com/us/search?term=Zion.T%20Complex%20G-DRAGON", "vLzgATepxzg", "ZION.T feat. G-DRAGON — COMPLEX · OFFICIAL AUDIO"],
-      ["loser", "LOSER", "BIGBANG · SINGLE", "BIGBANG의 감정적인 면을 전면에 둔 싱글. 절제된 화면과 자기 고백에 가까운 가사가 그룹 음악의 다른 온도를 보여줍니다.", "https://music.apple.com/us/search?term=BIGBANG%20LOSER", "1CTced9CMMk", "BIGBANG — LOSER · OFFICIAL M/V"],
-      ["still-life", "STILL LIFE", "BIGBANG · SINGLE", "멤버들이 각자의 시간을 돌아보며 함께 부른 싱글. 계절과 기억을 오가는 영상으로 긴 공백 뒤의 재회를 기록합니다.", "https://music.apple.com/us/album/still-life-single/1616762362?l=en-US", "eN5mG_yMDiM", "BIGBANG — STILL LIFE · OFFICIAL M/V"]
+      ["good-boy", "GOOD BOY", "DUET SINGLE", "태양과 함께한 유닛 싱글. 둘의 랩과 퍼포먼스가 충돌하며 솔로 아티스트의 무대를 두 사람의 대결처럼 확장합니다.", "https://music.apple.com/us/album/good-boy-single/1313615274", "BV1G54y1x7d8", "GD X TAEYANG — GOOD BOY · BILIBILI M/V"],
+      ["zutter", "ZUTTER", "UNIT TRACK", "T.O.P와 함께 만든 유닛 트랙. 거친 플로우와 과장된 캐릭터 플레이로 BIGBANG 안의 또 다른 결을 보여줍니다.", "https://music.apple.com/us/search?term=BIGBANG%20GD%20TOP%20ZUTTER", "BV1Rs411Q718", "GD&T.O.P — ZUTTER · BILIBILI M/V"],
+      ["palette", "PALETTE", "FEATURE · IU", "아이유의 시선에 G-DRAGON의 랩이 더해진 피처링 곡. 서로 다른 세대의 감각이 차분한 대화처럼 이어집니다.", "https://music.apple.com/us/search?term=IU%20Palette%20G-DRAGON", "BV1Nx411U7a3", "IU feat. G-DRAGON — PALETTE · BILIBILI M/V"],
+      ["complex", "COMPLEX", "FEATURE · ZION.T", "자이언티의 곡에 참여해 익숙한 자신감과 유머를 비튼 랩을 들려줍니다. 뮤직비디오 대신 Bilibili 오디오 영상을 연결합니다.", "https://music.apple.com/us/search?term=Zion.T%20Complex%20G-DRAGON", "BV1vs41187Zq", "ZION.T feat. G-DRAGON — COMPLEX · BILIBILI AUDIO"],
+      ["loser", "LOSER", "BIGBANG · SINGLE", "BIGBANG의 감정적인 면을 전면에 둔 싱글. 절제된 화면과 자기 고백에 가까운 가사가 그룹 음악의 다른 온도를 보여줍니다.", "https://music.apple.com/us/search?term=BIGBANG%20LOSER", "BV1Ks411J7aM", "BIGBANG — LOSER · BILIBILI M/V"],
+      ["still-life", "STILL LIFE", "BIGBANG · SINGLE", "멤버들이 각자의 시간을 돌아보며 함께 부른 싱글. 계절과 기억을 오가는 영상으로 긴 공백 뒤의 재회를 기록합니다.", "https://music.apple.com/us/album/still-life-single/1616762362?l=en-US", "BV1Vu411e7Tv", "BIGBANG — STILL LIFE · BILIBILI M/V"]
     ]
   },
   zh: {
     title: "G-DRAGON — 艺术家档案", homeLabel: "G-DRAGON 首页", mainNavLabel: "主导航", languageLabel: "语言选择", timelineNavLabel: "年份时间线", menuLabel: "菜单", menuOpenLabel: "打开菜单", menuCloseLabel: "关闭菜单", selectedReleasesLabel: "合作作品", backToTopLabel: "回到顶部",
     heroAlt: "G-Dragon 在 2012 年 Alive World Tour 的舞台上", work2017Alt: "G-Dragon 在 2017 年 M.O.T.T.E 悉尼演出现场", timeline2017Alt: "M.O.T.T.E 悉尼演出的舞台屏幕与 G-Dragon", gallery2017Alt: "2017 年悉尼 M.O.T.T.E 世界巡演舞台全景", gallery2017ScreensAlt: "G-Dragon 在 M.O.T.T.E 悉尼场的屏幕影像前表演", gallery2017LightsAlt: "M.O.T.T.E 悉尼场的舞台灯光与表演者", gallery2017CrowdAlt: "M.O.T.T.E 悉尼演出现场与观众全景",
     skip: "跳转至正文", navStory: "故事", navWorks: "作品", navArchive: "影像",
-    heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "舞台上的名字，权志龙", heroIntro: "音乐与影像、态度与蜕变。一个名字逐渐成为一个时代切面的过程。", heroLink: "进入档案", heroPhotoCaption: "KCON · LOS ANGELES · 2014", videoThumbnailAlt: "官方代表视频画面", workVideoAlt: "官方视频缩略图", videoFrameLabel: "官方代表视频", playVideoLabel: "播放官方视频", workVideoHint: "点击播放 · 页内观看", timelineSourceLabel: "资料来源",
+    heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "舞台上的名字，权志龙", heroIntro: "音乐与影像、态度与蜕变。一个名字逐渐成为一个时代切面的过程。", heroLink: "进入档案", heroPhotoCaption: "KCON · LOS ANGELES · 2014", videoThumbnailAlt: "Bilibili 视频画面", workVideoAlt: "Bilibili 视频缩略图", videoFrameLabel: "Bilibili 视频", playVideoLabel: "播放 Bilibili 视频", workVideoHint: "点击播放 · 页内观看", timelineSourceLabel: "资料来源",
     storyMarker: "THE PERSONA", storyTitle: "超越名字，<br />成为一种语言。", storyLead: "权志龙与 G-DRAGON。在两个名字之间，音乐成为风格，风格又成为表达自我的方式。", storyBody: "这是一份小型编辑档案，以唱片、舞台和变化的瞬间串起一位艺术家的时间。从初次登场到今天，每个片段都为下一幕打开新的可能。",
     timelineMarker: "A LIFE IN CHAPTERS", timelineTitle: "改变声音的岁月", timelineIntro: "一年成为一个片段，<br />片段又推开下一个时代。", timelineEnd: "下一章，仍在书写。",
-    worksMarker: "COLLABORATIONS & FEATURES", worksTitle: "合作与共创", worksIntro: "从双人企划到客席合作，看看他的声音如何进入不同作品。", workImageLabel: "OFFICIAL VIDEO STILL", listenLink: "在 Apple Music 收听",
+    worksMarker: "COLLABORATIONS & FEATURES", worksTitle: "合作与共创", worksIntro: "从双人企划到客席合作，看看他的声音如何进入不同作品。", workImageLabel: "BILIBILI VIDEO STILL", listenLink: "在 Apple Music 收听",
     archiveMarker: "THE VISUAL ARCHIVE", archiveTitle: "舞台余像", archiveIntro: "被记录的瞬间，仍在流动的影像。", gallery2017Title: "M.O.T.T.E WORLD TOUR", gallery2017Caption: "SYDNEY · 2017 — 舞台的尺度与光线", gallery2017ScreensTitle: "A SCENE IN MOTION", gallery2017ScreensCaption: "M.O.T.T.E WORLD TOUR · 2017", gallery2017LightsTitle: "LIGHTS ON STAGE", gallery2017LightsCaption: "SYDNEY · 2017", gallery2017CrowdTitle: "THE ROOM, THE SOUND", gallery2017CrowdCaption: "M.O.T.T.E WORLD TOUR · 2017", galleryNote: "可核验的图片来源与使用条件列于页面底部；未能确认的授权状态会在来源说明中注明。",
     closingLabel: "END OF THIS CHAPTER", closingTitle: "继续向前，<br /><em>不断变化。</em>", closingText: "这份档案，等待着他的下一幕。", backToTop: "回到顶部",
-    footerDisclaimer: "本页面为独立制作的粉丝档案，与艺人及其经纪公司无官方关联。", creditsLabel: "图片与视频来源", sourceLabel: "参考资料", videoCredits: "代表视频由官方 YouTube 页面在本站内嵌播放；视频权利归各自权利人所有。", creditHero2020: "（用户提供图片 · 683×1024 px · Getty 对应照片为版权管理素材）", creditHeroPearl: "（HelloGDkitty · KENH14 同图版本 · 1080×1350 px · 保留原图水印）", creditHeroCar: "（用户提供图片 · 956×1138 px · 轮播构图裁切掉查看器边角控件）", creditHeroBiiig: "（用户提供图片 · 710×992 px · 与 YG《BiiiG》iii 视觉照相同）", credit2015: "（2015《无限挑战》永东高速公路歌谣祭 · 高清裁切）", credit2014: "（2014 KCON · 调整色彩与裁切）", credit2025: "（2025 韩国大众文化艺术奖 · WebP 优化）", credit2012Stage: "（2012 ALIVE WORLD TOUR · 上半身构图）", credit2012Portrait: "（2012 ALIVE WORLD TOUR · 人像裁切）", credit2017Red: "（2017 M.O.T.T.E 悉尼场 · 调整色彩与裁切）", credit2017: "（2017 M.O.T.T.E 悉尼场 · 调整色彩与裁切）", credit2017Screens: "（2017 M.O.T.T.E 悉尼场 · 黑白处理与裁切）", credit2017Lights: "（2017 M.O.T.T.E 悉尼场 · 黑白处理与裁切）", credit2017Crowd: "（2017 M.O.T.T.E 悉尼场 · 黑白处理与裁切）", credit2017Hero: "（2017 M.O.T.T.E 悉尼场 · 高清裁切）", footerBack: "回到顶部 ↑",
+    footerDisclaimer: "本页面为独立制作的粉丝档案，与艺人及其经纪公司无官方关联。", creditsLabel: "图片与视频来源", sourceLabel: "参考资料", videoCredits: "页面嵌入 Bilibili 上的对应视频；部分为用户转载或字幕版本。具体上传来源见素材记录，视频权利归各自权利人所有。", creditHero2020: "（用户提供图片 · 683×1024 px · Getty 对应照片为版权管理素材）", creditHeroPearl: "（HelloGDkitty · KENH14 同图版本 · 1080×1350 px · 保留原图水印）", creditHeroCar: "（用户提供图片 · 956×1138 px · 轮播构图裁切掉查看器边角控件）", creditHeroBiiig: "（用户提供图片 · 710×992 px · 与 YG《BiiiG》iii 视觉照相同）", credit2015: "（2015《无限挑战》永东高速公路歌谣祭 · 高清裁切）", credit2014: "（2014 KCON · 调整色彩与裁切）", credit2025: "（2025 韩国大众文化艺术奖 · WebP 优化）", credit2012Stage: "（2012 ALIVE WORLD TOUR · 上半身构图）", credit2012Portrait: "（2012 ALIVE WORLD TOUR · 人像裁切）", credit2017Red: "（2017 M.O.T.T.E 悉尼场 · 调整色彩与裁切）", credit2017: "（2017 M.O.T.T.E 悉尼场 · 调整色彩与裁切）", credit2017Screens: "（2017 M.O.T.T.E 悉尼场 · 黑白处理与裁切）", credit2017Lights: "（2017 M.O.T.T.E 悉尼场 · 黑白处理与裁切）", credit2017Crowd: "（2017 M.O.T.T.E 悉尼场 · 黑白处理与裁切）", credit2017Hero: "（2017 M.O.T.T.E 悉尼场 · 高清裁切）", footerBack: "回到顶部 ↑",
     timeline: [
       ["2006", "BIGBANG", "GROUP DEBUT", "BIGBANG 组合出道，故事的第一章由此展开。个人声音在团队舞台中触达更广泛的观众。"],
       ["2009", "Heartbreaker", "SOLO DEBUT ALBUM", "首张个人录音室专辑。鲜明的视觉语言与电子音乐质感，宣告独立艺术家的起点。"],
@@ -49,25 +49,25 @@ const languages = {
       ["2025", "Übermensch", "STUDIO ALBUM · 2025", "全新录音室专辑。回望一路走来的角色，也为下一次变化留下空间。"]
     ],
     works: [
-      ["good-boy", "GOOD BOY", "DUET SINGLE", "与太阳合作的双人单曲。两人的 Rap 与表演彼此碰撞，把个人舞台扩展成一场默契十足的对决。", "https://music.apple.com/us/album/good-boy-single/1313615274", "1ZRb1we80kM", "GD X TAEYANG — GOOD BOY · OFFICIAL M/V"],
-      ["zutter", "ZUTTER", "UNIT TRACK", "与 T.O.P 组成小分队完成的作品。粗粝的 Flow 与夸张的人物感，呈现 BIGBANG 内部另一种表达。", "https://music.apple.com/us/search?term=BIGBANG%20GD%20TOP%20ZUTTER", "D8t8A8E_Tqc", "GD&T.O.P — ZUTTER · OFFICIAL M/V"],
-      ["palette", "PALETTE", "FEATURE · IU", "IU 的视角与 G-DRAGON 的 Rap 相遇。两种不同世代的感受像一段从容的对话，落在这首合作曲里。", "https://music.apple.com/us/search?term=IU%20Palette%20G-DRAGON", "d9IxdwEFk1c", "IU feat. G-DRAGON — PALETTE · OFFICIAL M/V"],
-      ["complex", "COMPLEX", "FEATURE · ZION.T", "参与 Zion.T 的作品，以熟悉的自信和幽默重新调侃自我。这里连接的是官方音频，而非音乐录影带。", "https://music.apple.com/us/search?term=Zion.T%20Complex%20G-DRAGON", "vLzgATepxzg", "ZION.T feat. G-DRAGON — COMPLEX · OFFICIAL AUDIO"],
-      ["loser", "LOSER", "BIGBANG · SINGLE", "BIGBANG 展露情绪的一面。克制的画面与近似自白的歌词，为组合作品带来不同的温度。", "https://music.apple.com/us/search?term=BIGBANG%20LOSER", "1CTced9CMMk", "BIGBANG — LOSER · OFFICIAL M/V"],
-      ["still-life", "STILL LIFE", "BIGBANG · SINGLE", "成员回望各自走过的时间，并再次并肩演唱。影像在季节与记忆之间切换，记录长久空白后的重逢。", "https://music.apple.com/us/album/still-life-single/1616762362?l=en-US", "eN5mG_yMDiM", "BIGBANG — STILL LIFE · OFFICIAL M/V"]
+      ["good-boy", "GOOD BOY", "DUET SINGLE", "与太阳合作的双人单曲。两人的 Rap 与表演彼此碰撞，把个人舞台扩展成一场默契十足的对决。", "https://music.apple.com/us/album/good-boy-single/1313615274", "BV1G54y1x7d8", "GD X TAEYANG — GOOD BOY · BILIBILI M/V"],
+      ["zutter", "ZUTTER", "UNIT TRACK", "与 T.O.P 组成小分队完成的作品。粗粝的 Flow 与夸张的人物感，呈现 BIGBANG 内部另一种表达。", "https://music.apple.com/us/search?term=BIGBANG%20GD%20TOP%20ZUTTER", "BV1Rs411Q718", "GD&T.O.P — ZUTTER · BILIBILI M/V"],
+      ["palette", "PALETTE", "FEATURE · IU", "IU 的视角与 G-DRAGON 的 Rap 相遇。两种不同世代的感受像一段从容的对话，落在这首合作曲里。", "https://music.apple.com/us/search?term=IU%20Palette%20G-DRAGON", "BV1Nx411U7a3", "IU feat. G-DRAGON — PALETTE · BILIBILI M/V"],
+      ["complex", "COMPLEX", "FEATURE · ZION.T", "参与 Zion.T 的作品，以熟悉的自信和幽默重新调侃自我。这里连接的是 Bilibili 上的音频视频，不是音乐录影带。", "https://music.apple.com/us/search?term=Zion.T%20Complex%20G-DRAGON", "BV1vs41187Zq", "ZION.T feat. G-DRAGON — COMPLEX · BILIBILI AUDIO"],
+      ["loser", "LOSER", "BIGBANG · SINGLE", "BIGBANG 展露情绪的一面。克制的画面与近似自白的歌词，为组合作品带来不同的温度。", "https://music.apple.com/us/search?term=BIGBANG%20LOSER", "BV1Ks411J7aM", "BIGBANG — LOSER · BILIBILI M/V"],
+      ["still-life", "STILL LIFE", "BIGBANG · SINGLE", "成员回望各自走过的时间，并再次并肩演唱。影像在季节与记忆之间切换，记录长久空白后的重逢。", "https://music.apple.com/us/album/still-life-single/1616762362?l=en-US", "BV1Vu411e7Tv", "BIGBANG — STILL LIFE · BILIBILI M/V"]
     ]
   },
   en: {
     title: "G-DRAGON — Artist Archive", homeLabel: "G-DRAGON home", mainNavLabel: "Main navigation", languageLabel: "Language selection", timelineNavLabel: "Timeline by year", menuLabel: "MENU", menuOpenLabel: "Open menu", menuCloseLabel: "Close menu", selectedReleasesLabel: "Selected collaborations", backToTopLabel: "Back to top",
     heroAlt: "G-Dragon performing on the 2012 Alive World Tour", work2017Alt: "G-Dragon performing at the 2017 M.O.T.T.E Sydney show", timeline2017Alt: "G-Dragon and the stage screens at the M.O.T.T.E Sydney show", gallery2017Alt: "Stage view from the 2017 M.O.T.T.E World Tour in Sydney", gallery2017ScreensAlt: "G-Dragon performing with the visual screens at the M.O.T.T.E Sydney show", gallery2017LightsAlt: "Stage lights and performers at the M.O.T.T.E Sydney show", gallery2017CrowdAlt: "The M.O.T.T.E Sydney performance and audience",
     skip: "Skip to content", navStory: "Story", navWorks: "Works", navArchive: "Visuals",
-    heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "A name on stage: Kwon Ji Yong", heroIntro: "Music and image, attitude and reinvention. The years in which one name became its own cultural scene.", heroLink: "Explore the archive", heroPhotoCaption: "KCON · LOS ANGELES · 2014", videoThumbnailAlt: "official representative video still", workVideoAlt: "official video thumbnail", videoFrameLabel: "Official representative video", playVideoLabel: "Play official video", workVideoHint: "CLICK TO WATCH · IN PAGE", timelineSourceLabel: "SOURCE",
+    heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "A name on stage: Kwon Ji Yong", heroIntro: "Music and image, attitude and reinvention. The years in which one name became its own cultural scene.", heroLink: "Explore the archive", heroPhotoCaption: "KCON · LOS ANGELES · 2014", videoThumbnailAlt: "Bilibili video still", workVideoAlt: "Bilibili video thumbnail", videoFrameLabel: "Bilibili video", playVideoLabel: "Play Bilibili video", workVideoHint: "CLICK TO WATCH · IN PAGE", timelineSourceLabel: "SOURCE",
     storyMarker: "THE PERSONA", storyTitle: "Beyond a name,<br />a language of his own.", storyLead: "Kwon Ji Yong and G-DRAGON. Between the two names, music becomes style, and style becomes a way of speaking for oneself.", storyBody: "This compact editorial archive traces an artist through records, stages, and moments of change. From the opening chapter to the present, each scene points toward the possibilities of the next.",
     timelineMarker: "A LIFE IN CHAPTERS", timelineTitle: "THE YEARS THAT SHAPED THE SOUND", timelineIntro: "A year becomes a scene;<br />a scene opens another era.", timelineEnd: "The next chapter is still being written.",
-    worksMarker: "COLLABORATIONS & FEATURES", worksTitle: "ACROSS COLLABORATIONS", worksIntro: "From unit projects to guest verses, hear his voice meet other worlds.", workImageLabel: "OFFICIAL VIDEO STILL", listenLink: "Listen on Apple Music",
+    worksMarker: "COLLABORATIONS & FEATURES", worksTitle: "ACROSS COLLABORATIONS", worksIntro: "From unit projects to guest verses, hear his voice meet other worlds.", workImageLabel: "BILIBILI VIDEO STILL", listenLink: "Listen on Apple Music",
     archiveMarker: "THE VISUAL ARCHIVE", archiveTitle: "Afterimages of the stage", archiveIntro: "Recorded moments; images still in motion.", gallery2017Title: "M.O.T.T.E WORLD TOUR", gallery2017Caption: "SYDNEY · 2017 — Scale and light on stage", gallery2017ScreensTitle: "A SCENE IN MOTION", gallery2017ScreensCaption: "M.O.T.T.E WORLD TOUR · 2017", gallery2017LightsTitle: "LIGHTS ON STAGE", gallery2017LightsCaption: "SYDNEY · 2017", gallery2017CrowdTitle: "THE ROOM, THE SOUND", gallery2017CrowdCaption: "M.O.T.T.E WORLD TOUR · 2017", galleryNote: "Image sources and available license details appear below; unverified permissions are noted in the source record.",
     closingLabel: "END OF THIS CHAPTER", closingTitle: "Onward,<br /><em>otherwise.</em>", closingText: "This archive waits for the next scene.", backToTop: "Back to top",
-    footerDisclaimer: "An independent fan archive, with no official affiliation with the artist or his agency.", creditsLabel: "PHOTO & VIDEO CREDITS", sourceLabel: "REFERENCES", videoCredits: "Representative videos play in-page from official YouTube uploads. Rights remain with their respective owners.", creditHero2020: "(user-provided image · 683 × 1,024 px · matching Getty image is rights-managed)", creditHeroPearl: "(HelloGDkitty · KENH14 copy of the same photo · 1,080 × 1,350 px · watermark retained)", creditHeroCar: "(user-provided image · 956 × 1,138 px · viewer-corner controls cropped by composition)", creditHeroBiiig: "(user-provided image · 710 × 992 px · same visual as YG’s BiiiG iii release)", credit2015: "(2015 Yeongdong Expressway Music Festival · high-resolution crop)", credit2014: "(KCON 2014 · color/crop adjusted)", credit2025: "(2025 Korea Popular Culture and Arts Awards · WebP optimized)", credit2012Stage: "(ALIVE WORLD TOUR, 2012 · upper-body crop)", credit2012Portrait: "(ALIVE WORLD TOUR, 2012 · portrait crop)", credit2017Red: "(M.O.T.T.E Sydney show, 2017 · color/crop adjusted)", credit2017: "(M.O.T.T.E Sydney show, 2017 · color/crop adjusted)", credit2017Screens: "(M.O.T.T.E Sydney show, 2017 · monochrome/crop adjusted)", credit2017Lights: "(M.O.T.T.E Sydney show, 2017 · monochrome/crop adjusted)", credit2017Crowd: "(M.O.T.T.E Sydney show, 2017 · monochrome/crop adjusted)", credit2017Hero: "(M.O.T.T.E Sydney show, 2017 · high-resolution crop)", footerBack: "BACK TO TOP ↑",
+    footerDisclaimer: "An independent fan archive, with no official affiliation with the artist or his agency.", creditsLabel: "PHOTO & VIDEO CREDITS", sourceLabel: "REFERENCES", videoCredits: "Videos play in-page from Bilibili uploads, some of which are reposts or subtitled editions. Upload sources are documented separately; rights remain with their owners.", creditHero2020: "(user-provided image · 683 × 1,024 px · matching Getty image is rights-managed)", creditHeroPearl: "(HelloGDkitty · KENH14 copy of the same photo · 1,080 × 1,350 px · watermark retained)", creditHeroCar: "(user-provided image · 956 × 1,138 px · viewer-corner controls cropped by composition)", creditHeroBiiig: "(user-provided image · 710 × 992 px · same visual as YG’s BiiiG iii release)", credit2015: "(2015 Yeongdong Expressway Music Festival · high-resolution crop)", credit2014: "(KCON 2014 · color/crop adjusted)", credit2025: "(2025 Korea Popular Culture and Arts Awards · WebP optimized)", credit2012Stage: "(ALIVE WORLD TOUR, 2012 · upper-body crop)", credit2012Portrait: "(ALIVE WORLD TOUR, 2012 · portrait crop)", credit2017Red: "(M.O.T.T.E Sydney show, 2017 · color/crop adjusted)", credit2017: "(M.O.T.T.E Sydney show, 2017 · color/crop adjusted)", credit2017Screens: "(M.O.T.T.E Sydney show, 2017 · monochrome/crop adjusted)", credit2017Lights: "(M.O.T.T.E Sydney show, 2017 · monochrome/crop adjusted)", credit2017Crowd: "(M.O.T.T.E Sydney show, 2017 · monochrome/crop adjusted)", credit2017Hero: "(M.O.T.T.E Sydney show, 2017 · high-resolution crop)", footerBack: "BACK TO TOP ↑",
     timeline: [
       ["2006", "BIGBANG", "GROUP DEBUT", "The first chapter opens with BIGBANG’s debut. A distinct voice reaches a wider audience from within the group’s stage."],
       ["2009", "Heartbreaker", "SOLO DEBUT ALBUM", "A first solo studio album. A vivid visual language and electronic textures mark the start of an independent artist’s path."],
@@ -78,12 +78,12 @@ const languages = {
       ["2025", "Übermensch", "STUDIO ALBUM · 2025", "A new studio album. Looking back at earlier personas while leaving room for what comes next."]
     ],
     works: [
-      ["good-boy", "GOOD BOY", "DUET SINGLE", "A unit single with Taeyang. Their contrasting rap and performance turn the solo stage into a playful face-off between two distinct artists.", "https://music.apple.com/us/album/good-boy-single/1313615274", "1ZRb1we80kM", "GD X TAEYANG — GOOD BOY · OFFICIAL M/V"],
-      ["zutter", "ZUTTER", "UNIT TRACK", "A unit track with T.O.P. Its rough-edged flow and exaggerated character reveal another side of BIGBANG’s shared language.", "https://music.apple.com/us/search?term=BIGBANG%20GD%20TOP%20ZUTTER", "D8t8A8E_Tqc", "GD&T.O.P — ZUTTER · OFFICIAL M/V"],
-      ["palette", "PALETTE", "FEATURE · IU", "G-DRAGON’s rap enters IU’s point of view. Their different generational perspectives meet in a relaxed, conversational collaboration.", "https://music.apple.com/us/search?term=IU%20Palette%20G-DRAGON", "d9IxdwEFk1c", "IU feat. G-DRAGON — PALETTE · OFFICIAL M/V"],
-      ["complex", "COMPLEX", "FEATURE · ZION.T", "A guest verse on Zion.T’s track, turning familiar confidence into self-aware humor. The linked official upload is audio, not a music video.", "https://music.apple.com/us/search?term=Zion.T%20Complex%20G-DRAGON", "vLzgATepxzg", "ZION.T feat. G-DRAGON — COMPLEX · OFFICIAL AUDIO"],
-      ["loser", "LOSER", "BIGBANG · SINGLE", "A more vulnerable side of BIGBANG. Restrained imagery and near-confessional lyrics give the group’s catalogue a different emotional temperature.", "https://music.apple.com/us/search?term=BIGBANG%20LOSER", "1CTced9CMMk", "BIGBANG — LOSER · OFFICIAL M/V"],
-      ["still-life", "STILL LIFE", "BIGBANG · SINGLE", "A song in which the members look back on separate lives and return to the frame together. Its changing seasons record a reunion after a long silence.", "https://music.apple.com/us/album/still-life-single/1616762362?l=en-US", "eN5mG_yMDiM", "BIGBANG — STILL LIFE · OFFICIAL M/V"]
+      ["good-boy", "GOOD BOY", "DUET SINGLE", "A unit single with Taeyang. Their contrasting rap and performance turn the solo stage into a playful face-off between two distinct artists.", "https://music.apple.com/us/album/good-boy-single/1313615274", "BV1G54y1x7d8", "GD X TAEYANG — GOOD BOY · BILIBILI M/V"],
+      ["zutter", "ZUTTER", "UNIT TRACK", "A unit track with T.O.P. Its rough-edged flow and exaggerated character reveal another side of BIGBANG’s shared language.", "https://music.apple.com/us/search?term=BIGBANG%20GD%20TOP%20ZUTTER", "BV1Rs411Q718", "GD&T.O.P — ZUTTER · BILIBILI M/V"],
+      ["palette", "PALETTE", "FEATURE · IU", "G-DRAGON’s rap enters IU’s point of view. Their different generational perspectives meet in a relaxed, conversational collaboration.", "https://music.apple.com/us/search?term=IU%20Palette%20G-DRAGON", "BV1Nx411U7a3", "IU feat. G-DRAGON — PALETTE · BILIBILI M/V"],
+      ["complex", "COMPLEX", "FEATURE · ZION.T", "A guest verse on Zion.T’s track, turning familiar confidence into self-aware humor. The linked Bilibili upload is audio, not a music video.", "https://music.apple.com/us/search?term=Zion.T%20Complex%20G-DRAGON", "BV1vs41187Zq", "ZION.T feat. G-DRAGON — COMPLEX · BILIBILI AUDIO"],
+      ["loser", "LOSER", "BIGBANG · SINGLE", "A more vulnerable side of BIGBANG. Restrained imagery and near-confessional lyrics give the group’s catalogue a different emotional temperature.", "https://music.apple.com/us/search?term=BIGBANG%20LOSER", "BV1Ks411J7aM", "BIGBANG — LOSER · BILIBILI M/V"],
+      ["still-life", "STILL LIFE", "BIGBANG · SINGLE", "A song in which the members look back on separate lives and return to the frame together. Its changing seasons record a reunion after a long silence.", "https://music.apple.com/us/album/still-life-single/1616762362?l=en-US", "BV1Vu411e7Tv", "BIGBANG — STILL LIFE · BILIBILI M/V"]
     ]
   }
 };
@@ -105,17 +105,42 @@ let heroAutoplayEnabled = !window.matchMedia("(prefers-reduced-motion: reduce)")
 let heroAutoplayTimer = null;
 
 const representativeVideos = {
-  "2006": { id: "bjTEMBB-mjY", label: "BIGBANG — WE BELONG TOGETHER" },
-  "2009": { id: "LOXEVd-Z7NE", label: "G-DRAGON — HEARTBREAKER" },
-  "2012": { id: "rJnICByeL8Q", label: "G-DRAGON — ONE OF A KIND" },
-  "2013": { id: "C8T6771Sdj8", label: "G-DRAGON — COUP D’ETAT" },
-  "2017": { id: "9kaCAbIXuyg", label: "G-DRAGON — UNTITLED, 2014" },
-  "2024": { id: "NMjhjrBIrG8", label: "G-DRAGON — POWER" },
-  "2025": { id: "o9DhvbqYzns", label: "G-DRAGON — TOO BAD" }
+  "2006": { id: "BV19p411d7S9", page: 23, label: "BIGBANG — WE BELONG TOGETHER" },
+  "2009": { id: "BV1EW411b7ms", label: "G-DRAGON — HEARTBREAKER" },
+  "2012": { id: "BV1Lx411S7vk", label: "G-DRAGON — ONE OF A KIND" },
+  "2013": { id: "BV1hs411M74C", label: "G-DRAGON — COUP D’ETAT" },
+  "2017": { id: "BV1nC4y1t7rs", label: "G-DRAGON — UNTITLED, 2014" },
+  "2024": { id: "BV1JJSnYsEQm", label: "G-DRAGON — POWER" },
+  "2025": { id: "BV1mV9bYNEqZ", label: "G-DRAGON — TOO BAD" }
+};
+
+// The page number is essential for multi-part Bilibili uploads: the collection
+// cover may be generic, but the embedded part must match the adjacent story.
+const videoCatalog = {
+  "BV19p411d7S9": { page: 23, aid: 23674863, cid: 39546901, poster: "https://i1.hdslb.com/bfs/archive/a5c98981fdc2dfcf6e542ea61d393e0067a25b28.jpg" },
+  "BV1EW411b7ms": { page: 1, aid: 17740807, cid: 28963917, poster: "https://i2.hdslb.com/bfs/archive/1708977b22d7990715f9667f02b2a94dd47f4df6.png" },
+  "BV1Lx411S7vk": { page: 1, aid: 10221778, cid: 16886763, poster: "https://i1.hdslb.com/bfs/archive/f0b5e7bb1b10e4f7ec44b3fca82c5470277ce32e.jpg" },
+  "BV1hs411M74C": { page: 1, aid: 28899549, cid: 50108264, poster: "https://i1.hdslb.com/bfs/archive/f53cc974a60e06522b3231d7c2c002e3671e65f7.jpg" },
+  "BV1nC4y1t7rs": { page: 1, aid: 796784363, cid: 225824327, poster: "https://i0.hdslb.com/bfs/archive/2475004169491ff722786dc8a2e4f5698ca316c1.png" },
+  "BV1JJSnYsEQm": { page: 1, aid: 113401263096645, cid: 26561085679, poster: "https://i2.hdslb.com/bfs/archive/56cc7edc34e35d6e0f0ded5c25c99d5d71424c51.jpg" },
+  "BV1mV9bYNEqZ": { page: 1, aid: 114091997796651, cid: 28652601475, poster: "https://i1.hdslb.com/bfs/archive/c56d2be64ffc3342cf90a9988f8630aa44e8fc74.jpg" },
+  "BV1G54y1x7d8": { page: 1, aid: 843333354, cid: 271691026, poster: "https://i1.hdslb.com/bfs/archive/093db5ae7c9838ab9c82ac46489f89fa6138d83a.jpg" },
+  "BV1Rs411Q718": { page: 1, aid: 4111362, cid: 6637068, poster: "https://i0.hdslb.com/bfs/archive/c2c74b47a3654e1657fe05988ef8db5a25dfeb97.png" },
+  "BV1Nx411U7a3": { page: 1, aid: 9992566, cid: 16518031, poster: "https://i2.hdslb.com/bfs/archive/34b4be7b51ee78b1a7f3c93b25471090a12d09ff.jpg" },
+  "BV1vs41187Zq": { page: 1, aid: 8337535, cid: 13721156, poster: "https://i0.hdslb.com/bfs/archive/610e0fce4ef61f4aab8f3dceaa898f5977f6d236.jpg" },
+  "BV1Ks411J7aM": { page: 1, aid: 26768773, cid: 46072925, poster: "https://i2.hdslb.com/bfs/archive/f89b3bf3edb835586f6564260cc0a4806d0b49a3.jpg" },
+  "BV1Vu411e7Tv": { page: 1, aid: 510416543, cid: 567652841, poster: "https://i1.hdslb.com/bfs/archive/f98d45e9106cf9f46c2fec735757f397ea3e6220.jpg" },
+  "BV1YW411E7P7": { page: 1, aid: 19508578, cid: 31813081, poster: "https://i0.hdslb.com/bfs/archive/bc3badd4b0aae58909a3e8d9e1a9e57bc3831382.jpg" }
+};
+
+const videoPage = (id, page = videoCatalog[id].page) => `https://www.bilibili.com/video/${id}/?p=${page}`;
+const videoEmbed = (id, page = videoCatalog[id].page) => {
+  const video = videoCatalog[id];
+  return `https://player.bilibili.com/player.html?isOutside=true&aid=${video.aid}&bvid=${encodeURIComponent(id)}&cid=${video.cid}&page=${page}&high_quality=1&danmaku=0&autoplay=1`;
 };
 
 const timelineSources = {
-  "2006": { label: "YG ENTERTAINMENT · OFFICIAL VIDEO", href: "https://www.youtube.com/watch?v=bjTEMBB-mjY" },
+  "2006": { label: "BILIBILI · WE BELONG TOGETHER", href: videoPage("BV19p411d7S9", 23) },
   "2009": { label: "MELON MUSIC AWARDS · 2009", href: "https://www.melon.com/mma/result.htm?mmaYear=2009" },
   "2012": { label: "2012 MAMA · WINNERS", href: "https://prtimes.jp/main/html/rd/p/000000098.000003711.html" },
   "2013": { label: "2013 MAMA · AWARDS", href: "https://yg-life.com/archives/25004?lang=en" },
@@ -125,9 +150,9 @@ const timelineSources = {
 };
 
 const interfaceCopy = {
-  ko: { heroCarouselLabel: "권지용 아카이브 사진 슬라이드", heroPause: "자동 재생 일시정지", heroPlay: "자동 재생 시작", heroDots: "사진 선택", galleryOpenLabel: "이미지 상세 보기", galleryCloseLabel: "상세 닫기", gallerySourceLabel: "사진 원본 및 라이선스", galleryDialogKicker: "VISUAL ARCHIVE", galleryPrevious: "이전 사진", galleryNext: "다음 사진", galleryZoomIn: "확대", galleryZoomOut: "축소", galleryZoomReset: "크기 초기화", galleryPlayVideo: "M.O.T.T.E 공식 투어 예고편 보기", galleryShowPhotos: "사진 모음으로 돌아가기", timelineAchievement: "CAREER MILESTONE", timelineChapter: "CHAPTER" },
-  zh: { heroCarouselLabel: "权志龙档案影像轮播", heroPause: "暂停自动播放", heroPlay: "开始自动播放", heroDots: "选择图片", galleryOpenLabel: "查看影像详情", galleryCloseLabel: "关闭详情", gallerySourceLabel: "原始照片与授权", galleryDialogKicker: "影像档案", galleryPrevious: "上一张照片", galleryNext: "下一张照片", galleryZoomIn: "放大照片", galleryZoomOut: "缩小照片", galleryZoomReset: "恢复原始大小", galleryPlayVideo: "播放 M.O.T.T.E 官方巡演预告", galleryShowPhotos: "返回照片集", timelineAchievement: "成就与荣誉", timelineChapter: "章节" },
-  en: { heroCarouselLabel: "Kwon Ji Yong photo carousel", heroPause: "Pause autoplay", heroPlay: "Start autoplay", heroDots: "Choose a photo", galleryOpenLabel: "View image details", galleryCloseLabel: "Close details", gallerySourceLabel: "Original photo and license", galleryDialogKicker: "VISUAL ARCHIVE", galleryPrevious: "Previous photo", galleryNext: "Next photo", galleryZoomIn: "Zoom in", galleryZoomOut: "Zoom out", galleryZoomReset: "Reset zoom", galleryPlayVideo: "Play the official M.O.T.T.E tour trailer", galleryShowPhotos: "Back to photo set", timelineAchievement: "CAREER MILESTONE", timelineChapter: "CHAPTER" }
+  ko: { heroCarouselLabel: "권지용 아카이브 사진 슬라이드", heroPause: "자동 재생 일시정지", heroPlay: "자동 재생 시작", heroDots: "사진 선택", galleryOpenLabel: "이미지 상세 보기", galleryCloseLabel: "상세 닫기", gallerySourceLabel: "사진 원본 및 라이선스", galleryDialogKicker: "VISUAL ARCHIVE", galleryPrevious: "이전 사진", galleryNext: "다음 사진", galleryZoomIn: "확대", galleryZoomOut: "축소", galleryZoomReset: "크기 초기화", galleryPlayVideo: "Bilibili에서 M.O.T.T.E 투어 예고편 보기", galleryShowPhotos: "사진 모음으로 돌아가기", timelineAchievement: "CAREER MILESTONE", timelineChapter: "CHAPTER", openBilibili: "Bilibili에서 열기" },
+  zh: { heroCarouselLabel: "权志龙档案影像轮播", heroPause: "暂停自动播放", heroPlay: "开始自动播放", heroDots: "选择图片", galleryOpenLabel: "查看影像详情", galleryCloseLabel: "关闭详情", gallerySourceLabel: "原始照片与授权", galleryDialogKicker: "影像档案", galleryPrevious: "上一张照片", galleryNext: "下一张照片", galleryZoomIn: "放大照片", galleryZoomOut: "缩小照片", galleryZoomReset: "恢复原始大小", galleryPlayVideo: "播放 Bilibili 上的 M.O.T.T.E 巡演预告", galleryShowPhotos: "返回照片集", timelineAchievement: "成就与荣誉", timelineChapter: "章节", openBilibili: "在 Bilibili 打开" },
+  en: { heroCarouselLabel: "Kwon Ji Yong photo carousel", heroPause: "Pause autoplay", heroPlay: "Start autoplay", heroDots: "Choose a photo", galleryOpenLabel: "View image details", galleryCloseLabel: "Close details", gallerySourceLabel: "Original photo and license", galleryDialogKicker: "VISUAL ARCHIVE", galleryPrevious: "Previous photo", galleryNext: "Next photo", galleryZoomIn: "Zoom in", galleryZoomOut: "Zoom out", galleryZoomReset: "Reset zoom", galleryPlayVideo: "Play the M.O.T.T.E tour trailer on Bilibili", galleryShowPhotos: "Back to photo set", timelineAchievement: "CAREER MILESTONE", timelineChapter: "CHAPTER", openBilibili: "Open on Bilibili" }
 };
 
 const heroSlides = [
@@ -235,13 +260,7 @@ let galleryPointers = new Map();
 let galleryPinchStart = null;
 let galleryDragStart = null;
 
-const videoThumbnail = (videoId, quality = "maxresdefault") => `https://i.ytimg.com/vi/${videoId}/${quality}.jpg`;
-
-function setThumbnailFallback(image, videoId) {
-  image.onerror = () => {
-    if (!image.src.endsWith("/hqdefault.jpg")) image.src = videoThumbnail(videoId, "hqdefault");
-  };
-}
+const videoThumbnail = (videoId) => videoCatalog[videoId].poster;
 
 function renderHeroCarousel(copy) {
   const slide = heroSlides[activeHeroSlide];
@@ -306,11 +325,11 @@ function renderTimelinePanel(copy) {
     <article class="timeline-item timeline-feature" aria-live="polite" aria-label="${escapeHTML(`${copy.timelineTitle} · ${year}`)}">
       <div class="timeline-story-top"><span>${escapeHTML(`${copy.timelineChapter} ${String(activeIndex + 1).padStart(2, "0")} / ${String(copy.timeline.length).padStart(2, "0")}`)}</span><span>${escapeHTML(tag)}</span></div>
       <figure class="timeline-visual">
-        <button class="timeline-video-trigger" type="button" data-video-id="${escapeHTML(video.id)}" data-video-year="${escapeHTML(year)}" data-video-title="${escapeHTML(title)}" aria-label="${escapeHTML(`${copy.playVideoLabel}: ${title} (${year})`)}">
-          <img src="${videoThumbnail(video.id)}" alt="${escapeHTML(`${title} · ${year} ${copy.videoThumbnailAlt}`)}" loading="lazy" />
+        <button class="timeline-video-trigger" type="button" data-video-id="${escapeHTML(video.id)}" data-video-page="${video.page || 1}" data-video-year="${escapeHTML(year)}" data-video-title="${escapeHTML(title)}" aria-label="${escapeHTML(`${copy.playVideoLabel}: ${title} (${year})`)}">
+          <img src="${videoThumbnail(video.id)}" alt="${escapeHTML(`${title} · ${year} ${copy.videoThumbnailAlt}`)}" loading="lazy" referrerpolicy="no-referrer" />
           <span class="timeline-play" aria-hidden="true">▶</span>
         </button>
-        <figcaption>${escapeHTML(video.label)} · ${escapeHTML(copy.videoFrameLabel)} ↗</figcaption>
+        <figcaption><a href="${videoPage(video.id, video.page || 1)}" target="_blank" rel="noreferrer">${escapeHTML(video.label)} · ${escapeHTML(copy.videoFrameLabel)} ↗</a></figcaption>
       </figure>
       <div class="timeline-info">
         <div class="timeline-year">${escapeHTML(year)}</div>
@@ -325,8 +344,6 @@ function renderTimelinePanel(copy) {
     </article>`;
   const trigger = byId("timeline-list").querySelector(".timeline-video-trigger");
   trigger.addEventListener("click", () => playInlineVideo(trigger, trigger.closest(".timeline-visual")));
-  const thumbnail = byId("timeline-list").querySelector(".timeline-visual img");
-  setThumbnailFallback(thumbnail, video.id);
 }
 
 function openGalleryDetail(index) {
@@ -336,6 +353,7 @@ function openGalleryDetail(index) {
   dialog.classList.remove("is-video");
   byId("gallery-dialog-video-frame").hidden = true;
   byId("gallery-dialog-video-frame").querySelector("iframe").removeAttribute("src");
+  byId("gallery-dialog-video-link").hidden = true;
   byId("gallery-dialog-image").hidden = false;
   updateGalleryDetail(index, copy);
   dialog.showModal();
@@ -407,8 +425,10 @@ function setGalleryVideoMode(showVideo) {
     frame.hidden = false;
     image.hidden = true;
     dialog.classList.add("is-video");
+    byId("gallery-dialog-video-link").hidden = false;
+    byId("gallery-dialog-video-link").querySelector("span").textContent = copy.openBilibili;
     iframe.title = `${copy.galleryPlayVideo} · M.O.T.T.E 2017`;
-    iframe.src = "https://www.youtube-nocookie.com/embed/LpsUxEDWpIw?autoplay=1&playsinline=1&rel=0";
+    iframe.src = videoEmbed("BV1YW411E7P7");
     byId("gallery-dialog-video-toggle").textContent = copy.galleryShowPhotos;
     byId("gallery-dialog-video-toggle").setAttribute("aria-pressed", "true");
   } else {
@@ -416,6 +436,7 @@ function setGalleryVideoMode(showVideo) {
     frame.hidden = true;
     image.hidden = false;
     dialog.classList.remove("is-video");
+    byId("gallery-dialog-video-link").hidden = true;
     byId("gallery-dialog-video-toggle").textContent = copy.galleryPlayVideo;
     byId("gallery-dialog-video-toggle").setAttribute("aria-pressed", "false");
     resetGalleryZoom();
@@ -432,6 +453,7 @@ function showVideoPoster(player) {
   image.src = player.dataset.videoThumbnail;
   image.alt = player.dataset.videoAlt;
   image.loading = "lazy";
+  image.referrerPolicy = "no-referrer";
   const play = document.createElement("span");
   play.className = "work-play";
   play.setAttribute("aria-hidden", "true");
@@ -439,15 +461,14 @@ function showVideoPoster(player) {
   button.append(image, play);
   button.addEventListener("click", () => playInlineVideo(player));
   player.replaceChildren(button);
-  setThumbnailFallback(image, player.dataset.videoId);
 }
 
 function playInlineVideo(player, target = player) {
   const frame = document.createElement("iframe");
   frame.className = "inline-video-frame";
-  frame.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(player.dataset.videoId)}?autoplay=1&playsinline=1&rel=0`;
-  frame.title = `${player.dataset.videoTitle} · G-DRAGON official video`;
-  frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  frame.src = videoEmbed(player.dataset.videoId, Number(player.dataset.videoPage) || 1);
+  frame.title = `${player.dataset.videoTitle} · Bilibili`;
+  frame.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
   frame.referrerPolicy = "strict-origin-when-cross-origin";
   frame.allowFullscreen = true;
   target.replaceChildren(frame);
@@ -464,7 +485,7 @@ function renderWorks(copy) {
     const selected = id === selectedWork;
     const sequence = String(index + 1).padStart(2, "0");
     const thumbnail = videoThumbnail(videoId);
-    const media = `<figure class="work-visual"><div class="work-player" data-video-id="${escapeHTML(videoId)}" data-video-sequence="${sequence}" data-video-title="${escapeHTML(title)}" data-video-thumbnail="${escapeHTML(thumbnail)}" data-video-alt="${escapeHTML(`${title} · ${copy.workVideoAlt}`)}" data-play-label="${escapeHTML(copy.playVideoLabel)}"></div><figcaption>${escapeHTML(videoLabel)} · ${escapeHTML(copy.workVideoHint)}</figcaption></figure>`;
+    const media = `<figure class="work-visual"><div class="work-player" data-video-id="${escapeHTML(videoId)}" data-video-page="${videoCatalog[videoId].page}" data-video-sequence="${sequence}" data-video-title="${escapeHTML(title)}" data-video-thumbnail="${escapeHTML(thumbnail)}" data-video-alt="${escapeHTML(`${title} · ${copy.workVideoAlt}`)}" data-play-label="${escapeHTML(copy.playVideoLabel)}"></div><figcaption><a href="${videoPage(videoId)}" target="_blank" rel="noreferrer">${escapeHTML(videoLabel)} · ${escapeHTML(copy.openBilibili)} ↗</a></figcaption></figure>`;
     return `
       <article class="work-item${selected ? " is-selected" : ""}">
         <div class="work-row-wrap">
