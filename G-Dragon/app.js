@@ -7,9 +7,9 @@ const languages = {
     storyMarker: "THE PERSONA", storyTitle: "이름을 넘어,<br />하나의 언어로.", storyLead: "권지용과 G-DRAGON. 두 이름 사이에서 음악은 스타일이 되고, 스타일은 다시 자기표현의 방식이 된다.", storyBody: "이 페이지는 한 아티스트의 시간을 음반과 무대, 그리고 변화의 순간으로 엮은 작은 편집 아카이브입니다. 시작부터 현재까지, 각 장면이 다음 장면의 가능성을 열어온 흐름을 따라갑니다.",
     timelineMarker: "A LIFE IN CHAPTERS", timelineTitle: "사운드를 바꾼 시간", timelineIntro: "한 해가 하나의 장면이 되고,<br />장면은 다음 시대의 문을 연다.", timelineEnd: "다음 장은 아직 쓰이고 있습니다.",
     worksMarker: "SELECTED DISCOGRAPHY", worksTitle: "시대를 만든 작품", worksIntro: "대표작을 따라가며 사운드의 변화를 듣습니다.", workImageLabel: "OFFICIAL VIDEO STILL", listenLink: "Apple Music에서 보기",
-    archiveMarker: "THE VISUAL ARCHIVE", archiveTitle: "무대의 잔상", archiveIntro: "기록된 순간, 계속 움직이는 이미지.", gallery2017Title: "M.O.T.T.E WORLD TOUR", gallery2017Caption: "SYDNEY · 2017 — 무대의 스케일과 빛", gallery2017ScreensTitle: "A SCENE IN MOTION", gallery2017ScreensCaption: "M.O.T.T.E WORLD TOUR · 2017", gallery2017LightsTitle: "LIGHTS ON STAGE", gallery2017LightsCaption: "SYDNEY · 2017", gallery2017CrowdTitle: "THE ROOM, THE SOUND", gallery2017CrowdCaption: "M.O.T.T.E WORLD TOUR · 2017", galleryNote: "모든 사진은 원본 기록을 바탕으로 사용했으며, 출처와 라이선스 정보는 하단 크레딧에서 확인할 수 있습니다.",
+    archiveMarker: "THE VISUAL ARCHIVE", archiveTitle: "무대의 잔상", archiveIntro: "기록된 순간, 계속 움직이는 이미지.", gallery2017Title: "M.O.T.T.E WORLD TOUR", gallery2017Caption: "SYDNEY · 2017 — 무대의 스케일과 빛", gallery2017ScreensTitle: "A SCENE IN MOTION", gallery2017ScreensCaption: "M.O.T.T.E WORLD TOUR · 2017", gallery2017LightsTitle: "LIGHTS ON STAGE", gallery2017LightsCaption: "SYDNEY · 2017", gallery2017CrowdTitle: "THE ROOM, THE SOUND", gallery2017CrowdCaption: "M.O.T.T.E WORLD TOUR · 2017", galleryNote: "사진 출처와 확인 가능한 사용 조건은 하단 크레딧에 표시했습니다.",
     closingLabel: "END OF THIS CHAPTER", closingTitle: "계속해서,<br /><em>다르게.</em>", closingText: "이 아카이브는 한 사람의 다음 장면을 기다립니다.", backToTop: "처음으로",
-    footerDisclaimer: "독립적으로 제작된 팬 아카이브이며, 아티스트·소속사와 제휴 또는 공식 관계가 없습니다.", creditsLabel: "사진 및 영상 출처", sourceLabel: "참고 자료", videoCredits: "대표 영상은 공식 YouTube 게시물을 페이지 안에서 재생합니다. 영상의 저작권은 각 권리자에게 있습니다.", credit2015: "(2015 영동고속도로 가요제 · 고해상도 크롭)", credit2014: "(2014 KCON · 색상/크롭 조정)", credit2025: "(2025 대한민국 대중문화예술상 · WebP 최적화)", credit2012Stage: "(2012 ALIVE WORLD TOUR · 상체 중심 크롭)", credit2012Portrait: "(2012 ALIVE WORLD TOUR · 인물 중심 크롭)", credit2017Red: "(2017 M.O.T.T.E 시드니 공연 · 색상/크롭 조정)", credit2017: "(2017 M.O.T.T.E 시드니 공연 · 색상/크롭 조정)", credit2017Screens: "(2017 M.O.T.T.E 시드니 공연 · 흑백/크롭 조정)", credit2017Lights: "(2017 M.O.T.T.E 시드니 공연 · 흑백/크롭 조정)", credit2017Crowd: "(2017 M.O.T.T.E 시드니 공연 · 흑백/크롭 조정)", credit2017Hero: "(2017 M.O.T.T.E 시드니 공연 · 고해상도 크롭)", footerBack: "처음으로 ↑",
+    footerDisclaimer: "독립적으로 제작된 팬 아카이브이며, 아티스트·소속사와 제휴 또는 공식 관계가 없습니다.", creditsLabel: "사진 및 영상 출처", sourceLabel: "참고 자료", videoCredits: "대표 영상은 공식 YouTube 게시물을 페이지 안에서 재생합니다. 영상의 저작권은 각 권리자에게 있습니다.", creditHero2020: "(사용자 제공 파일 · 683 × 1,024 px · Getty 대응 사진은 권리 관리 이미지)", creditHeroPearl: "(HelloGDkitty · KENH14 게시본 · 동일 사진 1,080 × 1,350 px · 원본 워터마크 유지)", creditHeroCar: "(사용자 제공 파일 · 956 × 1,138 px · 가장자리 화면 컨트롤은 구성 크롭으로 제외)", creditHeroBiiig: "(사용자 제공 파일 · 710 × 992 px · YG의 BiiiG iii 비주얼과 동일 이미지)", credit2015: "(2015 영동고속도로 가요제 · 고해상도 크롭)", credit2014: "(2014 KCON · 색상/크롭 조정)", credit2025: "(2025 대한민국 대중문화예술상 · WebP 최적화)", credit2012Stage: "(2012 ALIVE WORLD TOUR · 상체 중심 크롭)", credit2012Portrait: "(2012 ALIVE WORLD TOUR · 인물 중심 크롭)", credit2017Red: "(2017 M.O.T.T.E 시드니 공연 · 색상/크롭 조정)", credit2017: "(2017 M.O.T.T.E 시드니 공연 · 색상/크롭 조정)", credit2017Screens: "(2017 M.O.T.T.E 시드니 공연 · 흑백/크롭 조정)", credit2017Lights: "(2017 M.O.T.T.E 시드니 공연 · 흑백/크롭 조정)", credit2017Crowd: "(2017 M.O.T.T.E 시드니 공연 · 흑백/크롭 조정)", credit2017Hero: "(2017 M.O.T.T.E 시드니 공연 · 고해상도 크롭)", footerBack: "처음으로 ↑",
     timeline: [
       ["2006", "BIGBANG", "GROUP DEBUT", "그룹 BIGBANG의 데뷔와 함께 첫 장이 열립니다. 개인의 목소리는 팀의 무대 안에서 더 넓은 관객을 만납니다."],
       ["2009", "Heartbreaker", "SOLO DEBUT ALBUM", "첫 솔로 정규 앨범. 선명한 시각 언어와 전자음악의 질감으로 독립적인 아티스트의 출발을 알립니다."],
@@ -36,9 +36,9 @@ const languages = {
     storyMarker: "THE PERSONA", storyTitle: "超越名字，<br />成为一种语言。", storyLead: "权志龙与 G-DRAGON。在两个名字之间，音乐成为风格，风格又成为表达自我的方式。", storyBody: "这是一份小型编辑档案，以唱片、舞台和变化的瞬间串起一位艺术家的时间。从初次登场到今天，每个片段都为下一幕打开新的可能。",
     timelineMarker: "A LIFE IN CHAPTERS", timelineTitle: "改变声音的岁月", timelineIntro: "一年成为一个片段，<br />片段又推开下一个时代。", timelineEnd: "下一章，仍在书写。",
     worksMarker: "SELECTED DISCOGRAPHY", worksTitle: "标记时代的作品", worksIntro: "沿着代表作品，聆听声音的变化。", workImageLabel: "OFFICIAL VIDEO STILL", listenLink: "在 Apple Music 收听",
-    archiveMarker: "THE VISUAL ARCHIVE", archiveTitle: "舞台余像", archiveIntro: "被记录的瞬间，仍在流动的影像。", gallery2017Title: "M.O.T.T.E WORLD TOUR", gallery2017Caption: "SYDNEY · 2017 — 舞台的尺度与光线", gallery2017ScreensTitle: "A SCENE IN MOTION", gallery2017ScreensCaption: "M.O.T.T.E WORLD TOUR · 2017", gallery2017LightsTitle: "LIGHTS ON STAGE", gallery2017LightsCaption: "SYDNEY · 2017", gallery2017CrowdTitle: "THE ROOM, THE SOUND", gallery2017CrowdCaption: "M.O.T.T.E WORLD TOUR · 2017", galleryNote: "所有照片均依据原始影像记录使用，摄影来源及授权信息见页面底部。",
+    archiveMarker: "THE VISUAL ARCHIVE", archiveTitle: "舞台余像", archiveIntro: "被记录的瞬间，仍在流动的影像。", gallery2017Title: "M.O.T.T.E WORLD TOUR", gallery2017Caption: "SYDNEY · 2017 — 舞台的尺度与光线", gallery2017ScreensTitle: "A SCENE IN MOTION", gallery2017ScreensCaption: "M.O.T.T.E WORLD TOUR · 2017", gallery2017LightsTitle: "LIGHTS ON STAGE", gallery2017LightsCaption: "SYDNEY · 2017", gallery2017CrowdTitle: "THE ROOM, THE SOUND", gallery2017CrowdCaption: "M.O.T.T.E WORLD TOUR · 2017", galleryNote: "可核验的图片来源与使用条件列于页面底部；未能确认的授权状态会在来源说明中注明。",
     closingLabel: "END OF THIS CHAPTER", closingTitle: "继续向前，<br /><em>不断变化。</em>", closingText: "这份档案，等待着他的下一幕。", backToTop: "回到顶部",
-    footerDisclaimer: "本页面为独立制作的粉丝档案，与艺人及其经纪公司无官方关联。", creditsLabel: "图片与视频来源", sourceLabel: "参考资料", videoCredits: "代表视频由官方 YouTube 页面在本站内嵌播放；视频权利归各自权利人所有。", credit2015: "（2015《无限挑战》永东高速公路歌谣祭 · 高清裁切）", credit2014: "（2014 KCON · 调整色彩与裁切）", credit2025: "（2025 韩国大众文化艺术奖 · WebP 优化）", credit2012Stage: "（2012 ALIVE WORLD TOUR · 上半身构图）", credit2012Portrait: "（2012 ALIVE WORLD TOUR · 人像裁切）", credit2017Red: "（2017 M.O.T.T.E 悉尼场 · 调整色彩与裁切）", credit2017: "（2017 M.O.T.T.E 悉尼场 · 调整色彩与裁切）", credit2017Screens: "（2017 M.O.T.T.E 悉尼场 · 黑白处理与裁切）", credit2017Lights: "（2017 M.O.T.T.E 悉尼场 · 黑白处理与裁切）", credit2017Crowd: "（2017 M.O.T.T.E 悉尼场 · 黑白处理与裁切）", credit2017Hero: "（2017 M.O.T.T.E 悉尼场 · 高清裁切）", footerBack: "回到顶部 ↑",
+    footerDisclaimer: "本页面为独立制作的粉丝档案，与艺人及其经纪公司无官方关联。", creditsLabel: "图片与视频来源", sourceLabel: "参考资料", videoCredits: "代表视频由官方 YouTube 页面在本站内嵌播放；视频权利归各自权利人所有。", creditHero2020: "（用户提供图片 · 683×1024 px · Getty 对应照片为版权管理素材）", creditHeroPearl: "（HelloGDkitty · KENH14 同图版本 · 1080×1350 px · 保留原图水印）", creditHeroCar: "（用户提供图片 · 956×1138 px · 轮播构图裁切掉查看器边角控件）", creditHeroBiiig: "（用户提供图片 · 710×992 px · 与 YG《BiiiG》iii 视觉照相同）", credit2015: "（2015《无限挑战》永东高速公路歌谣祭 · 高清裁切）", credit2014: "（2014 KCON · 调整色彩与裁切）", credit2025: "（2025 韩国大众文化艺术奖 · WebP 优化）", credit2012Stage: "（2012 ALIVE WORLD TOUR · 上半身构图）", credit2012Portrait: "（2012 ALIVE WORLD TOUR · 人像裁切）", credit2017Red: "（2017 M.O.T.T.E 悉尼场 · 调整色彩与裁切）", credit2017: "（2017 M.O.T.T.E 悉尼场 · 调整色彩与裁切）", credit2017Screens: "（2017 M.O.T.T.E 悉尼场 · 黑白处理与裁切）", credit2017Lights: "（2017 M.O.T.T.E 悉尼场 · 黑白处理与裁切）", credit2017Crowd: "（2017 M.O.T.T.E 悉尼场 · 黑白处理与裁切）", credit2017Hero: "（2017 M.O.T.T.E 悉尼场 · 高清裁切）", footerBack: "回到顶部 ↑",
     timeline: [
       ["2006", "BIGBANG", "GROUP DEBUT", "BIGBANG 组合出道，故事的第一章由此展开。个人声音在团队舞台中触达更广泛的观众。"],
       ["2009", "Heartbreaker", "SOLO DEBUT ALBUM", "首张个人录音室专辑。鲜明的视觉语言与电子音乐质感，宣告独立艺术家的起点。"],
@@ -65,9 +65,9 @@ const languages = {
     storyMarker: "THE PERSONA", storyTitle: "Beyond a name,<br />a language of his own.", storyLead: "Kwon Ji Yong and G-DRAGON. Between the two names, music becomes style, and style becomes a way of speaking for oneself.", storyBody: "This compact editorial archive traces an artist through records, stages, and moments of change. From the opening chapter to the present, each scene points toward the possibilities of the next.",
     timelineMarker: "A LIFE IN CHAPTERS", timelineTitle: "THE YEARS THAT SHAPED THE SOUND", timelineIntro: "A year becomes a scene;<br />a scene opens another era.", timelineEnd: "The next chapter is still being written.",
     worksMarker: "SELECTED DISCOGRAPHY", worksTitle: "WORKS THAT MARKED AN ERA", worksIntro: "Follow the releases and hear the sound shift.", workImageLabel: "OFFICIAL VIDEO STILL", listenLink: "Listen on Apple Music",
-    archiveMarker: "THE VISUAL ARCHIVE", archiveTitle: "Afterimages of the stage", archiveIntro: "Recorded moments; images still in motion.", gallery2017Title: "M.O.T.T.E WORLD TOUR", gallery2017Caption: "SYDNEY · 2017 — Scale and light on stage", gallery2017ScreensTitle: "A SCENE IN MOTION", gallery2017ScreensCaption: "M.O.T.T.E WORLD TOUR · 2017", gallery2017LightsTitle: "LIGHTS ON STAGE", gallery2017LightsCaption: "SYDNEY · 2017", gallery2017CrowdTitle: "THE ROOM, THE SOUND", gallery2017CrowdCaption: "M.O.T.T.E WORLD TOUR · 2017", galleryNote: "Photographs are presented from their original records. Photographer credits and license details appear below.",
+    archiveMarker: "THE VISUAL ARCHIVE", archiveTitle: "Afterimages of the stage", archiveIntro: "Recorded moments; images still in motion.", gallery2017Title: "M.O.T.T.E WORLD TOUR", gallery2017Caption: "SYDNEY · 2017 — Scale and light on stage", gallery2017ScreensTitle: "A SCENE IN MOTION", gallery2017ScreensCaption: "M.O.T.T.E WORLD TOUR · 2017", gallery2017LightsTitle: "LIGHTS ON STAGE", gallery2017LightsCaption: "SYDNEY · 2017", gallery2017CrowdTitle: "THE ROOM, THE SOUND", gallery2017CrowdCaption: "M.O.T.T.E WORLD TOUR · 2017", galleryNote: "Image sources and available license details appear below; unverified permissions are noted in the source record.",
     closingLabel: "END OF THIS CHAPTER", closingTitle: "Onward,<br /><em>otherwise.</em>", closingText: "This archive waits for the next scene.", backToTop: "Back to top",
-    footerDisclaimer: "An independent fan archive, with no official affiliation with the artist or his agency.", creditsLabel: "PHOTO & VIDEO CREDITS", sourceLabel: "REFERENCES", videoCredits: "Representative videos play in-page from official YouTube uploads. Rights remain with their respective owners.", credit2015: "(2015 Yeongdong Expressway Music Festival · high-resolution crop)", credit2014: "(KCON 2014 · color/crop adjusted)", credit2025: "(2025 Korea Popular Culture and Arts Awards · WebP optimized)", credit2012Stage: "(ALIVE WORLD TOUR, 2012 · upper-body crop)", credit2012Portrait: "(ALIVE WORLD TOUR, 2012 · portrait crop)", credit2017Red: "(M.O.T.T.E Sydney show, 2017 · color/crop adjusted)", credit2017: "(M.O.T.T.E Sydney show, 2017 · color/crop adjusted)", credit2017Screens: "(M.O.T.T.E Sydney show, 2017 · monochrome/crop adjusted)", credit2017Lights: "(M.O.T.T.E Sydney show, 2017 · monochrome/crop adjusted)", credit2017Crowd: "(M.O.T.T.E Sydney show, 2017 · monochrome/crop adjusted)", credit2017Hero: "(M.O.T.T.E Sydney show, 2017 · high-resolution crop)", footerBack: "BACK TO TOP ↑",
+    footerDisclaimer: "An independent fan archive, with no official affiliation with the artist or his agency.", creditsLabel: "PHOTO & VIDEO CREDITS", sourceLabel: "REFERENCES", videoCredits: "Representative videos play in-page from official YouTube uploads. Rights remain with their respective owners.", creditHero2020: "(user-provided image · 683 × 1,024 px · matching Getty image is rights-managed)", creditHeroPearl: "(HelloGDkitty · KENH14 copy of the same photo · 1,080 × 1,350 px · watermark retained)", creditHeroCar: "(user-provided image · 956 × 1,138 px · viewer-corner controls cropped by composition)", creditHeroBiiig: "(user-provided image · 710 × 992 px · same visual as YG’s BiiiG iii release)", credit2015: "(2015 Yeongdong Expressway Music Festival · high-resolution crop)", credit2014: "(KCON 2014 · color/crop adjusted)", credit2025: "(2025 Korea Popular Culture and Arts Awards · WebP optimized)", credit2012Stage: "(ALIVE WORLD TOUR, 2012 · upper-body crop)", credit2012Portrait: "(ALIVE WORLD TOUR, 2012 · portrait crop)", credit2017Red: "(M.O.T.T.E Sydney show, 2017 · color/crop adjusted)", credit2017: "(M.O.T.T.E Sydney show, 2017 · color/crop adjusted)", credit2017Screens: "(M.O.T.T.E Sydney show, 2017 · monochrome/crop adjusted)", credit2017Lights: "(M.O.T.T.E Sydney show, 2017 · monochrome/crop adjusted)", credit2017Crowd: "(M.O.T.T.E Sydney show, 2017 · monochrome/crop adjusted)", credit2017Hero: "(M.O.T.T.E Sydney show, 2017 · high-resolution crop)", footerBack: "BACK TO TOP ↑",
     timeline: [
       ["2006", "BIGBANG", "GROUP DEBUT", "The first chapter opens with BIGBANG’s debut. A distinct voice reaches a wider audience from within the group’s stage."],
       ["2009", "Heartbreaker", "SOLO DEBUT ALBUM", "A first solo studio album. A vivid visual language and electronic textures mark the start of an independent artist’s path."],
@@ -139,34 +139,35 @@ const heroSlides = [
     en: { alt: "A close portrait of Kwon Ji Yong at the 2015 Yeongdong Expressway Music Festival", caption: "A MOMENT, IN COLOR · 2015" }
   },
   {
-    src: "assets/gd-2025-cultural-portrait.webp",
-    ko: { alt: "2025년 대한민국 대중문화예술상에서 턱시도를 입은 권지용의 인물 사진", caption: "KWON JI YONG · 2025 CULTURAL AWARDS" },
-    zh: { alt: "2025 年韩国大众文化艺术奖上身着礼服的权志龙近照", caption: "KWON JI YONG · 2025 CULTURAL AWARDS" },
-    en: { alt: "Kwon Ji Yong in a tailored tuxedo at the 2025 Korea Popular Culture and Arts Awards", caption: "KWON JI YONG · 2025 CULTURAL AWARDS" }
+    src: "assets/gd-2020-we11done-seated.webp",
+    objectPosition: "50% 7%",
+    ko: { alt: "2020년 파리 패션 위크 WE11DONE 쇼에서 파란색 정장을 입고 앉아 있는 권지용", caption: "WE11DONE · PARIS · 2020" },
+    zh: { alt: "2020 年巴黎时装周 WE11DONE 秀场上，身穿浅蓝色西装的权志龙", caption: "WE11DONE · PARIS · 2020" },
+    en: { alt: "Kwon Ji Yong seated in a pale blue suit at the 2020 WE11DONE show in Paris", caption: "WE11DONE · PARIS · 2020" }
   },
   {
-    src: "assets/gd-2014-kcon.webp",
-    ko: { alt: "2014년 KCON 무대에서 공연하는 권지용", caption: "KCON · LOS ANGELES · 2014" },
-    zh: { alt: "2014 年 KCON 舞台上的权志龙", caption: "KCON · LOS ANGELES · 2014" },
-    en: { alt: "Kwon Ji Yong performing at KCON in 2014", caption: "KCON · LOS ANGELES · 2014" }
+    src: "assets/gd-2025-pearl-tour.webp",
+    fit: "contain",
+    objectPosition: "50% 50%",
+    ko: { alt: "2025년 월드 투어 무대에서 진주 장식 의상을 입고 마이크를 든 권지용", caption: "ÜBERMENSCH WORLD TOUR · LIVE PORTRAIT" },
+    zh: { alt: "2025 年世界巡演舞台上，身穿珍珠装饰外套并手持麦克风的权志龙", caption: "ÜBERMENSCH WORLD TOUR · LIVE PORTRAIT" },
+    en: { alt: "Kwon Ji Yong holding a microphone in a pearl-embellished outfit during the 2025 world tour", caption: "ÜBERMENSCH WORLD TOUR · LIVE PORTRAIT" }
   },
   {
-    src: "assets/gd-2012-alive-closeup.jpg",
-    objectPosition: "50% 0%",
-    zoom: 1.55,
-    zoomOrigin: "50% 0%",
-    ko: { alt: "2012년 ALIVE WORLD TOUR 무대에서 마이크를 들고 노래하는 권지용", caption: "ALIVE WORLD TOUR · 2012" },
-    zh: { alt: "2012 年 ALIVE WORLD TOUR 舞台上手持麦克风演唱的权志龙", caption: "ALIVE WORLD TOUR · 2012" },
-    en: { alt: "Kwon Ji Yong singing into a microphone during the 2012 ALIVE WORLD TOUR", caption: "ALIVE WORLD TOUR · 2012" }
+    src: "assets/gd-2025-car-offstage.webp",
+    objectPosition: "50% 50%",
+    zoom: 1.25,
+    zoomOrigin: "50% 50%",
+    ko: { alt: "차 안에서 휴대전화를 보는 은발의 권지용", caption: "A PAUSE BETWEEN SCENES · 2025" },
+    zh: { alt: "在车内看手机的银发权志龙侧脸", caption: "A PAUSE BETWEEN SCENES · 2025" },
+    en: { alt: "A silver-haired Kwon Ji Yong looking at his phone inside a car", caption: "A PAUSE BETWEEN SCENES · 2025" }
   },
   {
-    src: "assets/gd-2012-alive-mic-portrait.jpg",
-    objectPosition: "50% 0%",
-    zoom: 1.6,
-    zoomOrigin: "50% 0%",
-    ko: { alt: "2012년 ALIVE WORLD TOUR에서 붉고 푸른 무대 의상을 입은 권지용의 공연 사진", caption: "ALIVE WORLD TOUR · 2012 · LIVE PORTRAIT" },
-    zh: { alt: "2012 年 ALIVE WORLD TOUR 演出中身着红蓝金色舞台服装的权志龙近景", caption: "ALIVE WORLD TOUR · 2012 · LIVE PORTRAIT" },
-    en: { alt: "A stage portrait of Kwon Ji Yong in a red, blue and gold performance jacket during the 2012 ALIVE WORLD TOUR", caption: "ALIVE WORLD TOUR · 2012 · LIVE PORTRAIT" }
+    src: "assets/gd-2026-biiig-visual.webp",
+    objectPosition: "50% 15%",
+    ko: { alt: "YG의 BiiiG iii 버전 비주얼 사진 속 주황색 머리와 한쪽 눈을 가린 권지용", caption: "BiiiG VISUAL · 2026" },
+    zh: { alt: "YG《BiiiG》iii 版本视觉照中，以橙色发型和手遮一只眼睛的权志龙", caption: "BiiiG VISUAL · 2026" },
+    en: { alt: "Kwon Ji Yong in YG’s BiiiG iii visual photo, with orange hair and one eye covered by his hand", caption: "BiiiG VISUAL · 2026" }
   }
 ];
 
@@ -250,6 +251,7 @@ function renderHeroCarousel(copy) {
   figure.setAttribute("aria-label", copy.heroCarouselLabel);
   image.classList.add("is-changing");
   image.src = slide.src;
+  image.style.objectFit = slide.fit || "cover";
   image.style.objectPosition = slide.objectPosition || "50% 16%";
   image.style.setProperty("--hero-image-scale", slide.zoom || 1);
   image.style.setProperty("--hero-image-origin", slide.zoomOrigin || "center");
