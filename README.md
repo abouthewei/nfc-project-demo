@@ -12,12 +12,19 @@ Independent static projects. Each project is self-contained and can be deployed 
 - `Archive/` — Babu Art bilingual field archive photo album
 - `UK-Sketches/` — Ye Gang's bilingual British travel sketchbook
 - `G-Dragon/` — G-DRAGON Korean / Chinese / English artist archive
+- `LeBron/` — LeBron James career archive
 
 ## Live demos
 
 - [Alan Tam](https://abouthewei.github.io/nfc-project-demo/alan-tam/)
-- [Kobe Bryant](https://nfc-project-demo.iwownow.com/kobe-bryant/index.html)
+- [Kobe Bryant](https://abouthewei.github.io/nfc-project-demo/Kobe/)
+- [Stephen Curry](https://abouthewei.github.io/nfc-project-demo/Curry/)
+- [Michael Jordan](https://abouthewei.github.io/nfc-project-demo/Jordan/)
+- [Babu Art](https://abouthewei.github.io/nfc-project-demo/Babu-Art/)
+- [Babu Art field archive](https://abouthewei.github.io/nfc-project-demo/Archive/)
+- [UK Sketchbook](https://abouthewei.github.io/nfc-project-demo/UK-Sketches/)
 - [G-DRAGON](https://abouthewei.github.io/nfc-project-demo/G-Dragon/)
+- [LeBron James](https://abouthewei.github.io/nfc-project-demo/LeBron/)
 
 ## Deployment
 
