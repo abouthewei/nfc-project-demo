@@ -51,8 +51,8 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--lime); outline-
 .text-link span:last-child { color: var(--lime); font-size: 16px; }
 .hero-portrait { position: absolute; z-index: 1; inset: 0 0 82px auto; width: 61%; margin: 0; overflow: hidden; background: #090909; }
 .hero-portrait::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--ink) 0%, rgba(11,11,10,.72) 13%, rgba(11,11,10,.05) 58%, rgba(11,11,10,.02) 100%), linear-gradient(0deg, rgba(11,11,10,.5), transparent 35%); pointer-events: none; }
-.hero-portrait img { height: 100%; object-fit: cover; object-position: 50% 16%; filter: saturate(.96) contrast(1.05) brightness(1.14); transition: opacity .4s ease, transform .7s ease; }
-.hero-portrait img.is-changing { opacity: .3; transform: scale(1.025); }
+.hero-portrait img { height: 100%; object-fit: cover; object-position: 50% 16%; transform: scale(var(--hero-image-scale, 1)); transform-origin: var(--hero-image-origin, center); filter: saturate(.96) contrast(1.05) brightness(1.14); transition: opacity .4s ease, transform .7s ease; }
+.hero-portrait img.is-changing { opacity: .3; transform: scale(calc(var(--hero-image-scale, 1) * 1.025)); }
 .hero-portrait figcaption { position: absolute; z-index: 1; right: 32px; bottom: 22px; color: rgba(255,255,255,.78); font: 700 12px/1 "Barlow Condensed", Impact, sans-serif; letter-spacing: .14em; }
 .hero-carousel-controls { position: absolute; z-index: 4; bottom: 18px; left: 22px; display: flex; align-items: center; gap: 15px; padding: 8px 11px; border: 1px solid rgba(236,235,229,.2); background: rgba(11,11,10,.62); backdrop-filter: blur(8px); }
 .hero-carousel-dots { display: flex; align-items: center; gap: 7px; }
@@ -82,7 +82,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--lime); outline-
 .heading-row > p { margin: 0 0 5px; color: #b6b7b0; font-size: 15px; line-height: 1.8; }
 .timeline-layout { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: clamp(34px, 5.4vw, 78px); align-items: stretch; }
 .year-rail { position: sticky; top: 112px; align-self: stretch; display: flex; flex-direction: column; justify-content: space-between; height: auto; min-height: 0; padding: 8px 0; border-left: 1px solid rgba(236,235,229,.38); }
-.year-rail button { position: relative; display: flex; align-items: center; min-height: 32px; padding: 0 0 0 22px; color: #888982; border: 0; background: transparent; text-align: left; font: 500 13px/1 "Barlow Condensed", Impact, sans-serif; letter-spacing: .1em; cursor: pointer; transition: color .2s; }
+.year-rail button { position: relative; display: flex; align-items: center; min-height: 38px; padding: 0 0 0 22px; color: #888982; border: 0; background: transparent; text-align: left; font: 600 16px/1 "Barlow Condensed", Impact, sans-serif; letter-spacing: .08em; cursor: pointer; transition: color .2s; }
 .year-rail button::before { content: ""; position: absolute; left: -5px; width: 9px; height: 9px; border: 1px solid #777871; border-radius: 50%; background: var(--ink); transition: border-color .2s, background .2s; }
 .year-rail button:hover, .year-rail button:focus-visible, .year-rail button[aria-pressed="true"] { color: var(--lime); }
 .year-rail button[aria-pressed="true"]::before { border-color: var(--lime); background: var(--lime); }
@@ -299,7 +299,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--lime); outline-
   .timeline-layout { display: block; }
   .year-rail { position: relative; top: auto; flex-direction: row; justify-content: flex-start; height: auto; min-height: 0; margin: 0 calc(var(--page-pad) * -1) 28px 0; padding: 0 0 12px; overflow-x: auto; border: 0; border-bottom: 1px solid var(--line); scrollbar-width: none; }
   .year-rail::-webkit-scrollbar { display: none; }
-  .year-rail button { flex: 0 0 auto; min-width: 66px; justify-content: center; padding: 10px 12px 8px; font-size: 12px; }
+  .year-rail button { flex: 0 0 auto; min-width: 74px; justify-content: center; padding: 11px 12px 9px; font-size: 14px; }
   .year-rail button::before { display: none; }
   .timeline-item { padding: 24px 0 27px; }
   .timeline-info { grid-template-columns: 52px minmax(0, 1fr); gap: 13px; }
