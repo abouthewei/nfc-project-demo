@@ -1,12 +1,12 @@
 const languages = {
   ko: {
-    title: "G-DRAGON — 아티스트 아카이브", homeLabel: "G-DRAGON 홈", mainNavLabel: "주요 탐색", languageLabel: "언어 선택", timelineNavLabel: "연도별 타임라인", menuLabel: "메뉴", menuOpenLabel: "메뉴 열기", menuCloseLabel: "메뉴 닫기", selectedReleasesLabel: "대표 발매작", backToTopLabel: "맨 위로",
+    title: "G-DRAGON — 아티스트 아카이브", homeLabel: "G-DRAGON 홈", mainNavLabel: "주요 탐색", languageLabel: "언어 선택", timelineNavLabel: "연도별 타임라인", menuLabel: "메뉴", menuOpenLabel: "메뉴 열기", menuCloseLabel: "메뉴 닫기", selectedReleasesLabel: "협업 작품", backToTopLabel: "맨 위로",
     heroAlt: "2012년 Alive World Tour 무대의 G-Dragon", work2017Alt: "2017년 M.O.T.T.E 시드니 공연 중인 G-Dragon", timeline2017Alt: "M.O.T.T.E 시드니 공연의 무대 스크린과 G-Dragon", gallery2017Alt: "2017년 시드니 M.O.T.T.E 월드투어 무대 전경", gallery2017ScreensAlt: "M.O.T.T.E 시드니 공연에서 화면 연출과 함께 퍼포먼스하는 G-Dragon", gallery2017LightsAlt: "M.O.T.T.E 시드니 공연의 무대 조명과 퍼포머", gallery2017CrowdAlt: "M.O.T.T.E 시드니 공연과 관객 전경",
     skip: "본문으로 건너뛰기", navStory: "이야기", navWorks: "작품", navArchive: "영상",
-    heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "무대 위의 이름, 권지용", heroIntro: "음악과 이미지, 태도와 변신. 한 사람의 이름이 하나의 장면이 되어온 시간.", heroLink: "아카이브 둘러보기", heroPhotoCaption: "KCON · LOS ANGELES · 2014", videoThumbnailAlt: "공식 대표 영상 이미지", videoFrameLabel: "공식 대표 영상", playVideoLabel: "공식 영상 재생", workVideoHint: "눌러서 페이지에서 재생", timelineSourceLabel: "REFERENCE",
+    heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "무대 위의 이름, 권지용", heroIntro: "음악과 이미지, 태도와 변신. 한 사람의 이름이 하나의 장면이 되어온 시간.", heroLink: "아카이브 둘러보기", heroPhotoCaption: "KCON · LOS ANGELES · 2014", videoThumbnailAlt: "공식 대표 영상 이미지", workVideoAlt: "공식 영상 썸네일", videoFrameLabel: "공식 대표 영상", playVideoLabel: "공식 영상 재생", workVideoHint: "눌러서 페이지에서 재생", timelineSourceLabel: "REFERENCE",
     storyMarker: "THE PERSONA", storyTitle: "이름을 넘어,<br />하나의 언어로.", storyLead: "권지용과 G-DRAGON. 두 이름 사이에서 음악은 스타일이 되고, 스타일은 다시 자기표현의 방식이 된다.", storyBody: "이 페이지는 한 아티스트의 시간을 음반과 무대, 그리고 변화의 순간으로 엮은 작은 편집 아카이브입니다. 시작부터 현재까지, 각 장면이 다음 장면의 가능성을 열어온 흐름을 따라갑니다.",
     timelineMarker: "A LIFE IN CHAPTERS", timelineTitle: "사운드를 바꾼 시간", timelineIntro: "한 해가 하나의 장면이 되고,<br />장면은 다음 시대의 문을 연다.", timelineEnd: "다음 장은 아직 쓰이고 있습니다.",
-    worksMarker: "SELECTED DISCOGRAPHY", worksTitle: "시대를 만든 작품", worksIntro: "대표작을 따라가며 사운드의 변화를 듣습니다.", workImageLabel: "OFFICIAL VIDEO STILL", listenLink: "Apple Music에서 보기",
+    worksMarker: "COLLABORATIONS & FEATURES", worksTitle: "함께 만든 장면", worksIntro: "유닛과 피처링을 따라가며, 다른 목소리와 만나는 순간을 듣습니다.", workImageLabel: "OFFICIAL VIDEO STILL", listenLink: "Apple Music에서 보기",
     archiveMarker: "THE VISUAL ARCHIVE", archiveTitle: "무대의 잔상", archiveIntro: "기록된 순간, 계속 움직이는 이미지.", gallery2017Title: "M.O.T.T.E WORLD TOUR", gallery2017Caption: "SYDNEY · 2017 — 무대의 스케일과 빛", gallery2017ScreensTitle: "A SCENE IN MOTION", gallery2017ScreensCaption: "M.O.T.T.E WORLD TOUR · 2017", gallery2017LightsTitle: "LIGHTS ON STAGE", gallery2017LightsCaption: "SYDNEY · 2017", gallery2017CrowdTitle: "THE ROOM, THE SOUND", gallery2017CrowdCaption: "M.O.T.T.E WORLD TOUR · 2017", galleryNote: "사진 출처와 확인 가능한 사용 조건은 하단 크레딧에 표시했습니다.",
     closingLabel: "END OF THIS CHAPTER", closingTitle: "계속해서,<br /><em>다르게.</em>", closingText: "이 아카이브는 한 사람의 다음 장면을 기다립니다.", backToTop: "처음으로",
     footerDisclaimer: "독립적으로 제작된 팬 아카이브이며, 아티스트·소속사와 제휴 또는 공식 관계가 없습니다.", creditsLabel: "사진 및 영상 출처", sourceLabel: "참고 자료", videoCredits: "대표 영상은 공식 YouTube 게시물을 페이지 안에서 재생합니다. 영상의 저작권은 각 권리자에게 있습니다.", creditHero2020: "(사용자 제공 파일 · 683 × 1,024 px · Getty 대응 사진은 권리 관리 이미지)", creditHeroPearl: "(HelloGDkitty · KENH14 게시본 · 동일 사진 1,080 × 1,350 px · 원본 워터마크 유지)", creditHeroCar: "(사용자 제공 파일 · 956 × 1,138 px · 가장자리 화면 컨트롤은 구성 크롭으로 제외)", creditHeroBiiig: "(사용자 제공 파일 · 710 × 992 px · YG의 BiiiG iii 비주얼과 동일 이미지)", credit2015: "(2015 영동고속도로 가요제 · 고해상도 크롭)", credit2014: "(2014 KCON · 색상/크롭 조정)", credit2025: "(2025 대한민국 대중문화예술상 · WebP 최적화)", credit2012Stage: "(2012 ALIVE WORLD TOUR · 상체 중심 크롭)", credit2012Portrait: "(2012 ALIVE WORLD TOUR · 인물 중심 크롭)", credit2017Red: "(2017 M.O.T.T.E 시드니 공연 · 색상/크롭 조정)", credit2017: "(2017 M.O.T.T.E 시드니 공연 · 색상/크롭 조정)", credit2017Screens: "(2017 M.O.T.T.E 시드니 공연 · 흑백/크롭 조정)", credit2017Lights: "(2017 M.O.T.T.E 시드니 공연 · 흑백/크롭 조정)", credit2017Crowd: "(2017 M.O.T.T.E 시드니 공연 · 흑백/크롭 조정)", credit2017Hero: "(2017 M.O.T.T.E 시드니 공연 · 고해상도 크롭)", footerBack: "처음으로 ↑",
@@ -20,22 +20,22 @@ const languages = {
       ["2025", "Übermensch", "STUDIO ALBUM · 2025", "새 정규 앨범. 지나온 페르소나를 돌아보면서도 다음 변화의 가능성을 열어둡니다."]
     ],
     works: [
-      ["2009", "Heartbreaker", "STUDIO ALBUM", "솔로 아티스트 G-DRAGON의 첫 정규 앨범. 강한 비트와 대담한 스타일링으로 새로운 장을 엽니다.", "https://music.apple.com/us/album/heartbreaker/1337476494"],
-      ["2012", "One of a Kind", "EP", "랩과 멜로디, 패션과 퍼포먼스가 하나의 시그니처로 응축된 EP.", "https://music.apple.com/us/album/one-of-a-kind-ep/1335980959"],
-      ["2013", "Coup d’Etat", "STUDIO ALBUM", "장르를 넘나드는 프로덕션과 폭넓은 협업으로 완성한 정규 앨범.", "https://music.apple.com/us/album/coup-detat-one-of-a-kind-heartbreaker/740327399"],
-      ["2017", "Kwon Ji Yong", "EP", "예명과 본명 사이를 오가며 자기 이야기를 펼쳐 보인 다섯 트랙의 EP.", "https://music.apple.com/us/album/kwon-ji-yong-ep/1246076503"],
-      ["2024", "POWER", "SINGLE", "2024년 발표한 솔로 싱글. 짧은 형식 안에 현재의 에너지를 담았습니다.", "https://music.apple.com/us/album/power-single/1776670341"],
-      ["2025", "Übermensch", "STUDIO ALBUM", "2025년 발표한 정규 앨범. 다시 쓰이는 정체성과 다음 장을 향한 움직임.", "https://music.apple.com/us/album/%C3%BCbermensch/1794882375"]
+      ["good-boy", "GOOD BOY", "DUET SINGLE", "태양과 함께한 유닛 싱글. 둘의 랩과 퍼포먼스가 충돌하며 솔로 아티스트의 무대를 두 사람의 대결처럼 확장합니다.", "https://music.apple.com/us/album/good-boy-single/1313615274", "1ZRb1we80kM", "GD X TAEYANG — GOOD BOY · OFFICIAL M/V"],
+      ["zutter", "ZUTTER", "UNIT TRACK", "T.O.P와 함께 만든 유닛 트랙. 거친 플로우와 과장된 캐릭터 플레이로 BIGBANG 안의 또 다른 결을 보여줍니다.", "https://music.apple.com/us/search?term=BIGBANG%20GD%20TOP%20ZUTTER", "D8t8A8E_Tqc", "GD&T.O.P — ZUTTER · OFFICIAL M/V"],
+      ["palette", "PALETTE", "FEATURE · IU", "아이유의 시선에 G-DRAGON의 랩이 더해진 피처링 곡. 서로 다른 세대의 감각이 차분한 대화처럼 이어집니다.", "https://music.apple.com/us/search?term=IU%20Palette%20G-DRAGON", "d9IxdwEFk1c", "IU feat. G-DRAGON — PALETTE · OFFICIAL M/V"],
+      ["complex", "COMPLEX", "FEATURE · ZION.T", "자이언티의 곡에 참여해 익숙한 자신감과 유머를 비튼 랩을 들려줍니다. 정식 뮤직비디오 대신 공식 오디오를 연결합니다.", "https://music.apple.com/us/search?term=Zion.T%20Complex%20G-DRAGON", "vLzgATepxzg", "ZION.T feat. G-DRAGON — COMPLEX · OFFICIAL AUDIO"],
+      ["loser", "LOSER", "BIGBANG · SINGLE", "BIGBANG의 감정적인 면을 전면에 둔 싱글. 절제된 화면과 자기 고백에 가까운 가사가 그룹 음악의 다른 온도를 보여줍니다.", "https://music.apple.com/us/search?term=BIGBANG%20LOSER", "1CTced9CMMk", "BIGBANG — LOSER · OFFICIAL M/V"],
+      ["still-life", "STILL LIFE", "BIGBANG · SINGLE", "멤버들이 각자의 시간을 돌아보며 함께 부른 싱글. 계절과 기억을 오가는 영상으로 긴 공백 뒤의 재회를 기록합니다.", "https://music.apple.com/us/album/still-life-single/1616762362?l=en-US", "eN5mG_yMDiM", "BIGBANG — STILL LIFE · OFFICIAL M/V"]
     ]
   },
   zh: {
-    title: "G-DRAGON — 艺术家档案", homeLabel: "G-DRAGON 首页", mainNavLabel: "主导航", languageLabel: "语言选择", timelineNavLabel: "年份时间线", menuLabel: "菜单", menuOpenLabel: "打开菜单", menuCloseLabel: "关闭菜单", selectedReleasesLabel: "代表作品", backToTopLabel: "回到顶部",
+    title: "G-DRAGON — 艺术家档案", homeLabel: "G-DRAGON 首页", mainNavLabel: "主导航", languageLabel: "语言选择", timelineNavLabel: "年份时间线", menuLabel: "菜单", menuOpenLabel: "打开菜单", menuCloseLabel: "关闭菜单", selectedReleasesLabel: "合作作品", backToTopLabel: "回到顶部",
     heroAlt: "G-Dragon 在 2012 年 Alive World Tour 的舞台上", work2017Alt: "G-Dragon 在 2017 年 M.O.T.T.E 悉尼演出现场", timeline2017Alt: "M.O.T.T.E 悉尼演出的舞台屏幕与 G-Dragon", gallery2017Alt: "2017 年悉尼 M.O.T.T.E 世界巡演舞台全景", gallery2017ScreensAlt: "G-Dragon 在 M.O.T.T.E 悉尼场的屏幕影像前表演", gallery2017LightsAlt: "M.O.T.T.E 悉尼场的舞台灯光与表演者", gallery2017CrowdAlt: "M.O.T.T.E 悉尼演出现场与观众全景",
     skip: "跳转至正文", navStory: "故事", navWorks: "作品", navArchive: "影像",
-    heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "舞台上的名字，权志龙", heroIntro: "音乐与影像、态度与蜕变。一个名字逐渐成为一个时代切面的过程。", heroLink: "进入档案", heroPhotoCaption: "KCON · LOS ANGELES · 2014", videoThumbnailAlt: "官方代表视频画面", videoFrameLabel: "官方代表视频", playVideoLabel: "播放官方视频", workVideoHint: "点击播放 · 页内观看", timelineSourceLabel: "资料来源",
+    heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "舞台上的名字，权志龙", heroIntro: "音乐与影像、态度与蜕变。一个名字逐渐成为一个时代切面的过程。", heroLink: "进入档案", heroPhotoCaption: "KCON · LOS ANGELES · 2014", videoThumbnailAlt: "官方代表视频画面", workVideoAlt: "官方视频缩略图", videoFrameLabel: "官方代表视频", playVideoLabel: "播放官方视频", workVideoHint: "点击播放 · 页内观看", timelineSourceLabel: "资料来源",
     storyMarker: "THE PERSONA", storyTitle: "超越名字，<br />成为一种语言。", storyLead: "权志龙与 G-DRAGON。在两个名字之间，音乐成为风格，风格又成为表达自我的方式。", storyBody: "这是一份小型编辑档案，以唱片、舞台和变化的瞬间串起一位艺术家的时间。从初次登场到今天，每个片段都为下一幕打开新的可能。",
     timelineMarker: "A LIFE IN CHAPTERS", timelineTitle: "改变声音的岁月", timelineIntro: "一年成为一个片段，<br />片段又推开下一个时代。", timelineEnd: "下一章，仍在书写。",
-    worksMarker: "SELECTED DISCOGRAPHY", worksTitle: "标记时代的作品", worksIntro: "沿着代表作品，聆听声音的变化。", workImageLabel: "OFFICIAL VIDEO STILL", listenLink: "在 Apple Music 收听",
+    worksMarker: "COLLABORATIONS & FEATURES", worksTitle: "合作与共创", worksIntro: "从双人企划到客席合作，看看他的声音如何进入不同作品。", workImageLabel: "OFFICIAL VIDEO STILL", listenLink: "在 Apple Music 收听",
     archiveMarker: "THE VISUAL ARCHIVE", archiveTitle: "舞台余像", archiveIntro: "被记录的瞬间，仍在流动的影像。", gallery2017Title: "M.O.T.T.E WORLD TOUR", gallery2017Caption: "SYDNEY · 2017 — 舞台的尺度与光线", gallery2017ScreensTitle: "A SCENE IN MOTION", gallery2017ScreensCaption: "M.O.T.T.E WORLD TOUR · 2017", gallery2017LightsTitle: "LIGHTS ON STAGE", gallery2017LightsCaption: "SYDNEY · 2017", gallery2017CrowdTitle: "THE ROOM, THE SOUND", gallery2017CrowdCaption: "M.O.T.T.E WORLD TOUR · 2017", galleryNote: "可核验的图片来源与使用条件列于页面底部；未能确认的授权状态会在来源说明中注明。",
     closingLabel: "END OF THIS CHAPTER", closingTitle: "继续向前，<br /><em>不断变化。</em>", closingText: "这份档案，等待着他的下一幕。", backToTop: "回到顶部",
     footerDisclaimer: "本页面为独立制作的粉丝档案，与艺人及其经纪公司无官方关联。", creditsLabel: "图片与视频来源", sourceLabel: "参考资料", videoCredits: "代表视频由官方 YouTube 页面在本站内嵌播放；视频权利归各自权利人所有。", creditHero2020: "（用户提供图片 · 683×1024 px · Getty 对应照片为版权管理素材）", creditHeroPearl: "（HelloGDkitty · KENH14 同图版本 · 1080×1350 px · 保留原图水印）", creditHeroCar: "（用户提供图片 · 956×1138 px · 轮播构图裁切掉查看器边角控件）", creditHeroBiiig: "（用户提供图片 · 710×992 px · 与 YG《BiiiG》iii 视觉照相同）", credit2015: "（2015《无限挑战》永东高速公路歌谣祭 · 高清裁切）", credit2014: "（2014 KCON · 调整色彩与裁切）", credit2025: "（2025 韩国大众文化艺术奖 · WebP 优化）", credit2012Stage: "（2012 ALIVE WORLD TOUR · 上半身构图）", credit2012Portrait: "（2012 ALIVE WORLD TOUR · 人像裁切）", credit2017Red: "（2017 M.O.T.T.E 悉尼场 · 调整色彩与裁切）", credit2017: "（2017 M.O.T.T.E 悉尼场 · 调整色彩与裁切）", credit2017Screens: "（2017 M.O.T.T.E 悉尼场 · 黑白处理与裁切）", credit2017Lights: "（2017 M.O.T.T.E 悉尼场 · 黑白处理与裁切）", credit2017Crowd: "（2017 M.O.T.T.E 悉尼场 · 黑白处理与裁切）", credit2017Hero: "（2017 M.O.T.T.E 悉尼场 · 高清裁切）", footerBack: "回到顶部 ↑",
@@ -49,22 +49,22 @@ const languages = {
       ["2025", "Übermensch", "STUDIO ALBUM · 2025", "全新录音室专辑。回望一路走来的角色，也为下一次变化留下空间。"]
     ],
     works: [
-      ["2009", "Heartbreaker", "STUDIO ALBUM", "G-DRAGON 的首张个人录音室专辑。强劲节拍与大胆造型，开启新的篇章。", "https://music.apple.com/us/album/heartbreaker/1337476494"],
-      ["2012", "One of a Kind", "EP", "Rap、旋律、时尚与舞台表现凝练成标志性语言的一张 EP。", "https://music.apple.com/us/album/one-of-a-kind-ep/1335980959"],
-      ["2013", "Coup d’Etat", "STUDIO ALBUM", "以跨越曲风的制作与多元合作完成的录音室专辑。", "https://music.apple.com/us/album/coup-detat-one-of-a-kind-heartbreaker/740327399"],
-      ["2017", "Kwon Ji Yong", "EP", "在艺名与本名之间展开自我叙事的五首曲目 EP。", "https://music.apple.com/us/album/kwon-ji-yong-ep/1246076503"],
-      ["2024", "POWER", "SINGLE", "2024 年发行的个人单曲，在精炼的形式中凝聚当下的能量。", "https://music.apple.com/us/album/power-single/1776670341"],
-      ["2025", "Übermensch", "STUDIO ALBUM", "2025 年发行的录音室专辑。重新书写身份，继续走向下一章。", "https://music.apple.com/us/album/%C3%BCbermensch/1794882375"]
+      ["good-boy", "GOOD BOY", "DUET SINGLE", "与太阳合作的双人单曲。两人的 Rap 与表演彼此碰撞，把个人舞台扩展成一场默契十足的对决。", "https://music.apple.com/us/album/good-boy-single/1313615274", "1ZRb1we80kM", "GD X TAEYANG — GOOD BOY · OFFICIAL M/V"],
+      ["zutter", "ZUTTER", "UNIT TRACK", "与 T.O.P 组成小分队完成的作品。粗粝的 Flow 与夸张的人物感，呈现 BIGBANG 内部另一种表达。", "https://music.apple.com/us/search?term=BIGBANG%20GD%20TOP%20ZUTTER", "D8t8A8E_Tqc", "GD&T.O.P — ZUTTER · OFFICIAL M/V"],
+      ["palette", "PALETTE", "FEATURE · IU", "IU 的视角与 G-DRAGON 的 Rap 相遇。两种不同世代的感受像一段从容的对话，落在这首合作曲里。", "https://music.apple.com/us/search?term=IU%20Palette%20G-DRAGON", "d9IxdwEFk1c", "IU feat. G-DRAGON — PALETTE · OFFICIAL M/V"],
+      ["complex", "COMPLEX", "FEATURE · ZION.T", "参与 Zion.T 的作品，以熟悉的自信和幽默重新调侃自我。这里连接的是官方音频，而非音乐录影带。", "https://music.apple.com/us/search?term=Zion.T%20Complex%20G-DRAGON", "vLzgATepxzg", "ZION.T feat. G-DRAGON — COMPLEX · OFFICIAL AUDIO"],
+      ["loser", "LOSER", "BIGBANG · SINGLE", "BIGBANG 展露情绪的一面。克制的画面与近似自白的歌词，为组合作品带来不同的温度。", "https://music.apple.com/us/search?term=BIGBANG%20LOSER", "1CTced9CMMk", "BIGBANG — LOSER · OFFICIAL M/V"],
+      ["still-life", "STILL LIFE", "BIGBANG · SINGLE", "成员回望各自走过的时间，并再次并肩演唱。影像在季节与记忆之间切换，记录长久空白后的重逢。", "https://music.apple.com/us/album/still-life-single/1616762362?l=en-US", "eN5mG_yMDiM", "BIGBANG — STILL LIFE · OFFICIAL M/V"]
     ]
   },
   en: {
-    title: "G-DRAGON — Artist Archive", homeLabel: "G-DRAGON home", mainNavLabel: "Main navigation", languageLabel: "Language selection", timelineNavLabel: "Timeline by year", menuLabel: "MENU", menuOpenLabel: "Open menu", menuCloseLabel: "Close menu", selectedReleasesLabel: "Selected releases", backToTopLabel: "Back to top",
+    title: "G-DRAGON — Artist Archive", homeLabel: "G-DRAGON home", mainNavLabel: "Main navigation", languageLabel: "Language selection", timelineNavLabel: "Timeline by year", menuLabel: "MENU", menuOpenLabel: "Open menu", menuCloseLabel: "Close menu", selectedReleasesLabel: "Selected collaborations", backToTopLabel: "Back to top",
     heroAlt: "G-Dragon performing on the 2012 Alive World Tour", work2017Alt: "G-Dragon performing at the 2017 M.O.T.T.E Sydney show", timeline2017Alt: "G-Dragon and the stage screens at the M.O.T.T.E Sydney show", gallery2017Alt: "Stage view from the 2017 M.O.T.T.E World Tour in Sydney", gallery2017ScreensAlt: "G-Dragon performing with the visual screens at the M.O.T.T.E Sydney show", gallery2017LightsAlt: "Stage lights and performers at the M.O.T.T.E Sydney show", gallery2017CrowdAlt: "The M.O.T.T.E Sydney performance and audience",
     skip: "Skip to content", navStory: "Story", navWorks: "Works", navArchive: "Visuals",
-    heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "A name on stage: Kwon Ji Yong", heroIntro: "Music and image, attitude and reinvention. The years in which one name became its own cultural scene.", heroLink: "Explore the archive", heroPhotoCaption: "KCON · LOS ANGELES · 2014", videoThumbnailAlt: "official representative video still", videoFrameLabel: "Official representative video", playVideoLabel: "Play official video", workVideoHint: "CLICK TO WATCH · IN PAGE", timelineSourceLabel: "SOURCE",
+    heroKicker: "ARTIST ARCHIVE · 2006—2025", heroOverline: "A name on stage: Kwon Ji Yong", heroIntro: "Music and image, attitude and reinvention. The years in which one name became its own cultural scene.", heroLink: "Explore the archive", heroPhotoCaption: "KCON · LOS ANGELES · 2014", videoThumbnailAlt: "official representative video still", workVideoAlt: "official video thumbnail", videoFrameLabel: "Official representative video", playVideoLabel: "Play official video", workVideoHint: "CLICK TO WATCH · IN PAGE", timelineSourceLabel: "SOURCE",
     storyMarker: "THE PERSONA", storyTitle: "Beyond a name,<br />a language of his own.", storyLead: "Kwon Ji Yong and G-DRAGON. Between the two names, music becomes style, and style becomes a way of speaking for oneself.", storyBody: "This compact editorial archive traces an artist through records, stages, and moments of change. From the opening chapter to the present, each scene points toward the possibilities of the next.",
     timelineMarker: "A LIFE IN CHAPTERS", timelineTitle: "THE YEARS THAT SHAPED THE SOUND", timelineIntro: "A year becomes a scene;<br />a scene opens another era.", timelineEnd: "The next chapter is still being written.",
-    worksMarker: "SELECTED DISCOGRAPHY", worksTitle: "WORKS THAT MARKED AN ERA", worksIntro: "Follow the releases and hear the sound shift.", workImageLabel: "OFFICIAL VIDEO STILL", listenLink: "Listen on Apple Music",
+    worksMarker: "COLLABORATIONS & FEATURES", worksTitle: "ACROSS COLLABORATIONS", worksIntro: "From unit projects to guest verses, hear his voice meet other worlds.", workImageLabel: "OFFICIAL VIDEO STILL", listenLink: "Listen on Apple Music",
     archiveMarker: "THE VISUAL ARCHIVE", archiveTitle: "Afterimages of the stage", archiveIntro: "Recorded moments; images still in motion.", gallery2017Title: "M.O.T.T.E WORLD TOUR", gallery2017Caption: "SYDNEY · 2017 — Scale and light on stage", gallery2017ScreensTitle: "A SCENE IN MOTION", gallery2017ScreensCaption: "M.O.T.T.E WORLD TOUR · 2017", gallery2017LightsTitle: "LIGHTS ON STAGE", gallery2017LightsCaption: "SYDNEY · 2017", gallery2017CrowdTitle: "THE ROOM, THE SOUND", gallery2017CrowdCaption: "M.O.T.T.E WORLD TOUR · 2017", galleryNote: "Image sources and available license details appear below; unverified permissions are noted in the source record.",
     closingLabel: "END OF THIS CHAPTER", closingTitle: "Onward,<br /><em>otherwise.</em>", closingText: "This archive waits for the next scene.", backToTop: "Back to top",
     footerDisclaimer: "An independent fan archive, with no official affiliation with the artist or his agency.", creditsLabel: "PHOTO & VIDEO CREDITS", sourceLabel: "REFERENCES", videoCredits: "Representative videos play in-page from official YouTube uploads. Rights remain with their respective owners.", creditHero2020: "(user-provided image · 683 × 1,024 px · matching Getty image is rights-managed)", creditHeroPearl: "(HelloGDkitty · KENH14 copy of the same photo · 1,080 × 1,350 px · watermark retained)", creditHeroCar: "(user-provided image · 956 × 1,138 px · viewer-corner controls cropped by composition)", creditHeroBiiig: "(user-provided image · 710 × 992 px · same visual as YG’s BiiiG iii release)", credit2015: "(2015 Yeongdong Expressway Music Festival · high-resolution crop)", credit2014: "(KCON 2014 · color/crop adjusted)", credit2025: "(2025 Korea Popular Culture and Arts Awards · WebP optimized)", credit2012Stage: "(ALIVE WORLD TOUR, 2012 · upper-body crop)", credit2012Portrait: "(ALIVE WORLD TOUR, 2012 · portrait crop)", credit2017Red: "(M.O.T.T.E Sydney show, 2017 · color/crop adjusted)", credit2017: "(M.O.T.T.E Sydney show, 2017 · color/crop adjusted)", credit2017Screens: "(M.O.T.T.E Sydney show, 2017 · monochrome/crop adjusted)", credit2017Lights: "(M.O.T.T.E Sydney show, 2017 · monochrome/crop adjusted)", credit2017Crowd: "(M.O.T.T.E Sydney show, 2017 · monochrome/crop adjusted)", credit2017Hero: "(M.O.T.T.E Sydney show, 2017 · high-resolution crop)", footerBack: "BACK TO TOP ↑",
@@ -78,12 +78,12 @@ const languages = {
       ["2025", "Übermensch", "STUDIO ALBUM · 2025", "A new studio album. Looking back at earlier personas while leaving room for what comes next."]
     ],
     works: [
-      ["2009", "Heartbreaker", "STUDIO ALBUM", "G-DRAGON’s first solo studio album. A new chapter shaped by forceful beats and daring style.", "https://music.apple.com/us/album/heartbreaker/1337476494"],
-      ["2012", "One of a Kind", "EP", "An EP where rap, melody, fashion, and performance converge into a signature.", "https://music.apple.com/us/album/one-of-a-kind-ep/1335980959"],
-      ["2013", "Coup d’Etat", "STUDIO ALBUM", "A studio album built across genres and a wide-ranging set of collaborations.", "https://music.apple.com/us/album/coup-detat-one-of-a-kind-heartbreaker/740327399"],
-      ["2017", "Kwon Ji Yong", "EP", "Five tracks that tell a personal story between stage name and given name.", "https://music.apple.com/us/album/kwon-ji-yong-ep/1246076503"],
-      ["2024", "POWER", "SINGLE", "A solo single released in 2024, gathering present-day energy into a compact form.", "https://music.apple.com/us/album/power-single/1776670341"],
-      ["2025", "Übermensch", "STUDIO ALBUM", "A 2025 studio album: identity rewritten, with motion toward the next chapter.", "https://music.apple.com/us/album/%C3%BCbermensch/1794882375"]
+      ["good-boy", "GOOD BOY", "DUET SINGLE", "A unit single with Taeyang. Their contrasting rap and performance turn the solo stage into a playful face-off between two distinct artists.", "https://music.apple.com/us/album/good-boy-single/1313615274", "1ZRb1we80kM", "GD X TAEYANG — GOOD BOY · OFFICIAL M/V"],
+      ["zutter", "ZUTTER", "UNIT TRACK", "A unit track with T.O.P. Its rough-edged flow and exaggerated character reveal another side of BIGBANG’s shared language.", "https://music.apple.com/us/search?term=BIGBANG%20GD%20TOP%20ZUTTER", "D8t8A8E_Tqc", "GD&T.O.P — ZUTTER · OFFICIAL M/V"],
+      ["palette", "PALETTE", "FEATURE · IU", "G-DRAGON’s rap enters IU’s point of view. Their different generational perspectives meet in a relaxed, conversational collaboration.", "https://music.apple.com/us/search?term=IU%20Palette%20G-DRAGON", "d9IxdwEFk1c", "IU feat. G-DRAGON — PALETTE · OFFICIAL M/V"],
+      ["complex", "COMPLEX", "FEATURE · ZION.T", "A guest verse on Zion.T’s track, turning familiar confidence into self-aware humor. The linked official upload is audio, not a music video.", "https://music.apple.com/us/search?term=Zion.T%20Complex%20G-DRAGON", "vLzgATepxzg", "ZION.T feat. G-DRAGON — COMPLEX · OFFICIAL AUDIO"],
+      ["loser", "LOSER", "BIGBANG · SINGLE", "A more vulnerable side of BIGBANG. Restrained imagery and near-confessional lyrics give the group’s catalogue a different emotional temperature.", "https://music.apple.com/us/search?term=BIGBANG%20LOSER", "1CTced9CMMk", "BIGBANG — LOSER · OFFICIAL M/V"],
+      ["still-life", "STILL LIFE", "BIGBANG · SINGLE", "A song in which the members look back on separate lives and return to the frame together. Its changing seasons record a reunion after a long silence.", "https://music.apple.com/us/album/still-life-single/1616762362?l=en-US", "eN5mG_yMDiM", "BIGBANG — STILL LIFE · OFFICIAL M/V"]
     ]
   }
 };
@@ -98,7 +98,7 @@ function saveLanguage(value) {
 }
 const urlLanguage = new URLSearchParams(location.search).get("lang");
 let language = ["ko", "zh", "en"].includes(urlLanguage) ? urlLanguage : (getSavedLanguage() || "ko");
-let selectedWork = "2009";
+let selectedWork = "good-boy";
 let selectedTimelineYear = "2006";
 let activeHeroSlide = 0;
 let heroAutoplayEnabled = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -125,9 +125,9 @@ const timelineSources = {
 };
 
 const interfaceCopy = {
-  ko: { heroCarouselLabel: "권지용 아카이브 사진 슬라이드", heroPause: "자동 재생 일시정지", heroPlay: "자동 재생 시작", heroDots: "사진 선택", galleryOpenLabel: "이미지 상세 보기", galleryCloseLabel: "상세 닫기", gallerySourceLabel: "사진 원본 및 라이선스", galleryDialogKicker: "VISUAL ARCHIVE", galleryPrevious: "이전 사진", galleryNext: "다음 사진", galleryZoomIn: "확대", galleryZoomOut: "축소", galleryZoomReset: "크기 초기화", galleryPlayVideo: "M.O.T.T.E 공식 투어 예고편 보기", galleryShowPhotos: "사진 모음으로 돌아가기", timelineAchievement: "CAREER MILESTONE", timelineStoryLabel: "THE STORY", timelineChapter: "CHAPTER" },
-  zh: { heroCarouselLabel: "权志龙档案影像轮播", heroPause: "暂停自动播放", heroPlay: "开始自动播放", heroDots: "选择图片", galleryOpenLabel: "查看影像详情", galleryCloseLabel: "关闭详情", gallerySourceLabel: "原始照片与授权", galleryDialogKicker: "影像档案", galleryPrevious: "上一张照片", galleryNext: "下一张照片", galleryZoomIn: "放大照片", galleryZoomOut: "缩小照片", galleryZoomReset: "恢复原始大小", galleryPlayVideo: "播放 M.O.T.T.E 官方巡演预告", galleryShowPhotos: "返回照片集", timelineAchievement: "成就与荣誉", timelineStoryLabel: "这一章节", timelineChapter: "章节" },
-  en: { heroCarouselLabel: "Kwon Ji Yong photo carousel", heroPause: "Pause autoplay", heroPlay: "Start autoplay", heroDots: "Choose a photo", galleryOpenLabel: "View image details", galleryCloseLabel: "Close details", gallerySourceLabel: "Original photo and license", galleryDialogKicker: "VISUAL ARCHIVE", galleryPrevious: "Previous photo", galleryNext: "Next photo", galleryZoomIn: "Zoom in", galleryZoomOut: "Zoom out", galleryZoomReset: "Reset zoom", galleryPlayVideo: "Play the official M.O.T.T.E tour trailer", galleryShowPhotos: "Back to photo set", timelineAchievement: "CAREER MILESTONE", timelineStoryLabel: "THE STORY", timelineChapter: "CHAPTER" }
+  ko: { heroCarouselLabel: "권지용 아카이브 사진 슬라이드", heroPause: "자동 재생 일시정지", heroPlay: "자동 재생 시작", heroDots: "사진 선택", galleryOpenLabel: "이미지 상세 보기", galleryCloseLabel: "상세 닫기", gallerySourceLabel: "사진 원본 및 라이선스", galleryDialogKicker: "VISUAL ARCHIVE", galleryPrevious: "이전 사진", galleryNext: "다음 사진", galleryZoomIn: "확대", galleryZoomOut: "축소", galleryZoomReset: "크기 초기화", galleryPlayVideo: "M.O.T.T.E 공식 투어 예고편 보기", galleryShowPhotos: "사진 모음으로 돌아가기", timelineAchievement: "CAREER MILESTONE", timelineChapter: "CHAPTER" },
+  zh: { heroCarouselLabel: "权志龙档案影像轮播", heroPause: "暂停自动播放", heroPlay: "开始自动播放", heroDots: "选择图片", galleryOpenLabel: "查看影像详情", galleryCloseLabel: "关闭详情", gallerySourceLabel: "原始照片与授权", galleryDialogKicker: "影像档案", galleryPrevious: "上一张照片", galleryNext: "下一张照片", galleryZoomIn: "放大照片", galleryZoomOut: "缩小照片", galleryZoomReset: "恢复原始大小", galleryPlayVideo: "播放 M.O.T.T.E 官方巡演预告", galleryShowPhotos: "返回照片集", timelineAchievement: "成就与荣誉", timelineChapter: "章节" },
+  en: { heroCarouselLabel: "Kwon Ji Yong photo carousel", heroPause: "Pause autoplay", heroPlay: "Start autoplay", heroDots: "Choose a photo", galleryOpenLabel: "View image details", galleryCloseLabel: "Close details", gallerySourceLabel: "Original photo and license", galleryDialogKicker: "VISUAL ARCHIVE", galleryPrevious: "Previous photo", galleryNext: "Next photo", galleryZoomIn: "Zoom in", galleryZoomOut: "Zoom out", galleryZoomReset: "Reset zoom", galleryPlayVideo: "Play the official M.O.T.T.E tour trailer", galleryShowPhotos: "Back to photo set", timelineAchievement: "CAREER MILESTONE", timelineChapter: "CHAPTER" }
 };
 
 const heroSlides = [
@@ -173,31 +173,31 @@ const heroSlides = [
 
 const timelineEditorial = {
   ko: [
-    { heading: "BIGBANG의 데뷔", detail: "다섯 멤버가 한 팀으로 처음 소개되며 권지용의 음악 여정도 공개적인 무대 위에 놓였습니다. 팀의 랩과 작사·작곡에 참여하며 아티스트로서의 기반을 다졌습니다." },
-    { heading: "MELON MUSIC AWARDS · 올해의 앨범", detail: "첫 솔로 정규 앨범 《Heartbreaker》가 2009 Melon Music Awards에서 올해의 앨범으로 선정됐습니다. 솔로 보컬과 프로덕션, 강한 시각 콘셉트를 결합해 독립적인 음악 세계를 각인시켰습니다." },
-    { heading: "MAMA · 남자 가수상", detail: "《One of a Kind》와 〈Crayon〉으로 솔로 음악의 폭을 넓혔고, 2012 MAMA에서 남자 가수상을 받았습니다. 이 시기의 실험적인 스타일은 이후 솔로 무대의 시그니처가 됐습니다." },
-    { heading: "MAMA · 올해의 가수상, 4관왕", detail: "2013 MAMA에서 올해의 가수상과 남자 가수상, 남자 솔로 댄스 퍼포먼스상, 뮤직비디오상을 수상했습니다. 같은 해 첫 솔로 월드투어 《ONE OF A KIND》로 일본 4개 돔 공연을 포함한 대형 투어를 이어갔습니다." },
-    { heading: "M.O.T.T.E · 일본 돔 투어 26만 관객", detail: "《KWON JI YONG》과 《ACT III, M.O.T.T.E》는 무대의 화려함 뒤에 있는 권지용의 내면을 전면에 내세웠습니다. 일본 3개 도시의 돔에서 열린 다섯 공연에는 약 26만 명이 모였습니다." },
-    { heading: "MAMA · MUSIC VISIONARY OF THE YEAR", detail: "〈POWER〉로 솔로 활동을 재개한 뒤, 2024 MAMA는 G-DRAGON에게 Music Visionary of the Year를 수여했습니다. 이 상은 한 해의 특정 곡보다 음악과 대중문화에 남긴 영향력을 기리는 부문입니다." },
-    { heading: "MAMA · 올해의 가수상 외 2관왕", detail: "정규 앨범 《Übermensch》와 〈TOO BAD〉로 다음 장을 열었습니다. 2025 MAMA에서 올해의 가수상, 남자 가수상, 남자 솔로 댄스 퍼포먼스상을 받았습니다." }
+    { storyLabel: "첫 장", heading: "BIGBANG의 데뷔", detail: "다섯 멤버가 한 팀으로 처음 소개되며 권지용의 음악 여정도 공개적인 무대 위에 놓였습니다. 팀의 랩과 작사·작곡에 참여하며 아티스트로서의 기반을 다졌습니다." },
+    { storyLabel: "솔로 챕터", heading: "MELON MUSIC AWARDS · 올해의 앨범", detail: "첫 솔로 정규 앨범 《Heartbreaker》가 2009 Melon Music Awards에서 올해의 앨범으로 선정됐습니다. 솔로 보컬과 프로덕션, 강한 시각 콘셉트를 결합해 독립적인 음악 세계를 각인시켰습니다." },
+    { storyLabel: "새로운 페르소나", heading: "MAMA · 남자 가수상", detail: "《One of a Kind》와 〈Crayon〉으로 솔로 음악의 폭을 넓혔고, 2012 MAMA에서 남자 가수상을 받았습니다. 이 시기의 실험적인 스타일은 이후 솔로 무대의 시그니처가 됐습니다." },
+    { storyLabel: "글로벌 스테이지", heading: "MAMA · 올해의 가수상, 4관왕", detail: "2013 MAMA에서 올해의 가수상과 남자 가수상, 남자 솔로 댄스 퍼포먼스상, 뮤직비디오상을 수상했습니다. 같은 해 첫 솔로 월드투어 《ONE OF A KIND》로 일본 4개 돔 공연을 포함한 대형 투어를 이어갔습니다." },
+    { storyLabel: "본명으로 쓴 이야기", heading: "M.O.T.T.E · 일본 돔 투어 26만 관객", detail: "《KWON JI YONG》과 《ACT III, M.O.T.T.E》는 무대의 화려함 뒤에 있는 권지용의 내면을 전면에 내세웠습니다. 일본 3개 도시의 돔에서 열린 다섯 공연에는 약 26만 명이 모였습니다." },
+    { storyLabel: "다시 켜진 목소리", heading: "MAMA · MUSIC VISIONARY OF THE YEAR", detail: "〈POWER〉로 솔로 활동을 재개한 뒤, 2024 MAMA는 G-DRAGON에게 Music Visionary of the Year를 수여했습니다. 이 상은 한 해의 특정 곡보다 음악과 대중문화에 남긴 영향력을 기리는 부문입니다." },
+    { storyLabel: "다음 장의 시작", heading: "MAMA · 올해의 가수상 외 2관왕", detail: "정규 앨범 《Übermensch》와 〈TOO BAD〉로 다음 장을 열었습니다. 2025 MAMA에서 올해의 가수상, 남자 가수상, 남자 솔로 댄스 퍼포먼스상을 받았습니다." }
   ],
   zh: [
-    { heading: "BIGBANG 正式出道", detail: "五位成员以 BIGBANG 的名义首次登上公众舞台，权志龙的音乐旅程也由此被更多人看见。他参与团队的 Rap、作词与作曲，在组合表达中逐渐建立个人创作身份。" },
-    { heading: "Melon Music Awards · 年度专辑", detail: "首张个人正规专辑《Heartbreaker》获得 2009 Melon Music Awards 年度专辑奖。个人演唱、制作与鲜明视觉概念合为一体，确立了独立的音乐表达。" },
-    { heading: "MAMA · 最佳男歌手", detail: "《One of a Kind》与《Crayon》拓宽了他作为 Solo 音乐人的表达边界，并让他获得 2012 MAMA 最佳男歌手奖。这一时期的实验风格逐渐成为个人舞台标识。" },
-    { heading: "MAMA · 年度艺人，四项获奖", detail: "他在 2013 MAMA 获得年度艺人、最佳男歌手、最佳男 Solo 舞蹈表演及最佳音乐录影带四项奖项。同年，首轮 Solo 世界巡演《ONE OF A KIND》展开，包含日本四座巨蛋场馆演出。" },
-    { heading: "M.O.T.T.E · 日本巨蛋巡演 26 万观众", detail: "《KWON JI YONG》与《ACT III, M.O.T.T.E》将聚光灯背后的权志龙带到作品中央。日本三座城市的五场巨蛋演出共吸引约 26 万名观众。" },
-    { heading: "MAMA · 年度音乐愿景人物", detail: "凭借《POWER》回归 Solo 活动后，G-DRAGON 获得 2024 MAMA Music Visionary of the Year。该荣誉关注他对音乐与流行文化的长期影响。" },
-    { heading: "MAMA · 年度艺人等三项大奖", detail: "正规专辑《Übermensch》与歌曲《TOO BAD》开启新的篇章。2025 MAMA 上，他获得年度艺人、最佳男歌手及最佳男 Solo 舞蹈表演三项奖项。" }
+    { storyLabel: "第一幕", heading: "BIGBANG 正式出道", detail: "五位成员以 BIGBANG 的名义首次登上公众舞台，权志龙的音乐旅程也由此被更多人看见。他参与团队的 Rap、作词与作曲，在组合表达中逐渐建立个人创作身份。" },
+    { storyLabel: "Solo 启程", heading: "Melon Music Awards · 年度专辑", detail: "首张个人正规专辑《Heartbreaker》获得 2009 Melon Music Awards 年度专辑奖。个人演唱、制作与鲜明视觉概念合为一体，确立了独立的音乐表达。" },
+    { storyLabel: "风格实验", heading: "MAMA · 最佳男歌手", detail: "《One of a Kind》与《Crayon》拓宽了他作为 Solo 音乐人的表达边界，并让他获得 2012 MAMA 最佳男歌手奖。这一时期的实验风格逐渐成为个人舞台标识。" },
+    { storyLabel: "巡演与荣誉", heading: "MAMA · 年度艺人，四项获奖", detail: "他在 2013 MAMA 获得年度艺人、最佳男歌手、最佳男 Solo 舞蹈表演及最佳音乐录影带四项奖项。同年，首轮 Solo 世界巡演《ONE OF A KIND》展开，包含日本四座巨蛋场馆演出。" },
+    { storyLabel: "本名叙事", heading: "M.O.T.T.E · 日本巨蛋巡演 26 万观众", detail: "《KWON JI YONG》与《ACT III, M.O.T.T.E》将聚光灯背后的权志龙带到作品中央。日本三座城市的五场巨蛋演出共吸引约 26 万名观众。" },
+    { storyLabel: "回归现场", heading: "MAMA · 年度音乐愿景人物", detail: "凭借《POWER》回归 Solo 活动后，G-DRAGON 获得 2024 MAMA Music Visionary of the Year。该荣誉关注他对音乐与流行文化的长期影响。" },
+    { storyLabel: "下一幕", heading: "MAMA · 年度艺人等三项大奖", detail: "正规专辑《Übermensch》与歌曲《TOO BAD》开启新的篇章。2025 MAMA 上，他获得年度艺人、最佳男歌手及最佳男 Solo 舞蹈表演三项奖项。" }
   ],
   en: [
-    { heading: "BIGBANG debuts", detail: "The five members are introduced as BIGBANG, bringing Kwon Ji Yong’s music into public view. His early contributions to rap, writing, and composition help establish his creative identity within the group." },
-    { heading: "Melon Music Awards · Album of the Year", detail: "His first solo studio album, Heartbreaker, is named Album of the Year at the 2009 Melon Music Awards. Solo vocals, production, and a vivid visual concept announce a distinct musical world." },
-    { heading: "MAMA · Best Male Artist", detail: "One of a Kind and Crayon expand his range as a solo artist, and he receives Best Male Artist at the 2012 MAMA. The era’s experimental styling becomes a signature of his solo stage." },
-    { heading: "MAMA · Artist of the Year, four awards", detail: "At the 2013 MAMA, he wins Artist of the Year, Best Male Artist, Best Dance Performance – Male Solo, and Best Music Video. That year, his first solo world tour, ONE OF A KIND, includes shows at four major domes in Japan." },
-    { heading: "M.O.T.T.E · 260,000 at Japan dome shows", detail: "KWON JI YONG and ACT III, M.O.T.T.E bring the person behind the stage persona into focus. Five concerts across three Japanese dome cities draw approximately 260,000 people." },
-    { heading: "MAMA · Music Visionary of the Year", detail: "After returning to solo activity with POWER, G-DRAGON receives the 2024 MAMA Music Visionary of the Year honor, recognizing a lasting influence on music and popular culture." },
-    { heading: "MAMA · Artist of the Year and two more", detail: "The studio album Übermensch and TOO BAD open a new chapter. At the 2025 MAMA, he wins Artist of the Year, Best Male Artist, and Best Dance Performance – Male Solo." }
+    { storyLabel: "Opening scene", heading: "BIGBANG debuts", detail: "The five members are introduced as BIGBANG, bringing Kwon Ji Yong’s music into public view. His early contributions to rap, writing, and composition help establish his creative identity within the group." },
+    { storyLabel: "First solo chapter", heading: "Melon Music Awards · Album of the Year", detail: "His first solo studio album, Heartbreaker, is named Album of the Year at the 2009 Melon Music Awards. Solo vocals, production, and a vivid visual concept announce a distinct musical world." },
+    { storyLabel: "A bolder persona", heading: "MAMA · Best Male Artist", detail: "One of a Kind and Crayon expand his range as a solo artist, and he receives Best Male Artist at the 2012 MAMA. The era’s experimental styling becomes a signature of his solo stage." },
+    { storyLabel: "A global stage", heading: "MAMA · Artist of the Year, four awards", detail: "At the 2013 MAMA, he wins Artist of the Year, Best Male Artist, Best Dance Performance – Male Solo, and Best Music Video. That year, his first solo world tour, ONE OF A KIND, includes shows at four major domes in Japan." },
+    { storyLabel: "Kwon Ji Yong, unveiled", heading: "M.O.T.T.E · 260,000 at Japan dome shows", detail: "KWON JI YONG and ACT III, M.O.T.T.E bring the person behind the stage persona into focus. Five concerts across three Japanese dome cities draw approximately 260,000 people." },
+    { storyLabel: "Return to the stage", heading: "MAMA · Music Visionary of the Year", detail: "After returning to solo activity with POWER, G-DRAGON receives the 2024 MAMA Music Visionary of the Year honor, recognizing a lasting influence on music and popular culture." },
+    { storyLabel: "The next chapter", heading: "MAMA · Artist of the Year and two more", detail: "The studio album Übermensch and TOO BAD open a new chapter. At the 2025 MAMA, he wins Artist of the Year, Best Male Artist, and Best Dance Performance – Male Solo." }
   ]
 };
 
@@ -235,11 +235,11 @@ let galleryPointers = new Map();
 let galleryPinchStart = null;
 let galleryDragStart = null;
 
-const videoThumbnail = (year, quality = "maxresdefault") => `https://i.ytimg.com/vi/${representativeVideos[year].id}/${quality}.jpg`;
+const videoThumbnail = (videoId, quality = "maxresdefault") => `https://i.ytimg.com/vi/${videoId}/${quality}.jpg`;
 
-function setThumbnailFallback(image, year) {
+function setThumbnailFallback(image, videoId) {
   image.onerror = () => {
-    if (!image.src.endsWith("/hqdefault.jpg")) image.src = videoThumbnail(year, "hqdefault");
+    if (!image.src.endsWith("/hqdefault.jpg")) image.src = videoThumbnail(videoId, "hqdefault");
   };
 }
 
@@ -307,7 +307,7 @@ function renderTimelinePanel(copy) {
       <div class="timeline-story-top"><span>${escapeHTML(`${copy.timelineChapter} ${String(activeIndex + 1).padStart(2, "0")} / ${String(copy.timeline.length).padStart(2, "0")}`)}</span><span>${escapeHTML(tag)}</span></div>
       <figure class="timeline-visual">
         <button class="timeline-video-trigger" type="button" data-video-id="${escapeHTML(video.id)}" data-video-year="${escapeHTML(year)}" data-video-title="${escapeHTML(title)}" aria-label="${escapeHTML(`${copy.playVideoLabel}: ${title} (${year})`)}">
-          <img src="${videoThumbnail(year)}" alt="${escapeHTML(`${title} · ${year} ${copy.videoThumbnailAlt}`)}" loading="lazy" />
+          <img src="${videoThumbnail(video.id)}" alt="${escapeHTML(`${title} · ${year} ${copy.videoThumbnailAlt}`)}" loading="lazy" />
           <span class="timeline-play" aria-hidden="true">▶</span>
         </button>
         <figcaption>${escapeHTML(video.label)} · ${escapeHTML(copy.videoFrameLabel)} ↗</figcaption>
@@ -318,7 +318,7 @@ function renderTimelinePanel(copy) {
           <h3 class="timeline-title">${escapeHTML(title)}</h3>
           <span class="timeline-tag">${escapeHTML(tag)}</span>
         </div>
-        <div class="timeline-story-copy"><span class="timeline-story-label">${escapeHTML(copy.timelineStoryLabel)}</span><p class="timeline-description">${escapeHTML(description)}</p><p class="timeline-context">${escapeHTML(editorial.detail)}</p></div>
+        <div class="timeline-story-copy"><span class="timeline-story-label">${escapeHTML(editorial.storyLabel)}</span><p class="timeline-description">${escapeHTML(description)}</p><p class="timeline-context">${escapeHTML(editorial.detail)}</p></div>
         <aside class="timeline-achievement"><span class="timeline-achievement-label">${escapeHTML(copy.timelineAchievement)}</span><strong>${escapeHTML(editorial.heading)}</strong></aside>
         <a class="timeline-source" href="${escapeHTML(source.href)}" target="_blank" rel="noreferrer"><span>${escapeHTML(copy.timelineSourceLabel)}</span><strong>${escapeHTML(source.label)}</strong><span aria-hidden="true">↗</span></a>
       </div>
@@ -326,7 +326,7 @@ function renderTimelinePanel(copy) {
   const trigger = byId("timeline-list").querySelector(".timeline-video-trigger");
   trigger.addEventListener("click", () => playInlineVideo(trigger, trigger.closest(".timeline-visual")));
   const thumbnail = byId("timeline-list").querySelector(".timeline-visual img");
-  setThumbnailFallback(thumbnail, year);
+  setThumbnailFallback(thumbnail, video.id);
 }
 
 function openGalleryDetail(index) {
@@ -426,7 +426,8 @@ function showVideoPoster(player) {
   const button = document.createElement("button");
   button.className = "work-video-trigger";
   button.type = "button";
-  button.setAttribute("aria-label", `${player.dataset.playLabel}: ${player.dataset.videoTitle} (${player.dataset.videoYear})`);
+  const context = player.dataset.videoSequence ? ` (${player.dataset.videoSequence})` : player.dataset.videoYear ? ` (${player.dataset.videoYear})` : "";
+  button.setAttribute("aria-label", `${player.dataset.playLabel}: ${player.dataset.videoTitle}${context}`);
   const image = document.createElement("img");
   image.src = player.dataset.videoThumbnail;
   image.alt = player.dataset.videoAlt;
@@ -438,7 +439,7 @@ function showVideoPoster(player) {
   button.append(image, play);
   button.addEventListener("click", () => playInlineVideo(player));
   player.replaceChildren(button);
-  setThumbnailFallback(image, player.dataset.videoYear);
+  setThumbnailFallback(image, player.dataset.videoId);
 }
 
 function playInlineVideo(player, target = player) {
@@ -459,15 +460,16 @@ function resetInlineVideo(item) {
 
 function renderWorks(copy) {
   const list = byId("work-list");
-  list.innerHTML = copy.works.map(([year, title, kind, description, href], index) => {
-    const selected = year === selectedWork;
-    const video = representativeVideos[year];
-    const media = `<figure class="work-visual"><div class="work-player" data-video-id="${escapeHTML(video.id)}" data-video-year="${escapeHTML(year)}" data-video-title="${escapeHTML(title)}" data-video-thumbnail="${escapeHTML(videoThumbnail(year))}" data-video-alt="${escapeHTML(`${title} · ${year} ${copy.videoThumbnailAlt}`)}" data-play-label="${escapeHTML(copy.playVideoLabel)}"></div><figcaption>${escapeHTML(video.label)} · ${escapeHTML(copy.workVideoHint)}</figcaption></figure>`;
+  list.innerHTML = copy.works.map(([id, title, kind, description, href, videoId, videoLabel], index) => {
+    const selected = id === selectedWork;
+    const sequence = String(index + 1).padStart(2, "0");
+    const thumbnail = videoThumbnail(videoId);
+    const media = `<figure class="work-visual"><div class="work-player" data-video-id="${escapeHTML(videoId)}" data-video-sequence="${sequence}" data-video-title="${escapeHTML(title)}" data-video-thumbnail="${escapeHTML(thumbnail)}" data-video-alt="${escapeHTML(`${title} · ${copy.workVideoAlt}`)}" data-play-label="${escapeHTML(copy.playVideoLabel)}"></div><figcaption>${escapeHTML(videoLabel)} · ${escapeHTML(copy.workVideoHint)}</figcaption></figure>`;
     return `
       <article class="work-item${selected ? " is-selected" : ""}">
         <div class="work-row-wrap">
           <button class="work-row" type="button" data-work-index="${index}" aria-expanded="${selected}">
-            <span class="work-year">${escapeHTML(year)}</span>
+            <span class="work-sequence">${sequence}</span>
             <span class="work-title">${escapeHTML(title)}</span>
             <span class="work-kind">${escapeHTML(kind)}</span>
             <span class="work-arrow" aria-hidden="true">+</span>
