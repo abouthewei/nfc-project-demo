@@ -8,6 +8,7 @@ const copy = {
     heroCopy: "火焰会停息，手艺仍在人的手中继续。在南风古灶，陶与火仍是日常。",
     heroEnglish: "Beyond the Kiln Fire,<br>Shiwan Lives On.",
     heroAction: "沿着窑身，走进石湾", heroColophon: "The fire may rest, but the clay goes on.\nIn people’s hands, Shiwan’s story continues.",
+    homeChapterNavAria: "首页章节入口", homeChapterHistory: "读窑史 · 从明代开始", homeChapterCraft: "看陶艺 · 从泥到火",
     heroCaption: "南风古灶与高灶陶窑全貌",
     historyTitle: "从明代开始，窑火仍在继续。",
     historyIntro: "南风古灶以龙窑闻名，依山而建，顺坡延伸，窑体呈长条状，利用地形由低而高。自明代正德年间建窑以来，窑火绵延不绝，承载着石湾的制瓷传统与地方记忆。",
@@ -136,6 +137,7 @@ const copy = {
     heroEnglish: "Beyond the Kiln Fire,<br>Shiwan Lives On.",
     heroCopy: "Follow the dragon kiln’s slope in Shiwan, Foshan, through a story of clay, fire and a ceramic town.",
     heroAction: "Follow the kiln into Shiwan", heroColophon: "From clay, into life.",
+    homeChapterNavAria: "Explore the main chapters", homeChapterHistory: "Read the kiln’s history", homeChapterCraft: "See how Shiwan pottery is made",
     heroCaption: "The Nanfeng and Gao kiln complex",
     historyTitle: "Built in the Ming, still part of life.",
     historyIntro: "Known for its dragon kiln, Nanfeng Kiln follows a hillside in a long, rising profile. Built during the Zhengde reign of the Ming dynasty, it carries Shiwan’s ceramic tradition and local memory.",
@@ -187,7 +189,7 @@ const copy = {
     visitPlanLabel: "Suggested route", visitPlan: "See the kilns and banyan first, then the pottery spaces, artists’ village and mural. Allow extra time for any hands-on activity.",
     mapLink: "Find it on Amap ↗", currentVisitLink: "Check current visitor information ↗", officialSiteLink: "Read the government cultural guide ↗",
     visitCaveat: "This independent guide is not the attraction’s official site. Check the operator’s latest notices for tickets, booking, events and transport.",
-    profileScale: "示意图 · NOT TO SCALE",
+    profileScale: "Diagram · NOT TO SCALE",
     craftTitle: "Clay and the<br>human world.",
     craftLabel: "SHIWAN CERAMIC SCULPTURE · CRAFT & LIFE",
     craftIntro: "At Nanfeng Kiln, ceramics are not distant relics,<br>but part of life today. Hands, time and fire<br>turn clay into works with warmth.",
@@ -322,7 +324,7 @@ function activateView() {
     view.hidden = !active;
     view.setAttribute("aria-hidden", active ? "false" : "true");
   });
-  document.querySelectorAll(".craft-nav a").forEach(function (link) {
+  document.querySelectorAll(".craft-nav a, .history-nav a").forEach(function (link) {
     const linkTarget = link.getAttribute("href").slice(1);
     const current = linkTarget === requested || (linkTarget === "top" && requested === "top");
     link.classList.toggle("is-current", current);

@@ -31,6 +31,10 @@
             <span class="brick-dash" aria-hidden="true"></span>
             <p class="hero-intro" data-i18n="heroCopy">火焰会停息，手艺仍在人的手中继续。<br>在南风古灶，陶与火仍是日常。</p>
             <p class="hero-intro-en" data-i18n="heroColophon">The fire may rest, but the clay goes on.<br>In people’s hands, Shiwan’s story continues.</p>
+            <nav class="home-chapter-links" aria-label="首页章节入口" data-i18n-aria="homeChapterNavAria">
+              <a href="#history"><span class="home-chapter-index">01 /</span><span data-i18n="homeChapterHistory">读窑史 · 从明代开始</span><span aria-hidden="true">↗</span></a>
+              <a href="#craft"><span class="home-chapter-index">02 /</span><span data-i18n="homeChapterCraft">看陶艺 · 从泥到火</span><span aria-hidden="true">↗</span></a>
+            </nav>
           </div>
           <aside class="hero-events" aria-label="石湾文化活动" data-i18n-aria="eventsAria">
             <p class="events-heading" data-i18n="eventsHeading">活动随当期安排</p>
@@ -168,6 +172,16 @@
 
     <section class="screen history-screen" id="history" data-view="history" aria-labelledby="history-heading" hidden>
       <div class="history-page">
+        <header class="history-topbar">
+          <a class="history-brand" href="#top" aria-label="南风古灶，返回首页" data-i18n-aria="brandHomeAria"><span>南风古灶</span><small>NANFENG KILN</small></a>
+          <nav class="history-nav" aria-label="页面导航" data-i18n-aria="navAria">
+            <a href="#top" data-i18n="navHome">首页</a>
+            <a href="#history" aria-current="page" data-i18n="navHistory">关于南风窑</a>
+            <a href="#craft" data-i18n="navCraft">陶艺传承</a>
+            <a href="#visit" data-i18n="navVisit">走进窑场</a>
+          </nav>
+          <button class="lang-switch" type="button" data-lang-switch aria-label="Switch to English">中文 <span aria-hidden="true">/</span> EN</button>
+        </header>
         <header class="history-heading">
           <h1 id="history-heading" data-i18n-html="historyTitle">从明代开始，窑火仍在继续。</h1>
           <p data-i18n="historyIntro">南风古灶依坡而建，顺坡延伸，窑体呈长条状。自明代正德年间建窑以来，窑火绵延不绝，承载着南丰的制瓷传统与地方记忆。</p>
@@ -203,7 +217,7 @@
 
     <section class="screen craft-screen" id="craft" data-view="craft" aria-labelledby="craft-heading" hidden>
       <header class="craft-header">
-        <a class="craft-brand" href="#top" data-i18n-aria="brandHomeAria"><span>南风窑</span><small>NANFENG KILN</small></a>
+        <a class="craft-brand" href="#top" data-i18n-aria="brandHomeAria"><span>南风古灶</span><small>NANFENG KILN</small></a>
         <nav class="craft-nav" aria-label="页面导航" data-i18n-aria="navAria">
           <a href="#top" data-i18n="navHome">首页</a><a href="#history" data-i18n="navHistory">关于南风窑</a><a class="is-current" href="#craft" data-i18n="navCraft">窑艺传承</a><a href="#craft-process" data-i18n="navWorks">作品</a><a href="#visit" data-i18n="navVisit">走进窑场</a>
         </nav>
