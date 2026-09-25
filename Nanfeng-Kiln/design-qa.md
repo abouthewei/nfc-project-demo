@@ -60,7 +60,7 @@
 
 ### 实际交互与资源检查
 
-- 从历史页“下一页”进入 `#craft` 正常；陶艺页中英文切换均更新标题、正文、工序名称、旁注、替代文字和页面标题。
+- 更新前：历史与陶艺曾作为独立屏幕切换。现已合并为单页章节流；历史章之后连续进入景点导览，再进入陶艺章，顶部导航只滚动定位。中英文切换继续更新标题、正文、工序名称、旁注、替代文字和页面标题。
 - 点播放后，官方 Bilibili iframe 请求包含 `aid=534967088`、`bvid=BV1MM411R7Si`、`cid=1305673422`、`page=1`；当前 Codex 浏览器返回“无法播放媒体”，随后可见的直达原视频和重载入口正常出现。内嵌画面播放仍未通过验证。
 - `node --check script.js` 通过；两种语言下 HTML 的 `data-i18n` 键完整；本轮新增本地图像和 CSS 素材路径均存在。
 - 当前只对 1220×986 完成实际截图。窄屏样式已保留图像说明、三列工序布局与纵向内容流，但未在本轮真实窄视口截图验收。
@@ -89,3 +89,10 @@
 - 历史页中英文切换更新标题、段落、导航、剖面说明和时间轴；英文页可见文字扫描仅保留品牌名称为中文。
 - 首页英文标题恢复为预期两行，两个章节入口位于首屏内；历史页英文标题不再压住说明栏，时间轴说明可读且不越出右边界。
 - `node --check script.js`、页内锚点完整性及重复 ID 检查通过。实际窄屏截图、本轮 Bilibili 实际播放仍未验证。
+
+## Continuous single-page flow · 2026-09-25
+
+- The main guide now reads top to bottom in one document: hero and visitor route → kiln history → spot notes → ceramic craft and Bilibili → customs → works and experiences → visit information → footer. History and craft are no longer hidden `data-view` screens.
+- The shared top navigation, home chapter links, route nodes, chapter controls, and search results use in-page anchors. Scroll position updates the active navigation item; changing language keeps the reader at the same chapter.
+- Verified in the local browser at 1280×720 and at a 390×844 mobile viewport: every main section remains rendered, there is no horizontal page overflow, and the mobile document is continuously scrollable. Language switching and search for “古榕” were exercised; the search synonym was added after the first test found no result.
+- Selecting the craft video requests the Bilibili player with its `aid`, `bvid`, `cid`, and page parameters. In this local browser the embedded frame remained black, while the direct Bilibili link and reload control stayed available; actual embedded playback remains unverified.

@@ -13,7 +13,7 @@ Independent static projects. Each project is self-contained and can be deployed 
 - `UK-Sketches/` — Ye Gang's bilingual British travel sketchbook
 - `G-Dragon/` — G-DRAGON Korean / Chinese / English artist archive
 - `LeBron/` — LeBron James career archive
-- `Nanfeng-Kiln/` — Responsive Chinese / English heritage guide to Foshan’s Nanfeng and Gao dragon kilns, with first-screen history and craft entry links, consistent chapter navigation, a reference-led history spread, six-stage Shiwan craft page, Bilibili footage, living customs, pottery experiences, a visitor route, and practical visitor information
+- `Nanfeng-Kiln/` — Responsive Chinese / English continuous-scroll heritage guide to Foshan’s Nanfeng and Gao dragon kilns, with a reference-led history spread, six-stage Shiwan craft chapter and Bilibili footage, a four-stop illustrated visitor route, living customs, pottery experiences, and practical visitor information
 
 ## Live demos
 
