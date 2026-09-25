@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f6f1" />
+  <meta name="description" content="沿着南风古灶的龙窑坡势，认识石湾的陶业历史、景点、手艺与生活。" />
+  <title>南风古灶 · 沿着窑身走进石湾</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="南风古灶，返回顶部" data-i18n-aria="brandHomeAria">
+      <span class="brand-name">南风古灶</span>
+      <span class="brand-place">FOSHAN · SHIWAN</span>
+    </a>
+    <nav class="site-nav" aria-label="页面导航" data-i18n-aria="navAria">
+      <a href="#history" data-i18n="navHistory">历史</a>
+      <a href="#route" data-i18n="navRoute">沿窑而行</a>
+      <a href="#craft" data-i18n="navCraft">泥与人</a>
+      <a href="#visit" data-i18n="navVisit">来石湾</a>
+    </nav>
+    <button class="lang-switch" id="langSwitch" type="button" aria-label="Switch to English">EN</button>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title" data-i18n-html="heroTitle">一窑火，<br>烧过五百年</h1>
+        <p data-i18n="heroCopy">在佛山石湾，沿着龙窑的坡势，读懂泥、火与一座陶城的故事。</p>
+        <a class="hero-link" href="#route">
+          <span data-i18n="heroAction">沿着窑身，走进石湾</span>
+          <span aria-hidden="true">↘</span>
+        </a>
+        <p class="hero-colophon" data-i18n="heroColophon">从泥土，到人心。</p>
+      </div>
+      <figure class="hero-photo" data-asset-id="photo-0">
+        <img src="./assets/photo-0.jpg" alt="南风古灶与高灶陶窑全貌" data-alt-zh="南风古灶与高灶陶窑全貌" data-alt-en="The Nanfeng and Gao kiln complex in Shiwan" fetchpriority="high" />
+        <figcaption><span data-i18n="heroCaption">南风古灶与高灶陶窑全貌</span><a href="https://commons.wikimedia.org/wiki/File:%E5%8D%97%E9%A3%8E%E5%8F%A4%E7%81%B6%E3%80%81%E9%AB%98%E7%81%B6%E9%99%B6%E7%AA%91%E5%85%A8%E8%B2%8C.jpg" target="_blank" rel="noopener" aria-label="查看照片来源" data-i18n-aria="photoSourceLabel">↗</a></figcaption>
+      </figure>
+      <svg class="hero-thread" viewBox="0 0 1000 150" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M8 4 C90 22 130 118 270 112 S440 20 558 50 S742 137 992 142" />
+      </svg>
+    </section>
+
+    <section class="history-section section-pad" id="history">
+      <div class="wrap">
+        <div class="history-heading">
+          <h2 data-i18n-html="historyTitle">从明代开始，<br>窑火仍在继续。</h2>
+          <p data-i18n="historyIntro">南风古灶依坡而建。它不是被封存的旧窑，而是理解石湾陶业如何延续的一处现场。</p>
+        </div>
+        <div class="kiln-study">
+          <figure class="kiln-photo" data-asset-id="photo-1">
+            <img src="./assets/photo-1.jpg" loading="lazy" alt="南风古灶龙窑内部与窑门" data-alt-zh="南风古灶龙窑内部与窑门" data-alt-en="Interior of the dragon kiln, with its firing openings" />
+              <figcaption><span data-i18n="kilnPhotoCaption">窑门沿着窑身排列，保留着烧制现场的尺度。</span><a href="https://commons.wikimedia.org/wiki/File:%E5%8D%97%E9%A3%8E%E5%8F%A4%E7%81%B6%E3%80%81%E9%AB%98%E7%81%B6%E9%99%B6%E7%AA%9103.jpg" target="_blank" rel="noopener" aria-label="查看照片来源" data-i18n-aria="photoSourceLabel">Wikimedia Commons ↗</a></figcaption>
+          </figure>
+          <div class="kiln-diagram">
+            <div class="diagram-heading">
+              <span data-i18n="diagramLabel">龙窑剖面示意 · 非实测比例</span>
+              <span data-i18n="diagramNote">沿坡而建，火候随窑内位置变化</span>
+            </div>
+            <svg class="kiln-profile" viewBox="0 0 760 350" role="img" aria-labelledby="profile-title profile-desc">
+              <title id="profile-title" data-i18n="profileTitle">南风古灶龙窑坡势示意图</title>
+              <desc id="profile-desc" data-i18n="profileDesc">龙窑沿坡延伸，并标出上、中、下火候区域。</desc>
+              <path class="profile-ground" d="M38 302 C188 284 340 244 487 194 C582 161 651 121 719 68" />
+              <path class="profile-body" d="M78 260 C232 245 361 207 493 163 C581 134 640 99 698 56 L704 101 C645 141 588 169 505 196 C365 242 235 275 84 291 Z" />
+              <path class="profile-roof" d="M82 253 C236 237 364 199 498 155 C589 126 649 91 705 49" />
+              <path class="profile-base" d="M84 291 C234 275 365 242 505 196 C588 169 645 141 704 101" />
+              <path class="profile-fire" d="M122 272 C265 253 377 219 505 177 C590 149 648 116 692 81" />
+              <g class="profile-marks">
+                <path d="M210 244v19M288 226v19M366 205v18M444 181v18M522 156v17M600 126v17" />
+                <circle cx="275" cy="232" r="5"/><circle cx="458" cy="177" r="5"/><circle cx="632" cy="112" r="5"/>
+              </g>
+              <g class="profile-labels">
+                <text x="214" y="318" data-i18n-svg="zoneLower">下火</text>
+                <text x="432" y="255" data-i18n-svg="zoneMiddle">中火</text>
+                <text x="621" y="188" data-i18n-svg="zoneUpper">上火</text>
+                <text x="52" y="236" data-i18n-svg="kilnMouth">窑口</text>
+                <text x="659" y="34" data-i18n-svg="kilnTail">窑尾</text>
+              </g>
+            </svg>
+            <p class="diagram-footnote" data-i18n="diagramFootnote">示意图仅解释龙窑沿坡延伸的形态；不代表遗址测绘或现场导览图。</p>
+          </div>
+        </div>
+        <div class="history-facts" aria-label="历史节点" data-i18n-aria="historyFactsAria">
+          <div class="fact">
+            <strong>1506—1521</strong>
+            <span data-i18n="factMing">明代正德年间始建</span>
+          </div>
+          <div class="fact">
+            <strong>2001</strong>
+            <span data-i18n="factHeritage">公布为全国重点文物保护单位</span>
+          </div>
+        </div>
+        <div class="history-note">
+          <span class="note-mark" aria-hidden="true" data-i18n="historyNoteMark">石湾</span>
+          <p data-i18n="historyQuote">窑火留下的不止器物，也有石湾至今仍在延续的制陶生活。</p>
+          <span class="history-note-en" data-i18n="historyNoteLabel">窑与日常</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="route-section section-pad" id="route">
+      <div class="wrap">
+        <div class="route-heading">
+          <div>
+            <h2 data-i18n-html="routeTitle">循着窑身，<br>走进石湾。</h2>
+          </div>
+          <div class="route-intro">
+            <p data-i18n="routeIntro">从仍在延续的龙窑开始，经过榕树、作坊与陶艺街巷。这里给你一条认识景区的叙事路线，实际开放情况请以现场公告为准。</p>
+            <span class="route-disclaimer" data-i18n="routeDisclaimer">游览顺序示意 · 非比例地图</span>
+          </div>
+        </div>
+        <div class="route-map-stage">
+          <img class="route-map-art" src="./assets/route-engraving.webp" alt="" aria-hidden="true" />
+          <span class="map-stop map-stop-1"><b>01</b><strong data-i18n="stop1Title">南风灶与高灶</strong></span>
+          <span class="map-stop map-stop-2"><b>02</b><strong data-i18n="stop2Title">古灶榕风</strong></span>
+          <span class="map-stop map-stop-3"><b>03</b><strong data-i18n="stop3Title">古寮场与陶艺空间</strong></span>
+          <span class="map-stop map-stop-4"><b>04</b><strong data-i18n="stop4Title">艺术家村与陶片壁画</strong></span>
+          <span class="map-art-note" data-i18n="routeDisclaimer">游览顺序示意 · 非比例地图</span>
+        </div>
+        <ol class="route-chapters">
+          <li class="route-chapter">
+            <figure class="stop-photo" data-asset-id="photo-2">
+              <img src="./assets/photo-2.jpg" loading="lazy" alt="南风古灶龙窑窑身与窑门" data-alt-zh="南风古灶龙窑窑身与窑门" data-alt-en="The dragon kiln body and firing openings at Nanfeng Kiln" />
+              <figcaption><span data-i18n="stop1Caption">龙窑内部</span><a href="https://commons.wikimedia.org/wiki/File:%E5%8D%97%E9%A3%8E%E5%8F%A4%E7%81%B6%E3%80%81%E9%AB%98%E7%81%B6%E9%99%B6%E7%AA%9105.jpg" target="_blank" rel="noopener" aria-label="查看照片来源" data-i18n-aria="photoSourceLabel">↗</a></figcaption>
+            </figure>
+            <div class="chapter-copy"><span class="chapter-index">01 / THE KILN</span><h3 data-i18n="stop1Title">南风灶与高灶</h3><p data-i18n="stop1Copy">两座柴烧龙窑，是认识石湾陶业的起点。沿着窑身看窑门与火眼，想象陶器如何在长窑中经历火候变化。</p><span class="stop-detail" data-i18n="stop1Detail">从窑口，向坡上看。</span></div>
+          </li>
+          <li class="route-chapter route-chapter-reverse">
+            <figure class="stop-photo" data-asset-id="photo-0">
+              <img src="./assets/photo-0.jpg" loading="lazy" alt="榕树掩映中的南风古灶与高灶陶窑" data-alt-zh="榕树掩映中的南风古灶与高灶陶窑" data-alt-en="The kiln rooftops and banyan tree at Nanfeng Kiln" />
+              <figcaption><span data-i18n="stop2Caption">古灶与榕树</span><a href="https://commons.wikimedia.org/wiki/File:%E5%8D%97%E9%A3%8E%E5%8F%A4%E7%81%B6%E3%80%81%E9%AB%98%E7%81%B6%E9%99%B6%E7%AA%91%E5%85%A8%E8%B2%8C.jpg" target="_blank" rel="noopener" aria-label="查看照片来源" data-i18n-aria="photoSourceLabel">↗</a></figcaption>
+            </figure>
+            <div class="chapter-copy"><span class="chapter-index">02 / THE BANYAN</span><h3 data-i18n="stop2Title">古灶榕风</h3><p data-i18n="stop2Copy">窑旁古榕为景区留下另一种时间感。抬头看树冠，再回望依坡铺展的屋顶，窑与岭南街巷在这里相遇。</p><span class="stop-detail" data-i18n="stop2Detail">看树，也看窑的坡势。</span></div>
+          </li>
+          <li class="route-chapter">
+            <figure class="stop-photo" data-asset-id="photo-3">
+              <img src="./assets/photo-3.jpg" loading="lazy" alt="南风古灶景区里的陶艺工作空间" data-alt-zh="南风古灶景区里的陶艺工作空间" data-alt-en="A pottery workspace in the Nanfeng Kiln cultural area" />
+              <figcaption><span data-i18n="stop3Caption">陶艺工作空间</span><a href="https://commons.wikimedia.org/wiki/File:%E5%8D%97%E9%A3%8E%E5%8F%A4%E7%81%B6%E3%80%81%E9%AB%98%E7%81%B6%E9%99%B6%E7%AA%9106.jpg" target="_blank" rel="noopener" aria-label="查看照片来源" data-i18n-aria="photoSourceLabel">↗</a></figcaption>
+            </figure>
+            <div class="chapter-copy"><span class="chapter-index">03 / THE STUDIO</span><h3 data-i18n="stop3Title">古寮场与陶艺空间</h3><p data-i18n="stop3Copy">古寮场保留制陶现场，适合从工具、泥料和半成品读懂工艺。景区也有石湾公仔制作过程与陶艺示范；现场体验项目及开放时间以当期安排为准。</p><span class="stop-detail" data-i18n="stop3Detail">先看工具，再看作品。</span></div>
+          </li>
+          <li class="route-chapter route-chapter-reverse route-chapter-last">
+            <div class="street-pair">
+              <figure class="stop-photo" data-asset-id="photo-4">
+                <img src="./assets/photo-4.jpg" loading="lazy" alt="南风古灶艺术家村与陶艺街巷" data-alt-zh="南风古灶艺术家村与陶艺街巷" data-alt-en="An art street in the Nanfeng Kiln cultural area" />
+                <figcaption><span data-i18n="stop4Caption">艺术家村街巷</span><a href="https://commons.wikimedia.org/wiki/File:Nanfeng_Kiln_39155-Foshan_(49021754677).jpg" target="_blank" rel="noopener" aria-label="查看照片来源" data-i18n-aria="photoSourceLabel">↗</a></figcaption>
+              </figure>
+              <figure class="stop-photo mural-photo" data-asset-id="photo-7">
+                <img src="./assets/photo-7.jpg" loading="lazy" alt="由陶片组成的瑞龙献宝壁画" data-alt-zh="由陶片组成的瑞龙献宝壁画" data-alt-en="Auspicious Dragon Offering Treasures, a mural made from ceramic fragments" />
+                <figcaption><span data-i18n="muralCaption">《瑞龙献宝》</span><a href="https://commons.wikimedia.org/wiki/File:Nanfeng_Kiln_39115-Foshan_(49042867971).jpg" target="_blank" rel="noopener" aria-label="查看照片来源" data-i18n-aria="photoSourceLabel">↗</a></figcaption>
+              </figure>
+            </div>
+            <div class="chapter-copy"><span class="chapter-index">04 / THE VILLAGE</span><h3 data-i18n="stop4Title">艺术家村与陶片壁画</h3><p data-i18n="stop4Copy">明清古民居改造而成的艺术家村，让陶艺继续在街巷里生长。沿途留意《瑞龙献宝》：陶片不只在窑里，也成为城市记忆的一部分。</p><span class="stop-detail" data-i18n="stop4Detail">从老屋，走到新的表达。</span></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="craft-section section-pad" id="craft">
+      <div class="wrap">
+        <div class="craft-story">
+          <figure class="sculpture-photo" data-asset-id="photo-6">
+            <img src="./assets/photo-6.jpg" loading="lazy" alt="南风古灶景区展出的石湾陶塑作品" data-alt-zh="南风古灶景区展出的石湾陶塑作品" data-alt-en="Shiwan ceramic sculpture displayed in the Nanfeng Kiln area" />
+            <figcaption><span data-i18n="sculptureCaption">石湾公仔 · 陶塑实景</span><a href="https://commons.wikimedia.org/wiki/File:Nanfeng_Kiln_39152-Foshan_(49042868786).jpg" target="_blank" rel="noopener" aria-label="查看照片来源" data-i18n-aria="photoSourceLabel">Wikimedia Commons ↗</a></figcaption>
+          </figure>
+          <div class="craft-copy">
+            <span class="craft-kicker" data-i18n="craftLabel">石湾陶塑 · 手艺与生活</span>
+            <h2 data-i18n-html="craftTitle">泥与人的手，<br>把日子烧出形状。</h2>
+            <p data-i18n="craftIntro">石湾陶塑从日用陶器发展而来。“石湾公仔”以传神、生动见长，也延伸到动物、器皿、微塑与建筑瓦脊装饰。</p>
+            <blockquote data-i18n="craftQuote">一抔泥土，在手上有了神情；入窑之后，又有了自己的颜色。</blockquote>
+          </div>
+        </div>
+        <div class="craft-process">
+          <div class="process-heading">
+            <span data-i18n="processTitle">从构思，到入窑</span>
+            <span data-i18n="processSource">石湾陶塑技艺 · 六个环节</span>
+          </div>
+          <ol class="process-list">
+            <li><img src="./assets/icons/bulb.svg" alt="" aria-hidden="true" /><span>01</span><strong data-i18n="process1">构思创作</strong></li>
+            <li><img src="./assets/icons/droplet.svg" alt="" aria-hidden="true" /><span>02</span><strong data-i18n="process2">泥料炼制</strong></li>
+            <li><img src="./assets/icons/hand-grab.svg" alt="" aria-hidden="true" /><span>03</span><strong data-i18n="process3">成形</strong></li>
+            <li><img src="./assets/icons/brush.svg" alt="" aria-hidden="true" /><span>04</span><strong data-i18n="process4">装饰</strong></li>
+            <li><img src="./assets/icons/hand-click.svg" alt="" aria-hidden="true" /><span>05</span><strong data-i18n="process5">上釉</strong></li>
+            <li><img src="./assets/icons/flame.svg" alt="" aria-hidden="true" /><span>06</span><strong data-i18n="process6">龙窑煅烧</strong></li>
+          </ol>
+          <p class="process-note" data-i18n="processNote">不同位置的火候各有变化，最终的成色离不开陶艺师的经验。</p>
+        </div>
+        <div class="film-strip">
+          <div class="film-copy">
+            <span class="film-label" data-i18n="filmLabel">现场影像 · 哔哩哔哩</span>
+            <h3 data-i18n-html="filmTitle">看见龙窑，<br>也看见窑火如何延续。</h3>
+            <p data-i18n="filmCopy">视频由原作者发布在哔哩哔哩。点击播放后载入平台播放器，也可以直接前往原视频。</p>
+            <a class="film-source" href="https://www.bilibili.com/video/BV1MM411R7Si/" target="_blank" rel="noopener">
+              <span data-i18n="filmExternal">在哔哩哔哩打开原视频</span><span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="video-shell" id="videoShell" data-asset-id="video-bv1mm411r7si">
+            <img src="./assets/kiln-video.jpg" alt="南风古灶龙窑实景照片，作为B站原视频封面" data-alt-zh="南风古灶龙窑实景照片，作为B站原视频封面" data-alt-en="A documentary photo of Nanfeng Kiln used as the Bilibili video cover" loading="lazy" />
+            <button type="button" class="play-button" id="playVideo" aria-label="播放南风古灶实地视频" data-i18n-aria="playVideoAria">
+              <span class="play-icon" aria-hidden="true">▶</span>
+              <span data-i18n="playVideo">播放实地影像</span>
+            </button>
+            <span class="video-credit" data-i18n="videoCredit">南风古灶龙窑 · B站原视频</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="living-section section-pad">
+      <div class="wrap living-grid">
+        <div class="living-copy">
+          <h2 data-i18n-html="livingTitle">窑火之外，<br>石湾仍在相聚。</h2>
+          <p data-i18n="livingIntro">制陶既是手艺，也是围绕着窑场形成的生活。谢灶祈福、龙窑开窑与陶艺市集等活动，会在特定时段举办。</p>
+          <p class="living-note" data-i18n="livingNote">活动不是每日固定演出；到访前请确认当期安排。</p>
+        </div>
+        <ol class="living-events">
+          <li><img src="./assets/icons/home-star.svg" alt="" aria-hidden="true" /><span>01</span><strong data-i18n="event1">谢灶祈福</strong><small data-i18n="event1note">敬谢窑神，祈愿顺遂</small></li>
+          <li><img src="./assets/icons/building-arch.svg" alt="" aria-hidden="true" /><span>02</span><strong data-i18n="event2">龙窑开窑</strong><small data-i18n="event2note">等待烧成作品出窑</small></li>
+          <li><img src="./assets/icons/building-store.svg" alt="" aria-hidden="true" /><span>03</span><strong data-i18n="event3">陶艺市集</strong><small data-i18n="event3note">创作者与来访者相遇</small></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="visit-section section-pad" id="visit">
+      <div class="wrap">
+        <div class="visit-grid">
+          <div class="visit-content">
+            <div class="visit-heading">
+              <h2 data-i18n-html="visitTitle">把一天留给石湾，<br>从窑火走到一件陶。</h2>
+              <p data-i18n="visitIntro">按自己的节奏走：先看窑，再逛作坊和艺术家村，最后挑一件真正喜欢的石湾作品。开放与体验信息请以景区当期公告为准。</p>
+            </div>
+            <ol class="day-route" aria-label="建议游览顺序" data-i18n-aria="dayRouteAria">
+              <li><img src="./assets/icons/building-arch.svg" alt="" aria-hidden="true" /><span data-i18n="day1">看窑</span></li>
+              <li><img src="./assets/icons/tools.svg" alt="" aria-hidden="true" /><span data-i18n="day2">逛古寮</span></li>
+              <li><img src="./assets/icons/brush.svg" alt="" aria-hidden="true" /><span data-i18n="day3">看陶艺</span></li>
+              <li><img src="./assets/icons/gift.svg" alt="" aria-hidden="true" /><span data-i18n="day4">选一件石湾公仔作手信</span></li>
+            </ol>
+            <div class="visit-links">
+              <a href="https://www.gdfao.gov.cn/zwgk/zdly/fss/content/post_1333505.html" target="_blank" rel="noopener">
+                <span data-i18n="officialLink">查看景点资料与到访提示</span><span aria-hidden="true">↗</span>
+              </a>
+              <a href="./sources.html">
+                <span data-i18n="sourceLink">查看历史、图片与视频来源</span><span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+          <figure class="visit-photo" data-asset-id="photo-6">
+            <img src="./assets/photo-6.jpg" loading="lazy" alt="南风古灶景区展出的石湾陶塑作品" data-alt-zh="南风古灶景区展出的石湾陶塑作品" data-alt-en="A Shiwan ceramic figurine at Nanfeng Kiln" />
+            <figcaption><span data-i18n="visitPhotoCaption">一件带得走的石湾记忆</span><a href="https://commons.wikimedia.org/wiki/File:Nanfeng_Kiln_39152-Foshan_(49042868786).jpg" target="_blank" rel="noopener" aria-label="查看照片来源" data-i18n-aria="photoSourceLabel">↗</a></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="footer-brand" href="#top">南风古灶<span>NANFENG KILN · FOSHAN</span></a>
+      <p data-i18n="footerNote">一座仍可走近的龙窑，一段仍在延续的石湾生活。</p>
+      <a class="footer-top" href="#top" data-i18n="backTop">回到顶部 ↑</a>
+    </div>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
