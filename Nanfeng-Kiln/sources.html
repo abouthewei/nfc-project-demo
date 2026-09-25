@@ -9,9 +9,9 @@
 </head>
 <body class="sources-page">
   <header class="site-header sources-header">
-    <a class="brand" href="./index.html#top">
-      <span class="brand-name">南风古灶</span>
-      <span class="brand-place">FOSHAN · SHIWAN</span>
+    <a class="brand-lockup" href="./index.html#top">
+      <span class="brand-seal" aria-hidden="true">南<br>風</span>
+      <span class="brand-chinese">南风古灶<small>NANFENG KILN<br>FOSHAN · SHIWAN</small></span>
     </a>
     <button class="lang-switch" id="langSwitch" type="button" aria-label="Switch to English">EN</button>
   </header>
@@ -47,12 +47,16 @@
 
     <section class="source-group">
       <h2 data-i18n="sourcesPhotos">照片与授权</h2>
-      <p data-i18n="sourcesPhotosNote">下列本地照片来自维基共享资源。照片已按版面裁切；请查看各文件页中的作者和许可条件。</p>
+      <p data-i18n="sourcesPhotosNote">维基共享资源的本地实景照片均列出原文件页。首页主视觉、历史照片与视频预览均裁自用户提供的参考图；原始摄影作者及授权状态尚未核实。</p>
       <table class="media-register">
         <thead>
           <tr><th data-i18n="sourceColumnAsset">素材编号</th><th data-i18n="sourceColumnSubject">画面内容</th><th data-i18n="sourceColumnCredit">来源与许可</th></tr>
         </thead>
         <tbody>
+          <tr>
+            <td>home-hero-reference-crop</td><td data-i18n="assetHomeReference">首页龙窑劳作主视觉 · 用户提供的设计参考裁切</td>
+            <td data-i18n="sourceReferencePermission">用户提供的参考截图裁切；原始摄影作者与使用许可未核实。</td>
+          </tr>
           <tr>
             <td>photo-0</td><td data-i18n="assetHero">古灶与高灶全貌 · 首页及古榕段</td>
             <td><a href="https://commons.wikimedia.org/wiki/File:%E5%8D%97%E9%A3%8E%E5%8F%A4%E7%81%B6%E3%80%81%E9%AB%98%E7%81%B6%E9%99%B6%E7%AA%91%E5%85%A8%E8%B2%8C.jpg" target="_blank" rel="noopener">Pkkj · CC BY-SA 4.0</a></td>
@@ -64,6 +68,18 @@
           <tr>
             <td>photo-2</td><td data-i18n="assetKiln">龙窑窑身 · 景点章节及视频封面</td>
             <td><a href="https://commons.wikimedia.org/wiki/File:%E5%8D%97%E9%A3%8E%E5%8F%A4%E7%81%B6%E3%80%81%E9%AB%98%E7%81%B6%E9%99%B6%E7%AA%9105.jpg" target="_blank" rel="noopener">Pkkj · CC0 1.0</a></td>
+          </tr>
+          <tr id="history-reference-photo">
+            <td>history-photo-reference-crop</td><td data-i18n="assetHistoryReference">历史页龙窑长廊照片 · 用户提供的设计参考裁切</td>
+            <td data-i18n="sourceHistoryReference">用户提供的参考截图裁切；原始摄影作者与使用许可未核实。</td>
+          </tr>
+          <tr id="history-reference-poster">
+            <td>video-poster-reference-crop</td><td data-i18n="assetHistoryPoster">视频播放器预览 · 用户提供的设计参考截图裁切；点击载入哔哩哔哩原视频</td>
+            <td data-i18n="sourceReferencePermission">用户提供的参考截图裁切；原始摄影作者与使用许可未核实。</td>
+          </tr>
+          <tr>
+            <td>route-figurine-reference-cutout</td><td data-i18n="assetRouteFigure">首页路线中的青釉坐像 · 由用户提供的参考图分离</td>
+            <td data-i18n="sourceReferencePermission">用户提供的参考截图裁切；原始摄影作者与使用许可未核实。</td>
           </tr>
           <tr>
             <td>photo-3</td><td data-i18n="assetWorkshop">陶艺工作空间 · 古寮场与工作室章节</td>
@@ -87,10 +103,19 @@
 
     <section class="source-group">
       <h2 data-i18n="sourcesArt">装饰插画与界面图标</h2>
-      <p data-i18n="sourcesArtNote">路线底图、纸纤维与窑砖纹理为本项目生成的装饰素材，不是南风古灶的实景照片或实测地图；景点内容仍以有来源标注的实景照片和资料为准。</p>
+      <p data-i18n="sourcesArtNote">下列剖面、陶塑与工序画面均为本项目生成的示意插画，不是现场照片、遗址测绘或馆藏实物记录。页面另使用南风古灶实景照片，并逐张标注来源；B站视频由原作者发布。</p>
       <ul class="source-list">
-        <li data-i18n="assetRouteArt">路线底图：生成式岭南陶窑场景插画，仅表示叙事顺序，不表示真实地理位置。</li>
-        <li data-i18n="assetTextures">纸纤维与窑砖纹理：生成式背景装饰。</li>
+        <li data-i18n="assetProfileArt">龙窑剖面：生成式示意线稿，用于解释依坡上升的窑身结构，不是测绘图。</li>
+        <li data-i18n="assetFigureArt">石湾陶塑人物：生成式意象，不代表馆藏作品或特定匠人作品。</li>
+        <li data-i18n="assetRouteFigure">青釉笑面公仔：生成式陶塑意象，不是实物照片。</li>
+        <li data-i18n="assetCraft1">工序01 · 构思：生成式工艺示意插画。</li>
+        <li data-i18n="assetCraft2">工序02 · 制泥：生成式工艺示意插画。</li>
+        <li data-i18n="assetCraft3">工序03 · 成形：生成式工艺示意插画。</li>
+        <li data-i18n="assetCraft4">工序04 · 装饰：生成式工艺示意插画。</li>
+        <li data-i18n="assetCraft5">工序05 · 上釉：生成式工艺示意插画。</li>
+        <li data-i18n="assetCraft6">工序06 · 龙窑煅烧：生成式工艺示意插画。</li>
+        <li data-i18n="assetTextures">纸纤维、窑砖与路线装饰图：生成式背景及叙事装饰素材。</li>
+        <li data-i18n="assetShardArt">历史页青绿色窑片装饰：依据用户提供的参考图生成透明分离图。</li>
         <li><span data-i18n="assetIcons">工艺与游览图标：</span><a href="https://github.com/tabler/tabler-icons" target="_blank" rel="noopener">Tabler Icons 3.34.0 · MIT License</a></li>
       </ul>
     </section>
