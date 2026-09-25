@@ -13,6 +13,7 @@ Independent static projects. Each project is self-contained and can be deployed 
 - `UK-Sketches/` — Ye Gang's bilingual British travel sketchbook
 - `G-Dragon/` — G-DRAGON Korean / Chinese / English artist archive
 - `LeBron/` — LeBron James career archive
+- `Nanfeng-Kiln/` — Chinese / English heritage guide to the historic dragon kilns, Shiwan ceramics, and local culture in Foshan
 
 ## Live demos
 
@@ -25,6 +26,7 @@ Independent static projects. Each project is self-contained and can be deployed 
 - [UK Sketchbook](https://abouthewei.github.io/nfc-project-demo/UK-Sketches/)
 - [G-DRAGON](https://abouthewei.github.io/nfc-project-demo/G-Dragon/)
 - [LeBron James](https://abouthewei.github.io/nfc-project-demo/LeBron/)
+- [Nanfeng Kiln · Foshan](https://abouthewei.github.io/nfc-project-demo/Nanfeng-Kiln/)
 
 ## Deployment
 
