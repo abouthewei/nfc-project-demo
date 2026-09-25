@@ -58,7 +58,7 @@ const copy = {
     visitHours: "第三方旅游页面当前列示日间开放 08:30–17:30、17:00 停止售票；时段可能变化，请出发前核对。",
     visitTransportLabel: "到达方式", visitTransport: "建议以实时地图导航至“南风古灶游客中心”；公共交通与停车情况请按出行当日查询。",
     visitPlanLabel: "建议路线", visitPlan: "先走龙窑与古榕，再看陶艺空间、艺术家村和壁画；若参加体验，请另留制作与等候时间。",
-    mapLink: "在高德地图查找 ↗", currentVisitLink: "核对当前游客信息 ↗", officialSiteLink: "查看政府文化介绍 ↗",
+    mapLink: "在高德地图查找 ↗", officialSiteLink: "查看政府文化介绍 ↗",
     visitCaveat: "本页为独立文化导览，不代表景区官方；门票、预约、活动和交通信息请以运营方最新通知为准。",
     profileScale: "非比例示意 · NOT TO SCALE",
     craftTitle: "泥与人间",
@@ -93,8 +93,8 @@ const copy = {
     day1: "看窑", day2: "古灶榕风", day3: "看陶艺", day4: "选一件石湾公仔作手信",
     officialLink: "查看景点资料与到访提示", sourceLink: "查看历史、图片与视频来源",
     footerNote: "一座仍可走近的龙窑，一段仍在延续的石湾生活。", backTop: "回到顶部 ↑",
-    previousPage: "上一页", nextPage: "下一页", day4Short: "选一件石湾公仔",
-    footerSources: "参考资料", photoSourceLabel: "查看照片来源", brandHomeAria: "南风古灶，返回首页", navAria: "页面导航",
+    previousPage: "返回首页", nextPage: "继续参观", day4Short: "选一件石湾公仔",
+    footerSources: "参考资料", photoSourceLabel: "查看照片来源", brandHomeAria: "南风古灶，返回首页", navAria: "章节导航",
     historyFactsAria: "历史节点", playVideoAria: "播放南风古灶实地视频", dayRouteAria: "建议游览顺序", processAria: "石湾陶塑制作过程",
     searchAria: "搜索页面内容", searchTitle: "搜索这份导览", searchPlaceholder: "搜索龙窑、陶塑、体验…", closeSearchAria: "关闭搜索", searchEmpty: "输入关键词，查找景点、工艺与到访信息。", searchNoResults: "没有找到相关章节。试试“龙窑”“拉坯”或“榕树”。",
     videoStatus: "如播放器未能载入，可直接打开哔哩哔哩原视频。", videoRequestedStatus: "已请求哔哩哔哩播放器；若仍黑屏或提示无法播放，请用下方链接打开原视频。", videoRetry: "重新载入播放器",
@@ -117,7 +117,7 @@ const copy = {
     assetKiln: "龙窑窑身 · 历史章节", assetWorkshop: "陶艺工作空间 · 古寮场与工作室章节",
     assetStreet: "陶艺街巷 · 艺术家村章节", assetSculpture: "石湾陶塑 · 工艺与作品章节",
     assetMural: "《瑞龙献宝》陶片壁画 · 景点章节",
-    sourcesArt: "装饰插画与界面图标", sourcesArtNote: "下列龙窑剖面、陶塑人物与山水画面为本项目生成的示意或装饰插画，不是现场照片、遗址测绘或馆藏实物记录。六张工序圆图裁自用户提供的陶艺排版参考截图；原始作者与授权未核实。页面另使用南风古灶实景照片并逐张标注来源；B站视频由原作者发布。",
+    sourcesArt: "装饰插画与界面图标", sourcesArtNote: "下列龙窑剖面、陶塑人物、路线图标与山水画面为本项目生成的示意或装饰插画，不是现场照片、遗址测绘或馆藏实物记录。六张工序圆图裁自用户提供的陶艺排版参考截图；原始作者与授权未核实。页面另使用南风古灶实景照片并逐张标注来源；B站视频由原作者发布。",
     assetProfileArt: "龙窑剖面：生成式示意线稿，用于解释依坡上升的窑身结构，不是测绘图。",
     assetFigureArt: "石湾陶塑人物：生成式意象，不代表馆藏作品或特定匠人作品。",
     assetRouteFigure: "首页路线中的青釉坐像：由用户提供的设计参考图分离；原始物件与摄影许可未核实。",
@@ -125,7 +125,7 @@ const copy = {
     assetCraft3: "工序03 · 成形：圆形画面裁自用户提供的陶艺排版参考图；原始作者与使用许可未核实。", assetCraft4: "工序04 · 装饰：圆形画面裁自用户提供的陶艺排版参考图；原始作者与使用许可未核实。",
     assetCraft5: "工序05 · 上釉：圆形画面裁自用户提供的陶艺排版参考图；原始作者与使用许可未核实。", assetCraft6: "工序06 · 龙窑煅烧：圆形画面裁自用户提供的陶艺排版参考图；原始作者与使用许可未核实。",
     assetCraftLandscape: "陶艺页底部的浅墨岭南窑城山水：生成式装饰插画，不代表实测地理景观。",
-    assetRouteArt: "路线装饰图：生成式岭南陶窑场景插画，仅表示叙事顺序，不表示真实地理位置。", assetTextures: "纸纤维与窑砖纹理：生成式背景装饰。", assetShardArt: "历史页青绿色窑片装饰：依据用户提供的参考图生成透明分离图。", assetIcons: "工艺与游览图标：",
+    assetRouteArt: "路线图标：四幅生成式场景插画，分别表现龙窑、古榕、制陶工匠与石湾陶塑；仅作叙事示意，不是实景照片。", assetTextures: "纸纤维与窑砖纹理：生成式背景装饰。", assetShardArt: "历史页青绿色窑片装饰：依据用户提供的参考图生成透明分离图。", assetIcons: "工艺与游览图标：",
     sourceBack: "← 返回页面", sourceIntroEn: "This independent cultural showcase is not the attraction’s official website."
   },
   en: {
@@ -187,7 +187,7 @@ const copy = {
     visitHours: "A third-party travel listing currently shows daytime hours of 08:30–17:30, with ticket sales ending at 17:00. Hours may change; confirm before travelling.",
     visitTransportLabel: "Getting there", visitTransport: "Navigate to “Nanfeng Kiln Visitor Centre” using a live map. Check public transport and parking for your travel date.",
     visitPlanLabel: "Suggested route", visitPlan: "See the kilns and banyan first, then the pottery spaces, artists’ village and mural. Allow extra time for any hands-on activity.",
-    mapLink: "Find it on Amap ↗", currentVisitLink: "Check current visitor information ↗", officialSiteLink: "Read the government cultural guide ↗",
+    mapLink: "Find it on Amap ↗", officialSiteLink: "Read the government cultural guide ↗",
     visitCaveat: "This independent guide is not the attraction’s official site. Check the operator’s latest notices for tickets, booking, events and transport.",
     profileScale: "Diagram · NOT TO SCALE",
     craftTitle: "Clay and the<br>human world.",
@@ -222,8 +222,8 @@ const copy = {
     day1: "See the kiln", day2: "See the banyan", day3: "Meet pottery", day4: "Choose a Shiwan figurine souvenir",
     officialLink: "Site information and visitor notes", sourceLink: "History, photo and video sources",
     footerNote: "A dragon kiln you can still approach, and a Shiwan way of life that continues.", backTop: "Back to top ↑",
-    previousPage: "Previous", nextPage: "Next", day4Short: "Choose a Shiwan figurine",
-    footerSources: "Sources", photoSourceLabel: "View photo source", brandHomeAria: "Nanfeng Kiln, home", navAria: "Page navigation",
+    previousPage: "Back to the start", nextPage: "Continue the walk", day4Short: "Choose a Shiwan figurine",
+    footerSources: "Sources", photoSourceLabel: "View photo source", brandHomeAria: "Nanfeng Kiln, home", navAria: "Chapter navigation",
     historyFactsAria: "Historical milestones", playVideoAria: "Play on-site video of Nanfeng Kiln", dayRouteAria: "Suggested visitor sequence", processAria: "Shiwan ceramic sculpture process",
     searchAria: "Search this page", searchTitle: "Search this guide", searchPlaceholder: "Search kilns, sculpture, activities…", closeSearchAria: "Close search", searchEmpty: "Enter a term to find places, craft and visitor information.", searchNoResults: "No matching section. Try “kiln”, “pottery” or “banyan”.",
     videoStatus: "If the player does not load, open the original Bilibili video directly.", videoRequestedStatus: "The Bilibili player was requested. If it stays black or reports an error, use the link below to open the original video.", videoRetry: "Reload player",
@@ -246,7 +246,7 @@ const copy = {
     assetKiln: "Dragon kiln interior · history chapter", assetWorkshop: "Pottery workspace · old yard and studio section",
     assetStreet: "Pottery lane · artists’ village section", assetSculpture: "Shiwan ceramic sculpture · craft section",
     assetMural: "Auspicious Dragon Offering Treasures · places section",
-    sourcesArt: "Illustrations & interface icons", sourcesArtNote: "The kiln profile, ceramic figure and kiln-town landscape below are generated illustrative assets. They are not on-site photographs, a measured survey or records of collection objects. The six process thumbnails are crops from the user-supplied craft reference; original authorship and permission have not been verified. The page also uses attributed photographs of Nanfeng Kiln; the Bilibili video remains with its original publisher.",
+    sourcesArt: "Illustrations & interface icons", sourcesArtNote: "The kiln profile, ceramic figure, route illustrations and kiln-town landscape below are generated illustrative assets. They are not on-site photographs, a measured survey or records of collection objects. The six process thumbnails are crops from the user-supplied craft reference; original authorship and permission have not been verified. The page also uses attributed photographs of Nanfeng Kiln; the Bilibili video remains with its original publisher.",
     assetProfileArt: "Dragon kiln profile: generated line illustration to explain its rising form, not a measured drawing.",
     assetFigureArt: "Shiwan ceramic figure: generated image, not a collection object or a work attributed to a specific artisan.",
     assetRouteFigure: "Seated celadon figure in the home route: isolated from the user-supplied design reference; object provenance and image rights are unverified.",
@@ -254,7 +254,7 @@ const copy = {
     assetCraft3: "Stage 03 · Shaping: circular crop from the user-supplied craft reference; original authorship and permission are unverified.", assetCraft4: "Stage 04 · Decoration: circular crop from the user-supplied craft reference; original authorship and permission are unverified.",
     assetCraft5: "Stage 05 · Glazing: circular crop from the user-supplied craft reference; original authorship and permission are unverified.", assetCraft6: "Stage 06 · Dragon-kiln firing: circular crop from the user-supplied craft reference; original authorship and permission are unverified.",
     assetCraftLandscape: "Pale Lingnan kiln-town landscape strip at the foot of the craft page: generated decorative illustration, not a geographic record.",
-    assetRouteArt: "Route decoration: a generated Lingnan kiln scene that suggests sequence, not actual geography.", assetTextures: "Paper fibre and kiln brick textures: generated backgrounds.", assetShardArt: "Celadon kiln-shard decoration on the history page: transparent cutout generated from the user-supplied reference.", assetIcons: "Craft and visitor icons: ",
+    assetRouteArt: "Route icons: four generated editorial vignettes of the dragon kiln, banyan, potter and Shiwan ceramic figure; illustrative, not documentary photographs.", assetTextures: "Paper fibre and kiln brick textures: generated backgrounds.", assetShardArt: "Celadon kiln-shard decoration on the history page: transparent cutout generated from the user-supplied reference.", assetIcons: "Craft and visitor icons: ",
     sourceBack: "← Back to the page", sourceIntroEn: "This independent cultural showcase is not the attraction’s official website."
   }
 };
@@ -316,32 +316,39 @@ languageButtons.forEach(function (button) {
   });
 });
 
-function activateView() {
-  const requested = window.location.hash.replace(/^#/, "") || "top";
-  const viewName = requested === "history" ? "history" : (requested === "craft" || requested === "craft-process" ? "craft" : "home");
-  document.querySelectorAll("section[data-view]").forEach(function (view) {
-    const active = view.dataset.view === viewName;
-    view.hidden = !active;
-    view.setAttribute("aria-hidden", active ? "false" : "true");
+const siteHeader = document.getElementById("siteHeader");
+const homeHero = document.querySelector(".home-hero");
+const chapterLinks = Array.from(document.querySelectorAll(".site-nav a[href^=\"#\"]"));
+const chapterTargets = chapterLinks
+  .map(function (link) { return document.getElementById(link.getAttribute("href").slice(1)); })
+  .filter(Boolean);
+let scrollFramePending = false;
+function syncPagePosition() {
+  if (siteHeader && homeHero) {
+    const headerBottom = siteHeader.getBoundingClientRect().bottom;
+    siteHeader.classList.toggle("is-over-hero", homeHero.getBoundingClientRect().bottom > headerBottom + 2);
+  }
+  const readingLine = (siteHeader?.getBoundingClientRect().height || 0) + 36;
+  let activeId = "top";
+  chapterTargets.forEach(function (target) {
+    if (target.getBoundingClientRect().top <= readingLine) activeId = target.id;
   });
-  document.querySelectorAll(".craft-nav a, .history-nav a").forEach(function (link) {
-    const linkTarget = link.getAttribute("href").slice(1);
-    const current = linkTarget === requested || (linkTarget === "top" && requested === "top");
-    link.classList.toggle("is-current", current);
-    if (current) link.setAttribute("aria-current", "page");
+  chapterLinks.forEach(function (link) {
+    if (link.getAttribute("href") === "#" + activeId) link.setAttribute("aria-current", "location");
     else link.removeAttribute("aria-current");
   });
-  const target = requested === "craft-process" ? document.getElementById("craft-process") : document.getElementById(requested);
-  requestAnimationFrame(function () {
-    if (target && requested !== "top" && requested !== "history" && requested !== "craft") {
-      target.scrollIntoView({block: "start", behavior: "smooth"});
-    } else {
-      window.scrollTo({top: 0, behavior: "auto"});
-    }
-  });
+  scrollFramePending = false;
 }
-window.addEventListener("hashchange", activateView);
-activateView();
+function queuePagePositionSync() {
+  if (scrollFramePending) return;
+  scrollFramePending = true;
+  requestAnimationFrame(syncPagePosition);
+}
+window.addEventListener("scroll", queuePagePositionSync, {passive: true});
+window.addEventListener("resize", queuePagePositionSync);
+window.addEventListener("hashchange", queuePagePositionSync);
+window.addEventListener("pageshow", queuePagePositionSync);
+syncPagePosition();
 
 const bilibiliUrl = "https://player.bilibili.com/player.html?isOutside=true&aid=534967088&bvid=BV1MM411R7Si&cid=1305673422&page=1&high_quality=1&danmaku=0&autoplay=1";
 function loadBilibiliPlayer() {
@@ -384,7 +391,7 @@ const searchCatalog = [
   ["history", "历史与龙窑 / History & dragon kiln", "明代 1506 1521 正德年间 历史 窑火 Ming history Zhengde"],
   ["route", "游览路线 / Visitor route", "沿窑而行 行程路线 visitor walk route"],
   ["spot-kilns", "南风灶与高灶 / Nanfeng and Gao Kilns", "龙窑 柴烧 kiln dragon fire"],
-  ["spot-banyan", "古灶榕风 / The banyan", "榕树 古树 banyan tree"],
+  ["spot-banyan", "古灶榕风 / The banyan", "古榕 榕树 古树 banyan tree"],
   ["spot-workshop", "古寮场与陶艺空间 / Pottery workshops", "古寮场 陶艺 陶艺体验 拉坯 pottery handbuilding throwing"],
   ["spot-artists", "艺术家村与陶片壁画 / Artists’ village", "瑞龙献宝 壁画 艺术家村 mural village"],
   ["customs", "风俗与活动 / Customs & events", "谢灶 祈福 开窑 市集 茶会 ritual market tea kiln opening"],
