@@ -256,13 +256,13 @@ body.lang-en .craft-intro h1 { font-size: clamp(38px, 3.5vw, 52px); line-height:
 .craft-intro blockquote { position: relative; grid-column: 2; grid-row: 2 / span 2; align-self: center; margin: 0; padding: 9px 0 9px 26px; border-left: 1px solid #9b9a90; font: 26px/1.6 var(--serif); letter-spacing: .05em; transform: translateY(72px); }
 .craft-intro blockquote::before { position: absolute; top: -25px; left: 11px; color: #d2cec5; content: "“"; font: 70px/1 Georgia, serif; }
 .craft-process-block { display: flex; min-width: 0; min-height: 0; flex-direction: column; justify-content: center; padding-top: 10px; }
-.process-row { position: relative; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); align-items: center; gap: 15px; margin: 0 -15px 0 -25px; padding: 5px 0 0; list-style: none; }
-.process-row::before { position: absolute; z-index: 0; top: 65%; right: 6%; left: 5%; height: 1px; background: var(--brick); content: ""; }
+.process-row { --process-image-size: clamp(80px, 7.5vw, 112px); --process-image-radius: clamp(40px, 3.75vw, 56px); --process-image-offset: 12px; position: relative; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); align-items: center; gap: 15px; margin: 0 -15px 0 -25px; padding: 5px 0 0; list-style: none; }
+.process-row::before { position: absolute; z-index: 0; top: calc(67px + var(--process-image-radius) + var(--process-image-offset)); right: 6%; left: 5%; height: 1px; background: var(--brick); content: ""; }
 .process-row li { position: relative; z-index: 1; display: grid; grid-template-rows: 27px 35px minmax(75px, 1fr); align-items: center; justify-items: start; min-width: 0; }
 .process-index { position: relative; left: 25px; color: var(--brick); font: 17px/1 Georgia, serif; }
 .process-row strong { position: relative; left: 25px; align-self: start; font: 600 clamp(14px, 1.4vw, 19px)/1.4 var(--serif); letter-spacing: .02em; white-space: nowrap; transform: translateY(5px); }
 body.lang-en .process-row strong { font-size: 14px; letter-spacing: 0; white-space: normal; }
-.process-row img { justify-self: center; width: clamp(80px, 7.5vw, 112px); height: clamp(80px, 7.5vw, 112px); object-fit: cover; border-radius: 50%; background: #dfd8ca; transform: translateY(12px); }
+.process-row img { justify-self: center; width: var(--process-image-size); height: var(--process-image-size); object-fit: cover; border-radius: 50%; background: #dfd8ca; clip-path: circle(46.5% at 50% 50%); transform: translateY(var(--process-image-offset)) scale(1.07527); transform-origin: center; }
 .craft-lower { display: grid; grid-template-columns: .87fr 1.13fr; align-items: start; gap: 6%; padding-top: 29px; }
 .craft-afterword { padding-top: 3px; }
 .craft-afterword h2 { font: 500 24px/1.45 var(--serif); letter-spacing: .08em; }
@@ -303,7 +303,7 @@ body.lang-en .film-card h2 { font-size: 16px; letter-spacing: 0; }
   .process-index, .process-row strong { left: 20px; }
   .process-row strong, body.lang-en .process-row strong { max-width: 100%; font-size: clamp(12px,1.1vw,17px); line-height: 1.25; letter-spacing: 0; white-space: normal; }
   body.lang-en .process-row strong { left: 12px; max-width: 92%; font-size: 11px; line-height: 1.15; }
-  .process-row img { width: clamp(80px,7.5vw,112px); height: clamp(80px,7.5vw,112px); transform: translateY(9px); }
+  .process-row { --process-image-offset: 9px; }
   .craft-intro > p { font-size: clamp(12px,1vw,14px); }
   .craft-intro blockquote { font-size: clamp(18px,1.65vw,25px); }
   .craft-lower { grid-template-columns: .7fr 1fr; }
@@ -571,7 +571,7 @@ body.lang-en .film-card h2 { font-size: 16px; letter-spacing: 0; }
   .process-row strong { justify-self: start; min-height: 38px; font-size: 13px; white-space: normal; text-align: left; }
   body.lang-en .process-row strong { font-size: 12px; }
   .process-row img { width: clamp(80px, 25vw, 118px); height: clamp(80px, 25vw, 118px); }
-  .process-row img { transform: none; }
+  .process-row img { transform: scale(1.07527); }
   .craft-lower { display: grid; grid-template-columns: 1fr; gap: 30px; padding-top: 38px; }
   .craft-afterword h2 { font-size: 21px; }
   .craft-afterword p { font-size: 13px; }
