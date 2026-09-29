@@ -11,7 +11,6 @@ const MOODS = [
   { id: 'surprise', label: '惊喜多', glaze: '窑变彩' }
 ];
 const STAMP_KEY = 'nanfeng-kiln-stamps-v1';
-const OWNER_PREFIX = 'nanfeng-kiln-owner-';
 const MAX_VIDEO_BYTES = 8 * 1024 * 1024;
 const MAX_VIDEO_SECONDS = 15;
 const CHAPTER_ARTWORK = {
@@ -37,8 +36,7 @@ const state = {
   demo: false,
   modal: null,
   posterUrl: '',
-  shareUrl: '',
-  shareReturnY: 0,
+  posterBlob: null,
   busy: false,
   editingStoryId: '',
   expandedChapter: 'kiln'
@@ -91,8 +89,9 @@ function chapterMediaMarkup(chapter) {
   if (!chapter.media) return '';
   const url = escapeHtml(chapter.media.url);
   const alt = chapter.title.trim() || '旅行记片段';
+  const poster = chapter.media.posterUrl ? ' poster="' + escapeHtml(chapter.media.posterUrl) + '"' : '';
   const preview = chapter.media.kind === 'video'
-    ? '<video src="' + url + '" muted playsinline preload="metadata"></video><span class="video-flag">短片</span>'
+    ? '<video src="' + url + '"' + poster + ' muted playsinline preload="metadata"></video><span class="video-flag">短片</span>'
     : '<img src="' + url + '" alt="' + escapeHtml(alt) + '预览">';
   return '<div class="media-preview">' + preview +
     '<button class="remove-media" type="button" data-action="remove-media" data-id="' + chapter.id + '" aria-label="移除素材">' + icon('close') + '</button></div>';
@@ -144,8 +143,8 @@ function introView() {
     '<div class="journey-home-scene" aria-hidden="true"><picture><source media="(min-width: 768px)" srcset="./assets/kiln-courtyard.jpg"><img src="./assets/visual-390x844/home-kiln-scene.png" alt=""></picture></div>' +
     '<header class="journey-home-brand"><span>南风古灶 · 佛山</span></header>' +
     '<section class="journey-home-copy"><p class="journey-eyebrow">A MEMORY FROM NANFENG</p><h1>把今天，<br><em>写成一页旅行记</em></h1>' +
-      '<p class="journey-home-description">挑几张照片，写下当时的心情。<br>南风古灶会替你排成一封可以分享的明信片。</p>' +
-      '<div class="journey-home-note"><span>照片 + 一句话</span><i>→</i><span>旅行记长页</span></div></section>' +
+      '<p class="journey-home-description">挑几张照片，写下当时的心情。<br>在手机本地排成一张可保存、可分享的旅行记长图。</p>' +
+      '<div class="journey-home-note"><span>照片 + 一句话</span><i>→</i><span>本地旅行记长图</span></div></section>' +
     '<div class="journey-home-story-demo" aria-label="照片和一句话会排成旅行记">' +
       '<div class="home-photo-stack"><picture class="home-photo home-photo--back"><source media="(min-width: 768px)" srcset="./assets/shiwan-ceramic.jpg"><img src="./assets/visual-390x844/story-pottery.jpg" alt="陶艺体验照片示例"></picture><picture class="home-photo home-photo--middle"><source media="(min-width: 768px)" srcset="./assets/banyan.jpg"><img src="./assets/visual-390x844/story-lane.jpg" alt="榕荫街巷照片示例"></picture><picture class="home-photo home-photo--front"><source media="(min-width: 768px)" srcset="./assets/kiln-courtyard.jpg"><img src="./assets/visual-390x844/story-kiln.jpg" alt="古窑照片示例"></picture></div>' +
       '<span class="home-demo-arrow" aria-hidden="true">' + icon('arrow') + '</span>' +
@@ -162,7 +161,7 @@ function editorView() {
   return '<div class="app-shell screen screen--editor journey-editor">' +
     '<header class="journey-editor-head"><button class="journey-back" type="button" data-action="back" aria-label="返回">' + icon('back') + '</button><span>南风开窑记</span><span class="journey-step-tag">01 / 03</span></header>' +
     '<main class="journey-editor-main"><div class="journey-progress" aria-label="创作进度"><span class="journey-progress-step is-current">收集片段</span><span class="journey-progress-step">预览游记</span><span class="journey-progress-step">分享成品</span></div>' +
-      '<div class="journey-editor-intro"><h1>把旅途片段放进来</h1><p>每段放一张照片或短片，再写一句当时的话。标题由你来定，也可以留白。</p></div>' +
+      '<div class="journey-editor-intro"><h1>把旅途片段放进来</h1><p>每段放一张照片或短片，再写一句当时的话。素材只在这部手机整理，完成后可生成并分享长图。</p></div>' +
       '<label class="journey-title-label" for="journey-title">这篇旅行记的名字 <span>选填</span></label>' +
       '<input id="journey-title" class="journey-title-input" data-title maxlength="24" value="' + escapeHtml(state.title) + '" placeholder="南风古灶的一日慢游">' +
       '<div class="chapter-list journey-chapters">' + state.chapters.map((chapter, index) => chapterEditor(chapter, index)).join('') + '</div>' +
@@ -173,7 +172,7 @@ function editorView() {
 function mediaMarkup(media, className, alt) {
   if (!media) return '<div class="preview-empty">这一幕暂时留白</div>';
   const source = escapeHtml(media.url || media.mediaUrl || '');
-  if (media.kind === 'video') return '<video class="' + className + '" src="' + source + '" controls playsinline preload="metadata" aria-label="' + escapeHtml(alt) + '"></video>';
+  if (media.kind === 'video') return '<video class="' + className + '" src="' + source + '"' + (media.posterUrl ? ' poster="' + escapeHtml(media.posterUrl) + '"' : '') + ' controls playsinline preload="metadata" aria-label="' + escapeHtml(alt) + '"></video>';
   const sampleSpot = Object.keys(CHAPTER_ARTWORK).find((spotId) => CHAPTER_ARTWORK[spotId] === (media.url || media.mediaUrl));
   if (sampleSpot) {
     return '<picture class="' + className + '-picture"><source media="(min-width: 768px)" srcset="' + CHAPTER_DESKTOP_ARTWORK[sampleSpot] + '"><img class="' + className + '" src="' + source + '" alt="' + escapeHtml(alt) + '"></picture>';
@@ -182,9 +181,9 @@ function mediaMarkup(media, className, alt) {
 }
 
 function previewView() {
-  return '<div class="app-shell screen screen--preview journey-preview"><header class="journey-preview-head"><button class="journey-back" type="button" data-action="back-editor" aria-label="返回修改">' + icon('back') + '</button><div><strong>旅行记预览</strong><span>朋友打开后看到的页面</span></div></header>' +
+  return '<div class="app-shell screen screen--preview journey-preview"><header class="journey-preview-head"><button class="journey-back" type="button" data-action="back-editor" aria-label="返回修改">' + icon('back') + '</button><div><strong>旅行记预览</strong><span>先看看长图排版效果</span></div></header>' +
     storyCanvasMarkup({ title: state.title.trim() || suggestedTitle(), chapters: state.chapters, preview: true }) +
-    '<p class="upload-status" data-upload-status aria-live="polite"></p><footer class="journey-preview-footer"><button class="secondary-button" type="button" data-action="back-editor">继续编辑</button><button class="primary-button" type="button" data-action="create">生成并分享 ' + icon('arrow') + '</button></footer></div>';
+    '<p class="upload-status" data-upload-status aria-live="polite"></p><footer class="journey-preview-footer"><button class="secondary-button" type="button" data-action="back-editor">继续编辑</button><button class="primary-button" type="button" data-action="create">保存到本机 ' + icon('arrow') + '</button></footer></div>';
 }
 
 function moodLabel(moodId) {
@@ -209,7 +208,7 @@ function storyTitleMarkup(title) {
 }
 
 function chapterMediaValue(chapter) {
-  if (chapter?.mediaUrl) return { kind: chapter.kind || 'image', url: chapter.mediaUrl };
+  if (chapter?.mediaUrl) return { kind: chapter.kind || 'image', url: chapter.mediaUrl, posterUrl: chapter.posterUrl || '' };
   return chapter?.media || null;
 }
 
@@ -226,7 +225,7 @@ function storyCoverImage(source, alt) {
   const media = coverMediaValue(source);
   const url = escapeHtml(media.url || media.mediaUrl || CHAPTER_ARTWORK.kiln);
   if (media.kind === 'video') {
-    return '<video class="travelogue-cover-photo" src="' + url + '" muted playsinline autoplay loop preload="metadata" aria-label="' + escapeHtml(alt) + '"></video>';
+    return '<video class="travelogue-cover-photo" src="' + url + '"' + (media.posterUrl ? ' poster="' + escapeHtml(media.posterUrl) + '"' : '') + ' muted playsinline autoplay loop preload="metadata" aria-label="' + escapeHtml(alt) + '"></video>';
   }
   return mediaMarkup(media, 'travelogue-cover-photo', alt);
 }
@@ -265,18 +264,19 @@ function storyCanvasMarkup({ title, chapters, preview = false }) {
 
 function storyView() {
   const story = state.story;
-  if (!story) return errorView('找不到这份开窑记', '链接可能已经过期，或者作品已被创建者删除。');
-  const owner = localStorage.getItem(OWNER_PREFIX + story.storyId);
-  const expiryText = story.expiresAt ? '这份作品预计保留至 ' + new Date(story.expiresAt).toLocaleDateString('zh-CN') + '。' : '演示作品可以随时删除。';
-  return '<div class="app-shell screen screen--story journey-story"><header class="journey-story-head"><button class="journey-back" type="button" data-action="home" aria-label="回到开始">' + icon('back') + '</button><div><strong>我的旅行记</strong><span>朋友打开后看到的页面</span></div></header>' + storyCanvasMarkup({ title: story.title, chapters: story }) +
-    '<div class="story-extra-actions"><button class="story-share-button" type="button" data-action="share">分享这页旅行记 ' + icon('share') + '</button><button class="story-save-button" type="button" data-action="save-card">保存明信片</button>' +
-      (owner ? '<button class="secondary-button owner-edit" type="button" data-action="edit">继续修改</button><button class="story-delete" type="button" data-action="delete">删除这份作品</button>' : '') +
-      '<p class="story-expiry">' + escapeHtml(expiryText) + ' 链接仅供持有者访问。</p></div></div>';
+  if (!story) return errorView('找不到这份旅行记', '请在保存这份作品的手机和浏览器中打开。');
+  const editButton = story.demo ? '' : '<button class="secondary-button owner-edit" type="button" data-action="edit">继续修改</button>' + (story.savedLocally === false ? '' : '<button class="story-delete" type="button" data-action="delete">删除本机作品</button>');
+  const notice = story.savedLocally === false
+    ? '本机空间不足，这份作品只保留在当前页面。请先生成并保存长图。'
+    : '照片和文字只保存在这部手机；分享时会生成一张长图。';
+  return '<div class="app-shell screen screen--story journey-story"><header class="journey-story-head"><button class="journey-back" type="button" data-action="home" aria-label="回到开始">' + icon('back') + '</button><div><strong>我的旅行记</strong><span>在这部手机生成与保存</span></div></header>' + storyCanvasMarkup({ title: story.title, chapters: story }) +
+    '<div class="story-extra-actions"><button class="story-share-button" type="button" data-action="generate-image">生成旅行日记长图 ' + icon('arrow') + '</button>' + editButton +
+      '<p class="story-expiry">' + escapeHtml(notice) + '</p></div></div>';
 }
 
 function firingView() {
   return '<div class="app-shell screen screen--firing"><div class="firing-scene"><img class="firing-photo" src="./assets/kiln-interior.jpg" alt=""/><div class="firing-inner">' +
-    '<p class="firing-kicker">NANFENG ANCIENT KILN</p><h2>窑火正旺</h2><p>把今天的记忆，慢慢烧成一件纪念</p><div class="firing-progress"><span></span></div>' +
+    '<p class="firing-kicker">NANFENG ANCIENT KILN</p><h2>窑火正旺</h2><p>照片留在本机，正在整理成一篇旅行记</p><div class="firing-progress"><span></span></div>' +
     '</div></div></div>';
 }
 
@@ -292,7 +292,7 @@ function serviceRequiredView() {
   const previewUrl = 'http://127.0.0.1:8787/' + window.location.search + window.location.hash;
   return '<div class="app-shell screen error-screen service-required-screen"><div>' +
     '<h1>请通过预览地址打开</h1>' +
-    '<p>当前页面从文件直接打开（file://），浏览器会阻止它连接作品保存服务。请使用本地预览地址继续创作。</p>' +
+    '<p>当前页面从文件直接打开（file://），浏览器可能会限制本机图片处理和作品空间。请使用本地预览地址继续创作。</p>' +
     '<a class="primary-button service-open-link" href="' + escapeHtml(previewUrl) + '">打开本地预览</a>' +
     '<p class="service-start-help">如果地址无法访问，请在项目目录运行 <code>python3 server.py --port 8787</code>，再回来打开预览。</p>' +
     '</div></div>';
@@ -302,21 +302,10 @@ function modalView() {
   if (!state.modal) return '';
   if (state.posterUrl) {
     return '<div class="modal-backdrop" data-action="dismiss-modal"><section class="modal-sheet poster-sheet" role="dialog" aria-modal="true" aria-labelledby="modal-title">' +
-      '<h2 id="modal-title">纪念卡已做好</h2><p>长按图片保存到相册；也可以使用下方下载按钮。</p>' +
-      '<img class="poster-preview" src="' + escapeHtml(state.posterUrl) + '" alt="南风开窑记纪念卡：' + escapeHtml(state.story?.title || '南风开窑记') + '">' +
-      '<div class="modal-buttons"><a class="secondary-button" href="' + escapeHtml(state.posterUrl) + '" download="南风开窑记.png">下载图片</a><button class="primary-button" type="button" data-action="cancel-modal">关闭</button></div></section></div>';
-  }
-  if (state.shareUrl) {
-    const title = state.story?.title || '窑火未熄的一天';
-    const thumb = coverMediaValue(state.story);
-    const thumbUrl = escapeHtml(thumb.kind === 'video' ? CHAPTER_ARTWORK.kiln : (thumb.url || thumb.mediaUrl || CHAPTER_ARTWORK.kiln));
-    return '<div class="modal-backdrop modal-backdrop--share" data-action="dismiss-modal"><section class="modal-sheet share-sheet" role="dialog" aria-modal="true" aria-labelledby="modal-title">' +
-      '<span class="share-sheet-handle" aria-hidden="true"></span><button class="share-sheet-close" type="button" data-action="cancel-modal" aria-label="关闭分享">' + icon('close') + '</button>' +
-      '<h2 id="modal-title">分享这页旅行记</h2><p>把今天的记忆，分享给想念的人。</p>' +
-      '<div class="share-preview-card"><img src="' + thumbUrl + '" alt=""><div><span>南风古灶 · 佛山</span><strong>' + escapeHtml(title) + '</strong><small>一页私人旅行记</small></div><img class="share-preview-etch" src="./assets/visual-390x844/story-chimney-etch.png" alt=""></div>' +
-      '<label class="share-link-label" for="share-link">作品分享链接</label><textarea id="share-link" class="share-link-field" rows="1" readonly aria-label="作品分享链接">' + escapeHtml(state.shareUrl) + '</textarea>' +
-      '<div class="modal-buttons"><button class="primary-button" type="button" data-action="copy-share">复制链接</button><button class="secondary-button" type="button" data-action="native-share">系统分享</button></div>' +
-      '<p class="share-privacy-note">链接仅供持有者访问</p></section></div>';
+      '<h2 id="modal-title">旅行日记长图已做好</h2><p>照片和文字只在这部手机整理。可直接分享图片，或保存后从相册发送。</p>' +
+      '<div class="poster-preview-viewport"><img class="poster-preview" src="' + escapeHtml(state.posterUrl) + '" alt="南风古灶旅行日记长图：' + escapeHtml(state.story?.title || '南风开窑记') + '"></div>' +
+      '<div class="modal-buttons"><button class="secondary-button" type="button" data-action="download-image">保存长图</button><button class="primary-button" type="button" data-action="share-image">分享图片</button></div>' +
+      '<button class="share-modal-close" type="button" data-action="cancel-modal">关闭预览</button></section></div>';
   }
   return '<div class="modal-backdrop" data-action="dismiss-modal"><section class="modal-sheet" role="dialog" aria-modal="true" aria-labelledby="modal-title">' +
     '<h2 id="modal-title">' + escapeHtml(state.modal.title) + '</h2><p>' + escapeHtml(state.modal.message) + '</p>' +
@@ -338,14 +327,19 @@ function render() {
 }
 
 function resetDraft() {
-  state.chapters.forEach((chapter) => {
-    if (chapter.media?.url?.startsWith('blob:')) URL.revokeObjectURL(chapter.media.url);
+  state.chapters.forEach((chapter) => releaseMediaUrls(chapter.media));
+  (state.story?.chapters || []).forEach((chapter) => {
+    if (chapter.mediaUrl?.startsWith('blob:')) URL.revokeObjectURL(chapter.mediaUrl);
+    if (chapter.posterUrl?.startsWith('blob:')) URL.revokeObjectURL(chapter.posterUrl);
   });
+  if (state.posterUrl.startsWith('blob:')) URL.revokeObjectURL(state.posterUrl);
   state.chapters = CHAPTERS.map((chapter) => ({ ...chapter, title: '', media: null, caption: '', skipped: false, sampleDismissed: false, processing: false }));
   state.title = '';
   state.mood = 'slow';
   state.notice = '';
   state.story = null;
+  state.posterUrl = '';
+  state.posterBlob = null;
   state.reveal = false;
   state.demo = false;
   state.editingStoryId = '';
@@ -385,7 +379,7 @@ function mediaError(message) {
   render();
 }
 
-async function imageFileForUpload(file) {
+async function prepareLocalMedia(file) {
   if (file.type.startsWith('video/')) {
     if (file.size > MAX_VIDEO_BYTES) throw new Error('短片大小请控制在 8 MB 以内。');
     const previewUrl = URL.createObjectURL(file);
@@ -430,15 +424,13 @@ async function handleFiles(input) {
   render();
   try {
     chapter.skipped = false;
-    const sourceBytes = await file.arrayBuffer();
-    const sourceFile = new File([sourceBytes], file.name, { type: file.type, lastModified: file.lastModified });
-    const prepared = await imageFileForUpload(sourceFile);
-    const dataUrl = prepared === sourceFile
-      ? dataUrlFromBytes(sourceBytes, sourceFile.type)
-      : await fileToDataUrl(prepared);
-    if (chapter.media?.url?.startsWith('blob:')) URL.revokeObjectURL(chapter.media.url);
+    const prepared = await prepareLocalMedia(file);
+    const kind = prepared.type.startsWith('video/') ? 'video' : 'image';
+    const posterBlob = kind === 'video' ? await videoPosterForFile(prepared) : null;
+    releaseMediaUrls(chapter.media);
     const url = URL.createObjectURL(prepared);
-    chapter.media = { file: prepared, dataUrl, url, kind: prepared.type.startsWith('video/') ? 'video' : 'image' };
+    const posterUrl = posterBlob ? URL.createObjectURL(posterBlob) : '';
+    chapter.media = { file: prepared, url, kind, posterBlob, posterUrl };
     chapter.processing = false;
     render();
   } catch (error) {
@@ -448,17 +440,39 @@ async function handleFiles(input) {
   }
 }
 
-function dataUrlFromBytes(bytes, mime) {
-  bytes = new Uint8Array(bytes);
-  let binary = '';
-  for (let offset = 0; offset < bytes.length; offset += 0x8000) {
-    binary += String.fromCharCode(...bytes.subarray(offset, offset + 0x8000));
-  }
-  return 'data:' + (mime || 'application/octet-stream') + ';base64,' + btoa(binary);
+function releaseMediaUrls(media) {
+  if (media?.url?.startsWith('blob:')) URL.revokeObjectURL(media.url);
+  if (media?.posterUrl?.startsWith('blob:')) URL.revokeObjectURL(media.posterUrl);
 }
 
-async function fileToDataUrl(file) {
-  return dataUrlFromBytes(await file.arrayBuffer(), file.type);
+async function videoPosterForFile(file) {
+  const url = URL.createObjectURL(file);
+  const video = document.createElement('video');
+  video.muted = true;
+  video.playsInline = true;
+  video.preload = 'auto';
+  video.src = url;
+  try {
+    await new Promise((resolve, reject) => {
+      const timeout = window.setTimeout(() => reject(new Error('video-timeout')), 7000);
+      video.onloadeddata = () => { window.clearTimeout(timeout); resolve(); };
+      video.onerror = () => { window.clearTimeout(timeout); reject(new Error('video-decode')); };
+      video.load();
+    });
+    const canvas = document.createElement('canvas');
+    const scale = Math.min(1, 1600 / Math.max(video.videoWidth, video.videoHeight));
+    canvas.width = Math.max(1, Math.round(video.videoWidth * scale));
+    canvas.height = Math.max(1, Math.round(video.videoHeight * scale));
+    canvas.getContext('2d', { alpha: false }).drawImage(video, 0, 0, canvas.width, canvas.height);
+    return await new Promise((resolve) => canvas.toBlob(resolve, 'image/jpeg', .88));
+  } catch {
+    return null;
+  } finally {
+    video.pause();
+    video.removeAttribute('src');
+    video.load();
+    URL.revokeObjectURL(url);
+  }
 }
 
 function setStatus(message, percent) {
@@ -468,6 +482,57 @@ function setStatus(message, percent) {
   if (percent !== undefined) status.dataset.percent = String(percent);
 }
 
+function localStoryId() {
+  return window.crypto?.randomUUID?.() || ('nf' + Date.now().toString(36) + Math.random().toString(36).slice(2, 10));
+}
+
+function storyRecordFromEditor(storyId, title) {
+  return {
+    storyId,
+    title,
+    mood: state.mood,
+    createdAt: state.editingStoryId && state.story?.createdAt ? state.story.createdAt : new Date().toISOString(),
+    stamps: { ...state.stamps },
+    chapters: state.chapters.map((chapter) => ({
+      id: chapter.id,
+      spotId: chapter.spotId,
+      title: chapter.title.trim(),
+      caption: chapter.caption.trim(),
+      skipped: Boolean(chapter.skipped),
+      stampCollected: Boolean(state.stamps[chapter.spotId]),
+      media: chapter.media?.file ? {
+        blob: chapter.media.file,
+        name: chapter.media.file.name,
+        type: chapter.media.file.type,
+        kind: chapter.media.kind,
+        posterBlob: chapter.media.posterBlob || null
+      } : null
+    }))
+  };
+}
+
+function hydrateLocalStory(record, reuseEditorUrls = false) {
+  const chapters = record.chapters.map((chapter) => {
+    const editorChapter = reuseEditorUrls ? state.chapters.find((item) => item.id === chapter.id) : null;
+    const mediaUrl = chapter.media?.blob
+      ? (editorChapter?.media?.url || URL.createObjectURL(chapter.media.blob))
+      : '';
+    const posterUrl = chapter.media?.posterBlob
+      ? (editorChapter?.media?.posterUrl || URL.createObjectURL(chapter.media.posterBlob))
+      : '';
+    return {
+      ...chapter,
+      kind: chapter.media?.kind || '',
+      mediaUrl,
+      mediaBlob: chapter.media?.blob || null,
+      mediaName: chapter.media?.name || '',
+      mediaType: chapter.media?.type || '',
+      posterUrl
+    };
+  });
+  return { ...record, chapters, moodLabel: moodLabel(record.mood), savedLocally: true };
+}
+
 async function createStory() {
   const withMedia = state.chapters.filter((chapter) => chapter.media?.file);
   if (!withMedia.length) {
@@ -475,101 +540,56 @@ async function createStory() {
     return;
   }
   const title = state.title.trim() || suggestedTitle();
+  const storyId = state.editingStoryId || localStoryId();
   state.busy = true;
   const button = document.querySelector('[data-action="create"]');
   if (button) {
     button.disabled = true;
-    button.textContent = '正在封窑…';
+    button.textContent = '正在本机整理…';
   }
-  setStatus('正在整理素材…', 0);
+  setStatus('照片不会上传，正在本机整理…');
   try {
-    const chapters = [];
-    for (const chapter of state.chapters) {
-      const media = chapter.media?.file
-        ? { kind: chapter.media.kind, name: chapter.media.file.name, data: chapter.media.dataUrl || await fileToDataUrl(chapter.media.file) }
-        : null;
-      chapters.push({
-        id: chapter.id,
-        spotId: chapter.spotId,
-        title: chapter.title.trim(),
-        caption: chapter.caption.trim(),
-        skipped: Boolean(chapter.skipped),
-        stampCollected: Boolean(state.stamps[chapter.spotId]),
-        media
-      });
+    const record = storyRecordFromEditor(storyId, title);
+    let savedLocally = true;
+    let saveError = null;
+    try {
+      await window.LocalStoryStore.saveStory(record);
+    } catch (error) {
+      savedLocally = false;
+      saveError = error;
     }
-    const body = JSON.stringify({
-      templateId: 'nanfeng-open-kiln-v1',
-      locale: 'zh-CN',
-      title,
-      mood: state.mood,
-      stamps: state.stamps,
-      chapters
-    });
-    if (new Blob([body]).size > 32 * 1024 * 1024) throw new Error('素材总量较大，请减少视频或改用照片。');
-    const editingId = state.editingStoryId;
-    const manageToken = editingId ? localStorage.getItem(OWNER_PREFIX + editingId) : '';
-    if (editingId && !manageToken) throw new Error('无法验证创建者身份，请从原作品链接返回后再修改。');
-    const result = await postStory(body, editingId, manageToken);
-    if (!editingId) localStorage.setItem(OWNER_PREFIX + result.story.storyId, result.manageToken);
-    state.story = result.story;
-    state.story.storyId = result.story.storyId;
+    state.story = hydrateLocalStory(record, true);
+    state.story.savedLocally = savedLocally;
     state.title = title;
     state.editingStoryId = '';
     state.busy = false;
     state.screen = 'firing';
     render();
     window.setTimeout(() => {
-      window.history.pushState({}, '', '?story=' + encodeURIComponent(result.story.storyId));
+      window.history.pushState({}, '', '?story=' + encodeURIComponent(storyId));
       state.screen = 'story';
       state.reveal = false;
       render();
       window.scrollTo(0, 0);
-    }, 1850);
+      if (saveError) toast(saveError.name === 'QuotaExceededError'
+        ? '手机可用空间不足；请先生成并保存长图。'
+        : (saveError.message || '作品未能留存在本机；请先生成并保存长图。'));
+    }, 950);
   } catch (error) {
     state.busy = false;
     render();
-    toast(error.message || '作品没有生成，请检查网络后重试。');
+    toast(error.message || '本机作品没有生成，请再试一次。');
   }
-}
-
-function postStory(body, storyId, manageToken) {
-  return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest();
-    xhr.open(storyId ? 'PUT' : 'POST', storyId ? '/api/stories/' + encodeURIComponent(storyId) : '/api/stories');
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    if (manageToken) xhr.setRequestHeader('X-Manage-Token', manageToken);
-    xhr.upload.onprogress = (event) => {
-      if (event.lengthComputable) setStatus('上传素材 ' + Math.round(event.loaded / event.total * 100) + '%', Math.round(event.loaded / event.total * 100));
-    };
-    xhr.onload = () => {
-      let data;
-      try { data = JSON.parse(xhr.responseText); } catch { reject(new Error('服务器返回格式异常。')); return; }
-      if (xhr.status >= 200 && xhr.status < 300) resolve(data);
-      else reject(new Error(data.error || '作品没有生成，请稍后重试。'));
-    };
-    xhr.onerror = () => reject(new Error(window.location.protocol === 'file:'
-      ? '当前页面通过 file:// 打开，无法保存作品。请访问 http://127.0.0.1:8787/。'
-      : '连接本地作品服务失败，请确认服务仍在运行。'));
-    xhr.send(body);
-  });
 }
 
 async function loadStory(storyId) {
   state.screen = 'loading';
-  state.loadingMessage = '正在打开这份记忆…';
+  state.loadingMessage = '正在打开本机保存的旅行记…';
   render();
   try {
-    const response = await fetch('/api/stories/' + encodeURIComponent(storyId));
-    if (response.status === 410) {
-      state.screen = 'error';
-      state.errorTitle = '这份开窑记已到期';
-      state.errorMessage = '演示链接保留 30 天。请回到入口，重新为今天的记忆开窑。';
-      render();
-      return;
-    }
-    if (!response.ok) throw new Error('没有找到这份作品。');
-    state.story = await response.json();
+    const record = await window.LocalStoryStore.getStory(storyId);
+    if (!record) throw new Error('这份旅行记只保存在创作时使用的手机和浏览器中。');
+    state.story = hydrateLocalStory(record);
     state.mood = state.story.mood || state.mood;
     state.title = state.story.title || '';
     state.screen = 'story';
@@ -578,8 +598,8 @@ async function loadStory(storyId) {
     render();
   } catch (error) {
     state.screen = 'error';
-    state.errorTitle = '暂时打不开这份开窑记';
-    state.errorMessage = error.message || '请稍后再试。';
+    state.errorTitle = '无法读取这份本机旅行记';
+    state.errorMessage = error.message || '请回到本机重新选择素材。';
     render();
   }
 }
@@ -618,16 +638,14 @@ async function editCurrentStory() {
   render();
   try {
     state.title = state.story.title || '';
-    state.mood = state.story.mood === 'warm' ? 'warm' : 'slow';
+    state.mood = state.story.mood || 'slow';
     state.stamps = { ...(state.story.stamps || {}) };
     state.chapters = await Promise.all(CHAPTERS.map(async (chapter) => {
       const saved = (state.story.chapters || []).find((item) => item.id === chapter.id) || {};
       let media = null;
-      if (saved.mediaUrl) {
-        const response = await fetch(saved.mediaUrl);
-        const blob = await response.blob();
-        const file = new File([blob], 'nanfeng-memory.' + (saved.kind === 'video' ? 'mp4' : 'jpg'), { type: blob.type || (saved.kind === 'video' ? 'video/mp4' : 'image/jpeg') });
-        media = { file, url: URL.createObjectURL(file), kind: saved.kind || 'image' };
+      if (saved.mediaBlob) {
+        const file = new File([saved.mediaBlob], saved.mediaName || 'nanfeng-memory.jpg', { type: saved.mediaType || 'image/jpeg' });
+        media = { file, url: saved.mediaUrl, kind: saved.kind || 'image', posterBlob: saved.media?.posterBlob || null, posterUrl: saved.posterUrl || '' };
       }
       return { ...chapter, title: saved.title || '', media, caption: saved.caption || '', skipped: Boolean(saved.skipped) };
     }));
@@ -641,153 +659,86 @@ async function editCurrentStory() {
   }
 }
 
-async function shareStory() {
-  if (state.demo) {
-    toast('示例作品不能分享，开始创作后就能生成自己的链接。');
-    return;
+async function generateTravelogueImage() {
+  if (!state.story) return;
+  toast('正在这部手机上合成长图…');
+  try {
+    const blob = await window.TravelogueImage.render({ ...state.story, moodLabel: moodLabel(state.story.mood) });
+    if (state.posterUrl.startsWith('blob:')) URL.revokeObjectURL(state.posterUrl);
+    state.posterBlob = blob;
+    state.posterUrl = URL.createObjectURL(blob);
+    state.modal = { title: '旅行日记长图已做好', message: '照片和文字只在这部手机整理。可直接分享图片，或保存后从相册发送。' };
+    render();
+  } catch (error) {
+    toast(error.message || '长图生成失败，请减少素材后再试。');
   }
-  state.shareUrl = window.location.href;
-  state.shareReturnY = window.scrollY;
-  window.scrollTo(0, 0);
-  state.modal = { title: '分享这页旅行记', message: '复制链接发给朋友。' };
-  render();
 }
 
-async function nativeShareStory() {
+function imageFilename() {
+  const title = (state.story?.title || '南风开窑记').replace(/[\\/:*?"<>|\u0000-\u001f]/g, '-').trim().slice(0, 28);
+  return (title || '南风开窑记') + '-南风古灶旅行记.jpg';
+}
+
+function downloadTravelogueImage() {
+  if (!state.posterBlob || !state.posterUrl) {
+    toast('先生成旅行日记长图。');
+    return;
+  }
+  const link = document.createElement('a');
+  link.href = state.posterUrl;
+  link.download = imageFilename();
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  toast('长图已准备好；如果没有自动保存，请长按图片存入相册。');
+}
+
+async function shareTravelogueImage() {
+  if (!state.posterBlob) {
+    toast('先生成旅行日记长图。');
+    return;
+  }
   if (!navigator.share) {
-    toast('当前浏览器不支持系统分享，请复制链接发送给朋友。');
+    toast('当前浏览器不能直接分享图片，请先保存长图，再从相册发送。');
     return;
   }
-  if (navigator.share) {
-    try {
-      await navigator.share({ title: (state.story?.title || '南风开窑记') + ' · 南风古灶', text: '我把今天在南风古灶的记忆，做成了一页旅行记。', url: state.shareUrl || window.location.href });
-      return;
-    } catch (error) {
-      if (error?.name === 'AbortError') return;
-    }
-  }
-  toast('系统分享暂不可用，你可以复制上方链接。');
-}
-
-function wrapText(ctx, text, x, y, maxWidth, lineHeight, maxLines) {
-  const chars = Array.from(text || '');
-  let line = '';
-  let lines = 0;
-  for (const char of chars) {
-    const next = line + char;
-    if (ctx.measureText(next).width > maxWidth && line) {
-      ctx.fillText(line, x, y);
-      y += lineHeight;
-      line = char;
-      lines += 1;
-      if (maxLines && lines >= maxLines) break;
-    } else line = next;
-  }
-  if (line && (!maxLines || lines < maxLines)) ctx.fillText(line, x, y);
-}
-
-async function saveCard() {
-  toast('正在制作纪念卡…');
-  const canvas = document.createElement('canvas');
-  canvas.width = 1080;
-  canvas.height = 1600;
-  const ctx = canvas.getContext('2d');
-  const paper = ctx.createLinearGradient(0, 0, 0, 1600);
-  paper.addColorStop(0, '#f5eddf');
-  paper.addColorStop(1, '#e5d8c6');
-  ctx.fillStyle = paper;
-  ctx.fillRect(0, 0, 1080, 1600);
-  ctx.strokeStyle = '#a56544';
-  ctx.lineWidth = 2;
-  ctx.strokeRect(44, 44, 992, 1512);
-  ctx.fillStyle = '#87452e';
-  ctx.font = '26px sans-serif';
-  ctx.fillText('南风古灶 · 私人记忆', 82, 110);
-  ctx.fillStyle = '#282019';
-  ctx.font = 'bold 58px serif';
-  wrapText(ctx, state.story?.title || '南风开窑记', 82, 200, 900, 74, 2);
-  ctx.fillStyle = '#78695a';
-  ctx.font = '26px sans-serif';
-  ctx.fillText(moodLabel(state.story?.mood) + '　·　' + new Date(state.story?.createdAt || Date.now()).toLocaleDateString('zh-CN'), 82, 290);
-  const chapters = state.story?.chapters || [];
-  const mediaChapters = chapters.filter((chapter) => chapter.mediaUrl);
-  const imageSources = mediaChapters.filter((chapter) => chapter.kind !== 'video').slice(0, 3);
-  let y = 340;
-  if (imageSources.length) {
-    const gap = 15;
-    const width = Math.floor((916 - gap * (imageSources.length - 1)) / imageSources.length);
-    const height = imageSources.length === 1 ? 660 : 470;
-    for (let i = 0; i < imageSources.length; i++) {
-      const img = new Image();
-      const imageReady = new Promise((resolve) => { img.onload = resolve; img.onerror = resolve; });
-      img.src = imageSources[i].mediaUrl;
-      if (!img.complete) {
-        await Promise.race([imageReady, new Promise((resolve) => window.setTimeout(resolve, 3000))]);
-      }
-      const x = 82 + i * (width + gap);
-      if (img.complete && img.naturalWidth) {
-        const scale = Math.max(width / img.naturalWidth, height / img.naturalHeight);
-        const sw = width / scale, sh = height / scale;
-        const sx = (img.naturalWidth - sw) / 2, sy = (img.naturalHeight - sh) / 2;
-        ctx.drawImage(img, sx, sy, sw, sh, x, y, width, height);
-      } else {
-        ctx.fillStyle = '#d7c5ad';
-        ctx.fillRect(x, y, width, height);
-      }
-    }
-    y += height + 44;
-  } else {
-    ctx.fillStyle = '#9a5638';
-    ctx.font = '32px serif';
-    ctx.fillText('这一程的记忆，已经封进窑里。', 82, 465);
-    y = 540;
-  }
-  ctx.fillStyle = '#6b5b4c';
-  ctx.font = '30px serif';
-  const caption = mediaChapters.map((chapter) => chapter.caption).filter(Boolean).join('　/　');
-  wrapText(ctx, caption || '把今天的记忆，烧成一段独一无二的故事。', 82, y, 900, 48, 3);
-  ctx.fillStyle = '#8d4b31';
-  ctx.font = '26px sans-serif';
-  ctx.fillText('南风开窑记', 82, 1480);
-  ctx.fillStyle = '#8a7a68';
-  ctx.font = '19px sans-serif';
-  ctx.fillText('扫描作品链接，打开这段记忆', 82, 1520);
-  const blob = await new Promise((resolve) => canvas.toBlob(resolve, 'image/png'));
-  if (!blob) {
-    toast('纪念卡未能生成，请尝试截图保存。');
+  const file = new File([state.posterBlob], imageFilename(), { type: 'image/jpeg' });
+  if (navigator.canShare && !navigator.canShare({ files: [file] })) {
+    toast('当前浏览器暂不支持直接分享图片，请保存长图后从相册发送。');
     return;
   }
-  if (state.posterUrl.startsWith('blob:')) URL.revokeObjectURL(state.posterUrl);
-  state.posterUrl = URL.createObjectURL(blob);
-  state.modal = { title: '纪念卡已做好', message: '长按图片保存到相册。' };
-  render();
-  toast('纪念卡已做好。');
+  try {
+    await navigator.share({
+      files: [file],
+      title: (state.story?.title || '南风开窑记') + ' · 南风古灶',
+      text: '我把今天在南风古灶的记忆，做成了一张旅行日记长图。'
+    });
+  } catch (error) {
+    if (error?.name !== 'AbortError') toast('系统分享暂不可用，请保存长图后从相册发送。');
+  }
 }
 
 function requestDelete() {
-  state.modal = { title: '删除这份开窑记？', message: '页面和已上传素材会一并删除，删除后无法恢复。' };
+  state.modal = { title: '删除这份本机旅行记？', message: '只会删除这部手机里保存的文字和素材，删除后无法恢复。' };
   render();
 }
 
 async function deleteStory() {
   const storyId = state.story?.storyId;
-  const token = storyId && localStorage.getItem(OWNER_PREFIX + storyId);
-  if (!storyId || !token || state.demo) {
-    toast('只有创建这份作品的浏览器可以删除它。');
+  if (!storyId || state.demo) {
+    toast('示例旅行记不需要删除。');
     state.modal = null;
     render();
     return;
   }
   try {
-    const response = await fetch('/api/stories/' + encodeURIComponent(storyId), { method: 'DELETE', headers: { 'X-Manage-Token': token } });
-    if (!response.ok) throw new Error('删除失败，请稍后再试。');
-    localStorage.removeItem(OWNER_PREFIX + storyId);
+    await window.LocalStoryStore.deleteStory(storyId);
     window.history.pushState({}, '', window.location.pathname);
     resetDraft();
     state.screen = 'intro';
     state.modal = null;
     render();
-    toast('这份作品和素材已删除。');
+    toast('本机作品和素材已删除。');
   } catch (error) {
     state.modal = null;
     render();
@@ -817,7 +768,7 @@ async function onAction(button) {
     render();
   } else if (action === 'remove-media') {
     const chapter = state.chapters.find((item) => item.id === button.dataset.id);
-    if (chapter?.media?.url?.startsWith('blob:')) URL.revokeObjectURL(chapter.media.url);
+    releaseMediaUrls(chapter?.media);
     if (chapter) {
       chapter.media = null;
       chapter.sampleDismissed = true;
@@ -826,7 +777,7 @@ async function onAction(button) {
   } else if (action === 'skip') {
     const chapter = state.chapters.find((item) => item.id === button.dataset.id);
     if (!chapter) return;
-    if (!chapter.skipped && chapter.media?.url?.startsWith('blob:')) URL.revokeObjectURL(chapter.media.url);
+    if (!chapter.skipped) releaseMediaUrls(chapter.media);
     if (!chapter.skipped) chapter.media = null;
     chapter.skipped = !chapter.skipped;
     render();
@@ -850,41 +801,22 @@ async function onAction(button) {
     state.reveal = true;
     render();
     window.scrollTo(0, 0);
-  } else if (action === 'share') {
-    await shareStory();
-  } else if (action === 'native-share') {
-    await nativeShareStory();
-  } else if (action === 'copy-share') {
-    let copied = false;
-    try {
-      if (!navigator.clipboard?.writeText) throw new Error('clipboard unavailable');
-      copied = await Promise.race([
-        navigator.clipboard.writeText(state.shareUrl).then(() => true),
-        new Promise((resolve) => window.setTimeout(() => resolve(false), 1200))
-      ]);
-    } catch { copied = false; }
-    if (copied) button.textContent = '已复制';
-    else {
-      const field = document.querySelector('.share-link-field');
-      field?.focus();
-      field?.select();
-      button.textContent = '请长按上方链接复制';
-    }
-  } else if (action === 'save-card') {
-    await saveCard();
+  } else if (action === 'generate-image') {
+    await generateTravelogueImage();
+  } else if (action === 'share-image') {
+    await shareTravelogueImage();
+  } else if (action === 'download-image') {
+    downloadTravelogueImage();
   } else if (action === 'edit') {
     await editCurrentStory();
   } else if (action === 'delete') {
     requestDelete();
   } else if (action === 'cancel-modal' || action === 'dismiss-modal') {
-    const restoreSharePosition = Boolean(state.shareUrl);
-    const shareReturnY = state.shareReturnY;
     state.modal = null;
     if (state.posterUrl.startsWith('blob:')) URL.revokeObjectURL(state.posterUrl);
     state.posterUrl = '';
-    state.shareUrl = '';
+    state.posterBlob = null;
     render();
-    if (restoreSharePosition) window.requestAnimationFrame(() => window.scrollTo(0, shareReturnY));
   } else if (action === 'confirm-modal') {
     await deleteStory();
   }
