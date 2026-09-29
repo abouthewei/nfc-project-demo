@@ -178,7 +178,6 @@ function renderResult() {
       ${portrait}
       <div class="result-poster-copy"><h1>${esc(persona.name)}</h1><p>${esc(persona.slogan)}</p></div>
       <div class="result-six-strip" aria-label="六维窑格特征">${dimensions.map((dimension) => `<div class="result-six-item" aria-label="${esc(dimension.name)}，${dimensionScore(dimension.id)}分"><img src="${asset(`yaoge/dimensions/${dimension.id}.svg`)}" alt=""><span>${esc(dimension.name)}</span></div>`).join('')}</div>
-      <button type="button" class="primary-button clay-cta result-generate" data-action="generate-card">${shareCardVisible ? '查看我的窑格卡' : '生成我的窑格卡'}${icon('arrow')}</button>
     </section>
     ${shareCardVisible ? `<section class="share-card-section" id="share-card-area"><div class="share-card-heading"><p class="section-kicker">带走今天这一窑</p><h2>你的窑格卡</h2><p>卡片在当前设备生成，不会上传。</p></div><div class="share-canvas-wrap"><canvas id="share-canvas" width="1080" height="1740" aria-label="${esc(persona.name)}南风古灶窑格卡"></canvas></div><div class="share-card-actions"><button class="primary-button clay-cta" data-action="download-card">下载窑格卡 ${icon('arrow')}</button><button class="secondary-button" data-action="share-card">${icon('share')} 分享给窑友</button></div><p class="notice-line" data-share-notice aria-live="polite">${esc(temporaryNotice)}</p></section>` : ''}
     <div class="result-content">
@@ -189,7 +188,7 @@ function renderResult() {
       <section class="result-section story-teaser"><div class="section-heading"><span>03</span><h2>你的行当原型从哪里来</h2></div><p class="body-copy">${esc(persona.culture || '你的窑格连接着南风古灶的柴烧文化。')}</p><p class="source-line">${esc(source)}</p></section>
       ${companion ? `<section class="companion-panel"><span class="companion-label">你的窑友</span><div class="companion-row">${personaMark(companion.mark)}<div><h3>${esc(companion.name)}</h3><p>${esc(persona.companionLine)}</p></div></div></section>` : ''}
       <p class="result-disclaimer result-disclaimer-bottom">窑格是文化娱乐互动体验，不是心理学诊断。</p>
-      <div class="result-actions"><button type="button" class="secondary-button" data-action="restart-test">重新测一次</button></div>
+      <div class="result-actions"><button type="button" class="primary-button clay-cta result-generate" data-action="generate-card">${shareCardVisible ? '查看我的窑格卡' : '生成我的窑格卡'}${icon('arrow')}</button><button type="button" class="secondary-button" data-action="restart-test">重新测一次</button></div>
       <p class="notice-line" data-share-notice aria-live="polite">${esc(temporaryNotice)}</p>${appFooter()}
     </div>
   </section>`;

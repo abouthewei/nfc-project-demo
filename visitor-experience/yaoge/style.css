@@ -585,7 +585,7 @@ button:focus-visible, a:focus-visible, textarea:focus-visible, select:focus-visi
 .result-six-item { display: grid; justify-items: center; gap: .5cqh; min-width: 0; color: #d4c5b1; text-align: center; }
 .result-six-item img { display: block; width: 10cqw; height: 10cqw; object-fit: contain; filter: drop-shadow(0 2px 7px rgba(0,0,0,.55)); }
 .result-six-item span { font: 2.55cqw/1.2 var(--serif-display); letter-spacing: .02em; white-space: nowrap; }
-.result-generate { position: absolute; z-index: 3; right: 9cqw; bottom: 5.1cqh; left: 9cqw; width: auto; min-height: 8.5cqh; }
+.result-actions .result-generate { min-height: 64px; }
 .result-content { max-width: 580px; margin: 0 auto; padding: 32px 25px 12px; }
 .result-content .result-intro { margin: 0 0 36px; padding: 0 0 25px; border-bottom-color: rgba(215,193,164,.24); }
 .result-content .section-heading { margin-bottom: 18px; }
