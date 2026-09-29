@@ -15,7 +15,7 @@ Independent static projects. Each project is self-contained and can be deployed 
 - `LeBron/` — LeBron James career archive
 - `Nanfeng-Kiln/` — Responsive Chinese / English continuous-scroll heritage guide to Foshan’s Nanfeng and Gao dragon kilns, with a reference-led history spread, six-stage Shiwan craft chapter and Bilibili footage, a four-stop illustrated visitor route, living customs, pottery experiences, and practical visitor information
 - `Nanfeng-Kiln-H5/` — Bilingual, responsive, ten-chapter visitor H5 with illustrated kiln storytelling and interactive exploration
-- `visitor-experience/` — Standalone Nanfeng Ancient Kiln visitor H5 with a phone-local photo travelogue builder that saves source material in browser storage and generates a shareable long JPG on-device, plus the independent “Yaoge” interactive quiz
+- `visitor-experience/` — Standalone Nanfeng Ancient Kiln visitor H5 with a phone-local photo travelogue builder that saves source material in browser storage and generates a shareable long JPG on-device
 
 ## Live demos
 
