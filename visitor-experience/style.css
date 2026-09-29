@@ -797,8 +797,6 @@ img, video { max-width: 100%; }
 .home-rule { display: block; width: 34px; height: 1px; margin: 10px auto 0; background: #a64b2d; }
 .home-start { position: absolute; z-index: 3; bottom: 11.3%; left: 16%; display: flex; width: 68%; min-height: 55px; align-items: center; justify-content: center; gap: 10px; border: 1px solid rgba(239,185,139,.82); border-radius: 999px; background: linear-gradient(135deg, #a14727, #843a22); color: #fff6e9; font-family: var(--brush); font-size: 19px; letter-spacing: .08em; box-shadow: 0 8px 20px rgba(67,36,20,.22); }
 .home-start .ui-icon { width: 18px; height: 18px; }
-.yaoge-entry-link { position: absolute; z-index: 4; bottom: 6.1%; left: 50%; display: flex; min-height: 32px; align-items: center; justify-content: center; gap: 6px; padding: 6px 14px; transform: translateX(-50%); border: 1px solid rgba(121,89,61,.3); border-radius: 999px; background: rgba(244,239,227,.92); color: #5e4635; font-family: var(--serif); font-size: 12px; letter-spacing: .06em; box-shadow: 0 3px 12px rgba(49,34,22,.12); text-shadow: none; white-space: nowrap; }
-.yaoge-entry-link .ui-icon { width: 13px; height: 13px; }
 .home-footer-copy { position: absolute; z-index: 2; right: 0; bottom: 2.2%; left: 0; margin: 0; color: #665548; font-family: var(--brush); font-size: 13px; letter-spacing: .08em; text-align: center; }
 
 .screen--editor.coded-editor {
@@ -1023,8 +1021,6 @@ img, video { max-width: 100%; }
 .journey-home-bottom { position: absolute; z-index: 2; right: 24px; bottom: max(52px, calc(env(safe-area-inset-bottom) + 43px)); left: 24px; }
 .journey-home-bottom .primary-button { min-height: 54px; border-radius: 999px; background: #8e4229; font-family: var(--serif); font-size: 16px; letter-spacing: .08em; }
 .journey-home-bottom .primary-button .ui-icon { width: 18px; height: 18px; }
-.journey-home .yaoge-entry-link { position: static; display: flex; width: auto; min-height: 0; justify-content: center; gap: 5px; margin-top: 12px; padding: 0; transform: none; border: 0; border-radius: 0; background: none; box-shadow: none; color: #725b46; font-family: var(--serif); font-size: 11px; text-shadow: none; }
-.journey-home .yaoge-entry-link .ui-icon { width: 13px; height: 13px; }
 .journey-home-caption { position: absolute; right: 0; bottom: max(18px, env(safe-area-inset-bottom)); left: 0; color: #96836f; font-family: var(--serif); font-size: 9px; letter-spacing: .17em; text-align: center; }
 
 .journey-editor,.journey-preview,.journey-story { min-height: 100svh; overflow: visible; }
