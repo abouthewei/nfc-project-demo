@@ -285,7 +285,8 @@ img, video { max-width: 100%; }
 .modal-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .modal-buttons .primary-button, .modal-buttons .secondary-button { min-height: 48px; font-size: 13px; }
 .poster-sheet { max-height: 88dvh; overflow-y: auto; }
-.poster-preview { display: block; width: auto; max-width: 100%; max-height: 43dvh; margin: 0 auto 16px; border: 1px solid var(--line); background: #e5d8c6; object-fit: contain; }
+.poster-preview-viewport { width: min(100%, 380px); height: min(52dvh, 500px); margin: 0 auto 16px; overflow-y: auto; overscroll-behavior: contain; border: 1px solid var(--line); background: #e5d8c6; }
+.poster-preview { display: block; width: 100%; height: auto; margin: 0; object-fit: contain; }
 .poster-sheet .modal-buttons a { text-decoration: none; }
 .share-link-field { display: block; width: 100%; min-height: 72px; margin: 0 0 15px; padding: 10px; border: 1px solid var(--line); border-radius: 4px; background: #fbf6ed; color: var(--ink); font: 12px/1.6 var(--sans); overflow-wrap: anywhere; resize: vertical; user-select: all; }
 .toast { position: fixed; z-index: 30; bottom: calc(94px + env(safe-area-inset-bottom)); left: 50%; max-width: calc(100% - 36px); padding: 11px 15px; border-radius: 4px; background: #2a211a; color: #fff7eb; font-size: 12px; text-align: center; box-shadow: 0 6px 18px rgba(0,0,0,.22); transform: translateX(-50%); animation: toast-in .2s ease both; }
