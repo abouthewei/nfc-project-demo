@@ -13,7 +13,7 @@
 
 需要 Python 3.10+，无第三方依赖：
 
-    cd /Users/hewei/Documents/Codex/Nanfeng-Kiln/visitor-experience
+    cd /path/to/nfc-project-demo/visitor-experience
     python3 server.py
 
 浏览器访问 <http://127.0.0.1:8787>。本地原型支持照片/短视频上传、保存作品、刷新后通过随机链接重新打开、分享链接复制、下载纪念卡和创建者删除。

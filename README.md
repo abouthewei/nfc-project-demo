@@ -14,6 +14,7 @@ Independent static projects. Each project is self-contained and can be deployed 
 - `G-Dragon/` — G-DRAGON Korean / Chinese / English artist archive
 - `LeBron/` — LeBron James career archive
 - `Nanfeng-Kiln/` — Responsive Chinese / English continuous-scroll heritage guide to Foshan’s Nanfeng and Gao dragon kilns, with a reference-led history spread, six-stage Shiwan craft chapter and Bilibili footage, a four-stop illustrated visitor route, living customs, pottery experiences, and practical visitor information
+- `visitor-experience/` — Standalone Nanfeng Ancient Kiln visitor H5 with a photo travelogue builder and the independent “Yaoge” interactive quiz; travelogue uploads and persistence require its Python API service
 
 ## Live demos
 
@@ -27,6 +28,7 @@ Independent static projects. Each project is self-contained and can be deployed 
 - [G-DRAGON](https://abouthewei.github.io/nfc-project-demo/G-Dragon/)
 - [LeBron James](https://abouthewei.github.io/nfc-project-demo/LeBron/)
 - [Nanfeng Kiln · Foshan](https://abouthewei.github.io/nfc-project-demo/Nanfeng-Kiln/)
+- [Nanfeng visitor experience](https://abouthewei.github.io/nfc-project-demo/visitor-experience/)
 
 ## Deployment
 
