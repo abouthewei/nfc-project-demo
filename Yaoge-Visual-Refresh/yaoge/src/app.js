@@ -1,6 +1,6 @@
-import { clans, dimensions, firePoints, hiddenPersonas, missions, personas, questions, routeModes, sourceNotes, stories } from './data.js?v=15';
+import { clans, dimensions, firePoints, hiddenPersonas, missions, personas, questions, routeModes, sourceNotes, stories } from './data.js?v=16';
 import { calculateDimensions, getFirePoint, getMission, getRouteTasks, matchPersona, personaDistances } from './engine.js';
-import { awardPointVisit, completeMission, finishTest, getJourney, saveJourneyPhoto, startNewJourney, track, updateJourney, answerQuestion } from './journey.js';
+import { awardPointVisit, completeMission, finishTest, getJourney, saveJourneyPhoto, startNewJourney, track, updateJourney, answerQuestion } from './journey.js?v=16';
 import { openTimeWeave } from './adapters.js';
 
 const root = document.querySelector('#app');
@@ -11,6 +11,7 @@ let questionTimer = 0;
 let devAnswers = {};
 let temporaryNotice = '';
 let shareCardVisible = false;
+let shareCardReturnScroll = 0;
 
 function currentRoute() {
   const raw = window.location.hash.slice(1) || '/';
@@ -180,13 +181,16 @@ function renderResult() {
         <div class="result-actions"><button type="button" class="primary-button clay-cta result-generate" data-action="generate-card">${shareCardVisible ? '查看我的窑格卡' : '生成我的窑格卡'}${icon('arrow')}</button><button type="button" class="secondary-button" data-action="restart-test">重新测一次</button></div>
         <p class="notice-line" data-share-notice aria-live="polite">${esc(temporaryNotice)}</p>
       </section>
-      ${shareCardVisible ? `<section class="share-card-section" id="share-card-area"><header class="share-card-top"><button type="button" class="share-back" data-action="close-share-card">${icon('back')} 返回结果</button><span>南风古灶 · 窑格卡</span></header><div class="share-card-heading"><p class="section-kicker">把今天这一窑带走</p><h2>你的窑格卡</h2><p>卡片在当前设备生成，不会上传。</p></div><div class="share-canvas-wrap"><canvas id="share-canvas" width="1080" height="1920" aria-label="${esc(persona.name)}南风古灶窑格卡"></canvas></div><div class="share-card-actions"><button class="primary-button clay-cta" data-action="download-card">保存窑格卡 ${icon('arrow')}</button><button class="secondary-button" data-action="share-card">${icon('share')} 分享给窑友</button></div><p class="notice-line" data-share-notice aria-live="polite">${esc(temporaryNotice)}</p></section>` : ''}
       <section class="result-intro paper-panel"><p class="section-kicker">${esc(source)}</p><p>${esc(persona.culture || '')}</p><p class="result-disclaimer">窑格是文化体验中的行当原型，不代表你的真实历史身份。</p></section>
       ${companion ? `<section class="companion-panel paper-panel"><span class="companion-label">你的窑友</span><div class="companion-row"><img class="companion-art" src="${personaArtPath(companion, clans[companion.clanId])}" alt="${esc(companion.name)}的陶艺风格造型" loading="lazy"><div><h3>${esc(companion.name)}</h3><p>${esc(persona.companionLine)}</p></div></div></section>` : ''}
       <p class="result-disclaimer result-disclaimer-bottom">窑格是文化娱乐互动体验，不是心理学诊断。</p>
       ${appFooter()}
     </div>
   </section>`;
+}
+
+function renderShareCardModal(persona) {
+  return `<div class="share-card-modal" data-share-backdrop><section class="share-card-dialog" id="share-card-area" role="dialog" aria-modal="true" aria-labelledby="share-card-title" tabindex="-1"><header class="share-card-top"><span>南风古灶 · 窑格卡</span><button type="button" class="share-card-close" data-action="close-share-card" aria-label="关闭窑格卡">${icon('close')}</button></header><div class="share-card-heading"><p class="section-kicker">把今天这一窑带走</p><h2 id="share-card-title">你的窑格卡</h2><p>卡片只在当前页面生成，不会上传。</p></div><div class="share-canvas-wrap"><canvas id="share-canvas" width="1080" height="2500" aria-label="${esc(persona.name)}窑格卡，包含职业画像、这很像你、六维窑格分数和窑格图"></canvas></div><div class="share-card-actions"><button class="primary-button clay-cta" data-action="download-card">保存窑格卡 ${icon('arrow')}</button><button class="secondary-button" data-action="share-card">${icon('share')} 分享给窑友</button></div><p class="notice-line" data-share-notice aria-live="polite">${esc(temporaryNotice)}</p></section></div>`;
 }
 
 function modeCard(mode, selected) {
@@ -239,7 +243,7 @@ function renderMissionDetail(missionId) {
     <div class="mission-hero"><p class="section-kicker">${esc(point.title)} · ${esc(typeNames[mission.type] || mission.type)}</p><h1>${esc(mission.title)}</h1><p>${esc(mission.instruction)}</p><div class="location-line">${icon('pin')}<span>${esc(point.locationHint)}</span></div></div>
     <section class="arrival-panel ${arrived ? 'is-arrived' : ''}"><div class="arrival-symbol">${arrived ? icon('check') : icon('pin')}</div><div><strong>${arrived ? '火点已记录' : '确认你已到达'}</strong><p>${arrived ? '这一处火点已经为你留下。' : '请在现场找到这个火点，再领取到访火种。'}</p></div><button type="button" class="secondary-button" data-action="arrive" data-point="${point.id}" data-story="${mission.storyId || ''}" ${arrived ? 'disabled' : ''}>${arrived ? '已到达' : '我已到达'}</button></section>
     ${mission.type === 'choice' ? `<div class="mission-interaction"><h2>${esc(mission.prompt)}</h2><div class="mission-choices">${mission.choices.map((item)=>`<button class="choice-chip ${choice === item ? 'is-selected' : ''}" data-choice="${esc(item)}" data-mission="${mission.id}">${esc(item)}</button>`).join('')}</div>${choice ? `<p class="soft-reveal">${esc(mission.reveal)}</p>` : ''}</div>` : ''}
-    ${mission.type === 'photo' ? `<div class="mission-interaction photo-interaction"><h2>${esc(mission.prompt)}</h2>${photo ? `<img class="journey-photo-preview" src="${photo.dataUrl}" alt="本次旅程照片"><button class="text-button" data-action="remove-photo" data-point="${point.id}">移除照片</button>` : ''}<label class="upload-photo-button">${icon('camera')}<span>${photo ? '换一张照片' : '拍照或从相册选择'}</span><input type="file" accept="image/*" capture="environment" data-photo-point="${point.id}" aria-label="拍摄或选择景区照片"></label><small>图片压缩后保存在当前设备，不会上传。</small></div>` : ''}
+    ${mission.type === 'photo' ? `<div class="mission-interaction photo-interaction"><h2>${esc(mission.prompt)}</h2>${photo ? `<img class="journey-photo-preview" src="${photo.dataUrl}" alt="本次旅程照片"><button class="text-button" data-action="remove-photo" data-point="${point.id}">移除照片</button>` : ''}<label class="upload-photo-button">${icon('camera')}<span>${photo ? '换一张照片' : '拍照或从相册选择'}</span><input type="file" accept="image/*" capture="environment" data-photo-point="${point.id}" aria-label="拍摄或选择景区照片"></label><small>图片只在当前页面保留，重新打开后会清除。</small></div>` : ''}
     ${mission.type === 'companion' ? `<div class="mission-interaction"><h2>${esc(mission.prompt)}</h2><textarea class="mission-note" maxlength="120" data-note="${mission.id}" placeholder="${esc(mission.prompt)}">${esc(notes)}</textarea></div>` : ''}
     ${!['choice','photo','companion'].includes(mission.type) ? `<div class="mission-interaction"><h2>${esc(mission.prompt)}</h2><textarea class="mission-note" maxlength="120" data-note="${mission.id}" placeholder="留一句此刻的观察（可选）">${esc(notes)}</textarea></div>` : ''}
     ${story && storyUnlocked ? `<aside class="story-reveal"><div class="story-reveal-head"><span>窑火故事</span><span>已解锁</span></div><h2>${esc(story.title)}</h2><p>${esc(story.body)}</p><small>${esc(story.source)}</small></aside>` : ''}
@@ -304,13 +308,36 @@ async function drawShareCard(canvas) {
   const persona = currentPersona();
   const clan = currentClan();
   if (!ctx || !persona) return;
-  const w = canvas.width, h = canvas.height;
   const [scene, portrait, clanMark, ...dimensionMarks] = await Promise.all([
     loadCardImage(asset('yaoge/paper/result-kiln-courtyard.webp')),
     loadCardImage(personaArtPath(persona, clan)),
     loadCardImage(asset(`yaoge/clans/${clan?.id || 'kiln'}.svg`)),
     ...dimensions.map((dimension) => loadCardImage(dimensionArtPath(dimension.id)))
   ]);
+
+  const w = canvas.width;
+  const personalityTop = 995;
+  const personalityX = 64;
+  const personalityWidth = w - 128;
+  const chipFont = '700 29px "Kaiti SC", "Songti SC", serif';
+  const chipRows = layoutCanvasPills(ctx, persona.keywords || [], personalityWidth - 88, chipFont);
+  const copyFont = '500 34px "Kaiti SC", "Songti SC", serif';
+  const copyWidth = personalityWidth - 88;
+  ctx.font = copyFont;
+  const descriptionLines = (persona.descriptions || []).map((paragraph) => wrapCanvasLines(ctx, paragraph, copyWidth));
+  const copyLineHeight = 50;
+  const paragraphGap = 22;
+  const copyTop = personalityTop + 137 + chipRows.length * 62 + 23;
+  const copyHeight = descriptionLines.reduce((total, lines) => total + lines.length * copyLineHeight, 0) + Math.max(0, descriptionLines.length - 1) * paragraphGap;
+  const personalityHeight = Math.max(420, copyTop - personalityTop + copyHeight + 42);
+  const sixTop = personalityTop + personalityHeight + 28;
+  const sixHeight = 440;
+  const chartTop = sixTop + sixHeight + 22;
+  const chartHeight = 430;
+  const footerY = chartTop + chartHeight + 68;
+  canvas.height = Math.max(2500, footerY + 70);
+  const h = canvas.height;
+
   ctx.clearRect(0, 0, w, h);
   ctx.fillStyle = '#fff4dc';
   ctx.fillRect(0, 0, w, h);
@@ -338,37 +365,92 @@ async function drawShareCard(canvas) {
   ctx.font = '500 42px "Kaiti SC", "Songti SC", serif';
   wrapCanvasText(ctx, persona.slogan, w / 2, 914, w - 300, 42, 2);
 
-  ctx.fillStyle = 'rgba(255,247,226,.95)';
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'middle';
+  ctx.fillStyle = 'rgba(255,247,226,.97)';
   ctx.strokeStyle = '#dfc69b';
   ctx.lineWidth = 5;
-  roundRect(ctx, 64, 995, w - 128, 430, 28); ctx.fill(); ctx.stroke();
+  roundRect(ctx, personalityX, personalityTop, personalityWidth, personalityHeight, 28); ctx.fill(); ctx.stroke();
+  ctx.fillStyle = '#bd5433';
+  ctx.font = '700 25px "Kaiti SC", "Songti SC", serif';
+  ctx.fillText('01', personalityX + 38, personalityTop + 59);
+  ctx.fillStyle = '#173f76';
+  ctx.font = '800 39px "Kaiti SC", "Songti SC", serif';
+  ctx.fillText('这很像你', personalityX + 90, personalityTop + 59);
+
+  chipRows.forEach((row, rowIndex) => {
+    const rowWidth = row.reduce((total, chip) => total + chip.width, 0) + Math.max(0, row.length - 1) * 14;
+    let chipX = w / 2 - rowWidth / 2;
+    const chipY = personalityTop + 103 + rowIndex * 62;
+    row.forEach((chip) => {
+      ctx.fillStyle = '#f8e3ae';
+      ctx.strokeStyle = '#d2a55d';
+      ctx.lineWidth = 3;
+      roundRect(ctx, chipX, chipY, chip.width, 48, 24); ctx.fill(); ctx.stroke();
+      ctx.fillStyle = '#684326';
+      ctx.font = chipFont;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(chip.text, chipX + chip.width / 2, chipY + 24);
+      chipX += chip.width + 14;
+    });
+  });
+
   ctx.fillStyle = '#42291b';
-  ctx.font = '700 35px "Kaiti SC", "Songti SC", serif';
-  ctx.fillText('我的六维窑格', w / 2, 1044);
-  const cellWidth = (w - 180) / 3;
-  dimensions.forEach((dimension, index) => {
-    const row = Math.floor(index / 3);
-    const column = index % 3;
-    const x = 90 + column * cellWidth;
-    const y = 1070 + row * 165;
-    const mark = dimensionMarks[index];
-    if (mark) drawImageContain(ctx, mark, x + (cellWidth - 110) / 2, y, 110, 110);
-    ctx.fillStyle = '#352219';
-    ctx.font = '700 30px "Kaiti SC", "Songti SC", serif';
-    ctx.fillText(dimension.name, x + cellWidth / 2, y + 128);
-    ctx.fillStyle = '#7a4929';
-    ctx.font = '700 36px "Kaiti SC", "Songti SC", serif';
-    ctx.fillText(`${dimensionScore(dimension.id)} 分`, x + cellWidth / 2, y + 156);
+  ctx.font = copyFont;
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'top';
+  let paragraphY = copyTop;
+  descriptionLines.forEach((lines, index) => {
+    lines.forEach((line) => {
+      ctx.fillText(line, personalityX + 44, paragraphY);
+      paragraphY += copyLineHeight;
+    });
+    if (index < descriptionLines.length - 1) paragraphY += paragraphGap;
   });
 
   ctx.fillStyle = 'rgba(255,247,226,.95)';
   ctx.strokeStyle = '#dfc69b';
   ctx.lineWidth = 5;
-  roundRect(ctx, 64, 1450, w - 128, 370, 28); ctx.fill(); ctx.stroke();
+  roundRect(ctx, 64, sixTop, w - 128, sixHeight, 28); ctx.fill(); ctx.stroke();
+  ctx.textBaseline = 'middle';
+  ctx.textAlign = 'left';
+  ctx.fillStyle = '#bd5433';
+  ctx.font = '700 25px "Kaiti SC", "Songti SC", serif';
+  ctx.fillText('02', 102, sixTop + 58);
   ctx.fillStyle = '#42291b';
-  ctx.font = '700 35px "Kaiti SC", "Songti SC", serif';
-  ctx.fillText('这一窑的性格', w / 2, 1498);
-  const centerX = w / 2, centerY = 1660, radius = 100;
+  ctx.fillStyle = '#173f76';
+  ctx.font = '800 39px "Kaiti SC", "Songti SC", serif';
+  ctx.fillText('你的六维窑格', 154, sixTop + 58);
+  const cellWidth = (w - 180) / 3;
+  dimensions.forEach((dimension, index) => {
+    const row = Math.floor(index / 3);
+    const column = index % 3;
+    const x = 90 + column * cellWidth;
+    const y = sixTop + 91 + row * 164;
+    const mark = dimensionMarks[index];
+    if (mark) drawImageContain(ctx, mark, x + (cellWidth - 94) / 2, y, 94, 94);
+    ctx.fillStyle = '#352219';
+    ctx.font = '700 29px "Kaiti SC", "Songti SC", serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(dimension.name, x + cellWidth / 2, y + 110);
+    ctx.fillStyle = '#7a4929';
+    ctx.font = '800 31px "Kaiti SC", "Songti SC", serif';
+    ctx.fillText(`${dimensionScore(dimension.id)} 分`, x + cellWidth / 2, y + 143);
+  });
+
+  ctx.fillStyle = 'rgba(255,247,226,.95)';
+  ctx.strokeStyle = '#dfc69b';
+  ctx.lineWidth = 5;
+  roundRect(ctx, 64, chartTop, w - 128, chartHeight, 28); ctx.fill(); ctx.stroke();
+  ctx.textAlign = 'left';
+  ctx.fillStyle = '#bd5433';
+  ctx.font = '700 25px "Kaiti SC", "Songti SC", serif';
+  ctx.fillText('03', 102, chartTop + 58);
+  ctx.fillStyle = '#173f76';
+  ctx.font = '800 39px "Kaiti SC", "Songti SC", serif';
+  ctx.fillText('这一窑的性格', 154, chartTop + 58);
+  const centerX = w / 2, centerY = chartTop + 255, radius = 118;
   const chartPoint = (index, scale) => {
     const angle = (-90 + index * 60) * Math.PI / 180;
     return [centerX + Math.cos(angle) * radius * scale, centerY + Math.sin(angle) * radius * scale];
@@ -394,18 +476,43 @@ async function drawShareCard(canvas) {
     ctx.beginPath(); ctx.arc(x, y, 10, 0, Math.PI * 2); ctx.fillStyle = '#078879'; ctx.fill();
     const [labelX, labelY] = chartPoint(index, 1.2);
     ctx.fillStyle = '#42291b'; ctx.font = '600 23px "Kaiti SC", "Songti SC", serif';
+    ctx.textAlign = 'center';
     ctx.fillText(dimension.name, labelX, labelY);
   });
   ctx.textAlign = 'center';
   ctx.fillStyle = '#163f6e';
-  ctx.font = '700 28px "Kaiti SC", "Songti SC", serif';
-  ctx.fillText('五百年窑火 · 找到你在古灶的一行', w / 2, 1872);
+  ctx.font = '700 29px "Kaiti SC", "Songti SC", serif';
+  ctx.fillText('五百年窑火 · 找到你在古灶的一行', w / 2, footerY);
 }
 
-function wrapCanvasText(ctx,text,x,y,maxWidth,lineHeight,maxLines) {
+function wrapCanvasLines(ctx, text, maxWidth) {
   const chars=Array.from(String(text));let line='',lines=[];
   for(const char of chars){const trial=line+char;if(ctx.measureText(trial).width>maxWidth&&line){lines.push(line);line=char;}else line=trial;}
-  if(line)lines.push(line);lines.slice(0,maxLines).forEach((item,index)=>ctx.fillText(item,x,y+index*lineHeight));
+  if(line)lines.push(line);
+  return lines;
+}
+function wrapCanvasText(ctx,text,x,y,maxWidth,lineHeight,maxLines) {
+  const lines=wrapCanvasLines(ctx,text,maxWidth).slice(0,maxLines);
+  lines.forEach((item,index)=>ctx.fillText(item,x,y+index*lineHeight));
+  return lines.length;
+}
+function layoutCanvasPills(ctx, words, maxWidth, font) {
+  ctx.font = font;
+  const rows = [];
+  let row = [];
+  let rowWidth = 0;
+  for (const word of words) {
+    const chip = { text: String(word), width: Math.ceil(ctx.measureText(String(word)).width + 48) };
+    if (row.length && rowWidth + 14 + chip.width > maxWidth) {
+      rows.push(row);
+      row = [];
+      rowWidth = 0;
+    }
+    row.push(chip);
+    rowWidth += (row.length > 1 ? 14 : 0) + chip.width;
+  }
+  if (row.length) rows.push(row);
+  return rows;
 }
 function roundRect(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
 
@@ -425,12 +532,12 @@ function renderMyKiln() {
   const clan = currentClan();
   const route = getRouteTasks(journey.personaId || journey.hiddenPersonaId, journey.routeMode || 'light');
   return `<section class="screen my-kiln-screen">${topBar(persona ? '/result' : '/')}
-    <div class="my-kiln-heading"><p class="section-kicker">南风窑格 · 本机旅程</p><h1>我的窑令</h1>${persona ? `<div class="my-persona">${personaMark(persona.mark || 'kiln')}<div><span>${esc(clan?.name || '隐藏窑格')}</span><strong>${esc(persona.name)}</strong></div></div>` : '<p>完成窑性测试，生成你的第一道窑令。</p>'}</div>
+    <div class="my-kiln-heading"><p class="section-kicker">南风窑格 · 本页旅程</p><h1>我的窑令</h1>${persona ? `<div class="my-persona">${personaMark(persona.mark || 'kiln')}<div><span>${esc(clan?.name || '隐藏窑格')}</span><strong>${esc(persona.name)}</strong></div></div>` : '<p>完成窑性测试，生成你的第一道窑令。</p>'}</div>
     <div class="route-summary"><div><strong>${journey.fireSeedCount}</strong><span>枚火种</span></div><div><strong>${journey.completedMissionIds.length}</strong><span>项任务</span></div><div><strong>${journey.visitedFirePointIds.length}</strong><span>处火点</span></div></div>
     <section class="result-section"><div class="section-heading"><span>行程</span><h2>走过的火点</h2></div><div class="journey-points">${firePoints.map((point,index)=>`<a href="#/map?point=${point.id}" class="journey-point ${journey.visitedFirePointIds.includes(point.id) ? 'is-visited' : ''}"><span>${journey.visitedFirePointIds.includes(point.id) ? icon('check') : String(index+1).padStart(2,'0')}</span><strong>${esc(point.title)}</strong><small>${journey.visitedFirePointIds.includes(point.id) ? '已到访' : '未到访'}</small></a>`).join('')}</div></section>
     <section class="result-section"><div class="section-heading"><span>任务</span><h2>完成记录</h2></div>${route.map((task,index)=>missionCard(task,index,journey)).join('')}</section>
-    <section class="result-section"><div class="section-heading"><span>记忆</span><h2>照片</h2></div>${journey.photos.length ? `<div class="journey-photos">${journey.photos.map((photo)=>`<figure><img src="${photo.dataUrl}" alt="南风古灶旅程照片"><figcaption>${esc(getFirePoint(photo.firePointId).title)}</figcaption></figure>`).join('')}</div>` : '<p class="muted-copy">完成拍照任务后，照片会保存在这里。</p>'}</section>
-    <div class="result-actions"><button class="primary-button" data-go="${persona ? route.length ? '/mission' : '/test' : '/test'}">${persona ? '继续游览' : '开始测试'} ${icon('arrow')}</button><button class="secondary-button" data-action="restart-test">重新测一次</button></div><button class="text-button reset-link" data-action="reset-journey">清空本机旅程</button>${appFooter()}
+    <section class="result-section"><div class="section-heading"><span>记忆</span><h2>照片</h2></div>${journey.photos.length ? `<div class="journey-photos">${journey.photos.map((photo)=>`<figure><img src="${photo.dataUrl}" alt="南风古灶旅程照片"><figcaption>${esc(getFirePoint(photo.firePointId).title)}</figcaption></figure>`).join('')}</div>` : '<p class="muted-copy">完成拍照任务后，照片会显示在当前页面中。</p>'}</section>
+    <div class="result-actions"><button class="primary-button" data-go="${persona ? route.length ? '/mission' : '/test' : '/test'}">${persona ? '继续游览' : '开始测试'} ${icon('arrow')}</button><button class="secondary-button" data-action="restart-test">重新测一次</button></div><button class="text-button reset-link" data-action="reset-journey">重新开始本页旅程</button>${appFooter()}
   </section>`;
 }
 
@@ -473,13 +580,17 @@ function renderDevMissions() {
 function render() {
   clearTimeout(questionTimer);
   const { path, params } = currentRoute();
+  if (path !== '/result') shareCardVisible = false;
   if (path.startsWith('/mission') || ['/map', '/kiln-opening', '/share', '/my-kiln'].includes(path)) { go(getJourney().dimensionScores ? '/result' : '/'); return; }
   const title = path === '/' ? '窑格 · 南风古灶' : `${path.split('/').pop() || '窑格'} · 窑格`;
   document.title = title;
   document.body.className = path === '/' ? 'body-landing' : 'body-app';
+  document.body.classList.toggle('share-card-open', path === '/result' && shareCardVisible);
+  if (path === '/result' && shareCardVisible) document.body.style.setProperty('--share-scroll-top', `${-shareCardReturnScroll}px`);
+  else document.body.style.removeProperty('--share-scroll-top');
   if (path === '/') root.innerHTML = renderLanding();
   else if (path === '/test') root.innerHTML = renderTest();
-  else if (path === '/result') { root.innerHTML = renderResult(); const canvas = document.querySelector('#share-canvas'); if (canvas) drawShareCard(canvas); }
+  else if (path === '/result') { root.innerHTML = renderResult(); if (shareCardVisible) root.insertAdjacentHTML('beforeend', renderShareCardModal(currentPersona())); const canvas = document.querySelector('#share-canvas'); if (canvas) drawShareCard(canvas); }
   else if (path === '/dev/personas') root.innerHTML = renderDevPersonas();
   else if (path === '/dev/questions') root.innerHTML = renderDevQuestions();
   else if (path === '/dev/missions') root.innerHTML = renderDevMissions();
@@ -504,6 +615,15 @@ function showNotice(message) {
   window.setTimeout(() => { temporaryNotice = ''; const currentNotice = root.querySelector('[data-share-notice]'); if (currentNotice) currentNotice.textContent = ''; }, 3200);
 }
 
+function closeShareCard() {
+  if (!shareCardVisible) return;
+  shareCardVisible = false;
+  temporaryNotice = '';
+  render();
+  window.scrollTo({ top: shareCardReturnScroll, behavior: 'instant' });
+  requestAnimationFrame(() => document.querySelector('.result-generate')?.focus({ preventScroll: true }));
+}
+
 function handleAction(action, element) {
   const { path, params } = currentRoute();
   if (action === 'start-test') {
@@ -515,22 +635,18 @@ function handleAction(action, element) {
   if (action === 'previous-question') go(`/test?q=${Math.max(0,Number(params.get('q')||0)-1)}`);
   if (action === 'skip-question') advanceQuestion(Number(params.get('q')||0));
   if (action === 'generate-card') {
+    shareCardReturnScroll = window.scrollY;
     shareCardVisible = true;
     track('share_card_generate');
     render();
-    requestAnimationFrame(() => document.querySelector('#share-card-area')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+    requestAnimationFrame(() => document.querySelector('.share-card-dialog [data-action="close-share-card"]')?.focus({ preventScroll: true }));
   }
-  if (action === 'close-share-card') {
-    shareCardVisible = false;
-    temporaryNotice = '';
-    render();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  if (action === 'close-share-card') closeShareCard();
   if (action === 'restart-test') {
     if (window.confirm('重新测一次会覆盖当前窑格结果，确定重新开始吗？')) { shareCardVisible = false; startNewJourney(); go('/test'); }
   }
   if (action === 'reset-journey') {
-    if (window.confirm('清空本机保存的窑格旅程？这不会影响“南风开窑记”中的作品。')) { startNewJourney(); go('/'); }
+    if (window.confirm('清空当前页面中的窑格旅程？这不会影响“南风开窑记”中的作品。')) { startNewJourney(); go('/'); }
   }
   if (action === 'arrive') {
     const point = element.dataset.point;
@@ -574,8 +690,7 @@ async function shareCard() {
       const file=new File([blob],'nanfeng-yaoge.png',{type:'image/png'});
       if(!navigator.canShare || navigator.canShare({files:[file]})){await navigator.share({title:'我的南风窑格',text:currentPersona()?.slogan||'重生到古灶，你会干哪行？',files:[file]});return;}
     }
-    await navigator.clipboard.writeText(window.location.href);
-    showNotice('分享链接已复制；也可以下载图片后发给窑友。');
+    showNotice('当前浏览器不支持直接分享图片，请先保存窑格卡再发给窑友。');
   } catch(error) {
     if(error?.name !== 'AbortError') showNotice('浏览器暂不支持直接分享，请下载窑格卡后分享。');
   }
@@ -595,6 +710,7 @@ function compressPhoto(file) {
 }
 
 root.addEventListener('click',(event)=>{
+  if (shareCardVisible && event.target.matches('.share-card-modal')) { closeShareCard(); return; }
   const target=event.target.closest('[data-action],[data-go],[data-mode],[data-answer],[data-choice]');
   if(!target)return;
   if(target.dataset.go){event.preventDefault();go(target.dataset.go);return;}
@@ -643,5 +759,18 @@ root.addEventListener('input',(event)=>{
 });
 
 window.addEventListener('hashchange',render);
-if(!sessionStorage.getItem('yaoge:entered')){track('yaoge_enter');sessionStorage.setItem('yaoge:entered','1');}
+document.addEventListener('keydown',(event)=>{
+  if (!shareCardVisible) return;
+  if (event.key === 'Escape') { event.preventDefault(); closeShareCard(); return; }
+  if (event.key !== 'Tab') return;
+  const dialog = document.querySelector('.share-card-dialog');
+  const focusable = [...dialog?.querySelectorAll('button:not(:disabled),a[href],[tabindex]:not([tabindex="-1"])') || []];
+  if (!focusable.length) { event.preventDefault(); dialog?.focus(); return; }
+  const first = focusable[0], last = focusable.at(-1);
+  if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+  else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+});
+// Keep each page open independent: direct result links and restored browser tabs start at home.
+if (window.location.hash !== '#/') window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}#/`);
+track('yaoge_enter');
 render();

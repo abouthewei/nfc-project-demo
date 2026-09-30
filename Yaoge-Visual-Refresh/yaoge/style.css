@@ -1129,3 +1129,84 @@ body::before {
   background-size: 220px auto;
   box-shadow: 0 3px 0 rgba(97,58,32,.13);
 }
+
+/* The share card is a self-contained sheet over the result, not another result-page section. */
+body.share-card-open {
+  position: fixed;
+  top: var(--share-scroll-top, 0px);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.share-card-modal {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom));
+  background: rgba(24, 29, 34, .76);
+  backdrop-filter: blur(5px);
+  overscroll-behavior: contain;
+  animation: share-modal-in .18s ease-out both;
+}
+.share-card-dialog {
+  width: min(100%, 520px);
+  max-height: min(92svh, 900px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 3px solid #d9bc8a;
+  border-radius: 26px;
+  background: #f8edda url('../assets/paper-grain.webp') repeat;
+  background-size: 340px auto;
+  box-shadow: 0 22px 70px rgba(13, 21, 27, .5), inset 0 0 0 5px rgba(255,255,255,.38);
+  scrollbar-width: thin;
+  scrollbar-color: #c2995e transparent;
+}
+.share-card-top {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 58px;
+  padding: 8px 18px 8px 23px;
+  border-bottom: 1px dashed rgba(155, 104, 58, .35);
+  background: rgba(248, 237, 218, .95);
+  color: #173f76;
+  font: 800 15px var(--serif-display);
+  letter-spacing: .07em;
+  backdrop-filter: blur(8px);
+}
+.share-card-close {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 2px solid #c8a878;
+  border-radius: 50%;
+  background: #fff8e8;
+  color: #6b452b;
+  cursor: pointer;
+}
+.share-card-close .icon { width: 19px; height: 19px; }
+.share-card-heading { padding: 17px 18px 8px; }
+.share-card-heading .section-kicker { color: #af512f; font: 700 13px var(--serif-display); }
+.share-card-heading h2 { color: #173f76; font: 800 25px/1.35 var(--serif-display); }
+.share-card-heading > p:last-child { color: #765a3c; font: 14px/1.6 var(--serif-display); }
+.share-canvas-wrap {
+  width: min(88%, 400px);
+  border: 2px solid #d5b77e;
+  border-radius: 7px;
+  background: #fff5df;
+  box-shadow: 0 8px 20px rgba(91, 63, 33, .2);
+}
+.share-canvas-wrap canvas { display: block; width: 100%; height: auto; }
+.share-card-actions { width: min(88%, 400px); gap: 9px; margin: 16px auto 0; }
+.share-card-actions .primary-button { min-height: 54px; color: #fff7e4; font-size: 17px; }
+.share-card-actions .secondary-button { min-height: 48px; border: 2px solid #c6a675; background: #fff6e2; color: #583b26; font: 700 15px var(--serif-display); }
+.share-card-dialog > .notice-line { min-height: 24px; margin: 8px 18px 14px; color: #754c30; font-size: 13px; text-align: center; }
+@keyframes share-modal-in { from { opacity: 0; } to { opacity: 1; } }

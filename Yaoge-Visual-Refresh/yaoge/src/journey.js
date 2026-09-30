@@ -1,4 +1,3 @@
-import { EVENT_KEY, STORAGE_KEY } from './data.js?v=15';
 import { calculateDimensions, matchPersona } from './engine.js';
 
 const now = () => Date.now();
@@ -13,24 +12,12 @@ export function emptyJourney() {
   };
 }
 
-export function readJourney() {
-  try {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
-    if (!saved || typeof saved !== 'object') return emptyJourney();
-    return { ...emptyJourney(), ...saved, answers: saved.answers || {}, completedMissionIds: saved.completedMissionIds || [], visitedFirePointIds: saved.visitedFirePointIds || [], unlockedStoryIds: saved.unlockedStoryIds || [], photos: saved.photos || [] };
-  } catch { return emptyJourney(); }
-}
-
-let journey = readJourney();
+// A journey belongs to this open H5 page only. Reloading or opening a new tab starts fresh.
+let journey = emptyJourney();
 const listeners = new Set();
 
 function commit(next) {
   journey = { ...next, updatedAt: now() };
-  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(journey)); } catch {
-    // A large photo can fill browser storage; remove the oldest local photo and preserve journey state.
-    journey.photos = journey.photos.slice(-1);
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(journey)); } catch { /* keep in-memory journey available for this tab */ }
-  }
   for (const listener of listeners) listener(journey);
   return journey;
 }
@@ -92,9 +79,5 @@ export function startNewJourney() {
 
 export function track(eventName, payload = {}) {
   const record = { event: eventName, payload, at: now(), sessionId: journey.sessionId };
-  try {
-    const previous = JSON.parse(localStorage.getItem(EVENT_KEY) || '[]');
-    localStorage.setItem(EVENT_KEY, JSON.stringify([...previous.slice(-149), record]));
-  } catch { /* analytics is intentionally local and best-effort */ }
   window.dispatchEvent(new CustomEvent('yaoge:track', { detail: record }));
 }

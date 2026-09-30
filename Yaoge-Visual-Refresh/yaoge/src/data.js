@@ -1,6 +1,3 @@
-export const STORAGE_KEY = 'nanfeng-yaoge-journey-v1';
-export const EVENT_KEY = 'nanfeng-yaoge-events-v1';
-
 export const dimensions = [
   { id: 'F', name: '火势', english: 'Fire', low: '稳火', high: '烈火', lowMeans: '按自己的节奏推进', highMeans: '想到就先行动' },
   { id: 'C', name: '泥性', english: 'Clay', low: '软口', high: '硬口', lowMeans: '愿意适应变化', highMeans: '守住自己的判断' },
@@ -101,11 +98,11 @@ export const missions = [
     },
   {id:'experience-wheel',firePointId:'wheel',type:'experience',title:'试着扶住一团泥',instruction:'如拉坯体验开放，可在工作人员指导下感受手与泥的配合；若暂未开放，观察现场陶艺演示也可以。',prompt:'我感受到的手感是……',completeLabel:'我体验或观察过拉坯',reveal:'拉坯体验属于现场项目，开放安排请以景区当天信息为准。',storyId:'wheel',personaAffinity:['wheelMaker','apprentice','fireStarter'],clanAffinity:['craft','fire'],
     },
-  {id:'photo-wheel',firePointId:'wheel',type:'photo',title:'拍下手上有陶的一刻',instruction:'拍一张陶艺过程或作品的照片，把今天的手感留在旅程里。请先确认现场允许拍摄。',prompt:'给这张照片留一句话',completeLabel:'保存这张旅程照片',reveal:'照片保存在当前设备的浏览器本地储存中，不会上传到服务器。',storyId:'wheel',personaAffinity:['wheelMaker','miniatureArtist','figurine'],clanAffinity:['craft','guild'],
+  {id:'photo-wheel',firePointId:'wheel',type:'photo',title:'拍下手上有陶的一刻',instruction:'拍一张陶艺过程或作品的照片，把今天的手感留在旅程里。请先确认现场允许拍摄。',prompt:'给这张照片留一句话',completeLabel:'保存这张旅程照片',reveal:'照片只在当前页面保留，重新打开后会清除。',storyId:'wheel',personaAffinity:['wheelMaker','miniatureArtist','figurine'],clanAffinity:['craft','guild'],
     },
   {id:'observe-micro',firePointId:'micro',type:'observe',title:'找到一个表情',instruction:'找一件你喜欢的石湾微塑，观察它如何用很小的形体表现喜怒哀乐。',prompt:'我最先看到的是……',completeLabel:'我找到一个表情',reveal:'石湾微塑强调形、神、意的统一，作品尺寸虽小，也会努力表现人物神态。',storyId:'micro',personaAffinity:['miniatureArtist','figurine','wheelMaker'],clanAffinity:['craft','guild'],
     },
-  {id:'photo-micro',firePointId:'micro',type:'photo',title:'留下一个微小细节',instruction:'拍下你最喜欢的一件微塑或它的一个细节。拍摄前请留意现场提示。',prompt:'这个细节让我停下来看，因为……',completeLabel:'保存这张旅程照片',reveal:'照片保存在当前设备的浏览器本地储存中，不会上传到服务器。',storyId:'micro',personaAffinity:['miniatureArtist','figurine'],clanAffinity:['craft','guild'],
+  {id:'photo-micro',firePointId:'micro',type:'photo',title:'留下一个微小细节',instruction:'拍下你最喜欢的一件微塑或它的一个细节。拍摄前请留意现场提示。',prompt:'这个细节让我停下来看，因为……',completeLabel:'保存这张旅程照片',reveal:'照片只在当前页面保留，重新打开后会清除。',storyId:'micro',personaAffinity:['miniatureArtist','figurine'],clanAffinity:['craft','guild'],
     }
 ];
 
