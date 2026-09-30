@@ -8,7 +8,7 @@ GitHub Pages 部署后访问：
 
 <https://abouthewei.github.io/nfc-project-demo/Yaoge-Visual-Refresh/>
 
-此地址直接加载 H5 首页“开始入窑”，浏览器地址保持在本入口；页面代码仍由 yaoge/ 子目录提供。
+此地址直接加载 H5 首页“开始测试”，浏览器地址保持在本入口；页面代码仍由 yaoge/ 子目录提供。
 
 ## 本地预览
 

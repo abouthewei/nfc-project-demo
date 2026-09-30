@@ -100,7 +100,7 @@ function renderLanding() {
     <header class="landing-top"><span class="landing-brand">南风古灶 <i>·</i> 古灶行当</span><a href="#/result" class="landing-my-result" ${hasSavedResult ? '' : 'hidden'}>我的行当</a></header>
     <div class="landing-copy"><h1><span>重生到古灶</span><strong>你会干哪行？</strong></h1><p class="landing-slogan">五百年窑火，照见你在古灶的哪一行。</p></div>
     <div class="landing-actions">
-      <button type="button" class="primary-button landing-cta clay-cta" ${hasSavedResult ? 'data-go="/result"' : 'data-action="start-test"'}>${hasSavedResult ? '查看我的结果' : canResume ? '继续入窑' : '开始入窑'}${icon('arrow')}</button>
+      <button type="button" class="primary-button landing-cta clay-cta" ${hasSavedResult ? 'data-go="/result"' : 'data-action="start-test"'}>${hasSavedResult ? '查看我的结果' : canResume ? '继续测试' : '开始测试'}${icon('arrow')}</button>
       <p class="landing-meta">约 2 分钟 <span>·</span> 找到你的古灶行当</p>
     </div>
     <div class="landing-bottom"><p>本测试为文化娱乐互动体验，并非心理学诊断。</p></div>
@@ -186,7 +186,6 @@ function renderResult() {
       <section class="result-intro paper-panel"><p class="section-kicker">${esc(source)}</p><p>${esc(persona.culture || '')}</p><p class="result-disclaimer">这些行当是文化体验中的职业原型，不代表你的真实历史身份。</p></section>
       ${companion ? `<section class="companion-panel paper-panel"><span class="companion-label">你的窑友</span><div class="companion-row"><img class="companion-art" src="${personaArtPath(companion, clans[companion.clanId])}" alt="${esc(companion.name)}的陶艺风格造型" loading="lazy"><div><h3>${esc(companion.name)}</h3><p>${esc(persona.companionLine)}</p></div></div></section>` : ''}
       <p class="result-disclaimer result-disclaimer-bottom">本体验仅供文化娱乐，不是心理学诊断。</p>
-      ${appFooter()}
     </div>
   </section>`;
 }
