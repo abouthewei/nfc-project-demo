@@ -52,7 +52,7 @@ export const personas = [
 export const hiddenPersonas = [
   { id:'dragonWomb', name:'投龙胎', clanId:'kiln', slogan:'你不是来测人格的。你是来走大运的。', culture:'高灶相关传统民俗记述中，年末烧完最后一窑并谢灶后，陶工进入温暖的窑肚，寓意来年走大运。', source:'景区讲解词（2023.9.15）', criteria:'火势 100、灶法至少 80、泥性不高于 40，并在 Q15 选择 B。', specialAnswer:{questionId:'q15',answerId:'b'}, mark:'dragon' },
   { id:'fireGod', name:'火神', clanId:'fire', slogan:'你的问题不是有没有火，是附近有没有灭火器。', culture:'龙窑柴烧会受到多种不可控因素影响，陶工会在烧窑前向火神祈愿。', source:'景区讲解词（2023.9.15）', criteria:'火势与泥性都达到 100。', mark:'flame' },
-  { id:'southwindKiln', name:'南风灶', clanId:'kiln', slogan:'你不是某一个窑格。你是一座窑。', culture:'有人擅长冲，有人擅长守，有人相信经验，有人相信改变。而你很少把任何一种方法当成唯一答案。该守的时候守，该改的时候改，该上火的时候上火，该收火的时候收火。', source:'产品创作人格', criteria:'六个维度都在 40 到 60 之间。', mark:'kiln' }
+  { id:'southwindKiln', name:'南风灶', clanId:'kiln', slogan:'你不属于某一种固定行当，你更像一座窑。', culture:'有人擅长冲，有人擅长守，有人相信经验，有人相信改变。而你很少把任何一种方法当成唯一答案。该守的时候守，该改的时候改，该上火的时候上火，该收火的时候收火。', source:'产品创作人格', criteria:'六个维度都在 40 到 60 之间。', mark:'kiln' }
 ];
 
 export const tieBreakers = [
@@ -122,7 +122,7 @@ export const routePreferences = {
 };
 
 export const routeModes = [
-  {id:'light',name:'轻游',minutes:20,count:3,summary:'三个火点，先认识你的南风窑格。'},
+  {id:'light',name:'轻游',minutes:20,count:3,summary:'三个火点，先认识南风古灶的各类行当。'},
   {id:'standard',name:'标准',minutes:40,count:5,summary:'五个火点，把柴烧与石湾生活串起来。'},
   {id:'deep',name:'深游',minutes:60,count:8,summary:'走过八个火点，慢慢把这一窑看完整。'}
 ];

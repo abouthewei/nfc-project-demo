@@ -1,4 +1,4 @@
-import { clans, dimensions, firePoints, hiddenPersonas, missions, personas, questions, routeModes, sourceNotes, stories } from './data.js?v=16';
+import { clans, dimensions, firePoints, hiddenPersonas, missions, personas, questions, routeModes, sourceNotes, stories } from './data.js?v=17';
 import { calculateDimensions, getFirePoint, getMission, getRouteTasks, matchPersona, personaDistances } from './engine.js';
 import { awardPointVisit, completeMission, finishTest, getJourney, saveJourneyPhoto, startNewJourney, track, updateJourney, answerQuestion } from './journey.js?v=16';
 import { openTimeWeave } from './adapters.js?v=16';
@@ -83,7 +83,7 @@ function personaMark(mark = 'eye', className = '') {
 }
 
 function topBar(back = '/', right = '') {
-  return `<header class="topbar"><button type="button" class="icon-button" data-go="${esc(back)}" aria-label="返回">${icon('back')}</button><a href="#/" class="wordmark" aria-label="窑格首页">南风古灶 <span>·</span> 窑格</a><span class="topbar-right">${right}</span></header>`;
+  return `<header class="topbar"><button type="button" class="icon-button" data-go="${esc(back)}" aria-label="返回">${icon('back')}</button><a href="#/" class="wordmark" aria-label="古灶行当首页">南风古灶 <span>·</span> 古灶行当</a><span class="topbar-right">${right}</span></header>`;
 }
 
 function appFooter() {
@@ -95,13 +95,13 @@ function renderLanding() {
   const answeredCount = Object.keys(journey.answers).length;
   const hasSavedResult = Boolean(journey.dimensionScores && (journey.personaId || journey.hiddenPersonaId));
   const canResume = answeredCount > 0 && answeredCount < questions.length;
-  return `<section class="screen landing-screen" aria-label="窑格入口">
+  return `<section class="screen landing-screen" aria-label="古灶行当测试入口">
     <img class="landing-scene" src="${asset('yaoge/paper/kiln-potter-scene.webp')}" alt="南风古灶龙窑、陶器与拉坯师傅" fetchpriority="high">
-    <header class="landing-top"><span class="landing-brand">南风古灶 <i>·</i> 窑格</span><a href="#/result" class="landing-my-result" ${hasSavedResult ? '' : 'hidden'}>我的窑格</a></header>
+    <header class="landing-top"><span class="landing-brand">南风古灶 <i>·</i> 古灶行当</span><a href="#/result" class="landing-my-result" ${hasSavedResult ? '' : 'hidden'}>我的行当</a></header>
     <div class="landing-copy"><h1><span>重生到古灶</span><strong>你会干哪行？</strong></h1><p class="landing-slogan">五百年窑火，照见你在古灶的哪一行。</p></div>
     <div class="landing-actions">
-      <button type="button" class="primary-button landing-cta clay-cta" ${hasSavedResult ? 'data-go="/result"' : 'data-action="start-test"'}>${hasSavedResult ? '查看我的窑格' : canResume ? '继续入窑' : '开始入窑'}${icon('arrow')}</button>
-      <p class="landing-meta">约 2 分钟 <span>·</span> 找到你的窑格</p>
+      <button type="button" class="primary-button landing-cta clay-cta" ${hasSavedResult ? 'data-go="/result"' : 'data-action="start-test"'}>${hasSavedResult ? '查看我的结果' : canResume ? '继续入窑' : '开始入窑'}${icon('arrow')}</button>
+      <p class="landing-meta">约 2 分钟 <span>·</span> 找到你的古灶行当</p>
     </div>
     <div class="landing-bottom"><p>本测试为文化娱乐互动体验，并非心理学诊断。</p></div>
   </section>`;
@@ -117,7 +117,7 @@ function renderTest() {
   return `<section class="screen quiz-screen">
     <div class="quiz-art-stage"><img class="quiz-scene" src="${asset('yaoge/paper/kiln-potter-scene.webp')}" alt="拉坯师傅与南风古灶窑场"><div class="quiz-art-wash"></div>${topBar('/')}</div>
     <div class="quiz-paper-panel">
-      <div class="quiz-progress"><div class="progress-caption"><span>窑性测试</span><span>${String(questionIndex + 1).padStart(2,'0')}<i>/</i>${String(questions.length).padStart(2,'0')}</span></div><div class="progress-track"><span style="width:${Math.max(5, percent)}%"></span></div><p>答案只影响你自己的窑格，不显示对错。</p></div>
+      <div class="quiz-progress"><div class="progress-caption"><span>古灶行当测试</span><span>${String(questionIndex + 1).padStart(2,'0')}<i>/</i>${String(questions.length).padStart(2,'0')}</span></div><div class="progress-track"><span style="width:${Math.max(5, percent)}%"></span></div><p>答案只影响你本次的结果，不显示对错。</p></div>
       <div class="question-area" data-question-index="${questionIndex}"><div class="question-number">Q${String(questionIndex + 1).padStart(2,'0')}</div><h1>${esc(question.title)}</h1>
         <div class="answer-list" role="radiogroup" aria-label="选择一个答案">${question.options.map((option, index) => `<button type="button" class="answer-option ${selected === option.id ? 'is-selected' : ''}" role="radio" aria-checked="${selected === option.id}" data-answer="${option.id}" data-question="${question.id}" data-option-index="${index}"><span class="answer-letter">${String.fromCharCode(65 + index)}</span><span>${esc(option.text)}</span><span class="answer-check">${icon('check')}</span></button>`).join('')}</div>
       </div>
@@ -137,7 +137,7 @@ function radarMarkup(scores) {
     const angle = (-90 + index * 60) * Math.PI / 180;
     return `${cx + Math.cos(angle) * radius * scale},${cy + Math.sin(angle) * radius * scale}`;
   }).join(' ');
-  return `<svg class="radar" viewBox="0 0 220 220" role="img" aria-label="六维窑格雷达图">
+  return `<svg class="radar" viewBox="0 0 220 220" role="img" aria-label="六维做事倾向雷达图">
     <polygon class="radar-grid" points="${polygon(1)}"/><polygon class="radar-grid" points="${polygon(.66)}"/><polygon class="radar-grid" points="${polygon(.33)}"/>
     ${dimensions.map((_, index) => { const angle = (-90 + index * 60) * Math.PI / 180; return `<line class="radar-axis" x1="${cx}" y1="${cy}" x2="${cx + Math.cos(angle)*radius}" y2="${cy + Math.sin(angle)*radius}"/>`; }).join('')}
     <polygon class="radar-shape" points="${points.map(([x,y])=>`${x},${y}`).join(' ')}"/>${points.map(([x,y])=>`<circle class="radar-dot" cx="${x}" cy="${y}" r="3"/>`).join('')}
@@ -156,7 +156,7 @@ function dimensionsList(scores) {
 function renderResult() {
   const journey = getJourney();
   const persona = currentPersona();
-  if (!journey.dimensionScores || !persona) return `<section class="screen"><div class="empty-state">先完成窑性测试，再来看你的窑格。<button class="primary-button" data-go="/test">开始测试</button></div></section>`;
+  if (!journey.dimensionScores || !persona) return `<section class="screen"><div class="empty-state">先完成古灶行当测试，再来看结果。<button class="primary-button" data-go="/test">开始测试</button></div></section>`;
   const clan = currentClan();
   const isHidden = Boolean(journey.hiddenPersonaId);
   const companion = !isHidden ? personas.find((item) => item.id === persona.companionId) : null;
@@ -167,32 +167,32 @@ function renderResult() {
   }[persona.historicalType] || '南风古灶文化原型');
   const portrait = `<img class="result-art ${isHidden ? 'result-art-mark' : ''}" src="${personaArtPath(persona, clan)}" alt="${esc(persona.name)}的陶艺风格造型" fetchpriority="high">`;
   return `<section class="screen result-screen">
-    <section class="result-poster" aria-label="你的窑格结果">
+    <section class="result-poster" aria-label="你的古灶行当结果">
       <img class="result-scene" src="${asset('yaoge/paper/result-kiln-courtyard.webp')}" alt="南风古灶的龙窑、陶器与榕树庭院">
-      <header class="result-poster-top"><button type="button" class="poster-back" data-go="/" aria-label="返回首页">${icon('back')}</button><span>南风古灶 <i>·</i> 窑格</span><span class="poster-brand">我的结果</span></header>
-      <div class="result-badge"><img src="${asset(`yaoge/clans/${clan?.id || 'kiln'}.svg`)}" alt=""><span>${esc(clan?.name || '窑格')} · 职业原型</span></div>
+      <header class="result-poster-top"><button type="button" class="poster-back" data-go="/" aria-label="返回首页">${icon('back')}</button><span>南风古灶 <i>·</i> 古灶行当</span><span class="poster-brand">我的结果</span></header>
+      <div class="result-badge"><img src="${asset(`yaoge/clans/${clan?.id || 'kiln'}.svg`)}" alt=""><span>${esc(clan?.name || '古灶行当')} · 职业原型</span></div>
       ${portrait}
-      <div class="result-poster-copy"><span>你的窑格职业原型</span><h1>${esc(persona.name)}</h1><p>${esc(persona.slogan)}</p></div>
+      <div class="result-poster-copy"><span>你的古灶行当原型</span><h1>${esc(persona.name)}</h1><p>${esc(persona.slogan)}</p></div>
     </section>
     <div class="result-content">
       <section class="result-section result-likeness"><div class="section-heading"><span>01</span><h2>这很像你</h2></div><ul class="keyword-list">${(persona.keywords || []).map((word) => `<li>${esc(word)}</li>`).join('')}</ul>${(persona.descriptions || []).map((paragraph) => `<p class="body-copy">${esc(paragraph)}</p>`).join('')}</section>
-      <section class="result-overview" aria-label="窑格结果摘要">
-        ${isHidden ? `<aside class="hidden-note">隐藏窑格 <span>${esc(persona.criteria || '')}</span></aside>` : ''}
-        <section class="result-section result-six-panel"><div class="section-heading"><span>02</span><h2>你的六维窑格</h2></div><div class="result-six-grid" aria-label="六维窑格特征">${dimensions.map((dimension) => `<button type="button" class="result-six-item" data-action="show-dimension" data-dimension="${dimension.id}" aria-label="查看${esc(dimension.name)}属性说明，${dimensionScore(dimension.id)}分" aria-haspopup="dialog"><img src="${dimensionArtPath(dimension.id)}" alt="" aria-hidden="true"><span>${esc(dimension.name)}</span><strong class="dimension-score">${dimensionScore(dimension.id)}<small>分</small></strong></button>`).join('')}</div></section>
-        <section class="result-section result-dimensions"><div class="section-heading"><span>03</span><h2>你的窑格图</h2></div><div class="radar-layout">${radarMarkup(journey.dimensionScores)}<p>这是一张选择倾向图。每一维都会随情境改变，没有好坏之分。</p></div></section>
-        <div class="result-actions"><button type="button" class="primary-button clay-cta result-generate" data-action="generate-card">${shareCardVisible ? '查看我的窑格卡' : '生成我的窑格卡'}${icon('arrow')}</button><button type="button" class="secondary-button" data-action="restart-test">重新测一次</button></div>
+      <section class="result-overview" aria-label="古灶行当结果摘要">
+        ${isHidden ? `<aside class="hidden-note">隐藏行当原型 <span>${esc(persona.criteria || '')}</span></aside>` : ''}
+        <section class="result-section result-six-panel"><div class="section-heading"><span>02</span><h2>你的做事倾向</h2></div><div class="result-six-grid" aria-label="六维做事倾向">${dimensions.map((dimension) => `<button type="button" class="result-six-item" data-action="show-dimension" data-dimension="${dimension.id}" aria-label="查看${esc(dimension.name)}属性说明，${dimensionScore(dimension.id)}分" aria-haspopup="dialog"><img src="${dimensionArtPath(dimension.id)}" alt="" aria-hidden="true"><span>${esc(dimension.name)}</span><strong class="dimension-score">${dimensionScore(dimension.id)}<small>分</small></strong></button>`).join('')}</div></section>
+        <section class="result-section result-dimensions"><div class="section-heading"><span>03</span><h2>你的做事倾向图</h2></div><div class="radar-layout">${radarMarkup(journey.dimensionScores)}<p>这是一张选择倾向图。每一维都会随情境改变，没有好坏之分。</p></div></section>
+        <div class="result-actions"><button type="button" class="primary-button clay-cta result-generate" data-action="generate-card">${shareCardVisible ? '查看我的古灶行当卡' : '生成我的古灶行当卡'}${icon('arrow')}</button><button type="button" class="secondary-button" data-action="restart-test">重新测一次</button></div>
         <p class="notice-line" data-share-notice aria-live="polite">${esc(temporaryNotice)}</p>
       </section>
-      <section class="result-intro paper-panel"><p class="section-kicker">${esc(source)}</p><p>${esc(persona.culture || '')}</p><p class="result-disclaimer">窑格是文化体验中的行当原型，不代表你的真实历史身份。</p></section>
+      <section class="result-intro paper-panel"><p class="section-kicker">${esc(source)}</p><p>${esc(persona.culture || '')}</p><p class="result-disclaimer">这些行当是文化体验中的职业原型，不代表你的真实历史身份。</p></section>
       ${companion ? `<section class="companion-panel paper-panel"><span class="companion-label">你的窑友</span><div class="companion-row"><img class="companion-art" src="${personaArtPath(companion, clans[companion.clanId])}" alt="${esc(companion.name)}的陶艺风格造型" loading="lazy"><div><h3>${esc(companion.name)}</h3><p>${esc(persona.companionLine)}</p></div></div></section>` : ''}
-      <p class="result-disclaimer result-disclaimer-bottom">窑格是文化娱乐互动体验，不是心理学诊断。</p>
+      <p class="result-disclaimer result-disclaimer-bottom">本体验仅供文化娱乐，不是心理学诊断。</p>
       ${appFooter()}
     </div>
   </section>`;
 }
 
 function renderShareCardModal(persona) {
-  return `<div class="share-card-modal" data-share-backdrop><section class="share-card-dialog" id="share-card-area" role="dialog" aria-modal="true" aria-labelledby="share-card-title" tabindex="-1"><header class="share-card-top"><span>南风古灶 · 窑格卡</span><button type="button" class="share-card-close" data-action="close-share-card" aria-label="关闭窑格卡">${icon('close')}</button></header><div class="share-card-heading"><p class="section-kicker">把今天这一窑带走</p><h2 id="share-card-title">你的窑格卡</h2><p>卡片只在当前页面生成，不会上传。</p></div><div class="share-canvas-wrap"><canvas id="share-canvas" width="1080" height="2500" aria-label="${esc(persona.name)}窑格卡，包含职业画像、这很像你、六维窑格分数和窑格图"></canvas></div><div class="share-card-actions"><button class="primary-button clay-cta" data-action="download-card">保存窑格卡 ${icon('arrow')}</button><button class="secondary-button" data-action="share-card">${icon('share')} 分享给窑友</button></div><p class="notice-line" data-share-notice aria-live="polite">${esc(temporaryNotice)}</p></section></div>`;
+  return `<div class="share-card-modal" data-share-backdrop><section class="share-card-dialog" id="share-card-area" role="dialog" aria-modal="true" aria-labelledby="share-card-title" tabindex="-1"><header class="share-card-top"><span>南风古灶 · 行当卡</span><button type="button" class="share-card-close" data-action="close-share-card" aria-label="关闭行当卡">${icon('close')}</button></header><div class="share-card-heading"><p class="section-kicker">把今天这一窑带走</p><h2 id="share-card-title">我的古灶行当卡</h2><p>卡片只在当前页面生成，不会上传。</p></div><div class="share-canvas-wrap"><canvas id="share-canvas" width="1080" height="2500" aria-label="${esc(persona.name)}古灶行当卡，包含职业画像、这很像你、六维做事倾向分数和做事倾向图"></canvas></div><div class="share-card-actions"><button class="primary-button clay-cta" data-action="download-card">保存行当卡 ${icon('arrow')}</button><button class="secondary-button" data-action="share-card">${icon('share')} 分享给窑友</button></div><p class="notice-line" data-share-notice aria-live="polite">${esc(temporaryNotice)}</p></section></div>`;
 }
 
 function renderDimensionModal(dimension) {
@@ -204,7 +204,7 @@ function renderDimensionModal(dimension) {
     : score < 45
       ? dimension.lowMeans
       : `你在“${dimension.low}”与“${dimension.high}”之间留有弹性，可以按具体情境选择。`;
-  return `<div class="share-card-modal dimension-detail-modal" data-dimension-backdrop><section class="dimension-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="dimension-detail-title" aria-describedby="dimension-detail-summary" tabindex="-1"><header class="share-card-top"><span>窑格属性 · ${esc(dimension.english)}</span><button type="button" class="share-card-close" data-action="close-dimension-detail" aria-label="关闭属性说明">${icon('close')}</button></header><div class="dimension-detail-content"><div class="dimension-detail-art" data-dimension="${dimension.id}"><img src="${dimensionArtPath(dimension.id)}" alt="" aria-hidden="true"></div><p class="section-kicker">你的六维窑格</p><h2 id="dimension-detail-title">${esc(dimension.name)}</h2><div class="dimension-detail-score"><strong>${score}</strong><span>分</span><i>${esc(tendency)}</i></div><p id="dimension-detail-summary" class="dimension-detail-summary">${esc(interpretation)}</p><div class="dimension-detail-range"><div><span>${esc(dimension.low)}</span><p>${esc(dimension.lowMeans)}</p></div><div><span>${esc(dimension.high)}</span><p>${esc(dimension.highMeans)}</p></div></div><p class="dimension-detail-note">分数呈现本次选择倾向，不是固定标签。</p></div></section></div>`;
+  return `<div class="share-card-modal" data-dimension-backdrop><section class="dimension-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="dimension-detail-title" aria-describedby="dimension-detail-summary" tabindex="-1"><header class="share-card-top"><span>做事倾向 · ${esc(dimension.english)}</span><button type="button" class="share-card-close" data-action="close-dimension-detail" aria-label="关闭属性说明">${icon('close')}</button></header><div class="dimension-detail-content"><div class="dimension-detail-art" data-dimension="${dimension.id}"><img src="${dimensionArtPath(dimension.id)}" alt="" aria-hidden="true"></div><p class="section-kicker">六维做事倾向</p><h2 id="dimension-detail-title">${esc(dimension.name)}</h2><div class="dimension-detail-score"><strong>${score}</strong><span>分</span><i>${esc(tendency)}</i></div><p id="dimension-detail-summary" class="dimension-detail-summary">${esc(interpretation)}</p><div class="dimension-detail-range"><div><span>${esc(dimension.low)}</span><p>${esc(dimension.lowMeans)}</p></div><div><span>${esc(dimension.high)}</span><p>${esc(dimension.highMeans)}</p></div></div><p class="dimension-detail-note">分数呈现本次选择倾向，不是固定标签。</p></div></section></div>`;
 }
 
 function modeCard(mode, selected) {
@@ -220,7 +220,7 @@ function missionCard(mission, index, journey) {
 
 function renderMissionHome() {
   const journey = getJourney();
-  if (!journey.personaId && !journey.hiddenPersonaId) return `<section class="screen"><div class="empty-state">先取得窑格人格，才能领取属于你的窑令。<button class="primary-button" data-go="/test">去做测试</button></div></section>`;
+  if (!journey.personaId && !journey.hiddenPersonaId) return `<section class="screen"><div class="empty-state">先完成古灶行当测试，才能开启专属游程。<button class="primary-button" data-go="/test">去做测试</button></div></section>`;
   const route = getRouteTasks(journey.personaId || journey.hiddenPersonaId, journey.routeMode || 'light');
   const mode = routeModes.find((item) => item.id === journey.routeMode) || routeModes[0];
   const persona = currentPersona();
@@ -230,7 +230,7 @@ function renderMissionHome() {
   const nextTaskVisited = nextTask && journey.visitedFirePointIds.includes(nextTask.firePointId);
   const nextActionLabel = nextTaskVisited ? '继续当前任务' : progress > 0 ? '去下一站' : '去第一站';
   return `<section class="screen journey-screen">${topBar('/result',seedPill())}
-    <div class="journey-heading"><p class="section-kicker">专属轻游 · ${esc(persona.name)}</p><h1>领取你的<br>南风窑令</h1><p>带着你自己的窑性，去找真实的窑火与陶。</p></div>
+    <div class="journey-heading"><p class="section-kicker">专属轻游 · ${esc(persona.name)}</p><h1>领取你的<br>南风窑令</h1><p>带着你的行当气质，去找真实的窑火与陶。</p></div>
     <section class="mode-section"><div class="section-heading"><span>路程</span><h2>选一种逛法</h2></div><div class="mode-list">${routeModes.map((modeItem)=>modeCard(modeItem,journey.routeMode||'light')).join('')}</div></section>
     <div class="route-summary"><div><strong>${progress} / ${route.length}</strong><span>项任务完成</span></div><div><strong>${journey.visitedFirePointIds.length} / 8</strong><span>个火点到访</span></div><div><strong>${journey.fireSeedCount}</strong><span>枚火种</span></div></div>
     <div class="journey-cta">${canOpen ? `<button class="primary-button" data-go="/kiln-opening">火种齐了，开灶 ${icon('arrow')}</button>` : nextTask ? `<button class="primary-button" data-go="/mission/${encodeURIComponent(nextTask.id)}">${nextActionLabel} ${icon('arrow')}</button><p>下一站：${esc(nextTask.title)}。到达火点 +1 火种，完成任务再 +1；还差 ${Math.max(0,7-journey.fireSeedCount)} 枚即可开灶。</p>` : `<button class="primary-button" data-go="/kiln-opening">查看开灶结果 ${icon('arrow')}</button>`}</div>
@@ -285,11 +285,11 @@ function renderKilnOpening() {
   const clan = currentClan();
   if (!persona || journey.fireSeedCount < 7 || journey.completedMissionIds.length < 3) return `<section class="screen opening-locked"><div class="opening-dark"><span class="kiln-glow"></span><p class="section-kicker">窑门还没有打开</p><h1>火种还差一点</h1><p>完成轻游的 3 项任务，并收集到 7 枚火种，再来开灶。</p><button class="primary-button" data-go="/mission">回去收集火种 ${icon('arrow')}</button></div></section>`;
   const completeTasks = journey.completedMissionIds.map((id)=>getMission(id)).filter(Boolean);
-  return `<section class="screen opening-screen"><div class="opening-dark"><span class="kiln-glow"></span><div class="opening-copy"><p>你的这一窑，</p><h1>烧好了。</h1><span class="opening-rule"></span><p class="opening-subline">${esc(clan?.name || '南风窑格')} · ${esc(persona.name)}</p></div><div class="kiln-door" aria-hidden="true"><div></div><div></div></div></div>
-    <div class="memory-card-section"><div class="memory-id">南风窑格 <span>NO. ${getJourney().sessionId.slice(-6).toUpperCase()}</span></div><div class="memory-heading">${personaMark(persona.mark || 'kiln')}<div><p>${esc(clan?.name || '南风窑格')}</p><h2>${esc(persona.name)}</h2></div></div><p class="memory-slogan">${esc(persona.slogan)}</p>
+  return `<section class="screen opening-screen"><div class="opening-dark"><span class="kiln-glow"></span><div class="opening-copy"><p>你的这一窑，</p><h1>烧好了。</h1><span class="opening-rule"></span><p class="opening-subline">${esc(clan?.name || '古灶行当')} · ${esc(persona.name)}</p></div><div class="kiln-door" aria-hidden="true"><div></div><div></div></div></div>
+    <div class="memory-card-section"><div class="memory-id">古灶行当 <span>NO. ${getJourney().sessionId.slice(-6).toUpperCase()}</span></div><div class="memory-heading">${personaMark(persona.mark || 'kiln')}<div><p>${esc(clan?.name || '古灶行当')}</p><h2>${esc(persona.name)}</h2></div></div><p class="memory-slogan">${esc(persona.slogan)}</p>
       <div class="memory-stats">${dimensions.slice(0,3).map((dimension)=>`<div><strong>${dimensionScore(dimension.id)}%</strong><span>${dimension.name}</span></div>`).join('')}</div>
       <div class="memory-summary"><span>今日获得</span><p>✦ 火种 × ${journey.fireSeedCount}</p><p>🏺 到访火点 × ${journey.visitedFirePointIds.length}</p><p>📖 解锁故事 × ${journey.unlockedStoryIds.length}</p><p>📍 完成任务 × ${completeTasks.length}</p><p>📷 南风记忆 × ${journey.photos.length}</p></div>
-      <p class="memory-closing">这一窑已经属于你。</p><button class="primary-button" data-go="/share">生成我的窑格卡 ${icon('arrow')}</button><button class="secondary-button timeweave-button" data-action="timeweave">把这一窑带走 · 制作我的窑格 TimeTag</button><p class="timeweave-note">${esc(temporaryNotice || 'TimeWeave 接口当前为演示预留。')}</p><div class="memory-actions"><button class="text-button" data-go="/my-kiln">查看我的旅程</button><button class="text-button" data-go="/mission">继续逛</button></div>${appFooter()}</div>
+      <p class="memory-closing">这一窑已经属于你。</p><button class="primary-button" data-go="/share">生成我的古灶行当卡 ${icon('arrow')}</button><button class="secondary-button timeweave-button" data-action="timeweave">把这一窑带走 · 制作我的 TimeTag</button><p class="timeweave-note">${esc(temporaryNotice || 'TimeWeave 接口当前为演示预留。')}</p><div class="memory-actions"><button class="text-button" data-go="/my-kiln">查看我的旅程</button><button class="text-button" data-go="/mission">继续逛</button></div>${appFooter()}</div>
   </section>`;
 }
 
@@ -367,11 +367,11 @@ async function drawShareCard(canvas) {
   ctx.textBaseline = 'middle';
   ctx.fillStyle = '#273e70';
   ctx.font = cardFont(700, 42);
-  ctx.fillText('南风古灶  ·  窑格', w / 2, 108);
+  ctx.fillText('南风古灶  ·  古灶行当', w / 2, 108);
   if (clanMark) drawImageContain(ctx, clanMark, w / 2 - 50, 192, 100, 100);
   ctx.fillStyle = '#9a482d';
   ctx.font = cardFont(600, 30);
-  ctx.fillText(`${clan?.name || '窑格'}  ·  职业原型`, w / 2, 310);
+  ctx.fillText(`${clan?.name || '古灶行当'}  ·  职业原型`, w / 2, 310);
   if (portrait) drawImageContain(ctx, portrait, 150, 290, w - 300, 520);
   ctx.fillStyle = 'rgba(255,247,226,.94)';
   roundRect(ctx, 74, 790, w - 148, 178, 22); ctx.fill();
@@ -438,7 +438,7 @@ async function drawShareCard(canvas) {
   ctx.fillStyle = '#42291b';
   ctx.fillStyle = '#173f76';
   ctx.font = cardFont(800, 39);
-  ctx.fillText('你的六维窑格', 154, sixTop + 58);
+  ctx.fillText('你的做事倾向', 154, sixTop + 58);
   const cellWidth = (w - 180) / 3;
   dimensions.forEach((dimension, index) => {
     const row = Math.floor(index / 3);
@@ -535,11 +535,11 @@ function roundRect(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+
 
 function renderShare() {
   const journey = getJourney();
-  if (!currentPersona()) return `<section class="screen"><div class="empty-state">完成测试与开灶后，就能生成窑格卡。<button class="primary-button" data-go="/test">开始测试</button></div></section>`;
+  if (!currentPersona()) return `<section class="screen"><div class="empty-state">完成古灶行当测试后，就能生成分享卡。<button class="primary-button" data-go="/test">开始测试</button></div></section>`;
   return `<section class="screen share-screen">${topBar('/result')}
-    <div class="share-heading"><p class="section-kicker">带走今天这一窑</p><h1>生成窑格卡</h1><p>卡片只在当前设备生成，不会上传。</p></div>
-    <div class="share-canvas-wrap"><canvas id="share-canvas" width="1080" height="1920" aria-label="南风古灶窑格分享卡"></canvas></div>
-    <div class="share-actions"><button class="primary-button" data-action="download-card">下载窑格卡 ${icon('arrow')}</button><button class="secondary-button" data-action="share-card">${icon('share')} 分享给窑友</button><button class="text-button" data-action="timeweave">把这一窑带走 · TimeTag</button></div><p class="share-notice" aria-live="polite">${esc(temporaryNotice)}</p>${appFooter()}
+    <div class="share-heading"><p class="section-kicker">把今天这一窑带走</p><h1>生成古灶行当卡</h1><p>卡片只在当前设备生成，不会上传。</p></div>
+    <div class="share-canvas-wrap"><canvas id="share-canvas" width="1080" height="1920" aria-label="南风古灶古灶行当分享卡"></canvas></div>
+    <div class="share-actions"><button class="primary-button" data-action="download-card">下载古灶行当卡 ${icon('arrow')}</button><button class="secondary-button" data-action="share-card">${icon('share')} 分享给窑友</button><button class="text-button" data-action="timeweave">把这一窑带走 · TimeTag</button></div><p class="share-notice" aria-live="polite">${esc(temporaryNotice)}</p>${appFooter()}
   </section>`;
 }
 
@@ -549,7 +549,7 @@ function renderMyKiln() {
   const clan = currentClan();
   const route = getRouteTasks(journey.personaId || journey.hiddenPersonaId, journey.routeMode || 'light');
   return `<section class="screen my-kiln-screen">${topBar(persona ? '/result' : '/')}
-    <div class="my-kiln-heading"><p class="section-kicker">南风窑格 · 本页旅程</p><h1>我的窑令</h1>${persona ? `<div class="my-persona">${personaMark(persona.mark || 'kiln')}<div><span>${esc(clan?.name || '隐藏窑格')}</span><strong>${esc(persona.name)}</strong></div></div>` : '<p>完成窑性测试，生成你的第一道窑令。</p>'}</div>
+    <div class="my-kiln-heading"><p class="section-kicker">古灶行当 · 本页旅程</p><h1>我的窑令</h1>${persona ? `<div class="my-persona">${personaMark(persona.mark || 'kiln')}<div><span>${esc(clan?.name || '隐藏行当')}</span><strong>${esc(persona.name)}</strong></div></div>` : '<p>完成古灶行当测试，生成你的第一道窑令。</p>'}</div>
     <div class="route-summary"><div><strong>${journey.fireSeedCount}</strong><span>枚火种</span></div><div><strong>${journey.completedMissionIds.length}</strong><span>项任务</span></div><div><strong>${journey.visitedFirePointIds.length}</strong><span>处火点</span></div></div>
     <section class="result-section"><div class="section-heading"><span>行程</span><h2>走过的火点</h2></div><div class="journey-points">${firePoints.map((point,index)=>`<a href="#/map?point=${point.id}" class="journey-point ${journey.visitedFirePointIds.includes(point.id) ? 'is-visited' : ''}"><span>${journey.visitedFirePointIds.includes(point.id) ? icon('check') : String(index+1).padStart(2,'0')}</span><strong>${esc(point.title)}</strong><small>${journey.visitedFirePointIds.includes(point.id) ? '已到访' : '未到访'}</small></a>`).join('')}</div></section>
     <section class="result-section"><div class="section-heading"><span>任务</span><h2>完成记录</h2></div>${route.map((task,index)=>missionCard(task,index,journey)).join('')}</section>
@@ -563,10 +563,10 @@ function renderDevPersonas() {
   const scores = journey.dimensionScores || Object.fromEntries(dimensions.map(({id})=>[id,{score:50,raw:0}]));
   const match = matchPersona(scores, journey.answers);
   return `<section class="screen dev-screen">${topBar('/')}
-    <div class="dev-heading"><p class="section-kicker">开发调试</p><h1>12 种窑格</h1><p>以下称谓来源会与产品创作人格分开标注。</p></div>
+    <div class="dev-heading"><p class="section-kicker">开发调试</p><h1>12 种古灶行当原型</h1><p>以下称谓来源会与产品创作人格分开标注。</p></div>
     <div class="dev-links"><a href="#/dev/questions">测试算法 ${icon('arrow')}</a><a href="#/dev/missions">任务与火点 ${icon('arrow')}</a></div>
     ${personas.map((persona,index)=>`<article class="dev-persona"><div class="dev-persona-top">${personaMark(persona.mark)}<span>${esc(clans[persona.clanId].name)}</span><small>${String(index+1).padStart(2,'0')}</small></div><h2>${esc(persona.name)}</h2><p>${esc(persona.slogan)}</p><small>${esc(persona.kind)} · ${esc(persona.culture)}</small><div class="center-row">${dimensions.map((dimension)=>`<span>${dimension.id} ${persona.center[dimension.id]}</span>`).join('')}</div><div class="dev-persona-bottom"><span>中心距离 ${match.ranking.find((item)=>item.personaId===persona.id)?.distance.toFixed(1) ?? '—'}</span><span>路线：${esc(persona.home || '多点游览')}</span></div></article>`).join('')}
-    <h2 class="dev-hidden-title">隐藏窑格判定</h2>${hiddenPersonas.map((persona)=>`<article class="dev-hidden"><h3>${esc(persona.name)}</h3><p>${esc(persona.criteria)}</p><small>${esc(persona.culture)}</small></article>`).join('')}${appFooter()}
+    <h2 class="dev-hidden-title">隐藏行当原型判定</h2>${hiddenPersonas.map((persona)=>`<article class="dev-hidden"><h3>${esc(persona.name)}</h3><p>${esc(persona.criteria)}</p><small>${esc(persona.culture)}</small></article>`).join('')}${appFooter()}
   </section>`;
 }
 
@@ -599,7 +599,7 @@ function render() {
   const { path, params } = currentRoute();
   if (path !== '/result') { shareCardVisible = false; activeDimensionId = ''; }
   if (path.startsWith('/mission') || ['/map', '/kiln-opening', '/share', '/my-kiln'].includes(path)) { go(getJourney().dimensionScores ? '/result' : '/'); return; }
-  const title = path === '/' ? '窑格 · 南风古灶' : `${path.split('/').pop() || '窑格'} · 窑格`;
+  const title = path === '/' ? '古灶行当 · 南风古灶' : `${path.split('/').pop() || '古灶行当'} · 古灶行当`;
   document.title = title;
   document.body.className = path === '/' ? 'body-landing' : 'body-app';
   const anyDialogOpen = path === '/result' && (shareCardVisible || Boolean(activeDimensionId));
@@ -613,7 +613,7 @@ function render() {
   else if (path === '/dev/personas') root.innerHTML = renderDevPersonas();
   else if (path === '/dev/questions') root.innerHTML = renderDevQuestions();
   else if (path === '/dev/missions') root.innerHTML = renderDevMissions();
-  else { root.innerHTML = `<section class="screen"><div class="empty-state">没有这个页面。<button class="primary-button" data-go="/">回到窑格</button></div></section>`; }
+  else { root.innerHTML = `<section class="screen"><div class="empty-state">没有这个页面。<button class="primary-button" data-go="/">回到古灶行当</button></div></section>`; }
 }
 
 function advanceQuestion(index) {
@@ -622,7 +622,7 @@ function advanceQuestion(index) {
     const nextIndex = questions.findIndex((question)=>!getJourney().answers[question.id]);
     go(`/test?q=${Math.max(0,nextIndex)}`);
   } else {
-    root.innerHTML = `<section class="screen calculation-screen"><img class="calculation-scene" src="${asset('yaoge/paper/calculation-kiln.webp')}" alt=""><div class="calculation-paper"><span class="calculation-kicker">南风古灶 · 窑格</span><h1>正在看你的火候……</h1><p class="calculation-sub">正在试你的泥性<br>正在为你开灶</p><div class="calculation-wheel"><span class="calculation-ring" aria-hidden="true"></span><div class="calculation-seal"><img src="${asset('yaoge/paper/calculation-bowl.png')}" alt="手绘青花陶碗"></div></div><div class="calculation-stages" aria-label="试泥、看火、成器"><div><img src="${dimensionArtPath('C')}" alt=""><span>试泥</span></div><i aria-hidden="true"></i><div><img src="${dimensionArtPath('F')}" alt=""><span>看火</span></div><i aria-hidden="true"></i><div><img src="${dimensionArtPath('D')}" alt=""><span>成器</span></div></div></div></section>`;
+    root.innerHTML = `<section class="screen calculation-screen"><img class="calculation-scene" src="${asset('yaoge/paper/calculation-kiln.webp')}" alt=""><div class="calculation-paper"><span class="calculation-kicker">南风古灶 · 古灶行当</span><h1>正在看你的火候……</h1><p class="calculation-sub">正在试你的泥性<br>正在为你开灶</p><div class="calculation-wheel"><span class="calculation-ring" aria-hidden="true"></span><div class="calculation-seal"><img src="${asset('yaoge/paper/calculation-bowl.png')}" alt="手绘青花陶碗"></div></div><div class="calculation-stages" aria-label="试泥、看火、成器"><div><img src="${dimensionArtPath('C')}" alt=""><span>试泥</span></div><i aria-hidden="true"></i><div><img src="${dimensionArtPath('F')}" alt=""><span>看火</span></div><i aria-hidden="true"></i><div><img src="${dimensionArtPath('D')}" alt=""><span>成器</span></div></div></div></section>`;
     window.setTimeout(()=>{ finishTest(); go('/result'); },1450);
   }
 }
@@ -679,10 +679,10 @@ function handleAction(action, element) {
   }
   if (action === 'close-dimension-detail') closeDimensionDetail();
   if (action === 'restart-test') {
-    if (window.confirm('重新测一次会覆盖当前窑格结果，确定重新开始吗？')) { shareCardVisible = false; startNewJourney(); go('/test'); }
+    if (window.confirm('重新测一次会覆盖当前结果，确定重新开始吗？')) { shareCardVisible = false; startNewJourney(); go('/test'); }
   }
   if (action === 'reset-journey') {
-    if (window.confirm('清空当前页面中的窑格旅程？这不会影响“南风开窑记”中的作品。')) { startNewJourney(); go('/'); }
+    if (window.confirm('清空当前页面中的旅程？这不会影响“南风开窑记”中的作品。')) { startNewJourney(); go('/'); }
   }
   if (action === 'arrive') {
     const point = element.dataset.point;
@@ -712,8 +712,8 @@ async function downloadCard() {
   const canvas = document.querySelector('#share-canvas');
   if (!canvas) return;
   await drawShareCard(canvas);
-  const link = document.createElement('a'); link.download = '南风古灶-我的窑格卡.png'; link.href = canvas.toDataURL('image/png'); link.click();
-  track('share_card_download'); showNotice('窑格卡已下载。');
+  const link = document.createElement('a'); link.download = '南风古灶-我的古灶行当卡.png'; link.href = canvas.toDataURL('image/png'); link.click();
+  track('share_card_download'); showNotice('古灶行当卡已下载。');
 }
 
 async function shareCard() {
@@ -723,12 +723,12 @@ async function shareCard() {
   try {
     if(navigator.share && canvas.toBlob){
       const blob=await new Promise((resolve)=>canvas.toBlob(resolve,'image/png'));
-      const file=new File([blob],'nanfeng-yaoge.png',{type:'image/png'});
-      if(!navigator.canShare || navigator.canShare({files:[file]})){await navigator.share({title:'我的南风窑格',text:currentPersona()?.slogan||'重生到古灶，你会干哪行？',files:[file]});return;}
+      const file=new File([blob],'nanfeng-guzhao-hangdang.png',{type:'image/png'});
+      if(!navigator.canShare || navigator.canShare({files:[file]})){await navigator.share({title:'我的古灶行当',text:currentPersona()?.slogan||'重生到古灶，你会干哪行？',files:[file]});return;}
     }
-    showNotice('当前浏览器不支持直接分享图片，请先保存窑格卡再发给窑友。');
+    showNotice('当前浏览器不支持直接分享图片，请先保存古灶行当卡再发给窑友。');
   } catch(error) {
-    if(error?.name !== 'AbortError') showNotice('浏览器暂不支持直接分享，请下载窑格卡后分享。');
+    if(error?.name !== 'AbortError') showNotice('浏览器暂不支持直接分享，请下载古灶行当卡后分享。');
   }
 }
 
