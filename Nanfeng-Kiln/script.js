@@ -1,6 +1,6 @@
 const copy = {
   zh: {
-    navHome: "首页", navHistory: "关于南风窑", navRoute: "沿窑而行", navCraft: "陶艺传承", navVisit: "走进窑场", navWorks: "作品",
+    navHome: "首页", navHistory: "关于南风窑", navRoute: "沿窑而行", navCraft: "陶艺传承", navVisit: "走进窑场", navWorks: "作品", navMap: "景区地图",
     brandPromise: "土与火，造就生活之美<small>Clay and Fire Shape a More Human World</small>",
     heroSideNote: "石湾<br>一座仍在生长的<br>陶窑社区", heroVertical: "石湾陶<br>生活的艺术", heroVerticalNote: "泥土不语<br>火焰有声",
     eventsAria: "石湾文化活动", eventsHeading: "活动随当期安排",
@@ -60,6 +60,15 @@ const copy = {
     visitPlanLabel: "建议路线", visitPlan: "先走龙窑与古榕，再看陶艺空间、艺术家村和壁画；若参加体验，请另留制作与等候时间。",
     mapLink: "在高德地图查找 ↗", officialSiteLink: "查看政府文化介绍 ↗",
     visitCaveat: "本页为独立文化导览，不代表景区官方；门票、预约、活动和交通信息请以运营方最新通知为准。",
+    siteMapTitle: "一张图，走进古灶与石湾",
+    siteMapIntro: "这张景区导览图标出了古灶街巷、停车场、游客中心、出入口与周边道路。点击地图，可在大图查看器中拖拽和缩放细节。",
+    siteMapToolbar: "南风古灶景区导览图 · 原图 3000 × 1662",
+    siteMapControlsAria: "地图缩放控件", mapZoomOutAria: "缩小地图", mapZoomInAria: "放大地图",
+    mapZoomRangeAria: "地图缩放比例", mapZoomFit: "适配全图", siteMapViewportAria: "可交互的南风古灶景区地图",
+    siteMapOpenAria: "点击打开南风古灶景区地图大图", siteMapOpen: "点击查看大图", siteMapDialogTitle: "南风古灶景区地图",
+    siteMapCloseAria: "关闭地图查看器", siteMapHelp: "点击地图打开大图查看器；放大、缩小或拖动只在查看器中进行。",
+    siteMapDialogHelp: "拖动地图平移；使用滚轮、双指或缩放条放大细节。按方向键平移，Home 键复位，Esc 关闭。",
+    siteMapCredit: "地图由用户提供 · 实际路线与设施以现场标识为准",
     profileScale: "非比例示意 · NOT TO SCALE",
     craftTitle: "泥与人间",
     craftLabel: "石湾陶塑 · 手艺与生活",
@@ -104,7 +113,7 @@ const copy = {
     sourcesCraft: "工艺与非遗", sourcesCraftNote: "用于石湾陶塑技艺的工序、作品类型与“石湾公仔”地方风格说明。",
     sourcesEvents: "风俗与活动", sourcesEventsNote: "用于谢灶祈福、开窑和陶艺市集等活动内容；活动举办时间以当期公告为准。",
     sourcesExperiences: "体验、文创与到访信息", sourcesExperiencesNote: "用于捏陶、拉坯、釉彩、添柴加薪等体验内容以及当期文创报道。项目、场次、售价和营业信息可能变化；第三方旅游平台所列信息不等于运营方公告。",
-    sourcesPhotos: "照片与授权", sourcesPhotosNote: "维基共享资源的本地实景照片均列出原文件页。首页主视觉、历史照片、陶艺工序圆图与视频预览均裁自用户提供的参考图；原始摄影作者及授权状态尚未核实。",
+    sourcesPhotos: "照片、地图与授权", sourcesPhotosNote: "维基共享资源的本地实景照片均列出原文件页。首页主视觉、历史照片、陶艺工序圆图与视频预览均裁自用户提供的参考图；景区地图也由用户提供。图片原始作者或第三方标识的再发布授权未独立核实。",
     sourceColumnAsset: "素材编号", sourceColumnSubject: "画面内容", sourceColumnCredit: "来源与许可",
     sourceFooter: "视频由原作者发布于哔哩哔哩，页面使用哔哩哔哩官方外链播放器；未下载或重新托管。",
     sourceVideo: "B站视频", sourceVideoSubject: "南风古灶龙窑实地影像 · BV1MM411R7Si",
@@ -117,6 +126,8 @@ const copy = {
     assetKiln: "龙窑窑身 · 历史章节", assetWorkshop: "陶艺工作空间 · 古寮场与工作室章节",
     assetStreet: "陶艺街巷 · 艺术家村章节", assetSculpture: "石湾陶塑 · 工艺与作品章节",
     assetMural: "《瑞龙献宝》陶片壁画 · 景点章节",
+    assetSiteMap: "南风古灶与周边街区景区导览图 · 末尾地图章节",
+    sourceSiteMap: "用户提供的地图文件；地图上的商标、内容与第三方权益仍归各自权利人。",
     sourcesArt: "装饰插画与界面图标", sourcesArtNote: "下列龙窑剖面、陶塑人物、路线图标与山水画面为本项目生成的示意或装饰插画，不是现场照片、遗址测绘或馆藏实物记录。六张工序圆图裁自用户提供的陶艺排版参考截图；原始作者与授权未核实。页面另使用南风古灶实景照片并逐张标注来源；B站视频由原作者发布。",
     assetProfileArt: "龙窑剖面：生成式示意线稿，用于解释依坡上升的窑身结构，不是测绘图。",
     assetFigureArt: "石湾陶塑人物：生成式意象，不代表馆藏作品或特定匠人作品。",
@@ -129,7 +140,7 @@ const copy = {
     sourceBack: "← 返回页面", sourceIntroEn: "This independent cultural showcase is not the attraction’s official website."
   },
   en: {
-    navHome: "Home", navHistory: "About Nanfeng Kiln", navRoute: "Walk the Kiln", navCraft: "Ceramic Heritage", navVisit: "Visit the Kiln", navWorks: "Works",
+    navHome: "Home", navHistory: "About Nanfeng Kiln", navRoute: "Walk the Kiln", navCraft: "Ceramic Heritage", navVisit: "Visit the Kiln", navWorks: "Works", navMap: "Site map",
     brandPromise: "Clay and fire shape a more human world<small>土与火，造就生活之美</small>",
     heroSideNote: "SHIWAN<br>A CERAMIC COMMUNITY<br>STILL GROWING", heroVertical: "SHIWAN CERAMICS<br>A LIVING ART", heroVerticalNote: "CLAY KEEPS SILENCE<br>FIRE GIVES ANSWER",
     eventsAria: "Cultural events in Shiwan", eventsHeading: "Events vary by schedule",
@@ -189,6 +200,16 @@ const copy = {
     visitPlanLabel: "Suggested route", visitPlan: "See the kilns and banyan first, then the pottery spaces, artists’ village and mural. Allow extra time for any hands-on activity.",
     mapLink: "Find it on Amap ↗", officialSiteLink: "Read the government cultural guide ↗",
     visitCaveat: "This independent guide is not the attraction’s official site. Check the operator’s latest notices for tickets, booking, events and transport.",
+    siteMapTitle: "Explore the kiln town, one map at a time",
+    siteMapIntro: "This visitor map marks the old lanes, parking, visitor centre, entrances and surrounding roads. Select it to open a full-screen viewer, where you can pan and zoom.",
+    siteMapToolbar: "Nanfeng Kiln visitor map · Original 3000 × 1662",
+    siteMapControlsAria: "Map zoom controls", mapZoomOutAria: "Zoom out", mapZoomInAria: "Zoom in",
+    mapZoomRangeAria: "Map zoom level", mapZoomFit: "Fit map",
+    siteMapViewportAria: "Interactive map of Nanfeng Kiln", siteMapOpenAria: "Open the full-size Nanfeng Kiln visitor map",
+    siteMapOpen: "Open full-size map", siteMapDialogTitle: "Nanfeng Kiln visitor map", siteMapCloseAria: "Close map viewer",
+    siteMapHelp: "Select the map to open the full-size viewer. Pan and zoom are available only in the viewer.",
+    siteMapDialogHelp: "Drag to pan; use the wheel, a two-finger pinch or the slider to zoom. Use arrow keys to pan, Home to reset, or Esc to close.",
+    siteMapCredit: "Map supplied by the user · Follow on-site signs for current routes and facilities",
     profileScale: "Diagram · NOT TO SCALE",
     craftTitle: "Clay and the<br>human world.",
     craftLabel: "SHIWAN CERAMIC SCULPTURE · CRAFT & LIFE",
@@ -233,7 +254,7 @@ const copy = {
     sourcesCraft: "Craft & intangible heritage", sourcesCraftNote: "Used to verify the stages, forms and local style of Shiwan ceramic sculpture.",
     sourcesEvents: "Customs & events", sourcesEventsNote: "Used for references to thanksgiving rites, kiln openings and pottery markets; event dates depend on current notices.",
     sourcesExperiences: "Experiences, creative products & visitor information", sourcesExperiencesNote: "Used for references to hand-building, wheel throwing, glazing, adding firewood and current product reporting. Activities, sessions, prices and opening information may change; third-party listings are not operator notices.",
-    sourcesPhotos: "Photographs & licenses", sourcesPhotosNote: "Local documentary photographs from Wikimedia Commons link to their file pages. The home hero, history photo, craft-stage thumbnails and video preview are crops from user-supplied reference screenshots; their original photographers and licenses have not been verified.",
+    sourcesPhotos: "Photographs, map & rights", sourcesPhotosNote: "Local documentary photographs from Wikimedia Commons link to their file pages. The home hero, history photo, craft-stage thumbnails and video preview are crops from user-supplied reference screenshots; the visitor map was also supplied by the user. Original authorship or redistribution permission for third-party marks has not been independently verified.",
     sourceColumnAsset: "Asset ID", sourceColumnSubject: "Subject", sourceColumnCredit: "Source & license",
     sourceFooter: "The video was published by its creator on Bilibili and is embedded via the official Bilibili player. It is not downloaded or re-hosted.",
     sourceVideo: "Bilibili video", sourceVideoSubject: "On-site footage of Nanfeng Kiln · BV1MM411R7Si",
@@ -246,6 +267,8 @@ const copy = {
     assetKiln: "Dragon kiln interior · history chapter", assetWorkshop: "Pottery workspace · old yard and studio section",
     assetStreet: "Pottery lane · artists’ village section", assetSculpture: "Shiwan ceramic sculpture · craft section",
     assetMural: "Auspicious Dragon Offering Treasures · places section",
+    assetSiteMap: "Visitor map of Nanfeng Kiln and the surrounding district · final map section",
+    sourceSiteMap: "Map file supplied by the user; trademarks, content and third-party rights shown on it remain with their respective owners.",
     sourcesArt: "Illustrations & interface icons", sourcesArtNote: "The kiln profile, ceramic figure, route illustrations and kiln-town landscape below are generated illustrative assets. They are not on-site photographs, a measured survey or records of collection objects. The six process thumbnails are crops from the user-supplied craft reference; original authorship and permission have not been verified. The page also uses attributed photographs of Nanfeng Kiln; the Bilibili video remains with its original publisher.",
     assetProfileArt: "Dragon kiln profile: generated line illustration to explain its rising form, not a measured drawing.",
     assetFigureArt: "Shiwan ceramic figure: generated image, not a collection object or a work attributed to a specific artisan.",
@@ -397,6 +420,7 @@ const searchCatalog = [
   ["customs", "风俗与活动 / Customs & events", "谢灶 祈福 开窑 市集 茶会 ritual market tea kiln opening"],
   ["works", "石湾作品与体验 / Shiwan works & activities", "石湾公仔 陶塑 文创 手信 体验 sculpture figurine gifts"],
   ["visit", "到访信息 / Visitor information", "地址 开放 交通 地图 ticket hours transport address"],
+  ["site-map", "南风古灶景区地图 / Nanfeng Kiln guide map", "地图 导览 停车场 出入口 游客中心 visitor map parking entrance centre"],
   ["craft-process", "陶塑制作过程 / Ceramic process", "构思 泥料 成形 装饰 上釉 龙窑 工艺 craft shaping glazing firing"],
   ["videoShell", "哔哩哔哩视频 / Bilibili video", "视频 龙窑 实拍 player bilibili footage"]
 ];
@@ -431,3 +455,186 @@ searchDialog?.addEventListener("click", function (event) {
   if (event.target === searchDialog) searchDialog.close();
 });
 searchDialog?.addEventListener("close", function () { document.getElementById("searchToggle")?.focus(); });
+
+(function initSiteMapViewer() {
+  const dialog = document.getElementById("siteMapDialog");
+  const openButton = document.getElementById("mapOpenButton");
+  const closeButton = document.getElementById("siteMapClose");
+  const viewport = document.getElementById("siteMapViewport");
+  const image = document.getElementById("siteMapImage");
+  const range = document.getElementById("mapZoomRange");
+  const value = document.getElementById("mapZoomValue");
+  const zoomIn = document.getElementById("mapZoomIn");
+  const zoomOut = document.getElementById("mapZoomOut");
+  const fit = document.getElementById("mapZoomFit");
+  if (!dialog || !openButton || !viewport || !image || !range || !value) return;
+
+  const minScale = Number(range.min) / 100 || 0.5;
+  const maxScale = Number(range.max) / 100 || 8;
+  const state = { scale: 1, x: 0, y: 0 };
+  const pointers = new Map();
+  let dragOrigin = null;
+  let pinchOrigin = null;
+
+  function limit(valueToLimit, minimum, maximum) {
+    return Math.max(minimum, Math.min(maximum, valueToLimit));
+  }
+
+  function clampPan() {
+    const ratio = (image.naturalWidth || 3000) / (image.naturalHeight || 1662);
+    const baseWidth = Math.min(viewport.clientWidth, viewport.clientHeight * ratio);
+    const baseHeight = baseWidth / ratio;
+    const maxX = Math.max(0, (baseWidth * (state.scale - 1)) / 2);
+    const maxY = Math.max(0, (baseHeight * (state.scale - 1)) / 2);
+    state.x = limit(state.x, -maxX, maxX);
+    state.y = limit(state.y, -maxY, maxY);
+  }
+
+  function renderMap() {
+    clampPan();
+    image.style.transform = "translate(-50%, -50%) translate(" + state.x + "px, " + state.y + "px) scale(" + state.scale + ")";
+    range.value = String(Math.round(state.scale * 100));
+    value.value = Math.round(state.scale * 100) + "%";
+    value.textContent = value.value;
+    if (zoomOut) zoomOut.disabled = state.scale <= minScale + 0.001;
+    if (zoomIn) zoomIn.disabled = state.scale >= maxScale - 0.001;
+  }
+
+  function zoomTo(nextScale, clientX, clientY) {
+    const rect = viewport.getBoundingClientRect();
+    const focusX = (clientX ?? rect.left + rect.width / 2) - rect.left - rect.width / 2;
+    const focusY = (clientY ?? rect.top + rect.height / 2) - rect.top - rect.height / 2;
+    const oldScale = state.scale;
+    const newScale = limit(nextScale, minScale, maxScale);
+    const imageX = (focusX - state.x) / oldScale;
+    const imageY = (focusY - state.y) / oldScale;
+    state.scale = newScale;
+    state.x = focusX - imageX * newScale;
+    state.y = focusY - imageY * newScale;
+    renderMap();
+  }
+
+  function resetMap() {
+    state.scale = 1;
+    state.x = 0;
+    state.y = 0;
+    renderMap();
+  }
+
+  function midpoint(first, second) {
+    return { x: (first.x + second.x) / 2, y: (first.y + second.y) / 2 };
+  }
+
+  function distance(first, second) {
+    return Math.hypot(second.x - first.x, second.y - first.y);
+  }
+
+  function beginDrag(pointerId, point) {
+    dragOrigin = { pointerId, point, x: state.x, y: state.y };
+  }
+
+  function beginPinch() {
+    const pair = Array.from(pointers.values()).slice(0, 2);
+    if (pair.length < 2) return;
+    const middle = midpoint(pair[0], pair[1]);
+    const rect = viewport.getBoundingClientRect();
+    const focusX = middle.x - rect.left - rect.width / 2;
+    const focusY = middle.y - rect.top - rect.height / 2;
+    pinchOrigin = {
+      distance: Math.max(1, distance(pair[0], pair[1])),
+      scale: state.scale,
+      imageX: (focusX - state.x) / state.scale,
+      imageY: (focusY - state.y) / state.scale
+    };
+    dragOrigin = null;
+  }
+
+  function onPointerDown(event) {
+    if (event.pointerType === "mouse" && event.button !== 0) return;
+    viewport.setPointerCapture(event.pointerId);
+    viewport.focus({ preventScroll: true });
+    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    if (pointers.size === 1) beginDrag(event.pointerId, pointers.get(event.pointerId));
+    else if (pointers.size === 2) beginPinch();
+    viewport.classList.toggle("is-dragging", pointers.size === 1 && state.scale > 1);
+  }
+
+  function onPointerMove(event) {
+    if (!pointers.has(event.pointerId)) return;
+    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    if (pointers.size === 1 && dragOrigin) {
+      const point = pointers.get(dragOrigin.pointerId);
+      state.x = dragOrigin.x + point.x - dragOrigin.point.x;
+      state.y = dragOrigin.y + point.y - dragOrigin.point.y;
+    } else if (pointers.size >= 2 && pinchOrigin) {
+      const pair = Array.from(pointers.values()).slice(0, 2);
+      const middle = midpoint(pair[0], pair[1]);
+      const rect = viewport.getBoundingClientRect();
+      const scale = limit(pinchOrigin.scale * distance(pair[0], pair[1]) / pinchOrigin.distance, minScale, maxScale);
+      state.scale = scale;
+      state.x = middle.x - rect.left - rect.width / 2 - pinchOrigin.imageX * scale;
+      state.y = middle.y - rect.top - rect.height / 2 - pinchOrigin.imageY * scale;
+    }
+    renderMap();
+  }
+
+  function onPointerEnd(event) {
+    pointers.delete(event.pointerId);
+    viewport.classList.toggle("is-dragging", pointers.size === 1 && state.scale > 1);
+    if (pointers.size === 1) {
+      const [pointerId, point] = pointers.entries().next().value;
+      beginDrag(pointerId, point);
+      pinchOrigin = null;
+    } else if (pointers.size >= 2) {
+      beginPinch();
+    } else {
+      dragOrigin = null;
+      pinchOrigin = null;
+    }
+    if (viewport.hasPointerCapture(event.pointerId)) viewport.releasePointerCapture(event.pointerId);
+  }
+
+  viewport.addEventListener("pointerdown", onPointerDown);
+  viewport.addEventListener("pointermove", onPointerMove);
+  viewport.addEventListener("pointerup", onPointerEnd);
+  viewport.addEventListener("pointercancel", onPointerEnd);
+  viewport.addEventListener("wheel", function (event) {
+    const wheelDelta = limit(event.deltaY, -180, 180);
+    const nextScale = limit(state.scale * Math.exp(-wheelDelta * 0.0012), minScale, maxScale);
+    if (Math.abs(nextScale - state.scale) < 0.001) return;
+    event.preventDefault();
+    zoomTo(nextScale, event.clientX, event.clientY);
+  }, { passive: false });
+  viewport.addEventListener("keydown", function (event) {
+    if (event.target === range) return;
+    const pan = 44;
+    if (event.key === "ArrowLeft") state.x += pan;
+    else if (event.key === "ArrowRight") state.x -= pan;
+    else if (event.key === "ArrowUp") state.y += pan;
+    else if (event.key === "ArrowDown") state.y -= pan;
+    else if (event.key === "+" || event.key === "=") zoomTo(state.scale * 1.2);
+    else if (event.key === "-") zoomTo(state.scale / 1.2);
+    else if (event.key === "Home") resetMap();
+    else return;
+    event.preventDefault();
+    renderMap();
+  });
+  range.addEventListener("input", function () { zoomTo(Number(range.value) / 100); });
+  zoomIn?.addEventListener("click", function () { zoomTo(state.scale * 1.25); });
+  zoomOut?.addEventListener("click", function () { zoomTo(state.scale / 1.25); });
+  fit?.addEventListener("click", resetMap);
+  openButton.addEventListener("click", function () {
+    resetMap();
+    dialog.showModal();
+    requestAnimationFrame(function () {
+      renderMap();
+      viewport.focus({ preventScroll: true });
+    });
+  });
+  closeButton?.addEventListener("click", function () { dialog.close(); });
+  dialog.addEventListener("click", function (event) {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener("close", resetMap);
+  window.addEventListener("resize", renderMap, { passive: true });
+})();
