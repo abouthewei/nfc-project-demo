@@ -10,7 +10,7 @@
   --ember: #cf8152;
   --ember-light: #e5a477;
   --terracotta: #a95334;
-  --serif: 'Noto Serif SC', 'Songti SC', STSong, 'SimSun', serif;
+  --serif: 'Noto Serif SC', 'Noto Serif CJK SC', 'Source Han Serif SC', 'Songti SC', STSong, 'SimSun', serif;
   --sans: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-family: var(--sans);
   background: var(--bg);
@@ -21,7 +21,7 @@
 }
 
 * { box-sizing: border-box; }
-html { min-height: 100%; background: var(--bg); scroll-behavior: smooth; }
+html { min-height: 100%; background: var(--bg); scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body { min-width: 320px; min-height: 100%; margin: 0; background: #10100f; color: var(--ink); }
 body::before { position: fixed; z-index: 0; inset: 0; background: url('../assets/paper-grain.webp') repeat; background-size: 420px auto; content: ''; opacity: .08; pointer-events: none; mix-blend-mode: screen; }
 button, textarea, select { font: inherit; }
@@ -651,7 +651,7 @@ button:focus-visible, a:focus-visible, textarea:focus-visible, select:focus-visi
   --kiln-blue: #173f78;
   --jade: #148d7f;
   --gold: #efb846;
-  --serif-display: 'Kaiti SC', STKaiti, 'Songti SC', 'Noto Serif SC', serif;
+  --serif-display: 'Kaiti SC', STKaiti, 'Songti SC', 'Noto Serif CJK SC', 'Noto Serif SC', 'Source Han Serif SC', serif;
   background: var(--bg);
   color: var(--ink);
 }
@@ -1210,3 +1210,39 @@ body.share-card-open {
 .share-card-actions .secondary-button { min-height: 48px; border: 2px solid #c6a675; background: #fff6e2; color: #583b26; font: 700 15px var(--serif-display); }
 .share-card-dialog > .notice-line { min-height: 24px; margin: 8px 18px 14px; color: #754c30; font-size: 13px; text-align: center; }
 @keyframes share-modal-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* Older Android webviews may not understand the newer mobile viewport units. */
+@supports not (height: 100svh) {
+  .screen, .landing-screen, .quiz-screen, .calculation-screen { min-height: 100vh; }
+  .empty-state { min-height: 70vh; }
+  .landing-screen { height: max(100vh, 680px); }
+  .landing-copy { padding-top: 3vh; }
+  .opening-dark { min-height: min(87vh, 800px); }
+  .opening-locked .opening-dark { min-height: 100vh; }
+  .result-poster { height: clamp(330px, 50vh, 400px); }
+  .share-card-dialog { max-height: min(92vh, 900px); }
+  @media (max-width: 649px) {
+    .landing-screen { height: max(100vh, 680px); }
+    .quiz-art-stage { height: 34vh; }
+    .result-poster { height: clamp(330px, 50vh, 390px); }
+  }
+  @media (max-height: 740px) and (max-width: 649px) {
+    .landing-screen { height: 100vh; min-height: 100vh; }
+    .quiz-art-stage { height: 32vh; }
+  }
+}
+
+/* Container-unit fallback for older WebViews that otherwise drop poster geometry. */
+@supports not (height: 1cqh) {
+  .result-poster-top { top: 4.5%; }
+  .result-badge { top: 13%; }
+  .result-art { top: 11%; height: 54%; }
+  .result-art-mark { top: 25%; }
+  .result-poster-copy { top: 53%; }
+  .result-poster-copy p { margin-top: 6px; }
+  .result-six-strip { bottom: 16.4%; }
+  .result-six-item { gap: 4px; }
+  @media (max-height: 740px) and (max-width: 649px) {
+    .result-poster-copy { top: 52%; }
+  }
+}

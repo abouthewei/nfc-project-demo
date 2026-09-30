@@ -308,6 +308,9 @@ async function drawShareCard(canvas) {
   const persona = currentPersona();
   const clan = currentClan();
   if (!ctx || !persona) return;
+  if (document.fonts?.ready) await document.fonts.ready;
+  const displayFamily = getComputedStyle(document.documentElement).getPropertyValue('--serif-display').trim() || '"Kaiti SC", "Songti SC", "Noto Serif CJK SC", serif';
+  const cardFont = (weight, size) => `${weight} ${size}px ${displayFamily}`;
   const [scene, portrait, clanMark, ...dimensionMarks] = await Promise.all([
     loadCardImage(asset('yaoge/paper/result-kiln-courtyard.webp')),
     loadCardImage(personaArtPath(persona, clan)),
@@ -319,9 +322,9 @@ async function drawShareCard(canvas) {
   const personalityTop = 995;
   const personalityX = 64;
   const personalityWidth = w - 128;
-  const chipFont = '700 29px "Kaiti SC", "Songti SC", serif';
+  const chipFont = cardFont(700, 29);
   const chipRows = layoutCanvasPills(ctx, persona.keywords || [], personalityWidth - 88, chipFont);
-  const copyFont = '500 34px "Kaiti SC", "Songti SC", serif';
+  const copyFont = cardFont(500, 34);
   const copyWidth = personalityWidth - 88;
   ctx.font = copyFont;
   const descriptionLines = (persona.descriptions || []).map((paragraph) => wrapCanvasLines(ctx, paragraph, copyWidth));
@@ -349,20 +352,20 @@ async function drawShareCard(canvas) {
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   ctx.fillStyle = '#273e70';
-  ctx.font = '700 42px "Kaiti SC", "Songti SC", serif';
+  ctx.font = cardFont(700, 42);
   ctx.fillText('南风古灶  ·  窑格', w / 2, 108);
   if (clanMark) drawImageContain(ctx, clanMark, w / 2 - 50, 192, 100, 100);
   ctx.fillStyle = '#9a482d';
-  ctx.font = '600 30px "Kaiti SC", "Songti SC", serif';
+  ctx.font = cardFont(600, 30);
   ctx.fillText(`${clan?.name || '窑格'}  ·  职业原型`, w / 2, 310);
   if (portrait) drawImageContain(ctx, portrait, 150, 290, w - 300, 520);
   ctx.fillStyle = 'rgba(255,247,226,.94)';
   roundRect(ctx, 74, 790, w - 148, 178, 22); ctx.fill();
   ctx.fillStyle = '#183c71';
-  ctx.font = '900 96px "Kaiti SC", "Songti SC", serif';
+  ctx.font = cardFont(900, 96);
   ctx.fillText(persona.name, w / 2, 846);
   ctx.fillStyle = '#41251a';
-  ctx.font = '500 42px "Kaiti SC", "Songti SC", serif';
+  ctx.font = cardFont(500, 42);
   wrapCanvasText(ctx, persona.slogan, w / 2, 914, w - 300, 42, 2);
 
   ctx.textAlign = 'left';
@@ -372,10 +375,10 @@ async function drawShareCard(canvas) {
   ctx.lineWidth = 5;
   roundRect(ctx, personalityX, personalityTop, personalityWidth, personalityHeight, 28); ctx.fill(); ctx.stroke();
   ctx.fillStyle = '#bd5433';
-  ctx.font = '700 25px "Kaiti SC", "Songti SC", serif';
+  ctx.font = cardFont(700, 25);
   ctx.fillText('01', personalityX + 38, personalityTop + 59);
   ctx.fillStyle = '#173f76';
-  ctx.font = '800 39px "Kaiti SC", "Songti SC", serif';
+  ctx.font = cardFont(800, 39);
   ctx.fillText('这很像你', personalityX + 90, personalityTop + 59);
 
   chipRows.forEach((row, rowIndex) => {
@@ -416,11 +419,11 @@ async function drawShareCard(canvas) {
   ctx.textBaseline = 'middle';
   ctx.textAlign = 'left';
   ctx.fillStyle = '#bd5433';
-  ctx.font = '700 25px "Kaiti SC", "Songti SC", serif';
+  ctx.font = cardFont(700, 25);
   ctx.fillText('02', 102, sixTop + 58);
   ctx.fillStyle = '#42291b';
   ctx.fillStyle = '#173f76';
-  ctx.font = '800 39px "Kaiti SC", "Songti SC", serif';
+  ctx.font = cardFont(800, 39);
   ctx.fillText('你的六维窑格', 154, sixTop + 58);
   const cellWidth = (w - 180) / 3;
   dimensions.forEach((dimension, index) => {
@@ -431,11 +434,11 @@ async function drawShareCard(canvas) {
     const mark = dimensionMarks[index];
     if (mark) drawImageContain(ctx, mark, x + (cellWidth - 94) / 2, y, 94, 94);
     ctx.fillStyle = '#352219';
-    ctx.font = '700 29px "Kaiti SC", "Songti SC", serif';
+    ctx.font = cardFont(700, 29);
     ctx.textAlign = 'center';
     ctx.fillText(dimension.name, x + cellWidth / 2, y + 110);
     ctx.fillStyle = '#7a4929';
-    ctx.font = '800 31px "Kaiti SC", "Songti SC", serif';
+    ctx.font = cardFont(800, 31);
     ctx.fillText(`${dimensionScore(dimension.id)} 分`, x + cellWidth / 2, y + 143);
   });
 
@@ -445,10 +448,10 @@ async function drawShareCard(canvas) {
   roundRect(ctx, 64, chartTop, w - 128, chartHeight, 28); ctx.fill(); ctx.stroke();
   ctx.textAlign = 'left';
   ctx.fillStyle = '#bd5433';
-  ctx.font = '700 25px "Kaiti SC", "Songti SC", serif';
+  ctx.font = cardFont(700, 25);
   ctx.fillText('03', 102, chartTop + 58);
   ctx.fillStyle = '#173f76';
-  ctx.font = '800 39px "Kaiti SC", "Songti SC", serif';
+  ctx.font = cardFont(800, 39);
   ctx.fillText('这一窑的性格', 154, chartTop + 58);
   const centerX = w / 2, centerY = chartTop + 255, radius = 118;
   const chartPoint = (index, scale) => {
@@ -475,13 +478,13 @@ async function drawShareCard(canvas) {
     const [x, y] = chartPoint(index, (journey.dimensionScores?.[dimension.id]?.score ?? 50) / 100);
     ctx.beginPath(); ctx.arc(x, y, 10, 0, Math.PI * 2); ctx.fillStyle = '#078879'; ctx.fill();
     const [labelX, labelY] = chartPoint(index, 1.2);
-    ctx.fillStyle = '#42291b'; ctx.font = '600 23px "Kaiti SC", "Songti SC", serif';
+    ctx.fillStyle = '#42291b'; ctx.font = cardFont(600, 23);
     ctx.textAlign = 'center';
     ctx.fillText(dimension.name, labelX, labelY);
   });
   ctx.textAlign = 'center';
   ctx.fillStyle = '#163f6e';
-  ctx.font = '700 29px "Kaiti SC", "Songti SC", serif';
+  ctx.font = cardFont(700, 29);
   ctx.fillText('五百年窑火 · 找到你在古灶的一行', w / 2, footerY);
 }
 
