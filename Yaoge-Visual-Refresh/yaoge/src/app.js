@@ -5,7 +5,7 @@ import { openTimeWeave } from './adapters.js?v=16';
 
 const root = document.querySelector('#app');
 const typeNames = {find:'寻找',observe:'观察',choice:'判断',photo:'拍照',story:'故事',companion:'同行',experience:'体验'};
-const asset = (name) => `../assets/${name}`;
+const asset = (name) => new URL(`../../assets/${name}`, import.meta.url).href;
 const esc = (value) => String(value ?? '').replace(/[&<>"']/g, (char) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 let questionTimer = 0;
 let devAnswers = {};
