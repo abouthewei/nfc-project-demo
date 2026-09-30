@@ -452,7 +452,7 @@ button:focus-visible, a:focus-visible, textarea:focus-visible, select:focus-visi
   --poster-clay: #a64f34;
   --poster-ember: #dc7943;
   --poster-gold: #c7a06f;
-  --serif-display: 'STKaiti', 'Kaiti SC', 'Songti SC', 'Songti', 'Noto Serif SC', serif;
+  --serif-display: 'STKaiti', 'Kaiti SC', 'Songti SC', 'Songti', 'Noto Serif CJK SC', 'Source Han Serif SC', 'Noto Serif SC', serif;
 }
 
 .landing-photo {
@@ -651,7 +651,7 @@ button:focus-visible, a:focus-visible, textarea:focus-visible, select:focus-visi
   --kiln-blue: #173f78;
   --jade: #148d7f;
   --gold: #efb846;
-  --serif-display: 'Kaiti SC', STKaiti, 'Songti SC', 'Noto Serif CJK SC', 'Noto Serif SC', 'Source Han Serif SC', serif;
+  --serif-display: 'Kaiti SC', STKaiti, 'Songti SC', 'Songti', 'Noto Serif CJK SC', 'Source Han Serif SC', 'Noto Serif SC', serif;
   background: var(--bg);
   color: var(--ink);
 }
