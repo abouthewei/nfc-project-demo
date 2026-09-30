@@ -12,6 +12,8 @@ let devAnswers = {};
 let temporaryNotice = '';
 let shareCardVisible = false;
 let shareCardReturnScroll = 0;
+let activeDimensionId = '';
+let dimensionReturnScroll = 0;
 
 function currentRoute() {
   const raw = window.location.hash.slice(1) || '/';
@@ -176,7 +178,7 @@ function renderResult() {
       <section class="result-section result-likeness"><div class="section-heading"><span>01</span><h2>这很像你</h2></div><ul class="keyword-list">${(persona.keywords || []).map((word) => `<li>${esc(word)}</li>`).join('')}</ul>${(persona.descriptions || []).map((paragraph) => `<p class="body-copy">${esc(paragraph)}</p>`).join('')}</section>
       <section class="result-overview" aria-label="窑格结果摘要">
         ${isHidden ? `<aside class="hidden-note">隐藏窑格 <span>${esc(persona.criteria || '')}</span></aside>` : ''}
-        <section class="result-section result-six-panel"><div class="section-heading"><span>02</span><h2>你的六维窑格</h2></div><div class="result-six-grid" aria-label="六维窑格特征">${dimensions.map((dimension) => `<div class="result-six-item" data-dimension="${dimension.id}" aria-label="${esc(dimension.name)}，${dimensionScore(dimension.id)}分"><img src="${dimensionArtPath(dimension.id)}" alt="" aria-hidden="true"><span>${esc(dimension.name)}</span><strong class="dimension-score">${dimensionScore(dimension.id)}<small>分</small></strong></div>`).join('')}</div></section>
+        <section class="result-section result-six-panel"><div class="section-heading"><span>02</span><h2>你的六维窑格</h2></div><div class="result-six-grid" aria-label="六维窑格特征">${dimensions.map((dimension) => `<button type="button" class="result-six-item" data-action="show-dimension" data-dimension="${dimension.id}" aria-label="查看${esc(dimension.name)}属性说明，${dimensionScore(dimension.id)}分" aria-haspopup="dialog"><img src="${dimensionArtPath(dimension.id)}" alt="" aria-hidden="true"><span>${esc(dimension.name)}</span><strong class="dimension-score">${dimensionScore(dimension.id)}<small>分</small></strong></button>`).join('')}</div></section>
         <section class="result-section result-dimensions"><div class="section-heading"><span>03</span><h2>你的窑格图</h2></div><div class="radar-layout">${radarMarkup(journey.dimensionScores)}<p>这是一张选择倾向图。每一维都会随情境改变，没有好坏之分。</p></div></section>
         <div class="result-actions"><button type="button" class="primary-button clay-cta result-generate" data-action="generate-card">${shareCardVisible ? '查看我的窑格卡' : '生成我的窑格卡'}${icon('arrow')}</button><button type="button" class="secondary-button" data-action="restart-test">重新测一次</button></div>
         <p class="notice-line" data-share-notice aria-live="polite">${esc(temporaryNotice)}</p>
@@ -191,6 +193,18 @@ function renderResult() {
 
 function renderShareCardModal(persona) {
   return `<div class="share-card-modal" data-share-backdrop><section class="share-card-dialog" id="share-card-area" role="dialog" aria-modal="true" aria-labelledby="share-card-title" tabindex="-1"><header class="share-card-top"><span>南风古灶 · 窑格卡</span><button type="button" class="share-card-close" data-action="close-share-card" aria-label="关闭窑格卡">${icon('close')}</button></header><div class="share-card-heading"><p class="section-kicker">把今天这一窑带走</p><h2 id="share-card-title">你的窑格卡</h2><p>卡片只在当前页面生成，不会上传。</p></div><div class="share-canvas-wrap"><canvas id="share-canvas" width="1080" height="2500" aria-label="${esc(persona.name)}窑格卡，包含职业画像、这很像你、六维窑格分数和窑格图"></canvas></div><div class="share-card-actions"><button class="primary-button clay-cta" data-action="download-card">保存窑格卡 ${icon('arrow')}</button><button class="secondary-button" data-action="share-card">${icon('share')} 分享给窑友</button></div><p class="notice-line" data-share-notice aria-live="polite">${esc(temporaryNotice)}</p></section></div>`;
+}
+
+function renderDimensionModal(dimension) {
+  if (!dimension) return '';
+  const score = dimensionScore(dimension.id);
+  const tendency = score > 55 ? dimension.high : score < 45 ? dimension.low : '平衡';
+  const interpretation = score > 55
+    ? dimension.highMeans
+    : score < 45
+      ? dimension.lowMeans
+      : `你在“${dimension.low}”与“${dimension.high}”之间留有弹性，可以按具体情境选择。`;
+  return `<div class="share-card-modal dimension-detail-modal" data-dimension-backdrop><section class="dimension-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="dimension-detail-title" aria-describedby="dimension-detail-summary" tabindex="-1"><header class="share-card-top"><span>窑格属性 · ${esc(dimension.english)}</span><button type="button" class="share-card-close" data-action="close-dimension-detail" aria-label="关闭属性说明">${icon('close')}</button></header><div class="dimension-detail-content"><div class="dimension-detail-art" data-dimension="${dimension.id}"><img src="${dimensionArtPath(dimension.id)}" alt="" aria-hidden="true"></div><p class="section-kicker">你的六维窑格</p><h2 id="dimension-detail-title">${esc(dimension.name)}</h2><div class="dimension-detail-score"><strong>${score}</strong><span>分</span><i>${esc(tendency)}</i></div><p id="dimension-detail-summary" class="dimension-detail-summary">${esc(interpretation)}</p><div class="dimension-detail-range"><div><span>${esc(dimension.low)}</span><p>${esc(dimension.lowMeans)}</p></div><div><span>${esc(dimension.high)}</span><p>${esc(dimension.highMeans)}</p></div></div><p class="dimension-detail-note">分数呈现本次选择倾向，不是固定标签。</p></div></section></div>`;
 }
 
 function modeCard(mode, selected) {
@@ -583,17 +597,19 @@ function renderDevMissions() {
 function render() {
   clearTimeout(questionTimer);
   const { path, params } = currentRoute();
-  if (path !== '/result') shareCardVisible = false;
+  if (path !== '/result') { shareCardVisible = false; activeDimensionId = ''; }
   if (path.startsWith('/mission') || ['/map', '/kiln-opening', '/share', '/my-kiln'].includes(path)) { go(getJourney().dimensionScores ? '/result' : '/'); return; }
   const title = path === '/' ? '窑格 · 南风古灶' : `${path.split('/').pop() || '窑格'} · 窑格`;
   document.title = title;
   document.body.className = path === '/' ? 'body-landing' : 'body-app';
-  document.body.classList.toggle('share-card-open', path === '/result' && shareCardVisible);
+  const anyDialogOpen = path === '/result' && (shareCardVisible || Boolean(activeDimensionId));
+  document.body.classList.toggle('share-card-open', anyDialogOpen);
   if (path === '/result' && shareCardVisible) document.body.style.setProperty('--share-scroll-top', `${-shareCardReturnScroll}px`);
+  else if (path === '/result' && activeDimensionId) document.body.style.setProperty('--share-scroll-top', `${-dimensionReturnScroll}px`);
   else document.body.style.removeProperty('--share-scroll-top');
   if (path === '/') root.innerHTML = renderLanding();
   else if (path === '/test') root.innerHTML = renderTest();
-  else if (path === '/result') { root.innerHTML = renderResult(); if (shareCardVisible) root.insertAdjacentHTML('beforeend', renderShareCardModal(currentPersona())); const canvas = document.querySelector('#share-canvas'); if (canvas) drawShareCard(canvas); }
+  else if (path === '/result') { root.innerHTML = renderResult(); if (activeDimensionId) root.insertAdjacentHTML('beforeend', renderDimensionModal(dimensions.find((item) => item.id === activeDimensionId))); if (shareCardVisible) root.insertAdjacentHTML('beforeend', renderShareCardModal(currentPersona())); const canvas = document.querySelector('#share-canvas'); if (canvas) drawShareCard(canvas); }
   else if (path === '/dev/personas') root.innerHTML = renderDevPersonas();
   else if (path === '/dev/questions') root.innerHTML = renderDevQuestions();
   else if (path === '/dev/missions') root.innerHTML = renderDevMissions();
@@ -627,6 +643,15 @@ function closeShareCard() {
   requestAnimationFrame(() => document.querySelector('.result-generate')?.focus({ preventScroll: true }));
 }
 
+function closeDimensionDetail() {
+  if (!activeDimensionId) return;
+  const dimensionId = activeDimensionId;
+  activeDimensionId = '';
+  render();
+  window.scrollTo({ top: dimensionReturnScroll, behavior: 'instant' });
+  requestAnimationFrame(() => document.querySelector(`.result-six-item[data-dimension="${CSS.escape(dimensionId)}"]`)?.focus({ preventScroll: true }));
+}
+
 function handleAction(action, element) {
   const { path, params } = currentRoute();
   if (action === 'start-test') {
@@ -645,6 +670,14 @@ function handleAction(action, element) {
     requestAnimationFrame(() => document.querySelector('.share-card-dialog [data-action="close-share-card"]')?.focus({ preventScroll: true }));
   }
   if (action === 'close-share-card') closeShareCard();
+  if (action === 'show-dimension') {
+    if (shareCardVisible) return;
+    activeDimensionId = element.dataset.dimension;
+    dimensionReturnScroll = window.scrollY;
+    render();
+    requestAnimationFrame(() => document.querySelector('.dimension-detail-dialog [data-action="close-dimension-detail"]')?.focus({ preventScroll: true }));
+  }
+  if (action === 'close-dimension-detail') closeDimensionDetail();
   if (action === 'restart-test') {
     if (window.confirm('重新测一次会覆盖当前窑格结果，确定重新开始吗？')) { shareCardVisible = false; startNewJourney(); go('/test'); }
   }
@@ -714,6 +747,7 @@ function compressPhoto(file) {
 
 root.addEventListener('click',(event)=>{
   if (shareCardVisible && event.target.matches('.share-card-modal')) { closeShareCard(); return; }
+  if (activeDimensionId && event.target.matches('.dimension-detail-modal')) { closeDimensionDetail(); return; }
   const target=event.target.closest('[data-action],[data-go],[data-mode],[data-answer],[data-choice]');
   if(!target)return;
   if(target.dataset.go){event.preventDefault();go(target.dataset.go);return;}
@@ -763,10 +797,10 @@ root.addEventListener('input',(event)=>{
 
 window.addEventListener('hashchange',render);
 document.addEventListener('keydown',(event)=>{
-  if (!shareCardVisible) return;
-  if (event.key === 'Escape') { event.preventDefault(); closeShareCard(); return; }
+  if (!shareCardVisible && !activeDimensionId) return;
+  if (event.key === 'Escape') { event.preventDefault(); if (activeDimensionId) closeDimensionDetail(); else closeShareCard(); return; }
   if (event.key !== 'Tab') return;
-  const dialog = document.querySelector('.share-card-dialog');
+  const dialog = document.querySelector(activeDimensionId ? '.dimension-detail-dialog' : '.share-card-dialog');
   const focusable = [...dialog?.querySelectorAll('button:not(:disabled),a[href],[tabindex]:not([tabindex="-1"])') || []];
   if (!focusable.length) { event.preventDefault(); dialog?.focus(); return; }
   const first = focusable[0], last = focusable.at(-1);
