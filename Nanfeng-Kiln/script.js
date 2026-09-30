@@ -101,7 +101,6 @@ const copy = {
     previousPage: "返回首页", nextPage: "继续参观", day4Short: "选一件石湾公仔",
     footerSources: "参考资料", photoSourceLabel: "查看照片来源", brandHomeAria: "南风古灶，返回首页", navAria: "章节导航",
     historyFactsAria: "历史节点", playVideoAria: "播放南风古灶实地视频", dayRouteAria: "建议游览顺序", processAria: "石湾陶塑制作过程",
-    searchAria: "搜索页面内容", searchTitle: "搜索这份导览", searchPlaceholder: "搜索龙窑、陶塑、体验…", closeSearchAria: "关闭搜索", searchEmpty: "输入关键词，查找景点、工艺与到访信息。", searchNoResults: "没有找到相关章节。试试“龙窑”“拉坯”或“榕树”。",
     videoStatus: "如播放器未能载入，可直接打开哔哩哔哩原视频。", videoRequestedStatus: "已请求哔哩哔哩播放器；若仍黑屏或提示无法播放，请用下方链接打开原视频。", videoRetry: "重新载入播放器",
     sourcesTitle: "资料与影像来源",
     sourcesIntro: "本页为独立文化展示，不代表景区官方。开放时间、活动与体验安排请以运营方当期信息为准。",
@@ -238,7 +237,6 @@ const copy = {
     previousPage: "Back to the start", nextPage: "Continue the walk", day4Short: "Choose a Shiwan figurine",
     footerSources: "Sources", photoSourceLabel: "View photo source", brandHomeAria: "Nanfeng Kiln, home", navAria: "Chapter navigation",
     historyFactsAria: "Historical milestones", playVideoAria: "Play on-site video of Nanfeng Kiln", dayRouteAria: "Suggested visitor sequence", processAria: "Shiwan ceramic sculpture process",
-    searchAria: "Search this page", searchTitle: "Search this guide", searchPlaceholder: "Search kilns, sculpture, activities…", closeSearchAria: "Close search", searchEmpty: "Enter a term to find places, craft and visitor information.", searchNoResults: "No matching section. Try “kiln”, “pottery” or “banyan”.",
     videoStatus: "If the player does not load, open the original Bilibili video directly.", videoRequestedStatus: "The Bilibili player was requested. If it stays black or reports an error, use the link below to open the original video.", videoRetry: "Reload player",
     sourcesTitle: "Sources & image credits",
     sourcesIntro: "This independent cultural showcase is not the attraction’s official website. Check the operator’s current information for hours, events and activities.",
@@ -397,56 +395,6 @@ document.querySelectorAll('a[href^="./sources.html"]').forEach(function (link) {
     try { sessionStorage.setItem("nanfeng-source-return", window.location.href); } catch (error) { /* The source page still opens without return memory. */ }
   });
 });
-
-const searchDialog = document.getElementById("siteSearchDialog");
-const searchInput = document.getElementById("siteSearchInput");
-const searchResults = document.getElementById("searchResults");
-const searchCatalog = [
-  ["top", "南风古灶 / Nanfeng Kiln", "首页 古灶 佛山 石湾 kiln home Foshan Shiwan"],
-  ["history", "历史与龙窑 / History & dragon kiln", "明代 1506 1521 正德年间 历史 窑火 Ming history Zhengde"],
-  ["route", "游览路线 / Visitor route", "沿窑而行 行程路线 visitor walk route"],
-  ["spot-kilns", "南风灶与高灶 / Nanfeng and Gao Kilns", "龙窑 柴烧 kiln dragon fire"],
-  ["spot-banyan", "古灶榕风 / The banyan", "古榕 榕树 古树 banyan tree"],
-  ["spot-workshop", "古寮场与陶艺空间 / Pottery workshops", "古寮场 陶艺 陶艺体验 拉坯 pottery handbuilding throwing"],
-  ["spot-artists", "艺术家村与陶片壁画 / Artists’ village", "瑞龙献宝 壁画 艺术家村 mural village"],
-  ["customs", "风俗与活动 / Customs & events", "谢灶 祈福 开窑 市集 茶会 ritual market tea kiln opening"],
-  ["works", "石湾作品与体验 / Shiwan works & activities", "石湾公仔 陶塑 文创 手信 体验 sculpture figurine gifts"],
-  ["visit", "到访信息 / Visitor information", "地址 开放 交通 地图 ticket hours transport address"],
-  ["site-map", "南风古灶景区地图 / Nanfeng Kiln guide map", "地图 导览 停车场 出入口 游客中心 visitor map parking entrance centre"],
-  ["craft-process", "陶塑制作过程 / Ceramic process", "构思 泥料 成形 装饰 上釉 龙窑 工艺 craft shaping glazing firing"],
-  ["videoShell", "哔哩哔哩视频 / Bilibili video", "视频 龙窑 实拍 player bilibili footage"]
-];
-function renderSearchResults() {
-  if (!searchResults || !searchInput) return;
-  const query = searchInput.value.trim().toLocaleLowerCase();
-  const words = copy[document.documentElement.lang === "en" ? "en" : "zh"];
-  if (!query) {
-    searchResults.textContent = words.searchEmpty;
-    return;
-  }
-  const matches = searchCatalog.filter(function (item) { return (item[1] + " " + item[2]).toLocaleLowerCase().includes(query); });
-  if (!matches.length) {
-    searchResults.textContent = words.searchNoResults;
-    return;
-  }
-  searchResults.replaceChildren(...matches.map(function (item) {
-    const link = document.createElement("a");
-    link.href = "#" + item[0];
-    link.textContent = item[1];
-    link.addEventListener("click", function () { searchDialog.close(); });
-    return link;
-  }));
-}
-document.getElementById("searchToggle")?.addEventListener("click", function () {
-  if (!searchDialog) return;
-  searchDialog.showModal();
-  if (searchInput) { searchInput.value = ""; renderSearchResults(); searchInput.focus(); }
-});
-searchInput?.addEventListener("input", renderSearchResults);
-searchDialog?.addEventListener("click", function (event) {
-  if (event.target === searchDialog) searchDialog.close();
-});
-searchDialog?.addEventListener("close", function () { document.getElementById("searchToggle")?.focus(); });
 
 (function initSiteMapViewer() {
   const dialog = document.getElementById("siteMapDialog");
