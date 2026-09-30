@@ -22,6 +22,7 @@
         <a href="#craft" data-i18n="navCraft">陶艺传承</a>
         <a href="#works" data-i18n="navWorks">作品</a>
         <a href="#visit" data-i18n="navVisit">走进窑场</a>
+        <a class="site-map-nav-link" href="#site-map" data-i18n="navMap">景区地图</a>
       </nav>
       <button class="lang-switch" id="langSwitch" type="button" aria-label="Switch to English">中文 <span aria-hidden="true">/</span> English</button>
       <button class="search-toggle" id="searchToggle" type="button" aria-label="搜索页面内容" data-i18n-aria="searchAria" aria-haspopup="dialog" aria-controls="siteSearchDialog"><span class="search-mark" aria-hidden="true"></span></button>
@@ -256,13 +257,55 @@
         </div>
       </section>
 
+      <section class="site-map-section" id="site-map" aria-labelledby="site-map-heading">
+        <header class="site-map-heading">
+          <div>
+            <span class="section-index">05 / MAP YOUR WALK</span>
+            <h2 id="site-map-heading" data-i18n="siteMapTitle">一张图，走进古灶与石湾</h2>
+          </div>
+          <p data-i18n="siteMapIntro">这张景区导览图标出了古灶街巷、停车场、游客中心、出入口与周边道路。点击地图，可在大图查看器中拖拽和缩放细节。</p>
+        </header>
+        <figure class="site-map-panel">
+          <button class="site-map-preview" id="mapOpenButton" type="button" aria-label="点击打开南风古灶景区地图大图" data-i18n-aria="siteMapOpenAria" aria-haspopup="dialog" aria-controls="siteMapDialog">
+            <img class="site-map-preview-image" src="./assets/site-guide-map.jpg" alt="南风古灶与周边街区的手绘景区导览图，标有景点、停车场、游客中心、出入口和图例" data-alt-zh="南风古灶与周边街区的手绘景区导览图，标有景点、停车场、游客中心、出入口和图例" data-alt-en="Illustrated guide map of Nanfeng Kiln and the surrounding district, with places, parking, visitor centre, entrances and a legend" width="3000" height="1662" draggable="false" loading="lazy" />
+            <span class="site-map-open-label"><span aria-hidden="true">⌕</span><span data-i18n="siteMapOpen">点击查看大图</span></span>
+          </button>
+          <figcaption class="site-map-caption">
+            <span data-i18n="siteMapHelp">点击地图打开大图查看器；放大、缩小或拖动只在查看器中进行。</span>
+            <span class="site-map-credit" data-i18n="siteMapCredit">地图由用户提供 · 现场导览信息以园区标识为准</span>
+          </figcaption>
+        </figure>
+      </section>
+
       <footer class="home-footer">
         <a class="footer-brand-lockup" href="#top"><span class="brand-seal" aria-hidden="true">南<br>風</span><span>南风古灶<small>NANFENG KILN · FOSHAN · SHIWAN</small></span></a>
         <p data-i18n="footerNote">在这里，看见传统，也看见生活。</p>
         <div class="footer-sources"><span data-i18n="footerSources">参考资料</span><a href="./sources.html" data-i18n="sourceLink">历史、图片与视频来源</a></div>
-        <nav class="footer-nav" aria-label="章节导航" data-i18n-aria="navAria"><a href="#history" data-i18n="navHistory">历史</a><a href="#craft" data-i18n="navCraft">陶艺传承</a><a href="#visit" data-i18n="navVisit">走进窑场</a></nav>
+        <nav class="footer-nav" aria-label="章节导航" data-i18n-aria="navAria"><a href="#history" data-i18n="navHistory">历史</a><a href="#craft" data-i18n="navCraft">陶艺传承</a><a href="#visit" data-i18n="navVisit">走进窑场</a><a href="#site-map" data-i18n="navMap">景区地图</a></nav>
       </footer>
   </main>
+  <dialog class="site-map-dialog" id="siteMapDialog" aria-labelledby="siteMapDialogTitle">
+    <div class="site-map-dialog-shell">
+      <div class="site-map-dialog-toolbar">
+        <div class="site-map-dialog-heading">
+          <span class="site-map-toolbar-label" data-i18n="siteMapToolbar">南风古灶景区导览图 · 原图 3000 × 1662</span>
+          <h2 id="siteMapDialogTitle" data-i18n="siteMapDialogTitle">南风古灶景区地图</h2>
+        </div>
+        <div class="site-map-controls" role="group" aria-label="地图缩放控件" data-i18n-aria="siteMapControlsAria">
+          <button class="map-zoom-button" id="mapZoomOut" type="button" aria-label="缩小地图" data-i18n-aria="mapZoomOutAria">−</button>
+          <input class="map-zoom-range" id="mapZoomRange" type="range" min="50" max="800" step="1" value="100" aria-label="地图缩放比例" data-i18n-aria="mapZoomRangeAria" />
+          <output class="map-zoom-value" id="mapZoomValue" for="mapZoomRange" aria-live="polite">100%</output>
+          <button class="map-zoom-button" id="mapZoomIn" type="button" aria-label="放大地图" data-i18n-aria="mapZoomInAria">+</button>
+          <button class="map-fit-button" id="mapZoomFit" type="button" data-i18n="mapZoomFit">适配全图</button>
+        </div>
+        <button class="site-map-close" id="siteMapClose" type="button" aria-label="关闭地图查看器" data-i18n-aria="siteMapCloseAria"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="site-map-viewport" id="siteMapViewport" tabindex="0" role="region" aria-label="可交互的南风古灶景区地图" data-i18n-aria="siteMapViewportAria" aria-describedby="siteMapDialogHelp">
+        <img class="site-map-image" id="siteMapImage" src="./assets/site-guide-map.jpg" alt="南风古灶与周边街区的手绘景区导览图，标有景点、停车场、游客中心、出入口和图例" data-alt-zh="南风古灶与周边街区的手绘景区导览图，标有景点、停车场、游客中心、出入口和图例" data-alt-en="Illustrated guide map of Nanfeng Kiln and the surrounding district, with places, parking, visitor centre, entrances and a legend" width="3000" height="1662" draggable="false" />
+      </div>
+      <p class="site-map-dialog-help" id="siteMapDialogHelp" data-i18n="siteMapDialogHelp">拖动地图平移；使用滚轮、双指或缩放条放大细节。按方向键平移，Home 键复位，Esc 关闭。</p>
+    </div>
+  </dialog>
   <dialog class="search-dialog" id="siteSearchDialog" aria-labelledby="searchHeading">
     <form method="dialog" class="search-dialog-head"><label id="searchHeading" for="siteSearchInput" data-i18n="searchTitle">搜索这份导览</label><button value="close" aria-label="关闭搜索" data-i18n-aria="closeSearchAria">×</button></form>
     <input id="siteSearchInput" type="search" autocomplete="off" placeholder="搜索龙窑、陶塑、体验…" data-i18n-placeholder="searchPlaceholder" />
