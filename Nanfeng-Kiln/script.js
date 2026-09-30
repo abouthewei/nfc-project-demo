@@ -61,12 +61,10 @@ const copy = {
     mapLink: "在高德地图查找 ↗", officialSiteLink: "查看政府文化介绍 ↗",
     visitCaveat: "本页为独立文化导览，不代表景区官方；门票、预约、活动和交通信息请以运营方最新通知为准。",
     siteMapTitle: "一张图，走进古灶与石湾",
-    siteMapToolbar: "南风古灶景区导览图 · 原图 3000 × 1662",
     siteMapControlsAria: "地图缩放控件", mapZoomOutAria: "缩小地图", mapZoomInAria: "放大地图",
     mapZoomRangeAria: "地图缩放比例", mapZoomFit: "适配全图", siteMapViewportAria: "可交互的南风古灶景区地图",
     siteMapOpenAria: "点击打开南风古灶景区地图大图", siteMapOpen: "点击查看大图", siteMapDialogTitle: "南风古灶景区地图",
     siteMapCloseAria: "关闭地图查看器", siteMapHelp: "点击地图打开大图查看器；放大、缩小或拖动只在查看器中进行。",
-    siteMapDialogHelp: "拖动地图平移；使用滚轮、双指或缩放条放大细节。按方向键平移，Home 键复位，Esc 关闭。",
     profileScale: "非比例示意 · NOT TO SCALE",
     craftTitle: "泥与人间",
     craftLabel: "石湾陶塑 · 手艺与生活",
@@ -199,13 +197,11 @@ const copy = {
     mapLink: "Find it on Amap ↗", officialSiteLink: "Read the government cultural guide ↗",
     visitCaveat: "This independent guide is not the attraction’s official site. Check the operator’s latest notices for tickets, booking, events and transport.",
     siteMapTitle: "Explore the kiln town, one map at a time",
-    siteMapToolbar: "Nanfeng Kiln visitor map · Original 3000 × 1662",
     siteMapControlsAria: "Map zoom controls", mapZoomOutAria: "Zoom out", mapZoomInAria: "Zoom in",
     mapZoomRangeAria: "Map zoom level", mapZoomFit: "Fit map",
     siteMapViewportAria: "Interactive map of Nanfeng Kiln", siteMapOpenAria: "Open the full-size Nanfeng Kiln visitor map",
     siteMapOpen: "Open full-size map", siteMapDialogTitle: "Nanfeng Kiln visitor map", siteMapCloseAria: "Close map viewer",
     siteMapHelp: "Select the map to open the full-size viewer. Pan and zoom are available only in the viewer.",
-    siteMapDialogHelp: "Drag to pan; use the wheel, a two-finger pinch or the slider to zoom. Use arrow keys to pan, Home to reset, or Esc to close.",
     profileScale: "Diagram · NOT TO SCALE",
     craftTitle: "Clay and the<br>human world.",
     craftLabel: "SHIWAN CERAMIC SCULPTURE · CRAFT & LIFE",
@@ -476,19 +472,32 @@ searchDialog?.addEventListener("close", function () { document.getElementById("s
     return Math.max(minimum, Math.min(maximum, valueToLimit));
   }
 
-  function clampPan() {
-    const ratio = (image.naturalWidth || 3000) / (image.naturalHeight || 1662);
-    const baseWidth = Math.min(viewport.clientWidth, viewport.clientHeight * ratio);
-    const baseHeight = baseWidth / ratio;
-    const maxX = Math.max(0, (baseWidth * (state.scale - 1)) / 2);
-    const maxY = Math.max(0, (baseHeight * (state.scale - 1)) / 2);
+  // Size the layer at native device pixels before fitting it, so Safari does not magnify a viewport-sized raster.
+  function getFitGeometry() {
+    const pixelRatio = Math.max(0.5, window.devicePixelRatio || 1);
+    const sourceWidth = image.naturalWidth || Number(image.getAttribute("width")) || 3000;
+    const sourceHeight = image.naturalHeight || Number(image.getAttribute("height")) || 1662;
+    const imageWidth = sourceWidth / pixelRatio;
+    const imageHeight = sourceHeight / pixelRatio;
+    if (image.style.width !== imageWidth + "px") image.style.width = imageWidth + "px";
+    if (image.style.height !== imageHeight + "px") image.style.height = imageHeight + "px";
+    const ratio = imageWidth / imageHeight;
+    const width = Math.min(viewport.clientWidth, viewport.clientHeight * ratio);
+    const height = width / ratio;
+    return { imageWidth, imageHeight, width, height, scale: width / imageWidth };
+  }
+
+  function clampPan(geometry) {
+    const maxX = Math.max(0, (geometry.width * (state.scale - 1)) / 2);
+    const maxY = Math.max(0, (geometry.height * (state.scale - 1)) / 2);
     state.x = limit(state.x, -maxX, maxX);
     state.y = limit(state.y, -maxY, maxY);
   }
 
   function renderMap() {
-    clampPan();
-    image.style.transform = "translate(-50%, -50%) translate(" + state.x + "px, " + state.y + "px) scale(" + state.scale + ")";
+    const geometry = getFitGeometry();
+    clampPan(geometry);
+    image.style.transform = "translate(-50%, -50%) translate(" + state.x + "px, " + state.y + "px) scale(" + (geometry.scale * state.scale) + ")";
     range.value = String(Math.round(state.scale * 100));
     value.value = Math.round(state.scale * 100) + "%";
     value.textContent = value.value;
@@ -591,6 +600,7 @@ searchDialog?.addEventListener("close", function () { document.getElementById("s
   }
 
   viewport.addEventListener("pointerdown", onPointerDown);
+  image.addEventListener("load", renderMap);
   viewport.addEventListener("pointermove", onPointerMove);
   viewport.addEventListener("pointerup", onPointerEnd);
   viewport.addEventListener("pointercancel", onPointerEnd);
@@ -620,10 +630,9 @@ searchDialog?.addEventListener("close", function () { document.getElementById("s
   zoomOut?.addEventListener("click", function () { zoomTo(state.scale / 1.25); });
   fit?.addEventListener("click", resetMap);
   openButton.addEventListener("click", function () {
-    resetMap();
     dialog.showModal();
     requestAnimationFrame(function () {
-      renderMap();
+      resetMap();
       viewport.focus({ preventScroll: true });
     });
   });
