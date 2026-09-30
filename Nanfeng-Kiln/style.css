@@ -705,12 +705,11 @@ html { scroll-padding-top: 0; }
   background-size: 680px auto;
 }
 .site-map-heading {
-  display: grid; grid-template-columns: minmax(0,1.2fr) minmax(280px,.8fr); align-items: end;
-  gap: clamp(24px, 5vw, 68px); max-width: 1320px; margin: 0 auto 28px;
+  display: grid; grid-template-columns: 1fr; align-items: end;
+  max-width: 1320px; margin: 0 auto 28px;
 }
 .site-map-heading .section-index { margin-bottom: 11px; }
 .site-map-heading h2 { font: 500 clamp(30px, 3.5vw, 46px)/1.35 var(--serif); letter-spacing: .035em; }
-.site-map-heading > p { max-width: 540px; padding-bottom: 4px; color: #5e6059; font: 15px/1.9 var(--serif); }
 .site-map-panel { max-width: 1320px; margin: 0 auto; border: 1px solid #c7c2b7; background: rgba(255,255,255,.38); box-shadow: 0 15px 42px rgba(40,36,28,.08); }
 .site-map-preview { position: relative; display: block; width: 100%; padding: 0; overflow: hidden; border: 0; background: #f8f7f1; cursor: zoom-in; text-align: left; }
 .site-map-preview-image { display: block; width: 100%; height: auto; transition: filter .22s ease, transform .4s cubic-bezier(.2,.7,.2,1); }
@@ -740,7 +739,6 @@ html { scroll-padding-top: 0; }
   pointer-events: none; user-select: none; -webkit-user-drag: none; will-change: transform;
 }
 .site-map-caption { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; padding: 11px 16px 12px; border-top: 1px solid #d4d0c6; color: #66665e; font: 11px/1.7 var(--serif); }
-.site-map-credit { flex: 0 0 auto; color: #8a493c; font-size: 10px; }
 #app > #site-map { scroll-margin-top: 84px; }
 
 .site-map-dialog { position: fixed; inset: 0; width: 100vw; max-width: none; height: 100%; max-height: none; margin: 0; padding: 0; overflow: hidden; border: 0; background: #171918; color: #f5f3ec; }
@@ -761,17 +759,14 @@ html { scroll-padding-top: 0; }
   .site-map-nav-link { display: flex !important; }
 }
 @media (max-width: 1050px) {
-  .site-map-heading { gap: 28px; }
   #app > #site-map { scroll-margin-top: 120px; }
 }
 @media (max-width: 780px) {
   .site-map-section { padding: 54px 21px 66px; }
-  .site-map-heading { grid-template-columns: 1fr; gap: 10px; margin-bottom: 21px; }
+  .site-map-heading { margin-bottom: 21px; }
   .site-map-heading h2 { font-size: clamp(29px, 8vw, 39px); }
-  .site-map-heading > p { font-size: 13px; }
   .map-zoom-button, .map-fit-button { min-width: 0; height: 34px; padding-inline: 7px; }
   .site-map-caption { align-items: flex-start; flex-direction: column; gap: 4px; padding: 10px 12px; font-size: 10px; }
-  .site-map-credit { font-size: 9px; }
   .site-map-open-label { right: 9px; bottom: 9px; gap: 6px; padding: 7px 9px; font-size: 10px; }
   .site-map-dialog-shell { padding-right: max(10px, env(safe-area-inset-right)); padding-left: max(10px, env(safe-area-inset-left)); }
   .site-map-dialog-toolbar { grid-template-columns: minmax(0,1fr) 40px; grid-template-rows: auto auto; gap: 12px 10px; min-height: 0; padding: 5px 0 13px; }
