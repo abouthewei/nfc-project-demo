@@ -1,7 +1,7 @@
 import { clans, dimensions, firePoints, hiddenPersonas, missions, personas, questions, routeModes, sourceNotes, stories } from './data.js?v=16';
 import { calculateDimensions, getFirePoint, getMission, getRouteTasks, matchPersona, personaDistances } from './engine.js';
 import { awardPointVisit, completeMission, finishTest, getJourney, saveJourneyPhoto, startNewJourney, track, updateJourney, answerQuestion } from './journey.js?v=16';
-import { openTimeWeave } from './adapters.js';
+import { openTimeWeave } from './adapters.js?v=16';
 
 const root = document.querySelector('#app');
 const typeNames = {find:'寻找',observe:'观察',choice:'判断',photo:'拍照',story:'故事',companion:'同行',experience:'体验'};

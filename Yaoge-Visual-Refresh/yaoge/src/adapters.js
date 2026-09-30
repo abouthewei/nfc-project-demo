@@ -1,4 +1,4 @@
-import { track } from './journey.js';
+import { track } from './journey.js?v=16';
 
 export function openTimeWeave(context) {
   track('timeweave_click', { source: context.source, personaId: context.personaId, clanId: context.clanId, journeyId: context.journeyId });
