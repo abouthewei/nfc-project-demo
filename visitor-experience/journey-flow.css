@@ -1,4 +1,9 @@
 /* Visual implementation of the four approved 390 × 844 travelogue screens. */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 :root {
   --journey-paper: #f7f0e4;
   --journey-paper-soft: #fffaf1;
@@ -22,6 +27,7 @@
 
 .journey-home {
   position: relative;
+  height: 100vh;
   height: 100svh;
   min-height: 720px;
   overflow: hidden;
@@ -242,6 +248,7 @@
 .journey-editor,
 .journey-preview,
 .journey-story {
+  min-height: 100vh;
   min-height: 100svh;
   overflow: visible;
 }
@@ -485,9 +492,9 @@
 .chapter-upload-camera .ui-icon { width: 17px; height: 17px; }
 
 .chapter-uploaded { position: relative; }
-.chapter-uploaded .media-preview { position: relative; display: grid; width: 100%; height: auto; max-height: min(50svh, 420px); place-items: center; overflow: hidden; border-radius: 6px; background: #e1d0bc; }
+.chapter-uploaded .media-preview { position: relative; display: grid; width: 100%; height: auto; max-height: min(50vh, 420px); max-height: min(50svh, 420px); place-items: center; overflow: hidden; border-radius: 6px; background: #e1d0bc; }
 .chapter-uploaded .media-preview img,
-.chapter-uploaded .media-preview video { display: block; width: 100%; height: auto; max-height: min(50svh, 420px); object-fit: contain; }
+.chapter-uploaded .media-preview video { display: block; width: 100%; height: auto; max-height: min(50vh, 420px); max-height: min(50svh, 420px); object-fit: contain; }
 .chapter-uploaded .remove-media { top: 9px; right: 9px; }
 
 .chapter-replace {
@@ -631,6 +638,7 @@
 
 .travelogue-cover {
   position: relative;
+  height: min(455px, 54vh);
   height: min(455px, 54svh);
   min-height: 380px;
   overflow: hidden;
@@ -693,7 +701,7 @@
 .story-expiry { margin: 5px 0 0; color: #897660; font-size: 10px; line-height: 1.6; text-align: center; }
 
 .modal-backdrop--share { display: flex; align-items: flex-end; justify-content: center; padding: 0; background: rgba(30, 24, 19, .57); backdrop-filter: blur(4px); }
-.share-sheet { position: relative; width: min(100%, 390px); max-height: 91svh; overflow: auto; padding: 30px 23px calc(17px + env(safe-area-inset-bottom)); border: 0; border-radius: 24px 24px 0 0; background: var(--journey-paper) url("./assets/paper-grain.webp") center / 420px auto repeat; box-shadow: 0 -10px 42px rgba(30, 20, 13, .2); }
+.share-sheet { position: relative; width: min(100%, 390px); max-height: 91vh; max-height: 91svh; overflow: auto; padding: 30px 23px calc(17px + env(safe-area-inset-bottom)); border: 0; border-radius: 24px 24px 0 0; background: var(--journey-paper) url("./assets/paper-grain.webp") center / 420px auto repeat; box-shadow: 0 -10px 42px rgba(30, 20, 13, .2); }
 .share-sheet-handle { position: absolute; top: 10px; left: 50%; width: 39px; height: 5px; border-radius: 999px; background: #b8a590; transform: translateX(-50%); }
 .share-sheet-close { position: absolute; top: 16px; right: 17px; display: grid; width: 44px; height: 44px; place-items: center; border: 1px solid #d8c8b4; border-radius: 50%; background: transparent; color: #715c46; cursor: pointer; }
 .share-sheet-close .ui-icon { width: 15px; height: 15px; }
@@ -868,6 +876,7 @@
 .journey-preview-head strong,
 .journey-story-head strong { font-size: 18px; }
 .travelogue-cover {
+  height: clamp(320px, 49vh, 405px);
   height: clamp(320px, 49svh, 405px);
   min-height: 320px;
 }
@@ -897,6 +906,7 @@
 body.has-overlay-modal { overflow: hidden; }
 .modal-backdrop--share { overflow: hidden; }
 .share-sheet {
+  min-height: min(380px, 58vh);
   min-height: min(380px, 58svh);
   padding-top: 26px;
   padding-bottom: calc(8px + env(safe-area-inset-bottom));
@@ -969,18 +979,20 @@ body.has-overlay-modal { overflow: hidden; }
   .journey-home {
     display: flex;
     height: auto;
+    min-height: 100vh;
     min-height: 100svh;
     flex-direction: column;
     overflow: visible;
     padding-bottom: calc(16px + env(safe-area-inset-bottom));
   }
-  .journey-home-scene { height: min(31svh, 220px); }
+  .journey-home-scene { height: min(31vh, 220px); height: min(31svh, 220px); }
   .journey-home-brand { top: max(18px, calc(env(safe-area-inset-top) + 14px)); left: 18px; }
   .journey-home-copy {
     position: relative;
     top: auto;
     right: auto;
     left: auto;
+    margin: min(31vh, 176px) 21px 0;
     margin: min(31svh, 176px) 21px 0;
   }
   .journey-home-copy h1 { font-size: clamp(30px, 9.5vw, 35px); line-height: 1.12; }
@@ -991,12 +1003,13 @@ body.has-overlay-modal { overflow: hidden; }
     top: auto;
     right: auto;
     left: auto;
+    height: min(18vh, 118px);
     height: min(18svh, 118px);
     min-height: 102px;
     margin: 10px 19px 0 21px;
   }
   .home-postcard { height: 100%; min-height: 0; padding: 6px; }
-  .home-postcard > img:first-child { height: clamp(52px, 10svh, 64px); }
+  .home-postcard > img:first-child { height: clamp(52px, 10vh, 64px); height: clamp(52px, 10svh, 64px); }
   .home-postcard p { margin-top: 5px; font-size: 9px; line-height: 1.3; }
   .journey-home-bottom {
     position: relative;
@@ -1022,6 +1035,7 @@ body.has-overlay-modal { overflow: hidden; }
   .journey-editor,
   .journey-preview {
     display: grid;
+    height: 100vh;
     height: 100svh;
     min-height: 0;
     grid-template-rows: auto minmax(0, 1fr) auto;
@@ -1050,14 +1064,14 @@ body.has-overlay-modal { overflow: hidden; }
 }
 
 @media (max-width: 360px) {
-  .home-postcard > img:first-child { height: clamp(50px, 10svh, 64px); }
+  .home-postcard > img:first-child { height: clamp(50px, 10vh, 64px); height: clamp(50px, 10svh, 64px); }
 }
 
 @media (min-width: 768px) {
   .journey-story { width: min(calc(100% - 64px), 640px); }
   .journey-story .travelogue-chapters { padding-inline: clamp(32px, 5vw, 56px); }
   .journey-story .story-extra-actions { width: min(100%, 600px); margin-inline: auto; }
-  .journey-story .travelogue-cover { height: clamp(405px, 49svh, 520px); min-height: 0; }
+  .journey-story .travelogue-cover { height: clamp(405px, 49vh, 520px); height: clamp(405px, 49svh, 520px); min-height: 0; }
 }
 
 /* Fluid canvas: every journey surface occupies the viewport; editorial content stays readable. */
@@ -1093,7 +1107,7 @@ body {
   background-size: auto, 100% auto;
 }
 
-.app-shell.journey-home { height: 100svh; min-height: 680px; }
+.app-shell.journey-home { height: 100vh; height: 100svh; min-height: 680px; }
 .journey-home-scene picture { display: block; width: 100%; height: 100%; }
 .journey-home-scene img { width: 100%; height: 100%; object-fit: cover; }
 .journey-home-story-demo { min-width: 0; }
@@ -1153,6 +1167,7 @@ body {
 }
 
 .travelogue-cover {
+  height: clamp(340px, 52vh, 620px);
   height: clamp(340px, 52svh, 620px);
   min-height: 320px;
 }
@@ -1195,6 +1210,7 @@ body {
 @media (min-width: 768px) {
   .journey-home {
     position: relative;
+    height: 100vh;
     height: 100svh;
     min-height: 680px;
     overflow: hidden;
@@ -1215,6 +1231,7 @@ body {
   .journey-home-brand { left: clamp(24px, 5vw, 78px); }
 
   .journey-home-copy {
+    top: clamp(110px, 20vh, 230px);
     top: clamp(110px, 20svh, 230px);
     right: clamp(30px, 7vw, 110px);
     left: calc(50% + clamp(26px, 7vw, 112px));
@@ -1228,8 +1245,10 @@ body {
   .journey-home-story-demo {
     top: auto;
     right: clamp(30px, 7vw, 110px);
+    bottom: clamp(128px, 17vh, 190px);
     bottom: clamp(128px, 17svh, 190px);
     left: calc(50% + clamp(26px, 7vw, 112px));
+    height: clamp(155px, 22vh, 230px);
     height: clamp(155px, 22svh, 230px);
     grid-template-columns: minmax(0, 1.2fr) 28px minmax(140px, .88fr);
   }
@@ -1241,16 +1260,17 @@ body {
 
   .journey-home-bottom {
     right: clamp(30px, 7vw, 110px);
+    bottom: clamp(48px, 7vh, 78px);
     bottom: clamp(48px, 7svh, 78px);
     left: calc(50% + clamp(26px, 7vw, 112px));
   }
 
   .journey-home-bottom .primary-button { min-height: clamp(56px, 6.5vw, 70px); font-size: clamp(18px, 1.7vw, 22px); }
-  .journey-home-caption { right: 0; bottom: clamp(16px, 2.5svh, 28px); left: 50%; font-size: clamp(10px, .9vw, 12px); }
+  .journey-home-caption { right: 0; bottom: clamp(16px, 2.5vh, 28px); bottom: clamp(16px, 2.5svh, 28px); left: 50%; font-size: clamp(10px, .9vw, 12px); }
 }
 
 @media (min-width: 768px) and (max-height: 560px) {
-  .app-shell.journey-home { display: block; min-height: 0; height: 100svh; overflow: hidden; padding: 0; }
+  .app-shell.journey-home { display: block; min-height: 0; height: 100vh; height: 100svh; overflow: hidden; padding: 0; }
   .journey-home-scene { position: absolute; inset: 0 auto 0 0; width: 50%; height: 100%; flex: none; }
   .journey-home-copy { position: absolute; top: 20%; right: clamp(20px, 6vw, 50px); left: calc(50% + clamp(20px, 5vw, 42px)); margin: 0; }
   .journey-home-copy h1 { font-size: clamp(34px, 4.2vw, 46px); }
@@ -1264,15 +1284,16 @@ body {
 
 @media (min-width: 768px) {
   .journey-story .travelogue-chapters { padding-right: clamp(32px, 5vw, 64px); padding-left: clamp(32px, 5vw, 64px); }
-  .journey-story .travelogue-cover { height: clamp(430px, 56svh, 640px); min-height: 0; }
+  .journey-story .travelogue-cover { height: clamp(430px, 56vh, 640px); height: clamp(430px, 56svh, 640px); min-height: 0; }
   .travelogue-intro { padding-right: clamp(96px, 10vw, 150px); }
 }
 
 @media (max-width: 520px) and (max-height: 760px) {
-  .app-shell.journey-home { height: auto; min-height: 100svh; }
-  .journey-home-scene { flex: 0 0 min(31svh, 220px); }
+  .app-shell.journey-home { height: auto; min-height: 100vh; min-height: 100svh; }
+  .journey-home-scene { flex: 0 0 min(31vh, 220px); flex-basis: min(31svh, 220px); }
+  .journey-home-copy { margin-top: min(31vh, 176px); }
   .journey-home-copy { margin-top: min(31svh, 176px); }
-  .journey-home-story-demo { flex: 0 0 min(18svh, 118px); }
+  .journey-home-story-demo { flex: 0 0 min(18vh, 118px); flex-basis: min(18svh, 118px); }
   .home-postcard { height: 100%; min-height: 0; }
 }
 
@@ -1287,6 +1308,62 @@ body {
   .journey-preview-footer .secondary-button,
   .journey-preview-footer .primary-button { flex: 1 1 0; }
   .travelogue-page { width: 100%; }
+}
+
+/* Browser compatibility: keep fixed controls and the paper layout in place when
+   older Android browsers do not support modern viewport or safe-area units. */
+@supports not (height: 100svh) {
+  .journey-home,
+  .app-shell.journey-home { height: 100vh; }
+  .journey-editor,
+  .journey-preview,
+  .journey-story { min-height: 100vh; }
+  .travelogue-cover { height: clamp(320px, 49vh, 405px); }
+  .share-sheet { max-height: 91vh; min-height: min(380px, 58vh); }
+  .chapter-uploaded .media-preview,
+  .chapter-uploaded .media-preview img,
+  .chapter-uploaded .media-preview video { max-height: min(50vh, 420px); }
+
+  @media (max-height: 760px) {
+    .journey-home,
+    .app-shell.journey-home { height: auto; min-height: 100vh; }
+    .journey-editor,
+    .journey-preview { height: 100vh; }
+    .journey-home-scene { height: min(31vh, 220px); }
+    .journey-home-copy { margin-top: min(31vh, 176px); }
+    .journey-home-story-demo { height: min(18vh, 118px); }
+    .home-postcard > img:first-child { height: clamp(52px, 10vh, 64px); }
+    .journey-editor-main { padding-bottom: 18px; }
+  }
+
+  @media (min-width: 768px) {
+    .journey-home { height: 100vh; }
+    .journey-story .travelogue-cover { height: clamp(430px, 56vh, 640px); }
+  }
+}
+
+@supports not (padding: env(safe-area-inset-bottom)) {
+  .journey-home-brand { top: 48px; }
+  .journey-home-bottom { bottom: 45px; }
+  .journey-home-caption { bottom: 15px; }
+  .journey-editor-head,
+  .journey-preview-head { padding-top: 7px; padding-bottom: 7px; }
+  .journey-editor-footer { padding-top: 11px; padding-bottom: 11px; }
+  .journey-preview-footer { padding-top: 10px; padding-bottom: 10px; }
+  .journey-editor-main { padding-bottom: 122px; }
+  .journey-story { padding-bottom: 92px; }
+  .story-extra-actions { padding-bottom: 30px; }
+  .share-sheet { padding-bottom: 17px; }
+
+  @media (max-height: 760px) {
+    .journey-home { padding-bottom: 16px; }
+    .journey-editor-main { padding-bottom: 18px; }
+  }
+}
+
+@supports not (min-height: 100dvh) {
+  .app-shell,
+  .screen { min-height: 100vh; }
 }
 
 @media (min-width: 768px) {
