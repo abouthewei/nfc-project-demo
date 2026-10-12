@@ -477,6 +477,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
 .mobile-menu-overlay a{font-size:1.5rem;color:var(--text-secondary)}
 .mobile-menu-overlay a:hover{color:var(--gold)}
 .mobile-close{position:absolute;top:20px;right:20px;background:none;border:none;color:var(--gold);font-size:2rem;cursor:pointer}
+.rotary-focus{outline:3px solid var(--gold-bright)!important;outline-offset:5px;box-shadow:0 0 0 8px rgba(229,180,84,.18)!important}
 </style>
 </head>
 <body class="lang-zh">
@@ -1235,7 +1236,13 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 });
 
 // ============ VIDEO POSTER CLICK-TO-PLAY ============
+let activeVideoEmbed = null;
+let activeVideoPoster = null;
+let restoreActiveVideo = null;
+
 document.querySelectorAll('.video-poster').forEach(poster => {
+  poster.tabIndex = 0;
+  poster.setAttribute('role', 'button');
   poster.addEventListener('click', () => {
     const embed = poster.closest('.video-embed');
     const src = poster.getAttribute('data-src');
@@ -1272,14 +1279,177 @@ document.querySelectorAll('.video-poster').forEach(poster => {
         </button>
       </span>`;
 
-    help.querySelector('.video-back').addEventListener('click', () => {
+    const restorePoster = () => {
       embed.replaceChildren(...posterContent);
       help.remove();
-    });
+      if (activeVideoEmbed === embed) {
+        activeVideoEmbed = null;
+        activeVideoPoster = null;
+        restoreActiveVideo = null;
+      }
+    };
+    help.querySelector('.video-back').addEventListener('click', restorePoster);
 
     embed.replaceChildren(iframe);
+    activeVideoEmbed = embed;
+    activeVideoPoster = poster;
+    restoreActiveVideo = restorePoster;
     embed.insertAdjacentElement('afterend', help);
   });
+  poster.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      poster.click();
+    }
+  });
+});
+
+// ============ ROTARY KEYBOARD NAVIGATION ============
+const rotarySelector = 'a[href],button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled),img[alt]:not([alt=""]),[tabindex]:not([tabindex="-1"])';
+let rotaryFocus = null;
+let rotaryHighlight = null;
+const rotaryHistory = [];
+let rotaryPendingReturn = null;
+
+document.querySelectorAll('img[alt]:not([alt=""])').forEach(image => {
+  if (!image.matches('.video-poster') && !image.closest('a[href],button')) image.tabIndex = -1;
+});
+
+function rotaryTargets() {
+  return [...document.querySelectorAll(rotarySelector)].filter(element => {
+    if (element.closest('[hidden],[inert],[aria-hidden="true"],.footer-credit')) return false;
+    if (element.matches('img') && element.closest('a[href],button') && !element.matches('.video-poster')) return false;
+    for (let parent = element; parent; parent = parent.parentElement) {
+      const style = getComputedStyle(parent);
+      if (style.display === 'none' || style.visibility === 'hidden' || Number(style.opacity) === 0) return false;
+    }
+    const rect = element.getBoundingClientRect();
+    return rect.width > 0 && rect.height > 0;
+  });
+}
+
+function focusRotaryTarget(target, scroll = true) {
+  rotaryHighlight?.classList.remove('rotary-focus');
+  rotaryFocus = target;
+  rotaryHighlight = target.matches('.video-poster,.album-cover')
+    ? target.closest('.video-embed')
+    : target.matches('img')
+      ? target.closest('.intro-image,.timeline-card-image') || target
+      : target;
+  if (target.closest('#navbar')) navbar.classList.remove('hide-nav');
+  rotaryHighlight.classList.add('rotary-focus');
+  target.focus({ preventScroll: true });
+  if (scroll) {
+    const rect = target.getBoundingClientRect();
+    if (rect.top < 0 || rect.bottom > window.innerHeight) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+    }
+  }
+}
+
+function restoreRotaryLocation(location) {
+  if (!location) return;
+  window.scrollTo({ top: location.scrollY, behavior: 'smooth' });
+  const targets = rotaryTargets();
+  const target = location.focus?.isConnected && targets.includes(location.focus)
+    ? location.focus
+    : targets.find(element => {
+      const rect = element.getBoundingClientRect();
+      return !element.closest('#navbar') && rect.bottom > 0 && rect.top < window.innerHeight;
+    });
+  if (target) focusRotaryTarget(target, false);
+}
+
+function focusHashDestination(hash = location.hash) {
+  const id = decodeURIComponent(hash.slice(1));
+  const destination = document.getElementById(id);
+  if (!destination) return;
+  const targets = rotaryTargets();
+  const target = targets.find(element => destination.contains(element)) ||
+    targets.find(element => destination.compareDocumentPosition(element) & Node.DOCUMENT_POSITION_FOLLOWING);
+  if (target) focusRotaryTarget(target);
+}
+
+document.addEventListener('click', event => {
+  if (event.defaultPrevented || event.button !== 0 || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+  const link = event.target.closest('a[href]');
+  if (!link) return;
+  const destination = new URL(link.href, location.href);
+  if (destination.origin !== location.origin || destination.pathname !== location.pathname || destination.search !== location.search || !destination.hash) return;
+  if (destination.hash !== location.hash) {
+    const focus = rotaryFocus || (document.activeElement === document.body ? null : document.activeElement);
+    rotaryHistory.push({
+      fromHash: location.hash,
+      scrollY: window.scrollY,
+      focus
+    });
+  }
+  requestAnimationFrame(() => focusHashDestination(destination.hash));
+});
+
+window.addEventListener('hashchange', () => {
+  requestAnimationFrame(() => {
+    if (rotaryPendingReturn) {
+      restoreRotaryLocation(rotaryPendingReturn);
+      rotaryPendingReturn = null;
+      return;
+    }
+    const previous = rotaryHistory[rotaryHistory.length - 1];
+    if (previous?.fromHash === location.hash) {
+      rotaryHistory.pop();
+      restoreRotaryLocation(previous);
+      return;
+    }
+    focusHashDestination();
+  });
+});
+
+document.addEventListener('focusin', event => {
+  if (event.target !== rotaryFocus) {
+    rotaryHighlight?.classList.remove('rotary-focus');
+    rotaryFocus = null;
+    rotaryHighlight = null;
+  }
+});
+
+document.addEventListener('keydown', event => {
+  if (event.target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(event.target.tagName)) return;
+
+  if (event.key.toLowerCase() === 'f' && !event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.repeat && activeVideoEmbed) {
+    const iframe = activeVideoEmbed.querySelector('iframe');
+    if (iframe?.requestFullscreen) {
+      event.preventDefault();
+      (document.fullscreenElement === iframe ? document.exitFullscreen() : iframe.requestFullscreen()).catch(() => {});
+    }
+    return;
+  }
+
+  if (event.key.toLowerCase() === 'b' && !event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.repeat && !rotaryPendingReturn) {
+    event.preventDefault();
+    restoreActiveVideo?.();
+    rotaryPendingReturn = rotaryHistory.pop() || null;
+    history.back();
+    return;
+  }
+  if (!['ArrowLeft', 'ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey) return;
+
+  let targets = rotaryTargets();
+  if (!targets.length) return;
+  event.preventDefault();
+
+  const direction = event.key === 'ArrowRight' ? 1 : -1;
+  let current = targets.indexOf(document.activeElement);
+  if (activeVideoEmbed) {
+    const poster = activeVideoPoster;
+    restoreActiveVideo?.();
+    targets = rotaryTargets();
+    current = targets.indexOf(poster);
+  }
+  const next = current < 0
+    ? (direction > 0 ? 0 : targets.length - 1)
+    : (current + direction + targets.length) % targets.length;
+  const target = targets[next];
+  focusRotaryTarget(target);
 });
 </script>
 
