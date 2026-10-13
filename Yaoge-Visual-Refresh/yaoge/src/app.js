@@ -678,7 +678,9 @@ function handleAction(action, element) {
   }
   if (action === 'close-dimension-detail') closeDimensionDetail();
   if (action === 'restart-test') {
-    if (window.confirm('重新测一次会覆盖当前结果，确定重新开始吗？')) { shareCardVisible = false; startNewJourney(); go('/test'); }
+    shareCardVisible = false;
+    startNewJourney();
+    go('/test');
   }
   if (action === 'reset-journey') {
     if (window.confirm('清空当前页面中的旅程？这不会影响“南风开窑记”中的作品。')) { startNewJourney(); go('/'); }

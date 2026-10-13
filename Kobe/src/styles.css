@@ -1482,8 +1482,8 @@ nav a[aria-current]:after {
 
 .language-toggle:hover,
 .language-toggle:focus-visible {
-  background: currentColor;
-  color: var(--paper, #f7f3ec);
+  background: var(--gold);
+  color: #050505;
 }
 
 .site-header .language-toggle {
