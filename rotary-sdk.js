@@ -16,6 +16,7 @@
 
   function init(options = {}) {
     const keys = { ...defaults, ...options.keys };
+    const wrap = options.wrap !== false;
     const highlightStyle = {
       outline: '3px solid #e5b454',
       outlineOffset: '5px',
@@ -63,9 +64,9 @@
       rotaryHighlight.classList.add('rotary-focus');
       target.focus({ preventScroll: true });
       if (scroll) {
-        const rect = target.getBoundingClientRect();
-        if (rect.top < 0 || rect.bottom > window.innerHeight) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+        const rect = rotaryHighlight.getBoundingClientRect();
+        if (rotaryHighlight.hasAttribute('data-rotary-center') || rect.top < 0 || rect.bottom > window.innerHeight) {
+          rotaryHighlight.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
         }
       }
     }
@@ -83,15 +84,22 @@
       if (target) focusTarget(target, false);
     }
 
-    function focusHashDestination(hash = location.hash) {
+    function focusHashDestination(hash = location.hash, scroll = true) {
       if (!hash || hash === '#') return;
       const destination = document.getElementById(decodeURIComponent(hash.slice(1)));
       if (!destination) return;
       const candidates = targets();
       const target = candidates.find(element => destination.contains(element)) ||
         candidates.find(element => destination.compareDocumentPosition(element) & Node.DOCUMENT_POSITION_FOLLOWING);
-      if (target) focusTarget(target);
+      if (target) focusTarget(target, scroll);
     }
+
+    document.addEventListener('click', event => {
+      if (event.defaultPrevented || event.button !== 0 || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+      const rotaryDestination = event.target.closest?.('[data-rotary-destination]');
+      if (!rotaryDestination) return;
+      requestAnimationFrame(() => focusHashDestination(rotaryDestination.dataset.rotaryDestination, false));
+    }, true);
 
     document.addEventListener('click', event => {
       if (event.defaultPrevented || event.button !== 0 || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
@@ -124,7 +132,8 @@
     });
 
     document.addEventListener('focusin', event => {
-      if (event.target !== rotaryFocus) {
+      // Fragment navigation can briefly move native focus to body; keep the rotary position.
+      if (event.target !== document.body && event.target !== rotaryFocus) {
         rotaryHighlight?.classList.remove('rotary-focus');
         rotaryFocus = null;
         rotaryHighlight = null;
@@ -179,15 +188,31 @@
       let candidates = targets();
       if (!candidates.length) return;
       event.preventDefault();
+      const currentTarget = candidates.includes(rotaryFocus) ? rotaryFocus : document.activeElement;
+      const currentIndex = candidates.indexOf(currentTarget);
+      if (!wrap && (
+        (direction < 0 && currentIndex === 0) ||
+        (direction > 0 && currentIndex === candidates.length - 1)
+      )) return;
 
       const origin = options.beforeMove?.({ direction, activeElement: document.activeElement });
-      if (origin) candidates = targets();
-      const current = candidates.indexOf(origin || document.activeElement);
-      const next = current < 0
-        ? (direction > 0 ? 0 : candidates.length - 1)
-        : (current + direction + candidates.length) % candidates.length;
-      focusTarget(candidates[next]);
+      const isAsyncOrigin = Boolean(origin?.then);
+      const move = resolved => {
+        if (resolved || isAsyncOrigin) candidates = targets();
+        const current = candidates.indexOf(resolved || (candidates.includes(rotaryFocus) ? rotaryFocus : document.activeElement));
+        const next = current < 0
+          ? (direction > 0 ? 0 : candidates.length - 1)
+          : wrap ? (current + direction + candidates.length) % candidates.length : current + direction;
+        if (next < 0 || next >= candidates.length) return;
+        focusTarget(candidates[next]);
+      };
+      if (isAsyncOrigin) origin.then(move, () => move(null));
+      else move(origin);
     });
+
+    return {
+      focus: (target, scroll = true) => focusTarget(target, scroll)
+    };
   }
 
   window.RotarySDK = { init };

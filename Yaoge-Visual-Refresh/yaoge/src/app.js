@@ -83,7 +83,7 @@ function personaMark(mark = 'eye', className = '') {
 }
 
 function topBar(back = '/', right = '') {
-  return `<header class="topbar"><button type="button" class="icon-button" data-go="${esc(back)}" aria-label="返回">${icon('back')}</button><a href="#/" class="wordmark" aria-label="古灶行当首页">南风古灶 <span>·</span> 古灶行当</a><span class="topbar-right">${right}</span></header>`;
+  return `<header class="topbar" data-rotary-nav><button type="button" class="icon-button" data-go="${esc(back)}" aria-label="返回">${icon('back')}</button><a href="#/" class="wordmark" aria-label="古灶行当首页">南风古灶 <span>·</span> 古灶行当</a><span class="topbar-right">${right}</span></header>`;
 }
 
 function appFooter() {
@@ -168,7 +168,7 @@ function renderResult() {
   const portrait = `<img class="result-art ${isHidden ? 'result-art-mark' : ''}" src="${personaArtPath(persona, clan)}" alt="${esc(persona.name)}的陶艺风格造型" fetchpriority="high">`;
   return `<section class="screen result-screen">
     <section class="result-poster" aria-label="你的古灶行当结果">
-      <img class="result-scene" src="${asset('yaoge/paper/result-kiln-courtyard.webp')}" alt="南风古灶的龙窑、陶器与榕树庭院">
+      <img class="result-scene" src="${asset('yaoge/paper/result-kiln-courtyard.webp')}" alt="南风古灶的龙窑、陶器与榕树庭院" data-rotary-skip>
       <header class="result-poster-top"><button type="button" class="poster-back" data-go="/" aria-label="返回首页">${icon('back')}</button><span>南风古灶 <i>·</i> 古灶行当</span><span class="poster-brand">我的结果</span></header>
       <div class="result-badge"><img src="${asset(`yaoge/clans/${clan?.id || 'kiln'}.svg`)}" alt=""><span>${esc(clan?.name || '古灶行当')} · 职业原型</span></div>
       ${portrait}

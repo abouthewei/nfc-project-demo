@@ -14,6 +14,61 @@
   </head>
   <body>
     <main id="app" aria-live="polite"></main>
+    <script src="./rotary-sdk.js"></script>
+    <script>
+(() => {
+  const root = document.querySelector('#root, #app') || document.body;
+  const mark = node => {
+    if (!(node instanceof Element)) return;
+    if (node.matches('article,figure')) node.setAttribute('data-rotary-highlight', '');
+    if (node.matches('nav')) node.setAttribute('data-rotary-nav', '');
+    node.querySelectorAll('article,figure').forEach(card => card.setAttribute('data-rotary-highlight', ''));
+    node.querySelectorAll('nav').forEach(nav => nav.setAttribute('data-rotary-nav', ''));
+    if (node.matches('iframe')) node.setAttribute('data-rotary-target', '');
+    node.querySelectorAll('iframe').forEach(frame => frame.setAttribute('data-rotary-target', ''));
+  };
+  const syncDialogScope = () => {
+    root.querySelectorAll('[data-rotary-page-skip]').forEach(node => {
+      node.removeAttribute('data-rotary-page-skip');
+      node.removeAttribute('data-rotary-skip');
+    });
+    const dialog = root.querySelector('dialog[open], [role="dialog"][aria-modal="true"]');
+    for (let branch = dialog; branch && branch !== root;) {
+      const parent = branch.parentElement;
+      if (!parent) break;
+      [...parent.children].forEach(sibling => {
+        if (sibling === branch || sibling.contains(dialog) || sibling.hasAttribute('data-rotary-skip')) return;
+        sibling.setAttribute('data-rotary-skip', '');
+        sibling.setAttribute('data-rotary-page-skip', '');
+      });
+      branch = parent;
+    }
+  };
+  mark(root);
+  syncDialogScope();
+  new MutationObserver(records => {
+    records.forEach(record => record.addedNodes.forEach(mark));
+    syncDialogScope();
+  }).observe(root, { childList: true, subtree: true, attributes: true, attributeFilter: ['open'] });
+  document.addEventListener('keydown', event => {
+    if (event.key.toLowerCase() !== 'b' || event.repeat || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (event.target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(event.target.tagName)) return;
+    const close = root.querySelector('[role="dialog"][aria-modal="true"] .share-card-close');
+    if (!close) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    close.click();
+  }, true);
+  RotarySDK.init({
+    highlightStyle: { outline: '3px solid #cf8152', boxShadow: '0 0 0 8px rgba(207,129,82,.25)' },
+    beforeMove: ({ direction, activeElement }) => {
+      if (direction < 0 || activeElement !== document.body) return null;
+      const navTargets = [...root.querySelectorAll('[data-rotary-nav] a[href], [data-rotary-nav] button:not(:disabled)')];
+      return navTargets[navTargets.length - 1] || null;
+    }
+  });
+})();
+</script>
     <noscript>请开启 JavaScript 后体验南风古灶「古灶行当」。</noscript>
   </body>
 </html>

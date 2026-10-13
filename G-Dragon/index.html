@@ -7,8 +7,8 @@
     <meta name="description" content="G-DRAGON, a three-language editorial archive of music, moments, and reinvention. 한국어 · 中文 · English." />
     <title>G-DRAGON — Artist Archive</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23c9ff3d'/%3E%3Ctext x='50%25' y='55%25' font-family='Arial' font-size='27' font-weight='700' text-anchor='middle' fill='%230b0b0a'%3EGD%3C/text%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="styles.css?v=20260924-collab-index" />
-    <script defer src="app.js?v=20260924-collab-index"></script>
+    <link rel="stylesheet" href="styles.css?v=20261013-content-refactor" />
+    <script defer src="app.js?v=20261013-content-refactor"></script>
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="skip">본문으로 건너뛰기</a>
@@ -35,6 +35,7 @@
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
+        <a class="hero-link" href="#story"><span data-i18n="heroLink">아카이브 둘러보기</span><span aria-hidden="true">→</span></a>
         <figure class="hero-portrait" aria-roledescription="carousel" aria-label="G-DRAGON photo carousel">
           <img id="hero-image" src="assets/gd-2015-infinite-challenge-closeup.webp" alt="2015년 영동고속도로 가요제 현장에서 포착한 금발의 권지용 근접 사진" fetchpriority="high" />
           <figcaption id="hero-caption">A MOMENT, IN COLOR · 2015</figcaption>
@@ -48,7 +49,6 @@
           <h1 id="hero-title">G-DRAGON</h1>
           <div class="hero-intro"><p data-i18n="heroIntro">음악과 이미지, 태도와 변신. 한 사람의 이름이 하나의 장면이 되어온 시간.</p></div>
         </div>
-        <a class="hero-link" href="#story"><span data-i18n="heroLink">아카이브 둘러보기</span><span aria-hidden="true">→</span></a>
       </section>
 
       <section class="intro-section section-shell" id="story" aria-labelledby="story-title">
@@ -90,24 +90,8 @@
           <div class="section-marker"><span>04</span><span data-i18n="archiveMarker">THE VISUAL ARCHIVE</span></div>
           <div class="heading-row"><h2 id="archive-title" data-i18n="archiveTitle">무대의 잔상</h2><p data-i18n="archiveIntro">기록된 순간, 계속 움직이는 이미지.</p></div>
         </div>
-        <div class="gallery-grid">
-          <figure class="gallery-item gallery-featured">
-            <div class="gallery-image gallery-image-2017"><button class="gallery-open-image" type="button" data-gallery-open="0" aria-label="상세 보기: M.O.T.T.E WORLD TOUR"><img src="assets/gd-2017-motte-sydney-red.webp" alt="2017년 시드니 M.O.T.T.E 월드투어 무대 전경" data-i18n-alt="gallery2017Alt" loading="lazy" /></button></div>
-            <figcaption><span class="gallery-count">01</span><span class="gallery-caption"><button class="gallery-title-button" type="button" data-gallery-open="0" data-gallery-title="gallery2017Title" data-i18n="gallery2017Title">M.O.T.T.E WORLD TOUR</button><small data-i18n="gallery2017Caption">SYDNEY · 2017 — 무대의 스케일과 빛</small></span><button class="gallery-arrow" type="button" data-gallery-open="0" data-i18n-aria="galleryOpenLabel" aria-label="상세 보기" aria-controls="gallery-dialog">↗</button></figcaption>
-          </figure>
-          <figure class="gallery-item gallery-screen">
-            <div class="gallery-image"><button class="gallery-open-image" type="button" data-gallery-open="1" aria-label="상세 보기: A SCENE IN MOTION"><img src="assets/gd-2017-motte-sydney-screens.jpg" alt="2017년 시드니 M.O.T.T.E 공연의 무대 화면과 퍼포머" data-i18n-alt="gallery2017ScreensAlt" loading="lazy" /></button></div>
-            <figcaption><span class="gallery-count">02</span><span class="gallery-caption"><button class="gallery-title-button" type="button" data-gallery-open="1" data-gallery-title="gallery2017ScreensTitle" data-i18n="gallery2017ScreensTitle">A SCENE IN MOTION</button><small data-i18n="gallery2017ScreensCaption">M.O.T.T.E WORLD TOUR · 2017</small></span><button class="gallery-arrow" type="button" data-gallery-open="1" data-i18n-aria="galleryOpenLabel" aria-label="상세 보기" aria-controls="gallery-dialog">↗</button></figcaption>
-          </figure>
-          <figure class="gallery-item gallery-lights">
-            <div class="gallery-image"><button class="gallery-open-image" type="button" data-gallery-open="2" aria-label="상세 보기: LIGHTS ON STAGE"><img src="assets/gd-2017-motte-sydney-lights.jpg" alt="2017년 시드니 M.O.T.T.E 공연의 조명과 무대" data-i18n-alt="gallery2017LightsAlt" loading="lazy" /></button></div>
-            <figcaption><span class="gallery-count">03</span><span class="gallery-caption"><button class="gallery-title-button" type="button" data-gallery-open="2" data-gallery-title="gallery2017LightsTitle" data-i18n="gallery2017LightsTitle">LIGHTS ON STAGE</button><small data-i18n="gallery2017LightsCaption">SYDNEY · 2017</small></span><button class="gallery-arrow" type="button" data-gallery-open="2" data-i18n-aria="galleryOpenLabel" aria-label="상세 보기" aria-controls="gallery-dialog">↗</button></figcaption>
-          </figure>
-          <figure class="gallery-item gallery-crowd">
-            <div class="gallery-image"><button class="gallery-open-image" type="button" data-gallery-open="3" aria-label="상세 보기: THE ROOM, THE SOUND"><img src="assets/gd-2017-motte-sydney-crowd.jpg" alt="2017년 시드니 M.O.T.T.E 공연의 관객석과 무대 전경" data-i18n-alt="gallery2017CrowdAlt" loading="lazy" /></button></div>
-            <figcaption><span class="gallery-count">04</span><span class="gallery-caption"><button class="gallery-title-button" type="button" data-gallery-open="3" data-gallery-title="gallery2017CrowdTitle" data-i18n="gallery2017CrowdTitle">THE ROOM, THE SOUND</button><small data-i18n="gallery2017CrowdCaption">M.O.T.T.E WORLD TOUR · 2017</small></span><button class="gallery-arrow" type="button" data-gallery-open="3" data-i18n-aria="galleryOpenLabel" aria-label="상세 보기" aria-controls="gallery-dialog">↗</button></figcaption>
-          </figure>
-        </div>
+        <!-- Cards are rendered from `galleryPhotos` by renderGallery() in app.js. -->
+        <div class="gallery-grid" id="gallery-grid"></div>
         <p class="gallery-note" data-i18n="galleryNote">사진은 원본 기록을 바탕으로 사용했으며, 출처와 라이선스 정보는 하단 크레딧에서 확인할 수 있습니다.</p>
         <dialog class="gallery-dialog" id="gallery-dialog" aria-labelledby="gallery-dialog-title">
           <div class="gallery-dialog-shell">
@@ -132,7 +116,7 @@
         </dialog>
       </section>
 
-      <section class="closing-section section-shell" aria-labelledby="closing-title">
+      <section class="closing-section section-shell" aria-labelledby="closing-title" data-rotary-highlight data-rotary-center>
         <div class="closing-top"><span data-i18n="closingLabel">END OF THIS CHAPTER</span><span>G-DRAGON / 01—04</span></div>
         <h2 id="closing-title" data-i18n="closingTitle">계속해서,<br /><em>다르게.</em></h2>
         <p data-i18n="closingText">이 아카이브는 한 사람의 다음 장면을 기다립니다.</p>
@@ -180,5 +164,132 @@
         <div class="copyright"><span>© 2026 G-DRAGON ARCHIVE</span><a href="#top" data-i18n="footerBack">BACK TO TOP ↑</a></div>
       </div>
     </footer>
+    <script src="../rotary-sdk.js"></script>
+    <script>
+(() => {
+  const root = document.querySelector('#root, #app') || document.body;
+  const skipSelector = 'a.skip-link,.brand,.copyright,.photo-credits,.footer-links,.hero-carousel-controls,.year-rail,.work-row,.work-release-link,.timeline-source,.timeline-visual figcaption a,.work-visual figcaption a,.gallery-title-button,.gallery-arrow';
+  const highlightSelector = 'article:not(.timeline-feature),figure';
+  const mark = node => {
+    if (!(node instanceof Element)) return;
+    if (node.matches(highlightSelector)) node.setAttribute('data-rotary-highlight', '');
+    if (node.matches('nav')) node.setAttribute('data-rotary-nav', '');
+    if (node.matches(skipSelector)) node.setAttribute('data-rotary-skip', '');
+    node.querySelectorAll(highlightSelector).forEach(card => card.setAttribute('data-rotary-highlight', ''));
+    node.querySelectorAll('nav').forEach(nav => nav.setAttribute('data-rotary-nav', ''));
+    node.querySelectorAll(skipSelector).forEach(item => item.setAttribute('data-rotary-skip', ''));
+    if (node.matches('iframe')) node.setAttribute('data-rotary-target', '');
+    node.querySelectorAll('iframe').forEach(frame => frame.setAttribute('data-rotary-target', ''));
+  };
+  const syncDialogScope = () => {
+    root.querySelectorAll('[data-rotary-page-skip]').forEach(node => {
+      node.removeAttribute('data-rotary-page-skip');
+      node.removeAttribute('data-rotary-skip');
+    });
+    const dialog = root.querySelector('dialog[open], [role="dialog"][aria-modal="true"]');
+    for (let branch = dialog; branch && branch !== root;) {
+      const parent = branch.parentElement;
+      if (!parent) break;
+      [...parent.children].forEach(sibling => {
+        if (sibling === branch || sibling.contains(dialog) || sibling.hasAttribute('data-rotary-skip')) return;
+        sibling.setAttribute('data-rotary-skip', '');
+        sibling.setAttribute('data-rotary-page-skip', '');
+      });
+      branch = parent;
+    }
+  };
+  mark(root);
+  syncDialogScope();
+  new MutationObserver(records => {
+    records.forEach(record => record.addedNodes.forEach(mark));
+    syncDialogScope();
+  }).observe(root, { childList: true, subtree: true, attributes: true, attributeFilter: ['open'] });
+  document.addEventListener('click', event => {
+    if (!(event.target instanceof Element) || !event.target.closest('[data-timeline-year]')) return;
+    requestAnimationFrame(() => {
+      root.querySelector('#timeline-list .timeline-visual')?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    });
+  }, true);
+  document.addEventListener('keydown', event => {
+    if (event.key.toLowerCase() !== 'b' || event.repeat || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (event.target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(event.target.tagName)) return;
+    const dialog = root.querySelector('dialog[open]');
+    if (!dialog) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    dialog.close();
+  }, true);
+  document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    const image = root.querySelector('.hero-portrait #hero-image');
+    if (document.activeElement !== image) return;
+    const active = root.querySelector('.hero-carousel-dots [aria-pressed="true"]');
+    const next = active?.[event.key === 'ArrowRight' ? 'nextElementSibling' : 'previousElementSibling'];
+    if (!next) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    next.click();
+  }, true);
+  let rotary;
+  let galleryReturnFocus = null;
+  document.addEventListener('click', event => {
+    const opener = event.target.closest?.('#gallery-grid [data-gallery-open]');
+    if (opener) galleryReturnFocus = opener.closest('#gallery-grid figure')?.querySelector('.gallery-open-image') || opener;
+  }, true);
+  root.querySelector('#gallery-dialog')?.addEventListener('close', () => {
+    const target = galleryReturnFocus;
+    galleryReturnFocus = null;
+    requestAnimationFrame(() => {
+      if (target?.isConnected) rotary.focus(target, false);
+    });
+  });
+  document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    const focused = document.activeElement;
+    if (!focused.matches?.('.timeline-video-trigger,.timeline-visual iframe') &&
+        !(focused === document.body && root.querySelector('.timeline-visual iframe'))) return;
+    const active = root.querySelector('.year-rail [aria-pressed="true"]');
+    const next = active?.[event.key === 'ArrowRight' ? 'nextElementSibling' : 'previousElementSibling'];
+    if (!next) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    next.click();
+    const video = root.querySelector('.timeline-video-trigger');
+    video?.closest('.timeline-visual')?.setAttribute('data-rotary-highlight', '');
+    rotary.focus(video, false);
+  }, true);
+  document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    const active = document.activeElement;
+    const item = active.closest?.('.work-item') || (active === document.body && root.querySelector('.work-item.is-selected .work-player iframe')?.closest('.work-item'));
+    if (!item || !(active.matches?.('.work-video-trigger,.work-player iframe') || (active === document.body && item.querySelector('.work-player iframe')))) return;
+    const rows = [...root.querySelectorAll('.work-row')];
+    const current = rows.findIndex(row => row.closest('.work-item') === item);
+    const next = rows[current + (event.key === 'ArrowRight' ? 1 : -1)];
+    if (!next) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    next.click();
+    const nextItem = next.closest('.work-item');
+    mark(nextItem);
+    rotary.focus(nextItem.querySelector('.work-video-trigger'), false);
+  }, true);
+  rotary = RotarySDK.init({
+    highlightStyle: { outline: '3px solid #c9ff3d', boxShadow: '0 0 0 8px rgba(201,255,61,.24)' },
+    beforeMove: ({ activeElement }) => {
+      if (activeElement !== document.body) return null;
+      const frame = [...root.querySelectorAll('iframe[data-rotary-target][src]')].find(item => !item.closest('[hidden]'));
+      if (!frame) return null;
+      const timeline = Boolean(frame.closest('.timeline-visual'));
+      const player = frame.closest('.work-player');
+      if (!timeline && !player) return frame;
+      window.restoreRotaryVideoCovers?.();
+      if (timeline) mark(root.querySelector('#timeline-list'));
+      return timeline ? root.querySelector('.timeline-video-trigger') : player.querySelector('button');
+    },
+    beforeBack: () => window.restoreRotaryVideoCovers?.()
+  });
+})();
+</script>
   </body>
 </html>

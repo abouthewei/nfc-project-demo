@@ -364,8 +364,10 @@ window.addEventListener("pageshow", queuePagePositionSync);
 syncPagePosition();
 
 const bilibiliUrl = "https://player.bilibili.com/player.html?isOutside=true&aid=534967088&bvid=BV1MM411R7Si&cid=1305673422&page=1&high_quality=1&danmaku=0&autoplay=1";
+const videoShell = document.getElementById("videoShell");
+const videoPosterMarkup = videoShell?.innerHTML || "";
 function loadBilibiliPlayer() {
-  const shell = document.getElementById("videoShell");
+  const shell = videoShell;
   if (!shell) return;
   const frame = document.createElement("iframe");
   const language = document.documentElement.lang === "en" ? "en" : "zh";
@@ -380,6 +382,16 @@ function loadBilibiliPlayer() {
   const status = document.getElementById("videoStatus");
   if (status) status.textContent = copy[language].videoRequestedStatus;
 }
+function restoreRotaryVideoPoster() {
+  if (!videoShell?.querySelector("iframe")) return null;
+  videoShell.innerHTML = videoPosterMarkup;
+  videoShell.removeAttribute("data-playing");
+  setLanguage(document.documentElement.lang === "en" ? "en" : "zh");
+  const playButton = videoShell.querySelector("#playVideo");
+  playButton?.addEventListener("click", loadBilibiliPlayer);
+  return playButton;
+}
+window.restoreRotaryVideoPoster = restoreRotaryVideoPoster;
 document.getElementById("playVideo")?.addEventListener("click", loadBilibiliPlayer);
 document.getElementById("retryVideo")?.addEventListener("click", loadBilibiliPlayer);
 

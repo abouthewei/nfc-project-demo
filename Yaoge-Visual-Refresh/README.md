@@ -23,6 +23,7 @@ python3 -m http.server 8000
 ## 目录
 
 - yaoge/：页面、交互脚本、题目及职业原型内容。生成古灶行当卡时会在结果页上方打开独立弹窗。
+- rotary-sdk.js：项目内的左右键导航脚本，可独立部署。
 - assets/yaoge/：南风古灶场景、12 种职业插画、六维图标和陶土纹理。
 - assets/paper-grain.webp：页面纸张纹理。
 

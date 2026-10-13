@@ -16,10 +16,10 @@
     <button class="lang-switch" id="langSwitch" type="button" aria-label="Switch to English">EN</button>
   </header>
   <main class="sources-main" data-page-title-zh="资料与影像来源 · 南风古灶" data-page-title-en="Sources & Image Credits · Nanfeng Kiln">
-    <h1 data-i18n="sourcesTitle">资料与影像来源</h1>
+    <h1><span data-i18n="sourcesTitle" data-rotary-target data-rotary-highlight>资料与影像来源</span></h1>
     <p class="sources-lead" data-i18n="sourcesIntro">本页为独立文化展示，不代表景区官方。开放时间、活动与体验安排请以运营方当期信息为准。</p>
 
-    <section class="source-group">
+    <section class="source-group" data-rotary-target data-rotary-highlight>
       <h2 data-i18n="sourcesHistory">历史与景点</h2>
       <p data-i18n="sourcesHistoryNote">用于建窑年代、文物保护级别、景点名称和景区文化内容核对。</p>
       <ul class="source-list">
@@ -28,7 +28,7 @@
       </ul>
     </section>
 
-    <section class="source-group">
+    <section class="source-group" data-rotary-target data-rotary-highlight>
       <h2 data-i18n="sourcesCraft">工艺与非遗</h2>
       <p data-i18n="sourcesCraftNote">用于石湾陶塑技艺的工序、作品类型和技艺特点说明。</p>
       <ul class="source-list">
@@ -36,7 +36,7 @@
       </ul>
     </section>
 
-    <section class="source-group">
+    <section class="source-group" data-rotary-target data-rotary-highlight>
       <h2 data-i18n="sourcesEvents">风俗与活动</h2>
       <p data-i18n="sourcesEventsNote">用于谢灶祈福、开窑和陶艺市集等活动内容；活动举办时间以当期公告为准。</p>
       <ul class="source-list">
@@ -45,7 +45,7 @@
       </ul>
     </section>
 
-    <section class="source-group">
+    <section class="source-group" data-rotary-target data-rotary-highlight>
       <h2 data-i18n="sourcesExperiences">体验、文创与到访信息</h2>
       <p data-i18n="sourcesExperiencesNote">用于捏陶、拉坯、釉彩、添柴加薪等体验内容以及当期文创报道。项目、场次、售价和营业信息可能变化；第三方旅游平台所列信息不等于运营方公告。</p>
       <ul class="source-list">
@@ -55,7 +55,7 @@
       </ul>
     </section>
 
-    <section class="source-group">
+    <section class="source-group" data-rotary-target data-rotary-highlight>
       <h2 data-i18n="sourcesPhotos">照片与授权</h2>
       <p data-i18n="sourcesPhotosNote">维基共享资源的本地实景照片均列出原文件页。首页主视觉、历史照片、陶艺工序圆图与视频预览均裁自用户提供的参考图；原始摄影作者及授权状态尚未核实。</p>
       <table class="media-register">
@@ -115,7 +115,7 @@
       </table>
     </section>
 
-    <section class="source-group">
+    <section class="source-group" data-rotary-target data-rotary-highlight>
       <h2 data-i18n="sourcesArt">装饰插画与界面图标</h2>
       <p data-i18n="sourcesArtNote">下列龙窑剖面、陶塑人物、路线图标与山水画面为本项目生成的示意或装饰插画，不是现场照片、遗址测绘或馆藏实物记录。六张工序圆图裁自用户提供的陶艺排版参考截图；原始作者与授权未核实。页面另使用南风古灶实景照片并逐张标注来源；B站视频由原作者发布。</p>
       <ul class="source-list">
@@ -136,7 +136,7 @@
       </ul>
     </section>
 
-    <section class="source-group">
+    <section class="source-group" data-rotary-target data-rotary-highlight>
       <h2 data-i18n="sourceVideo">B站视频</h2>
       <p data-i18n="sourceVideoSubject">南风古灶龙窑实地影像 · BV1MM411R7Si</p>
       <p data-i18n="sourceVideoCredit">发布者：虎眼观世界；版权归原作者所有。</p>
@@ -148,5 +148,27 @@
     <a class="source-back" href="./index.html" data-i18n="sourceBack">← 返回页面</a>
   </main>
   <script src="./script.js"></script>
+  <script src="../rotary-sdk.js"></script>
+  <script>
+(() => {
+  const root = document.body;
+  const skipSelector = 'a[href]:not(.source-back)';
+  const mark = node => {
+    if (!(node instanceof Element)) return;
+    if (node.matches('article,figure')) node.setAttribute('data-rotary-highlight', '');
+    if (node.matches('nav')) node.setAttribute('data-rotary-nav', '');
+    if (node.matches(skipSelector)) node.setAttribute('data-rotary-skip', '');
+    node.querySelectorAll('article,figure').forEach(card => card.setAttribute('data-rotary-highlight', ''));
+    node.querySelectorAll('nav').forEach(nav => nav.setAttribute('data-rotary-nav', ''));
+    node.querySelectorAll(skipSelector).forEach(item => item.setAttribute('data-rotary-skip', ''));
+    if (node.matches('iframe')) node.setAttribute('data-rotary-target', '');
+    node.querySelectorAll('iframe').forEach(frame => frame.setAttribute('data-rotary-target', ''));
+  };
+  mark(root);
+  new MutationObserver(records => records.forEach(record => record.addedNodes.forEach(mark)))
+    .observe(root, { childList: true, subtree: true });
+  RotarySDK.init({ wrap: false, highlightStyle: { outline: '3px solid #e45a43', boxShadow: '0 0 0 8px rgba(228,90,67,.24)' } });
+})();
+</script>
 </body>
 </html>
