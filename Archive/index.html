@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="root"></div>
-    <script src="../rotary-sdk.js?v=20261013-shared"></script>
+    <script src="../rotary-sdk.js?v=20261013-controls"></script>
     <script>
       (() => {
         const root = document.querySelector("#root, #app") || document.body;
@@ -24,6 +24,8 @@
           if (node.matches(".video-controls"))
             node.setAttribute("data-rotary-skip", "");
           if (node.matches("nav")) node.setAttribute("data-rotary-nav", "");
+          if (node.matches(".video-frame")) node.setAttribute("data-rotary-play", "");
+          node.querySelectorAll(".video-frame").forEach(frame => frame.setAttribute("data-rotary-play", ""));
           node
             .querySelectorAll("article,figure")
             .forEach((card) => card.setAttribute("data-rotary-highlight", ""));

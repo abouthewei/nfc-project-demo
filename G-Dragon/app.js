@@ -966,7 +966,7 @@ function renderTimelinePanel(copy) {
     <article class="timeline-item timeline-feature" aria-live="polite" aria-label="${escapeHTML(`${copy.timelineTitle} · ${year}`)}">
       <div class="timeline-story-top"><span>${escapeHTML(`${copy.timelineChapter} ${pad2(activeIndex + 1)} / ${pad2(timelineEntries.length)}`)}</span><span>${escapeHTML(tag)}</span></div>
       <figure class="timeline-visual">
-        <button class="timeline-video-trigger" type="button" data-video-id="${escapeHTML(video.id)}" data-video-page="${video.page || 1}" data-video-year="${escapeHTML(year)}" data-video-title="${escapeHTML(title)}" aria-label="${escapeHTML(`${copy.playVideoLabel}: ${title} (${year})`)}">
+        <button class="timeline-video-trigger" data-rotary-play type="button" data-video-id="${escapeHTML(video.id)}" data-video-page="${video.page || 1}" data-video-year="${escapeHTML(year)}" data-video-title="${escapeHTML(title)}" aria-label="${escapeHTML(`${copy.playVideoLabel}: ${title} (${year})`)}">
           <img src="${videoThumbnail(video.id)}" alt="${escapeHTML(`${title} · ${year} ${copy.videoThumbnailAlt}`)}" loading="lazy" referrerpolicy="no-referrer" />
           <span class="timeline-play" aria-hidden="true">▶</span>
         </button>
@@ -1232,6 +1232,7 @@ function bindGalleryViewer() {
 function showVideoPoster(player) {
   const button = document.createElement("button");
   button.className = "work-video-trigger";
+  button.setAttribute("data-rotary-play", "");
   button.type = "button";
   const context = player.dataset.videoSequence ? ` (${player.dataset.videoSequence})` : player.dataset.videoYear ? ` (${player.dataset.videoYear})` : "";
   button.setAttribute("aria-label", `${player.dataset.playLabel}: ${player.dataset.videoTitle}${context}`);

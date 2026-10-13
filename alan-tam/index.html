@@ -1242,6 +1242,7 @@ let restoreActiveVideo = null;
 document.querySelectorAll('.video-poster').forEach(poster => {
   poster.tabIndex = 0;
   poster.setAttribute('role', 'button');
+  poster.setAttribute('data-rotary-play', '');
   poster.addEventListener('click', () => {
     const embed = poster.closest('.video-embed');
     const src = poster.getAttribute('data-src');
@@ -1300,7 +1301,7 @@ document.querySelectorAll('.video-poster').forEach(poster => {
 
 </script>
 
-<script src="../rotary-sdk.js?v=20261013-shared"></script>
+<script src="../rotary-sdk.js?v=20261013-controls"></script>
 <script>
 RotarySDK.init({
   keys: {

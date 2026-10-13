@@ -139,6 +139,7 @@ export function TributeMedia({
   return (
     <button
       className="tribute-video"
+      data-rotary-play=""
       onClick={() => setPlaying(true)}
       aria-label={`${playLabel}: ${alt}`}
     >

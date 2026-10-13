@@ -109,6 +109,7 @@ export function MomentMedia({ moment }: { moment: Moment }) {
             <button
               type="button"
               className="video-poster external-video-poster"
+      data-rotary-play=""
               onClick={() => setLoaded(true)}
               aria-label={`${playLabel}: ${moment.title.replace("\n", " ")}`}
             >
@@ -174,6 +175,7 @@ export function MomentMedia({ moment }: { moment: Moment }) {
         ) : (
           <button
             className="video-poster"
+      data-rotary-play=""
             onClick={() => setLoaded(true)}
             aria-label={`${locale === "zh" ? "加载视频" : "Load video"}: ${moment.title.replace("\n", " ")}`}
           >

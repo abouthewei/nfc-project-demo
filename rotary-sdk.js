@@ -145,8 +145,13 @@
       if (event.defaultPrevented) return;
       const active = event.target;
       if (active.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(active.tagName)) return;
+      const deviceOK = event.key === 'Accept';
+      const currentTarget = rotaryFocus?.isConnected ? rotaryFocus : document.activeElement;
+      const videoFullscreen = deviceOK && (
+        currentTarget?.matches?.(fullscreenSelector) || rotaryScope?.querySelector(fullscreenSelector)
+      );
 
-      if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.repeat && keyMatches(keys.fullscreen, event.key)) {
+      if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.repeat && (videoFullscreen || keyMatches(keys.fullscreen, event.key))) {
         const active = document.activeElement;
         const target = active.matches?.(fullscreenSelector)
           ? active
@@ -172,7 +177,8 @@
         return;
       }
 
-      if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.repeat && keyMatches(keys.confirm, event.key)) {
+      const videoOnly = event.key === 'MediaPlayPause';
+      if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.repeat && (videoOnly || deviceOK || keyMatches(keys.confirm, event.key))) {
         const poster = options.beforeConfirm?.();
         if (poster) {
           event.preventDefault();
@@ -183,6 +189,7 @@
         }
         const target = rotaryFocus?.isConnected ? rotaryFocus : document.activeElement;
         const video = target?.matches?.('video') ? target
+          : target?.matches?.('[data-rotary-play]') ? target.querySelector?.('video')
           : target === document.body ? rotaryScope?.querySelector('video') : null;
         if (video) {
           event.preventDefault();
@@ -190,7 +197,7 @@
           else video.load();
           return;
         }
-        if (typeof target?.click === 'function') {
+        if (typeof target?.click === 'function' && (!videoOnly || target.matches?.('[data-rotary-play]'))) {
           event.preventDefault();
           const scope = target.closest('[data-rotary-highlight],figure') || target.parentElement;
           target.click();
@@ -204,8 +211,8 @@
       let candidates = targets();
       if (!candidates.length) return;
       event.preventDefault();
-      const currentTarget = candidates.includes(rotaryFocus) ? rotaryFocus : document.activeElement;
-      const currentIndex = candidates.indexOf(currentTarget);
+      const moveTarget = candidates.includes(rotaryFocus) ? rotaryFocus : document.activeElement;
+      const currentIndex = candidates.indexOf(moveTarget);
       if (!wrap && (
         (direction < 0 && currentIndex === 0) ||
         (direction > 0 && currentIndex === candidates.length - 1)
@@ -238,11 +245,11 @@
   }
 
   Object.assign(window, {
-    onPlayBtnPressed: () => sendDeviceKey('Enter'),
+    onPlayBtnPressed: () => sendDeviceKey('MediaPlayPause'),
     onPlayBtnRelease: () => {},
     onBackBtnPressed: () => sendDeviceKey('b'),
     onBackBtnRelease: () => {},
-    onOKBtnPressed: () => sendDeviceKey('f'),
+    onOKBtnPressed: () => sendDeviceKey('Accept'),
     onOKBtnRelease: () => {},
     onClockwiseRoll: () => sendDeviceKey('ArrowRight'),
     onCounterClockwiseRoll: () => sendDeviceKey('ArrowLeft')

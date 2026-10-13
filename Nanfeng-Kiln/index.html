@@ -197,7 +197,7 @@
               <span class="film-rule" aria-hidden="true"></span>
               <div class="video-shell" id="videoShell" data-asset-id="video-bv1mm411r7si" data-rotary-highlight>
                 <img src="./assets/video-poster-reference-crop.png" alt="用户提供的设计参考图中的哔哩哔哩视频播放器画面；点击后载入原视频" data-alt-zh="用户提供的设计参考图中的哔哩哔哩视频播放器画面；点击后载入原视频" data-alt-en="Bilibili player preview cropped from the user-supplied design reference; select to load the original video" data-rotary-skip />
-                <button type="button" class="play-button" id="playVideo" aria-label="播放南风古灶实地视频" data-i18n-aria="playVideoAria"><span aria-hidden="true">▶</span></button>
+                <button type="button" class="play-button" id="playVideo" data-rotary-play aria-label="播放南风古灶实地视频" data-i18n-aria="playVideoAria"><span aria-hidden="true">▶</span></button>
                 <span class="video-credit sr-only" data-i18n="videoCredit">参考图裁切封面；播放时载入哔哩哔哩原视频</span>
               </div>
               <p class="video-status" id="videoStatus" role="status" aria-live="polite" data-i18n="videoStatus">如播放器未能载入，可直接打开哔哩哔哩原视频。</p>
@@ -301,7 +301,7 @@
     </div>
   </dialog>
   <script src="./script.js"></script>
-  <script src="../rotary-sdk.js?v=20261013-shared"></script>
+  <script src="../rotary-sdk.js?v=20261013-controls"></script>
   <script>
 (() => {
   const root = document.body;

@@ -66,8 +66,8 @@ Loading the SDK exposes these global functions for the device to call in the pag
 
 | Device callback | Keyboard action |
 | --- | --- |
-| `onPlayBtnPressed()` | Enter (play / restore video poster) |
-| `onOKBtnPressed()` | F (toggle fullscreen) |
+| `onPlayBtnPressed()` | Play / restore video poster only; other controls are ignored |
+| `onOKBtnPressed()` | Confirm; toggle fullscreen in the active video |
 | `onBackBtnPressed()` | B |
 | `onClockwiseRoll()` | ArrowRight |
 | `onCounterClockwiseRoll()` | ArrowLeft |

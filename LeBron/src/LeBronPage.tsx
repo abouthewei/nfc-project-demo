@@ -72,6 +72,7 @@ function BilibiliMedia({ moment }: { moment: (typeof lebronMoments)[number] }) {
           <button
             type="button"
             className="lebron-poster"
+      data-rotary-play=""
             onClick={() => {
               setFailed(false);
               setPlaying(true);

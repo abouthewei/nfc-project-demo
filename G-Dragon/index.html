@@ -8,7 +8,7 @@
     <title>G-DRAGON — Artist Archive</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23c9ff3d'/%3E%3Ctext x='50%25' y='55%25' font-family='Arial' font-size='27' font-weight='700' text-anchor='middle' fill='%230b0b0a'%3EGD%3C/text%3E%3C/svg%3E" />
     <link rel="stylesheet" href="styles.css?v=20261013-content-refactor" />
-    <script defer src="app.js?v=20261013-video-toggle"></script>
+    <script defer src="app.js?v=20261013-video-controls"></script>
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="skip">본문으로 건너뛰기</a>
@@ -111,7 +111,7 @@
               </div>
               <figcaption id="gallery-dialog-caption"></figcaption>
             </figure>
-            <div class="gallery-dialog-copy"><span class="gallery-dialog-kicker" id="gallery-dialog-kicker"></span><h3 id="gallery-dialog-title"></h3><p id="gallery-dialog-description"></p><div class="gallery-dialog-actions"><button class="gallery-dialog-video-toggle" id="gallery-dialog-video-toggle" type="button" aria-pressed="false">Bilibili에서 M.O.T.T.E 투어 예고편 보기</button><a id="gallery-dialog-video-link" href="https://www.bilibili.com/video/BV1YW411E7P7/?p=1" target="_blank" rel="noreferrer" hidden><span>Bilibili</span><span aria-hidden="true">↗</span></a><a id="gallery-dialog-source" href="" target="_blank" rel="noreferrer"><span data-i18n="gallerySourceLabel">사진 원본 및 라이선스</span><span aria-hidden="true">↗</span></a></div></div>
+            <div class="gallery-dialog-copy"><span class="gallery-dialog-kicker" id="gallery-dialog-kicker"></span><h3 id="gallery-dialog-title"></h3><p id="gallery-dialog-description"></p><div class="gallery-dialog-actions"><button class="gallery-dialog-video-toggle" id="gallery-dialog-video-toggle" data-rotary-play type="button" aria-pressed="false">Bilibili에서 M.O.T.T.E 투어 예고편 보기</button><a id="gallery-dialog-video-link" href="https://www.bilibili.com/video/BV1YW411E7P7/?p=1" target="_blank" rel="noreferrer" hidden><span>Bilibili</span><span aria-hidden="true">↗</span></a><a id="gallery-dialog-source" href="" target="_blank" rel="noreferrer"><span data-i18n="gallerySourceLabel">사진 원본 및 라이선스</span><span aria-hidden="true">↗</span></a></div></div>
           </div>
         </dialog>
       </section>
@@ -164,7 +164,7 @@
         <div class="copyright"><span>© 2026 G-DRAGON ARCHIVE</span><a href="#top" data-i18n="footerBack">BACK TO TOP ↑</a></div>
       </div>
     </footer>
-    <script src="../rotary-sdk.js?v=20261013-shared"></script>
+    <script src="../rotary-sdk.js?v=20261013-controls"></script>
     <script>
 (() => {
   const root = document.querySelector('#root, #app') || document.body;

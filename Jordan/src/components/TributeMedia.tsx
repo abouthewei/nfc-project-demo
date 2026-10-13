@@ -99,6 +99,7 @@ export function TributeMedia({
   const posterButton = (
     <button
       className="tribute-video"
+      data-rotary-play=""
       onClick={() => setPlaying(true)}
       aria-label={`${playLabel}: ${alt}`}
     >

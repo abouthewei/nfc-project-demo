@@ -47,7 +47,7 @@ function page() {
 }
 
 const mapping = {
-  onPlayBtnPressed: 'Enter', onOKBtnPressed: 'f', onBackBtnPressed: 'b',
+  onPlayBtnPressed: 'MediaPlayPause', onOKBtnPressed: 'Accept', onBackBtnPressed: 'b',
   onClockwiseRoll: 'ArrowRight', onCounterClockwiseRoll: 'ArrowLeft'
 };
 const callbacks = page();
@@ -72,6 +72,7 @@ for (const input of ['keyboard', 'device']) {
   send('onCounterClockwiseRoll');
   assert.equal(p.document.activeElement, p.links[0]);
   send('onPlayBtnPressed');
+  assert.equal(p.links[0].clicks, 0, 'Play must not confirm a link');
   send('onOKBtnPressed');
   assert.equal(p.links[0].clicks, 1);
   send('onBackBtnPressed');
@@ -82,6 +83,7 @@ for (const input of ['keyboard', 'device']) {
   const p = page();
   let entered = 0;
   let exited = 0;
+  let restored = 0;
   const video = p.element('VIDEO');
   video.matches = selector => selector.startsWith('video');
   video.requestFullscreen = () => {
@@ -93,7 +95,7 @@ for (const input of ['keyboard', 'device']) {
     p.document.fullscreenElement = null;
   };
   p.document.activeElement = video;
-  p.window.RotarySDK.init();
+  p.window.RotarySDK.init({ beforeConfirm: () => { restored++; return p.links[0]; } });
   const send = () => input === 'device' ? p.window.onOKBtnPressed()
     : video.dispatchEvent(new KeyboardEvent('keydown', { key: 'f', bubbles: true, cancelable: true }));
   send();
@@ -102,6 +104,7 @@ for (const input of ['keyboard', 'device']) {
   assert.equal(exited, 0, 'release must not exit fullscreen');
   send();
   assert.equal(exited, 1);
+  assert.equal(restored, 0, 'OK fullscreen must not restore the cover');
   assert.equal(video.clicks, 0, 'OK must not activate the play button');
 }
 
@@ -121,6 +124,7 @@ async function checkPlaybackToggle() {
     const p = page();
     let playing = false;
     const poster = p.links[0];
+    poster.matches = selector => selector === '[data-rotary-play]' || selector.includes('a[href]');
     poster.click = () => {
       poster.clicks++;
       playing = true;
