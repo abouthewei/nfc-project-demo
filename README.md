@@ -74,6 +74,8 @@ Loading the SDK exposes these global functions for the device to call in the pag
 
 `onPlayBtnRelease()`, `onOKBtnRelease()` and `onBackBtnRelease()` are callable no-ops: releasing a button does not trigger another action. There is no long-press action. All demos except `visitor-experience/` reference the device-compatible SDK at the repository root; projects do not contain SDK copies.
 
+Back restores only SDK-recorded in-page locations; it never calls `history.back()` or exits the page when the stack is empty. DOM `BrowserBack`, `GoBack`, `Back` and Alt+Left events are consumed on both press and release. `onBackBtnPressed()` and `onBackBtnRelease()` return `true` to indicate that the native host should consume the event. An Android host must not also call `WebView.goBack()` or execute its default Back action after invoking these callbacks; JavaScript cannot cancel navigation performed directly by the native container.
+
 Run `node rotary-sdk.test.cjs` to check device mappings and keyboard behavior.
 
 ### The four Vite player pages

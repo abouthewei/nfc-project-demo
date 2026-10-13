@@ -6,6 +6,8 @@ class KeyboardEvent extends Event {
   constructor(type, options) {
     super(type, options);
     this.key = options.key;
+    this.altKey = Boolean(options.altKey);
+    this.repeat = Boolean(options.repeat);
   }
 }
 
@@ -14,6 +16,8 @@ function page() {
   const window = new EventTarget();
   const events = [];
   let backCount = 0;
+  const replacements = [];
+  const location = { href: 'https://example.test/demo/index.html', origin: 'https://example.test', pathname: '/demo/index.html', search: '', hash: '' };
   const element = tagName => ({
     tagName,
     isConnected: true,
@@ -37,13 +41,25 @@ function page() {
   document.head = { append() {} };
   document.createElement = () => ({});
   document.querySelectorAll = selector => selector.startsWith('a[href]') ? links : [];
+  document.getElementById = () => null;
   window.innerHeight = 500;
+  window.scrollY = 0;
+  window.scrollTo = () => {};
   vm.runInNewContext(fs.readFileSync(`${__dirname}/rotary-sdk.js`, 'utf8'), {
-    document, window, KeyboardEvent,
+    document, window, KeyboardEvent, location, URL,
+    requestAnimationFrame: callback => callback(),
     getComputedStyle: () => ({ display: 'block', visibility: 'visible', opacity: '1' }),
-    history: { back() { backCount++; } }
+    history: {
+      back() { backCount++; },
+      replaceState(state, title, url) {
+        replacements.push(url);
+        const destination = new URL(url, location.href);
+        location.href = destination.href;
+        location.hash = destination.hash;
+      }
+    }
   });
-  return { document, window, links, events, element, backCount: () => backCount };
+  return { document, window, links, events, element, location, replacements, backCount: () => backCount };
 }
 
 const mapping = {
@@ -76,8 +92,41 @@ for (const input of ['keyboard', 'device']) {
   send('onOKBtnPressed');
   assert.equal(p.links[0].clicks, 1);
   send('onBackBtnPressed');
-  assert.equal(p.backCount(), 1);
+  assert.equal(p.backCount(), 0, 'Back must never leave the page through browser history');
 }
+
+for (const key of ['BrowserBack', 'GoBack', 'Back', 'ArrowLeft']) {
+  const p = page();
+  let handled = 0;
+  p.window.RotarySDK.init({ beforeBack: () => handled++ });
+  const event = new KeyboardEvent('keydown', { key, altKey: key === 'ArrowLeft', bubbles: true, cancelable: true });
+  p.document.body.dispatchEvent(event);
+  assert(event.defaultPrevented, `${key}: block native browser back`);
+  assert.equal(handled, 1);
+  const release = new KeyboardEvent('keyup', { key, altKey: key === 'ArrowLeft', bubbles: true, cancelable: true });
+  p.document.body.dispatchEvent(release);
+  assert(release.defaultPrevented);
+  assert.equal(handled, 1, 'release must not cause another return');
+  assert.equal(p.backCount(), 0);
+}
+
+const inPage = page();
+const link = inPage.links[0];
+link.href = `${inPage.location.href}#chapter`;
+link.closest = selector => selector === 'a[href]' ? link : null;
+inPage.window.RotarySDK.init().focus(link, false);
+const click = new Event('click', { bubbles: true, cancelable: true });
+click.button = 0;
+link.dispatchEvent(click);
+inPage.location.hash = '#chapter';
+inPage.location.href += '#chapter';
+assert.equal(inPage.window.onBackBtnPressed(), true, 'native host can consume the handled callback');
+assert.equal(inPage.location.hash, '');
+assert.equal(inPage.replacements.length, 1);
+assert.equal(inPage.backCount(), 0);
+inPage.window.onBackBtnPressed();
+assert.equal(inPage.replacements.length, 1, 'extra Back at the root is a no-op');
+assert.equal(inPage.window.onBackBtnRelease(), true);
 
 for (const input of ['keyboard', 'device']) {
   const p = page();

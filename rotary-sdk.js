@@ -34,7 +34,6 @@
     let rotaryHighlight = null;
     let rotaryScope = null;
     const historyStack = [];
-    let pendingReturn = null;
 
     document.querySelectorAll('img[alt]:not([alt=""])').forEach(image => {
       if ((!image.closest('a[href],button') || image.hasAttribute('data-rotary-target')) && !image.hasAttribute('tabindex')) image.tabIndex = -1;
@@ -116,11 +115,6 @@
 
     window.addEventListener('hashchange', () => {
       requestAnimationFrame(() => {
-        if (pendingReturn) {
-          restoreLocation(pendingReturn);
-          pendingReturn = null;
-          return;
-        }
         const previous = historyStack[historyStack.length - 1];
         if (previous?.fromHash === location.hash) {
           historyStack.pop();
@@ -171,9 +165,15 @@
 
       if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.repeat && keyMatches(keys.back, event.key)) {
         event.preventDefault();
+        event.stopImmediatePropagation();
         options.beforeBack?.();
-        pendingReturn = historyStack.pop() || null;
-        history.back();
+        const previous = historyStack.pop();
+        if (previous) {
+          const url = previous.fromHash || location.href.split('#')[0];
+          try { history.replaceState(history.state, '', url); }
+          catch { location.hash = previous.fromHash; }
+          restoreLocation(previous);
+        }
         return;
       }
 
@@ -244,11 +244,25 @@
     target.dispatchEvent(new KeyboardEvent('keydown', { key, bubbles: true, cancelable: true }));
   }
 
+  function isBrowserBack(event) {
+    return ['BrowserBack', 'GoBack', 'Back'].includes(event.key) ||
+      (event.key === 'ArrowLeft' && event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey);
+  }
+
+  for (const type of ['keydown', 'keyup']) {
+    document.addEventListener(type, event => {
+      if (!isBrowserBack(event)) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      if (type === 'keydown' && !event.repeat) sendDeviceKey('b');
+    }, true);
+  }
+
   Object.assign(window, {
     onPlayBtnPressed: () => sendDeviceKey('MediaPlayPause'),
     onPlayBtnRelease: () => {},
-    onBackBtnPressed: () => sendDeviceKey('b'),
-    onBackBtnRelease: () => {},
+    onBackBtnPressed: () => { sendDeviceKey('b'); return true; },
+    onBackBtnRelease: () => true,
     onOKBtnPressed: () => sendDeviceKey('Accept'),
     onOKBtnRelease: () => {},
     onClockwiseRoll: () => sendDeviceKey('ArrowRight'),
