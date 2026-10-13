@@ -301,7 +301,7 @@
     </div>
   </dialog>
   <script src="./script.js"></script>
-  <script src="../rotary-sdk.js"></script>
+  <script src="../rotary-sdk.js?v=20261013-shared"></script>
   <script>
 (() => {
   const root = document.body;
@@ -355,7 +355,8 @@
       if (activeElement !== document.body || !root.querySelector('#videoShell iframe[data-rotary-target]')) return null;
       return window.restoreRotaryVideoPoster?.() || null;
     },
-    beforeBack: () => window.restoreRotaryVideoPoster?.()
+    beforeBack: () => window.restoreRotaryVideoPoster?.(),
+    beforeConfirm: () => window.restoreRotaryVideoPoster?.() || null
   });
 })();
 </script>

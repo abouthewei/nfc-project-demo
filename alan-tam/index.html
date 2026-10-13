@@ -1300,7 +1300,7 @@ document.querySelectorAll('.video-poster').forEach(poster => {
 
 </script>
 
-<script src="../rotary-sdk.js"></script>
+<script src="../rotary-sdk.js?v=20261013-shared"></script>
 <script>
 RotarySDK.init({
   keys: {
@@ -1316,6 +1316,12 @@ RotarySDK.init({
     boxShadow: '0 0 0 8px rgba(229,180,84,.18)'
   },
   beforeMove: () => {
+    if (!activeVideoEmbed) return null;
+    const poster = activeVideoPoster;
+    restoreActiveVideo?.();
+    return poster;
+  },
+  beforeConfirm: () => {
     if (!activeVideoEmbed) return null;
     const poster = activeVideoPoster;
     restoreActiveVideo?.();

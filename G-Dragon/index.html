@@ -8,7 +8,7 @@
     <title>G-DRAGON — Artist Archive</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23c9ff3d'/%3E%3Ctext x='50%25' y='55%25' font-family='Arial' font-size='27' font-weight='700' text-anchor='middle' fill='%230b0b0a'%3EGD%3C/text%3E%3C/svg%3E" />
     <link rel="stylesheet" href="styles.css?v=20261013-content-refactor" />
-    <script defer src="app.js?v=20261013-content-refactor"></script>
+    <script defer src="app.js?v=20261013-video-toggle"></script>
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="skip">본문으로 건너뛰기</a>
@@ -164,7 +164,7 @@
         <div class="copyright"><span>© 2026 G-DRAGON ARCHIVE</span><a href="#top" data-i18n="footerBack">BACK TO TOP ↑</a></div>
       </div>
     </footer>
-    <script src="../rotary-sdk.js"></script>
+    <script src="../rotary-sdk.js?v=20261013-shared"></script>
     <script>
 (() => {
   const root = document.querySelector('#root, #app') || document.body;
@@ -287,7 +287,8 @@
       if (timeline) mark(root.querySelector('#timeline-list'));
       return timeline ? root.querySelector('.timeline-video-trigger') : player.querySelector('button');
     },
-    beforeBack: () => window.restoreRotaryVideoCovers?.()
+    beforeBack: () => window.restoreRotaryVideoCovers?.(),
+    beforeConfirm: () => window.restoreRotaryPlayingVideo?.() || null
   });
 })();
 </script>

@@ -173,7 +173,23 @@
       }
 
       if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.repeat && keyMatches(keys.confirm, event.key)) {
+        const poster = options.beforeConfirm?.();
+        if (poster) {
+          event.preventDefault();
+          Promise.resolve(poster).then(target => {
+            if (target) focusTarget(target, false);
+          });
+          return;
+        }
         const target = rotaryFocus?.isConnected ? rotaryFocus : document.activeElement;
+        const video = target?.matches?.('video') ? target
+          : target === document.body ? rotaryScope?.querySelector('video') : null;
+        if (video) {
+          event.preventDefault();
+          if (video.paused) video.play()?.catch(() => {});
+          else video.load();
+          return;
+        }
         if (typeof target?.click === 'function') {
           event.preventDefault();
           const scope = target.closest('[data-rotary-highlight],figure') || target.parentElement;
@@ -214,6 +230,23 @@
       focus: (target, scroll = true) => focusTarget(target, scroll)
     };
   }
+
+  function sendDeviceKey(key) {
+    // Use the page's keyboard handlers too, including video and dialog navigation.
+    const target = document.activeElement || document.body;
+    target.dispatchEvent(new KeyboardEvent('keydown', { key, bubbles: true, cancelable: true }));
+  }
+
+  Object.assign(window, {
+    onPlayBtnPressed: () => sendDeviceKey('Enter'),
+    onPlayBtnRelease: () => {},
+    onBackBtnPressed: () => sendDeviceKey('b'),
+    onBackBtnRelease: () => {},
+    onOKBtnPressed: () => sendDeviceKey('f'),
+    onOKBtnRelease: () => {},
+    onClockwiseRoll: () => sendDeviceKey('ArrowRight'),
+    onCounterClockwiseRoll: () => sendDeviceKey('ArrowLeft')
+  });
 
   window.RotarySDK = { init };
 })();

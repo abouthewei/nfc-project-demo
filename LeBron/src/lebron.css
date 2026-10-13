@@ -1,0 +1,1228 @@
+.lebron-page {
+  --lbj-ink: #13090c;
+  --lbj-oxblood: #541521;
+  --lbj-oxblood-deep: #260c13;
+  --lbj-gold: #c9a65a;
+  --lbj-ivory: #f4f1ea;
+  --lbj-muted: #b4a8a0;
+  --lbj-line: rgba(201, 166, 90, 0.5);
+  --lbj-serif: Georgia, "Times New Roman", serif;
+  --lbj-sans: var(--condensed), "Arial Narrow", Arial, sans-serif;
+  background: var(--lbj-ink);
+  color: var(--lbj-ivory);
+  min-height: 100vh;
+  overflow: hidden;
+}
+.lebron-page * {
+  box-sizing: border-box;
+}
+.lebron-page a {
+  color: inherit;
+  text-decoration: none;
+}
+.lebron-page button {
+  color: inherit;
+  font: inherit;
+}
+.lebron-page img {
+  display: block;
+  width: 100%;
+}
+.lebron-page h1,
+.lebron-page h2,
+.lebron-page h3,
+.lebron-page p,
+.lebron-page figure,
+.lebron-page dl {
+  margin: 0;
+}
+.lebron-page h1,
+.lebron-page h2,
+.lebron-page h3 {
+  font-weight: 400;
+}
+.lebron-page section[id] {
+  scroll-margin-top: 72px;
+}
+.lebron-skip {
+  position: fixed;
+  top: -100px;
+  left: 20px;
+  z-index: 100;
+  padding: 14px 18px;
+  color: var(--lbj-ink);
+  background: var(--lbj-gold);
+  font: 600 14px var(--lbj-sans);
+}
+.lebron-skip:focus {
+  top: 12px;
+}
+.lebron-header {
+  height: 72px;
+  padding: 0 clamp(22px, 4vw, 68px);
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  border-bottom: 1px solid var(--lbj-line);
+  background: rgba(19, 9, 12, 0.95);
+  backdrop-filter: blur(12px);
+}
+.lebron-wordmark {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  gap: 8px;
+  white-space: nowrap;
+  font: 600 20px var(--lbj-sans);
+  letter-spacing: 0.12em;
+}
+.lebron-wordmark span,
+.lebron-footer-mark span {
+  color: var(--lbj-gold);
+}
+.lebron-header nav {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(20px, 4vw, 62px);
+}
+.lebron-header nav a,
+.lebron-footer nav a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font: 600 13px var(--lbj-sans);
+  letter-spacing: 0.22em;
+  white-space: nowrap;
+}
+.lebron-header nav a:hover,
+.lebron-header nav a[aria-current] {
+  color: var(--lbj-gold);
+}
+.lebron-header nav a[aria-current]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0.2em;
+  bottom: -1px;
+  height: 2px;
+  background: var(--lbj-gold);
+}
+.lebron-language {
+  flex: 0 0 auto;
+  border: 1px solid var(--lbj-gold) !important;
+  background: transparent;
+  min-width: 58px;
+  min-height: 40px;
+  color: var(--lbj-gold);
+  font: 600 12px var(--lbj-sans);
+  letter-spacing: 0.16em;
+}
+.lebron-language:hover {
+  background: var(--lbj-gold);
+  color: var(--lbj-ink);
+}
+.lebron-page .language-toggle:hover,
+.lebron-page .language-toggle:focus-visible {
+  background: var(--lbj-gold);
+  color: var(--lbj-ink);
+}
+.lebron-menu {
+  display: none;
+  width: 42px;
+  min-height: 42px;
+  padding: 10px;
+  border: 1px solid var(--lbj-line);
+  background: transparent;
+}
+.lebron-menu span {
+  display: block;
+  height: 1px;
+  margin: 5px 0;
+  background: var(--lbj-gold);
+}
+.lebron-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: min(850px, calc(100svh - 72px));
+  height: calc(100svh - 72px);
+  max-height: 1020px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--lbj-line);
+  background:
+    radial-gradient(circle at 80% 18%, rgba(132, 35, 48, 0.42), transparent 38%),
+    linear-gradient(135deg, var(--lbj-ink), var(--lbj-oxblood-deep));
+}
+.lebron-map-lines {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.34;
+  background-image: repeating-radial-gradient(
+    ellipse at 60% 30%,
+    transparent 0 22px,
+    rgba(178, 79, 75, 0.22) 23px 24px,
+    transparent 25px 49px
+  );
+  transform: rotate(-12deg) scale(1.25);
+}
+.lebron-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 35%;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(transparent, var(--lbj-ink));
+  opacity: 0.65;
+}
+.lebron-hero-number {
+  position: absolute;
+  z-index: 0;
+  top: 1%;
+  right: 18%;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(201, 166, 90, 0.85);
+  font: 400 clamp(360px, 48vw, 780px)/1 var(--lbj-serif);
+  letter-spacing: -0.1em;
+  opacity: 0.78;
+}
+.lebron-hero-photo-wrap {
+  position: absolute;
+  right: clamp(32px, 9vw, 180px);
+  bottom: 7%;
+  z-index: 1;
+  width: min(43vw, 640px);
+  height: min(82%, 750px);
+  overflow: hidden;
+  border: 1px solid var(--lbj-gold);
+  box-shadow: 18px 22px 0 rgba(201, 166, 90, 0.08);
+}
+.lebron-hero-photo {
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 24%;
+  filter: saturate(0.86) contrast(1.05);
+}
+.lebron-hero-copy {
+  position: relative;
+  z-index: 3;
+  width: min(56%, 730px);
+  padding: clamp(76px, 9vh, 120px) clamp(24px, 6vw, 102px);
+}
+.lebron-hero-kicker,
+.lebron-kicker {
+  color: var(--lbj-gold);
+  font: 600 13px/1.4 var(--lbj-sans);
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+.lebron-hero-copy h1 {
+  margin-top: 20px;
+  font: 400 clamp(84px, 13vw, 214px)/0.83 var(--lbj-serif);
+  letter-spacing: -0.07em;
+}
+.lebron-hero-copy h1 span {
+  display: block;
+}
+.lebron-hero-line {
+  margin-top: 30px;
+  color: var(--lbj-ivory);
+  font: 500 clamp(15px, 1.35vw, 20px)/1.4 var(--lbj-sans);
+  letter-spacing: 0.27em;
+}
+.lebron-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 48px;
+  margin-top: 30px;
+  padding: 13px 21px;
+  border: 1px solid var(--lbj-gold);
+  color: var(--lbj-gold) !important;
+  font: 600 14px var(--lbj-sans);
+  letter-spacing: 0.2em;
+  transition:
+    background 0.25s,
+    color 0.25s;
+}
+.lebron-button svg {
+  width: 18px;
+  height: 18px;
+}
+.lebron-button:hover {
+  background: var(--lbj-gold);
+  color: var(--lbj-ink) !important;
+}
+.lebron-scroll {
+  position: absolute;
+  left: clamp(24px, 6vw, 102px);
+  bottom: 30px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--lbj-gold);
+  font: 600 12px var(--lbj-sans);
+  letter-spacing: 0.28em;
+}
+.lebron-scroll svg {
+  width: 18px;
+  height: 18px;
+}
+.lebron-hero-route {
+  position: absolute;
+  left: 3.3%;
+  bottom: 15%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  color: rgba(244, 241, 234, 0.7);
+  font: 600 10px var(--lbj-sans);
+  letter-spacing: 0.28em;
+}
+.lebron-hero-route i {
+  display: block;
+  width: 1px;
+  height: 26px;
+  margin-left: 2px;
+  background: var(--lbj-gold);
+}
+.lebron-stats {
+  display: grid;
+  grid-template-columns: minmax(150px, 1.1fr) repeat(5, minmax(120px, 1fr));
+  padding: 34px clamp(24px, 5.2vw, 88px) 40px;
+  border-bottom: 1px solid var(--lbj-line);
+  background: var(--lbj-ink);
+}
+.lebron-stat-intro {
+  align-self: end;
+  max-width: 100px;
+  color: var(--lbj-muted);
+  font: 600 12px/1.5 var(--lbj-sans);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+.lebron-stat {
+  min-width: 0;
+  padding: 0 18px;
+  border-left: 1px solid rgba(201, 166, 90, 0.35);
+}
+.lebron-stat strong {
+  display: block;
+  color: var(--lbj-gold);
+  font: 400 clamp(40px, 4.5vw, 74px)/0.9 var(--lbj-serif);
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+}
+.lebron-stat span {
+  display: block;
+  margin-top: 13px;
+  color: var(--lbj-ivory);
+  font: 600 11px var(--lbj-sans);
+  letter-spacing: 0.15em;
+  line-height: 1.3;
+}
+.lebron-section {
+  padding: clamp(86px, 10vw, 150px) clamp(24px, 6vw, 102px);
+}
+.lebron-story {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(48px, 9vw, 150px);
+  align-items: center;
+  background: var(--lbj-ivory);
+  color: var(--lbj-ink);
+}
+.lebron-story-copy {
+  max-width: 640px;
+}
+.lebron-story .lebron-kicker {
+  color: var(--lbj-oxblood);
+}
+.lebron-story-copy h2,
+.lebron-section-head h2,
+.lebron-legacy-copy h2 {
+  margin-top: 20px;
+  font: 400 clamp(50px, 6.2vw, 102px)/0.9 var(--lbj-serif);
+  letter-spacing: -0.06em;
+}
+.lebron-story-copy h2 span,
+.lebron-section-head h2 span,
+.lebron-legacy-copy h2 span,
+.lebron-moment-copy h3 span {
+  display: block;
+}
+.lebron-body {
+  margin-top: 34px;
+  max-width: 560px;
+  color: #40373a;
+  font: 400 clamp(16px, 1.3vw, 19px)/1.65 var(--lbj-serif);
+}
+.lebron-body p + p {
+  margin-top: 18px;
+}
+.lebron-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px 28px;
+  margin-top: 42px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(84, 21, 33, 0.35);
+}
+.lebron-facts dt {
+  color: #7b6a64;
+  font: 600 10px var(--lbj-sans);
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}
+.lebron-facts dd {
+  margin-top: 6px;
+  color: var(--lbj-oxblood);
+  font: 600 12px/1.3 var(--lbj-sans);
+  letter-spacing: 0.07em;
+}
+.lebron-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 35px;
+  color: var(--lbj-oxblood) !important;
+  font: 600 13px var(--lbj-sans);
+  letter-spacing: 0.2em;
+}
+.lebron-text-link svg {
+  width: 18px;
+  height: 18px;
+}
+.lebron-story-image {
+  position: relative;
+  min-height: 610px;
+}
+.lebron-story-image img {
+  height: 610px;
+  object-fit: cover;
+  object-position: 54% center;
+  filter: saturate(0.8);
+}
+.lebron-story-image::after {
+  content: "";
+  position: absolute;
+  inset: 16px -16px -16px 16px;
+  border: 1px solid var(--lbj-gold);
+  pointer-events: none;
+}
+.lebron-story-image figcaption,
+.lebron-legacy-image figcaption {
+  position: absolute;
+  bottom: -38px;
+  left: 0;
+  color: #7b6a64;
+  font: 600 10px var(--lbj-sans);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.lebron-story-year {
+  position: absolute;
+  right: -18px;
+  top: -52px;
+  z-index: 2;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--lbj-gold);
+  font: 400 clamp(150px, 18vw, 280px)/1 var(--lbj-serif);
+  letter-spacing: -0.1em;
+}
+.lebron-eras {
+  background: var(--lbj-ivory);
+  color: var(--lbj-ink);
+  padding-top: 100px;
+}
+.lebron-section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 42px;
+  border-bottom: 1px solid rgba(84, 21, 33, 0.3);
+}
+.lebron-section-head .lebron-kicker {
+  color: var(--lbj-oxblood);
+}
+.lebron-section-head > p {
+  max-width: 260px;
+  color: #7b6a64;
+  font: 500 15px/1.5 var(--lbj-sans);
+  letter-spacing: 0.1em;
+  text-align: right;
+}
+.lebron-era-rail {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 48px;
+}
+.lebron-era {
+  min-width: 0;
+}
+.lebron-era-top strong {
+  display: block;
+  color: var(--lbj-oxblood);
+  font: 400 clamp(42px, 4.4vw, 74px)/0.9 var(--lbj-serif);
+  letter-spacing: -0.05em;
+}
+.lebron-era-top span {
+  display: block;
+  margin-top: 10px;
+  color: var(--lbj-oxblood);
+  font: 600 11px var(--lbj-sans);
+  letter-spacing: 0.2em;
+}
+.lebron-era-line {
+  height: 1px;
+  margin: 24px 0 18px;
+  background: var(--lbj-gold);
+  position: relative;
+}
+.lebron-era-line i {
+  position: absolute;
+  right: 0;
+  top: -5px;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--lbj-gold);
+  border-radius: 50%;
+  background: var(--lbj-ivory);
+}
+.lebron-era p {
+  min-height: 70px;
+  color: #54474a;
+  font: 400 14px/1.55 var(--lbj-serif);
+}
+.lebron-era img {
+  aspect-ratio: 16 / 10;
+  margin-top: 24px;
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(0.74) contrast(1.05);
+}
+.lebron-top10 {
+  background: var(--lbj-ink);
+  color: var(--lbj-ivory);
+}
+.lebron-top-head {
+  border-bottom-color: var(--lbj-line);
+}
+.lebron-top-head .lebron-kicker {
+  color: var(--lbj-gold);
+}
+.lebron-top-head > p {
+  color: var(--lbj-muted);
+}
+.lebron-top-head h2 {
+  font-size: clamp(54px, 6.8vw, 112px);
+}
+.lebron-moments {
+  margin-top: 60px;
+}
+.lebron-moment {
+  display: grid;
+  grid-template-columns: minmax(90px, 0.22fr) minmax(230px, 0.68fr) minmax(360px, 1.1fr);
+  gap: clamp(24px, 4vw, 68px);
+  align-items: center;
+  padding: 56px 0 70px;
+  border-bottom: 1px solid var(--lbj-line);
+}
+.lebron-moment-light {
+  color: var(--lbj-ink);
+  background: var(--lbj-ivory);
+  padding-inline: clamp(22px, 5vw, 82px);
+  margin-inline: calc(clamp(24px, 6vw, 102px) * -1);
+  border-bottom-color: rgba(84, 21, 33, 0.25);
+}
+.lebron-moment-rank {
+  align-self: start;
+  color: var(--lbj-gold);
+  font: 400 clamp(100px, 13vw, 230px)/0.7 var(--lbj-serif);
+  letter-spacing: -0.1em;
+}
+.lebron-moment-light .lebron-moment-rank {
+  color: var(--lbj-oxblood);
+}
+.lebron-moment-copy time {
+  color: var(--lbj-gold);
+  font: 600 11px var(--lbj-sans);
+  letter-spacing: 0.25em;
+}
+.lebron-moment-light .lebron-moment-copy time {
+  color: var(--lbj-oxblood);
+}
+.lebron-moment-copy h3 {
+  margin-top: 20px;
+  color: var(--lbj-ivory);
+  font: 400 clamp(35px, 4vw, 68px)/0.93 var(--lbj-serif);
+  letter-spacing: -0.045em;
+}
+.lebron-moment-light .lebron-moment-copy h3 {
+  color: var(--lbj-ink);
+}
+.lebron-moment-sub {
+  margin-top: 14px;
+  color: var(--lbj-gold);
+  font: 600 12px var(--lbj-sans);
+  letter-spacing: 0.2em;
+}
+.lebron-moment-light .lebron-moment-sub {
+  color: var(--lbj-oxblood);
+}
+.lebron-moment-text {
+  max-width: 470px;
+  margin-top: 24px;
+  color: var(--lbj-muted);
+  font: 400 16px/1.6 var(--lbj-serif);
+}
+.lebron-moment-light .lebron-moment-text {
+  color: #54474a;
+}
+.lebron-moment-stat {
+  display: block;
+  margin-top: 30px;
+  color: var(--lbj-gold);
+  font: 400 clamp(34px, 4vw, 62px)/0.9 var(--lbj-serif);
+  letter-spacing: -0.04em;
+}
+.lebron-moment-light .lebron-moment-stat {
+  color: var(--lbj-oxblood);
+}
+.lebron-media {
+  min-width: 0;
+}
+.lebron-media-frame {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--lbj-gold);
+  background: #1b1618;
+}
+.lebron-media-frame > img,
+.lebron-poster img {
+  height: 100%;
+  object-fit: cover;
+}
+.lebron-poster {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: #1b1618;
+  text-align: left;
+  overflow: hidden;
+}
+.lebron-poster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(19, 9, 12, 0.1), rgba(19, 9, 12, 0.6));
+}
+.lebron-poster:hover img {
+  transform: scale(1.035);
+}
+.lebron-poster img {
+  transition: transform 0.5s ease;
+}
+.lebron-play {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border: 1px solid var(--lbj-gold);
+  border-radius: 50%;
+  color: var(--lbj-gold);
+  background: rgba(19, 9, 12, 0.55);
+}
+.lebron-play svg {
+  margin-left: 3px;
+}
+.lebron-play-label {
+  position: absolute;
+  z-index: 1;
+  left: 20px;
+  bottom: 16px;
+  color: var(--lbj-ivory);
+  font: 600 11px var(--lbj-sans);
+  letter-spacing: 0.18em;
+}
+.lebron-media-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.lebron-media-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 12px;
+  color: var(--lbj-muted);
+  font: 600 10px var(--lbj-sans);
+  letter-spacing: 0.11em;
+}
+.lebron-moment-light .lebron-media-caption {
+  color: #77686a;
+}
+.lebron-media-caption a {
+  color: var(--lbj-gold);
+}
+.lebron-moment-light .lebron-media-caption a {
+  color: var(--lbj-oxblood);
+}
+.lebron-video-help {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-top: 11px;
+  color: var(--lbj-muted);
+  font: 500 11px/1.45 var(--lbj-sans);
+}
+.lebron-video-help > div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+.lebron-video-help a {
+  color: var(--lbj-gold);
+}
+.lebron-video-help button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--lbj-ivory);
+  cursor: pointer;
+}
+.lebron-moment-light .lebron-video-help {
+  color: #77686a;
+}
+.lebron-moment-light .lebron-video-help a {
+  color: var(--lbj-oxblood);
+}
+.lebron-moment-light .lebron-video-help button {
+  color: var(--lbj-ink);
+}
+.lebron-motion {
+  color: var(--lbj-ink);
+  background: var(--lbj-ivory);
+}
+.lebron-motion .lebron-kicker {
+  color: var(--lbj-oxblood);
+}
+.lebron-motion .lebron-section-head {
+  border-bottom-color: rgba(84, 21, 33, 0.3);
+}
+.lebron-motion-rail {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.lebron-motion-item {
+  position: relative;
+  min-height: 150px;
+  padding: 0 18px;
+  border-left: 1px solid rgba(84, 21, 33, 0.4);
+}
+.lebron-motion-item strong {
+  display: block;
+  color: var(--lbj-gold);
+  font: 400 34px var(--lbj-serif);
+}
+.lebron-motion-item span {
+  display: block;
+  margin-top: 30px;
+  color: var(--lbj-oxblood);
+  font: 600 clamp(20px, 2.5vw, 38px) var(--lbj-serif);
+  letter-spacing: -0.03em;
+}
+.lebron-motion-item i {
+  position: relative;
+  display: block;
+  margin-top: 12px;
+  height: 1px;
+  background: var(--lbj-gold);
+}
+.lebron-motion-item i::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -4px;
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--lbj-gold);
+  border-radius: 50%;
+  background: var(--lbj-ivory);
+}
+.lebron-legacy {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(270px, 0.7fr) minmax(160px, 0.35fr);
+  gap: clamp(26px, 6vw, 90px);
+  align-items: center;
+  position: relative;
+  background:
+    radial-gradient(circle at 70% 20%, rgba(132, 35, 48, 0.32), transparent 35%),
+    var(--lbj-oxblood-deep);
+}
+.lebron-legacy-copy h2 {
+  color: var(--lbj-ivory);
+}
+.lebron-legacy-copy > p:not(.lebron-kicker) {
+  max-width: 420px;
+  margin-top: 32px;
+  color: var(--lbj-muted);
+  font: 400 17px/1.6 var(--lbj-serif);
+}
+.lebron-legacy-image {
+  position: relative;
+}
+.lebron-legacy-image img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: saturate(0.74);
+}
+.lebron-legacy-image::after {
+  content: "";
+  position: absolute;
+  inset: 14px -14px -14px 14px;
+  border: 1px solid var(--lbj-gold);
+  pointer-events: none;
+}
+.lebron-legacy-image figcaption {
+  bottom: -30px;
+  color: var(--lbj-muted);
+}
+.lebron-legacy-side {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  padding-left: 24px;
+  border-left: 1px solid var(--lbj-line);
+  color: var(--lbj-gold);
+  font: 600 11px var(--lbj-sans);
+  letter-spacing: 0.28em;
+}
+.lebron-legacy-side i {
+  width: 1px;
+  height: 85px;
+  background: var(--lbj-gold);
+}
+.lebron-legacy-side p {
+  max-width: 140px;
+  color: var(--lbj-muted);
+  font: 500 12px/1.6 var(--lbj-sans);
+  letter-spacing: 0.12em;
+}
+.lebron-footer {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 30px;
+  min-height: 120px;
+  padding: 24px clamp(24px, 5.2vw, 88px);
+  border-top: 1px solid var(--lbj-line);
+  background: #0b0809;
+}
+.lebron-footer-mark {
+  font: 400 33px var(--lbj-serif);
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+.lebron-footer p {
+  color: var(--lbj-muted);
+  font: 600 11px var(--lbj-sans);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.lebron-footer nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: clamp(16px, 2.4vw, 34px);
+}
+.lebron-footer nav a {
+  color: var(--lbj-muted);
+  font-size: 11px;
+}
+.lebron-footer nav a:hover {
+  color: var(--lbj-gold);
+}
+.lebron-footer-language {
+  min-height: 38px;
+}
+/* scroll reveals keep a trace of opacity so the keyboard SDK still counts them as visible content */
+.lebron-reveal {
+  opacity: 0.001;
+  transform: translateY(26px);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s ease;
+}
+.lebron-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lebron-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .lebron-page {
+    scroll-behavior: auto;
+  }
+}
+@media (max-width: 1050px) {
+  .lebron-header nav {
+    gap: 22px;
+  }
+  .lebron-hero-copy {
+    width: 60%;
+  }
+  .lebron-hero-photo-wrap {
+    right: 4%;
+    width: 45vw;
+  }
+  .lebron-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 0;
+  }
+  .lebron-stat-intro {
+    grid-column: 1 / -1;
+    max-width: none;
+    padding-bottom: 10px;
+  }
+  .lebron-stat:nth-child(2) {
+    border-left: 0;
+  }
+  .lebron-era-rail {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 48px;
+  }
+  .lebron-era:last-child {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 11px);
+  }
+  .lebron-moment {
+    grid-template-columns: 90px minmax(200px, 0.8fr) minmax(290px, 1fr);
+    gap: 28px;
+  }
+  .lebron-legacy {
+    grid-template-columns: minmax(0, 1fr) minmax(250px, 0.7fr);
+  }
+  .lebron-legacy-side {
+    grid-column: 1 / -1;
+    min-height: 80px;
+    padding: 18px 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--lbj-line);
+    flex-direction: row;
+    align-items: center;
+  }
+  .lebron-legacy-side i {
+    width: 80px;
+    height: 1px;
+  }
+}
+@media (max-width: 760px) {
+  .lebron-header {
+    height: 64px;
+    padding-inline: 18px;
+    gap: 12px;
+  }
+  .lebron-wordmark {
+    font-size: 17px;
+  }
+  .lebron-header nav {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    display: none;
+    height: auto;
+    padding: 14px 18px 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    border-bottom: 1px solid var(--lbj-line);
+    background: rgba(19, 9, 12, 0.98);
+  }
+  .lebron-header nav.is-open {
+    display: flex;
+  }
+  .lebron-header nav a {
+    padding: 10px 0;
+    min-height: 42px;
+  }
+  .lebron-header nav a[aria-current]::after {
+    right: auto;
+    width: 36px;
+    bottom: 4px;
+  }
+  .lebron-menu {
+    display: block;
+    order: 3;
+  }
+  .lebron-language {
+    margin-left: auto;
+    min-width: 48px;
+  }
+  .lebron-hero {
+    min-height: 770px;
+    height: calc(100svh - 64px);
+    max-height: none;
+  }
+  .lebron-hero-number {
+    top: 18px;
+    right: -8%;
+    font-size: min(92vw, 430px);
+  }
+  .lebron-hero-photo-wrap {
+    top: 92px;
+    right: 20px;
+    bottom: auto;
+    width: calc(100% - 40px);
+    height: 45%;
+  }
+  .lebron-hero-copy {
+    width: 100%;
+    padding: 55vh 24px 0;
+  }
+  .lebron-hero-copy h1 {
+    margin-top: 14px;
+    font-size: clamp(64px, 20vw, 122px);
+  }
+  .lebron-hero-kicker {
+    max-width: 210px;
+    line-height: 1.7;
+  }
+  .lebron-hero-line {
+    margin-top: 18px;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+  }
+  .lebron-hero-route {
+    left: auto;
+    right: 22px;
+    bottom: 26px;
+    align-items: flex-end;
+    text-align: right;
+    font-size: 8px;
+  }
+  .lebron-scroll {
+    display: none;
+  }
+  .lebron-stats {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 28px 20px 34px;
+    gap: 28px 0;
+  }
+  .lebron-stat-intro {
+    padding-bottom: 2px;
+  }
+  .lebron-stat {
+    padding: 0 12px;
+  }
+  .lebron-stat:nth-child(odd) {
+    border-left: 0;
+  }
+  .lebron-stat strong {
+    font-size: clamp(34px, 12vw, 56px);
+  }
+  .lebron-stat span {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+  }
+  .lebron-section {
+    padding: 72px 20px;
+  }
+  .lebron-story {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 58px;
+  }
+  .lebron-story-copy h2,
+  .lebron-section-head h2,
+  .lebron-legacy-copy h2 {
+    font-size: clamp(47px, 14vw, 82px);
+  }
+  .lebron-story-image {
+    width: 100%;
+    min-height: 0;
+  }
+  .lebron-story-image img {
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+  .lebron-story-image::after {
+    inset: 10px -10px -10px 10px;
+  }
+  .lebron-story-year {
+    right: -8px;
+    top: -36px;
+    font-size: 110px;
+  }
+  .lebron-story-image figcaption {
+    bottom: -31px;
+    font-size: 9px;
+  }
+  .lebron-body {
+    font-size: 16px;
+  }
+  .lebron-facts {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 32px;
+    gap: 18px 16px;
+  }
+  .lebron-facts dd {
+    font-size: 10px;
+  }
+  .lebron-section-head {
+    display: block;
+    padding-bottom: 28px;
+  }
+  .lebron-section-head > p {
+    margin-top: 20px;
+    text-align: left;
+  }
+  .lebron-era-rail {
+    display: block;
+    margin-top: 34px;
+    padding-left: 18px;
+    border-left: 1px solid var(--lbj-gold);
+  }
+  .lebron-era,
+  .lebron-era:last-child {
+    display: grid;
+    grid-template-columns: 86px 1fr;
+    gap: 12px 18px;
+    max-width: none;
+    margin-bottom: 42px;
+  }
+  .lebron-era-top strong {
+    font-size: 46px;
+  }
+  .lebron-era-top span {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+  }
+  .lebron-era-line {
+    display: none;
+  }
+  .lebron-era p {
+    min-height: 0;
+    align-self: end;
+    font-size: 14px;
+  }
+  .lebron-era img {
+    grid-column: 1 / -1;
+    margin-top: 4px;
+  }
+  .lebron-moments {
+    margin-top: 32px;
+  }
+  .lebron-moment,
+  .lebron-moment-light {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    margin-inline: -20px;
+    padding: 42px 20px 50px;
+  }
+  .lebron-moment-rank {
+    font-size: 112px;
+    line-height: 0.68;
+  }
+  .lebron-moment-copy h3 {
+    font-size: clamp(40px, 12vw, 70px);
+  }
+  .lebron-moment-text {
+    font-size: 15px;
+  }
+  .lebron-media-frame {
+    aspect-ratio: 16 / 10;
+  }
+  .lebron-media-caption {
+    font-size: 9px;
+  }
+  .lebron-video-help {
+    display: block;
+  }
+  .lebron-video-help > div {
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+  .lebron-motion-rail {
+    display: block;
+    margin-top: 34px;
+  }
+  .lebron-motion-item {
+    min-height: 112px;
+    margin-bottom: 20px;
+    padding-left: 14px;
+  }
+  .lebron-motion-item span {
+    margin-top: 18px;
+    font-size: 28px;
+  }
+  .lebron-legacy {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 46px;
+  }
+  .lebron-legacy-image {
+    order: 2;
+  }
+  .lebron-legacy-side {
+    order: 3;
+    min-height: 0;
+    padding-top: 18px;
+  }
+  .lebron-legacy-copy > p:not(.lebron-kicker) {
+    font-size: 16px;
+  }
+  .lebron-footer {
+    grid-template-columns: 1fr auto;
+    gap: 20px 14px;
+    padding: 30px 20px;
+  }
+  .lebron-footer p {
+    grid-column: 1 / -1;
+    order: 3;
+    font-size: 9px;
+  }
+  .lebron-footer nav {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    order: 4;
+  }
+  .lebron-footer-language {
+    justify-self: end;
+  }
+}

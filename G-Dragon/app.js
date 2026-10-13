@@ -1265,6 +1265,19 @@ function resetInlineVideo(item) {
   if (player?.querySelector("iframe")) showVideoPoster(player);
 }
 
+window.restoreRotaryPlayingVideo = () => {
+  if (byId("gallery-dialog").open && !byId("gallery-dialog-video-frame").hidden) {
+    setGalleryVideoMode(false);
+    return byId("gallery-dialog-video-toggle");
+  }
+  const frame = document.querySelector(".timeline-visual iframe,.work-player iframe");
+  if (!frame) return null;
+  const timeline = frame.closest(".timeline-visual");
+  const player = frame.closest(".work-player");
+  window.restoreRotaryVideoCovers();
+  return timeline ? byId("timeline-list").querySelector(".timeline-video-trigger") : player.querySelector(".work-video-trigger");
+};
+
 window.restoreRotaryVideoCovers = () => {
   if (byId("timeline-list")?.querySelector(".timeline-visual iframe")) renderTimeline(currentCopy());
   document.querySelectorAll(".work-item").forEach(resetInlineVideo);
