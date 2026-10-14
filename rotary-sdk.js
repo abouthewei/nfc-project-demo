@@ -8,6 +8,7 @@
   };
   const targetSelector = 'a[href],button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled),video[controls],[role="button"],[role="link"],[role="tab"],[role="menuitem"],[tabindex]:not([tabindex="-1"]),[data-rotary-target],img[alt]:not([alt=""])';
   const fullscreenSelector = 'video,[data-rotary-fullscreen],iframe[allowfullscreen],iframe[allow*="fullscreen"]';
+  const playSelector = '[data-rotary-play],.tribute-video,.video-poster,.lebron-poster,.timeline-video-trigger,.work-video-trigger,#playVideo,#gallery-dialog-video-toggle,.video-frame[role="button"]';
 
   const normalizeKey = key => key === 'Space' ? ' ' : key.length === 1 ? key.toLowerCase() : key;
   const keyMatches = (key, eventKey) => (Array.isArray(key) ? key : [key]).some(value =>
@@ -189,7 +190,7 @@
         }
         const target = rotaryFocus?.isConnected ? rotaryFocus : document.activeElement;
         const video = target?.matches?.('video') ? target
-          : target?.matches?.('[data-rotary-play]') ? target.querySelector?.('video')
+          : target?.matches?.(playSelector) ? target.querySelector?.('video')
           : target === document.body ? rotaryScope?.querySelector('video') : null;
         if (video) {
           event.preventDefault();
@@ -197,7 +198,7 @@
           else video.load();
           return;
         }
-        if (typeof target?.click === 'function' && (!videoOnly || target.matches?.('[data-rotary-play]'))) {
+        if (typeof target?.click === 'function' && (!videoOnly || target.matches?.(playSelector))) {
           event.preventDefault();
           const scope = target.closest('[data-rotary-highlight],figure') || target.parentElement;
           target.click();

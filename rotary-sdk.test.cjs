@@ -169,11 +169,20 @@ player.window.RotarySDK.init({ beforeMove: () => player.links[0] });
 player.window.onClockwiseRoll();
 assert.equal(player.document.activeElement, player.links[1], 'device navigation restores the video origin');
 async function checkPlaybackToggle() {
+  for (const className of ['.tribute-video', '.video-poster', '.lebron-poster', '.timeline-video-trigger', '.work-video-trigger', '#playVideo', '#gallery-dialog-video-toggle', '.video-frame[role="button"]']) {
+    const p = page();
+    const poster = p.links[0];
+    poster.matches = selector => selector.includes(className);
+    p.document.activeElement = poster;
+    p.window.RotarySDK.init();
+    p.window.onPlayBtnPressed();
+    assert.equal(poster.clicks, 1, `legacy poster ${className} must play without the new marker`);
+  }
   for (const input of ['keyboard', 'device']) {
     const p = page();
     let playing = false;
     const poster = p.links[0];
-    poster.matches = selector => selector === '[data-rotary-play]' || selector.includes('a[href]');
+    poster.matches = selector => selector.includes('[data-rotary-play]') || selector.includes('a[href]');
     poster.click = () => {
       poster.clicks++;
       playing = true;
