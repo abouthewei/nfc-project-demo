@@ -1,0 +1,453 @@
+{
+  "reportDate": "2026-10-17",
+  "project": {
+    "id": "6aae8595-a07f-4439-b006-d8782afcbd0d",
+    "title": "金属小乐园探险记",
+    "stage": "complete",
+    "createdAt": "2026/10/16 21:03:09",
+    "updatedAt": "2026/10/17 10:31:09",
+    "sourceDimensions": {
+      "width": 1200,
+      "height": 743
+    },
+    "style": "黑暗哥特金属风格",
+    "theme": "讲童趣涂鸦里的小动物们结伴探险的快乐日常",
+    "voice": "以森林动物的集体视角分享结伴探险的趣事",
+    "genre": "动感欢快的摇滚风，透着探险的热闹劲",
+    "arrangement": "活泼摇滚乐队配童声主唱，鼓点强劲热闹"
+  },
+  "song": {
+    "id": "3650da3e-f408-4e85-91c8-34aec500e4ae",
+    "title": "金属小乐园探险记",
+    "summary": "金属质感的童趣涂鸦小动物们结伴探险的快乐日常",
+    "provider": "MiniMax",
+    "model": "music-3.0",
+    "durationSeconds": 146.050612,
+    "createdAt": "2026/10/16 21:40:57",
+    "traceId": "07215c21e3c78abba9bccf6e06cfda35",
+    "file": {
+      "name": "完整歌曲.mp3",
+      "bytes": 4675594
+    }
+  },
+  "assets": {
+    "original": {
+      "name": "原画-before.jpg",
+      "bytes": 199719
+    },
+    "effect": {
+      "name": "效果图-after.jpg",
+      "bytes": 836278
+    },
+    "song": {
+      "name": "完整歌曲.mp3",
+      "bytes": 4675594
+    }
+  },
+  "idea": "金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。",
+  "prompt": "歌曲主题：金属质感的童趣涂鸦小动物们结伴探险的快乐日常。音乐氛围：动感欢快的摇滚风，透着探险的热闹劲。循环短片：金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+  "videos": [
+    {
+      "index": 1,
+      "id": "f35c2e39-5ee7-4668-800b-8f615a27e763",
+      "provider": "Volcengine Ark",
+      "model": "doubao-seedance-2-5-260628",
+      "modelName": "Seedance 2.5",
+      "durationRequestedSeconds": 10,
+      "durationActualSeconds": 10,
+      "resolutionRequested": "720p",
+      "dimensions": "2400×1486",
+      "frameRate": "25/1",
+      "codec": "h264",
+      "parts": [
+        10
+      ],
+      "calls": 1,
+      "submittedCalls": 1,
+      "cost": "费用无法准确预估，按供应商实际扣费；本次不包含额外重试。",
+      "createdAt": "2026/10/16 21:41:37",
+      "confirmedAt": "2026/10/16 21:41:39",
+      "completedAt": "2026/10/16 21:47:45",
+      "elapsedSeconds": 365,
+      "status": "ready",
+      "loopReview": "首尾接缝待人工评分",
+      "prompt": "歌曲主题：金属质感的童趣涂鸦小动物们结伴探险的快乐日常。音乐氛围：动感欢快的摇滚风，透着探险的热闹劲。循环短片：金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "idea": "金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。",
+      "taskId": "f35c2e39-5ee7-4668-800b-8f615a27e763",
+      "planId": "19b804e7-4049-42ea-84bb-ce7f5eedaca6",
+      "remoteTaskIds": [
+        "cgt-20261016214141-3qnri"
+      ],
+      "usage": [
+        {
+          "completion_tokens": 216495,
+          "total_tokens": 216495
+        }
+      ],
+      "file": "mv-01-seedance-2-5-10s.mp4",
+      "fileBytes": 10434772
+    },
+    {
+      "index": 2,
+      "id": "fbf198b2-1fd9-4698-b7dc-a15a78ace472",
+      "provider": "Volcengine Ark",
+      "model": "doubao-seedance-2-0-260128",
+      "modelName": "Seedance 2.0",
+      "durationRequestedSeconds": 10,
+      "durationActualSeconds": 10,
+      "resolutionRequested": "720p",
+      "dimensions": "2400×1486",
+      "frameRate": "25/1",
+      "codec": "h264",
+      "parts": [
+        10
+      ],
+      "calls": 1,
+      "submittedCalls": 1,
+      "cost": "费用无法准确预估，按供应商实际扣费；本次不包含额外重试。",
+      "createdAt": "2026/10/16 21:48:41",
+      "confirmedAt": "2026/10/16 21:48:45",
+      "completedAt": "2026/10/16 21:53:34",
+      "elapsedSeconds": 288,
+      "status": "ready",
+      "loopReview": "首尾接缝待人工评分",
+      "prompt": "歌曲主题：金属质感的童趣涂鸦小动物们结伴探险的快乐日常。音乐氛围：动感欢快的摇滚风，透着探险的热闹劲。循环短片：金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "idea": "金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。",
+      "taskId": "fbf198b2-1fd9-4698-b7dc-a15a78ace472",
+      "planId": "615e4580-9a98-4b3c-ad90-1d078d3dd0bb",
+      "remoteTaskIds": [
+        "cgt-20261016214851-rcdm8"
+      ],
+      "usage": [
+        {
+          "completion_tokens": 216900,
+          "total_tokens": 216900
+        }
+      ],
+      "file": "mv-02-seedance-2-0-10s.mp4",
+      "fileBytes": 10974985
+    },
+    {
+      "index": 3,
+      "id": "78ddf54e-9cdb-4d3c-8958-a061df4f955b",
+      "provider": "Volcengine Ark",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "modelName": "Seedance 2.0 Fast",
+      "durationRequestedSeconds": 10,
+      "durationActualSeconds": 10,
+      "resolutionRequested": "720p",
+      "dimensions": "2400×1486",
+      "frameRate": "25/1",
+      "codec": "h264",
+      "parts": [
+        10
+      ],
+      "calls": 1,
+      "submittedCalls": 1,
+      "cost": "费用无法准确预估，按供应商实际扣费；本次不包含额外重试。",
+      "createdAt": "2026/10/16 21:54:27",
+      "confirmedAt": "2026/10/16 21:54:30",
+      "completedAt": "2026/10/16 21:56:59",
+      "elapsedSeconds": 149,
+      "status": "ready",
+      "loopReview": "首尾接缝待人工评分",
+      "prompt": "歌曲主题：金属质感的童趣涂鸦小动物们结伴探险的快乐日常。音乐氛围：动感欢快的摇滚风，透着探险的热闹劲。循环短片：金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "idea": "金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。",
+      "taskId": "78ddf54e-9cdb-4d3c-8958-a061df4f955b",
+      "planId": "4e0ae73b-714e-4b8d-b74c-adddd550e3c6",
+      "remoteTaskIds": [
+        "cgt-20261016215436-5jslh"
+      ],
+      "usage": [
+        {
+          "completion_tokens": 216900,
+          "total_tokens": 216900
+        }
+      ],
+      "file": "mv-03-seedance-2-0-fast-10s.mp4",
+      "fileBytes": 11873319
+    },
+    {
+      "index": 4,
+      "id": "5c33f340-967a-426d-9565-1534a65b29d3",
+      "provider": "MiniMax",
+      "model": "MiniMax-H3",
+      "modelName": "MiniMax H3",
+      "durationRequestedSeconds": 10,
+      "durationActualSeconds": 10.08,
+      "resolutionRequested": "768P",
+      "dimensions": "2400×1486",
+      "frameRate": "25/1",
+      "codec": "h264",
+      "parts": [
+        10
+      ],
+      "calls": 1,
+      "submittedCalls": 1,
+      "cost": "费用无法准确预估，按供应商实际扣费；本次不包含额外重试。",
+      "createdAt": "2026/10/16 21:57:49",
+      "confirmedAt": "2026/10/16 21:57:52",
+      "completedAt": "2026/10/16 22:01:38",
+      "elapsedSeconds": 226,
+      "status": "ready",
+      "loopReview": "首尾接缝待人工评分",
+      "prompt": "歌曲主题：金属质感的童趣涂鸦小动物们结伴探险的快乐日常。音乐氛围：动感欢快的摇滚风，透着探险的热闹劲。循环短片：金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "idea": "金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。",
+      "taskId": "5c33f340-967a-426d-9565-1534a65b29d3",
+      "planId": "693a0307-2188-471f-be16-091e80040a9f",
+      "remoteTaskIds": [
+        "453042166559010"
+      ],
+      "usage": [
+        {
+          "total_seconds": 10,
+          "input_seconds": 0,
+          "output_seconds": 10,
+          "input_image_count": 2,
+          "total_tokens": 351530,
+          "prompt_tokens": 26040,
+          "completion_tokens": 325490
+        }
+      ],
+      "file": "mv-04-minimax-h3-10s.mp4",
+      "fileBytes": 8997526
+    },
+    {
+      "index": 5,
+      "id": "d23e5f9b-3571-404a-be78-b36f8ee3e4c2",
+      "provider": "MiniMax",
+      "model": "MiniMax-H3-Max",
+      "modelName": "MiniMax H3 Max",
+      "durationRequestedSeconds": 10,
+      "durationActualSeconds": 10.08,
+      "resolutionRequested": "768P",
+      "dimensions": "2400×1486",
+      "frameRate": "25/1",
+      "codec": "h264",
+      "parts": [
+        10
+      ],
+      "calls": 1,
+      "submittedCalls": 1,
+      "cost": "费用无法准确预估，按供应商实际扣费；本次不包含额外重试。",
+      "createdAt": "2026/10/16 22:03:23",
+      "confirmedAt": "2026/10/16 22:03:25",
+      "completedAt": "2026/10/16 22:04:04",
+      "elapsedSeconds": 39,
+      "status": "ready",
+      "loopReview": "首尾接缝待人工评分",
+      "prompt": "歌曲主题：金属质感的童趣涂鸦小动物们结伴探险的快乐日常。音乐氛围：动感欢快的摇滚风，透着探险的热闹劲。循环短片：金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "idea": "金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。",
+      "taskId": "d23e5f9b-3571-404a-be78-b36f8ee3e4c2",
+      "planId": "944fc20f-d79a-48a5-82ee-bbfb8ad287c5",
+      "remoteTaskIds": [
+        "453044394946822"
+      ],
+      "usage": [
+        {
+          "total_seconds": 10,
+          "input_seconds": 0,
+          "output_seconds": 10,
+          "input_image_count": 2
+        }
+      ],
+      "file": "mv-05-minimax-h3-max-10s.mp4",
+      "fileBytes": 11434225
+    },
+    {
+      "index": 6,
+      "id": "8f1be79a-7988-43c1-9ebe-73e8623c9051",
+      "provider": "Volcengine Ark",
+      "model": "doubao-seedance-2-5-260628",
+      "modelName": "Seedance 2.5",
+      "durationRequestedSeconds": 30,
+      "durationActualSeconds": 30,
+      "resolutionRequested": "720p",
+      "dimensions": "2400×1486",
+      "frameRate": "25/1",
+      "codec": "h264",
+      "parts": [
+        30
+      ],
+      "calls": 1,
+      "submittedCalls": 1,
+      "cost": "费用无法准确预估，按供应商实际扣费；本次不包含额外重试。",
+      "createdAt": "2026/10/16 22:05:22",
+      "confirmedAt": "2026/10/16 22:05:24",
+      "completedAt": "2026/10/16 22:12:08",
+      "elapsedSeconds": 404,
+      "status": "ready",
+      "loopReview": "首尾接缝待人工评分",
+      "prompt": "歌曲主题：金属质感的童趣涂鸦小动物们结伴探险的快乐日常。音乐氛围：动感欢快的摇滚风，透着探险的热闹劲。循环短片：金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "idea": "金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。",
+      "taskId": "8f1be79a-7988-43c1-9ebe-73e8623c9051",
+      "planId": "73fb9ccb-c2d4-4edb-b422-5970d7a11f74",
+      "remoteTaskIds": [
+        "cgt-20261016220526-qfajf"
+      ],
+      "usage": [
+        {
+          "completion_tokens": 647688,
+          "total_tokens": 647688
+        }
+      ],
+      "file": "mv-06-seedance-2-5-30s.mp4",
+      "fileBytes": 29695750
+    },
+    {
+      "index": 7,
+      "id": "a33d7031-3db7-4557-bafe-63d4fb8eadc9",
+      "provider": "Volcengine Ark",
+      "model": "doubao-seedance-2-0-260128",
+      "modelName": "Seedance 2.0",
+      "durationRequestedSeconds": 30,
+      "durationActualSeconds": 30.04,
+      "resolutionRequested": "720p",
+      "dimensions": "2400×1486",
+      "frameRate": "25/1",
+      "codec": "h264",
+      "parts": [
+        15,
+        15
+      ],
+      "calls": 2,
+      "submittedCalls": 2,
+      "cost": "费用无法准确预估，按供应商实际扣费；本次不包含额外重试。",
+      "createdAt": "2026/10/16 22:15:42",
+      "confirmedAt": "2026/10/16 22:15:45",
+      "completedAt": "2026/10/16 22:24:16",
+      "elapsedSeconds": 511,
+      "status": "ready",
+      "loopReview": "首尾接缝待人工评分",
+      "prompt": "歌曲主题：金属质感的童趣涂鸦小动物们结伴探险的快乐日常。音乐氛围：动感欢快的摇滚风，透着探险的热闹劲。循环短片：金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "idea": "金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。",
+      "taskId": "a33d7031-3db7-4557-bafe-63d4fb8eadc9",
+      "planId": "da3eb74e-a68c-49e7-b22d-155f0949018c",
+      "remoteTaskIds": [
+        "cgt-20261016221551-gkk4r",
+        "cgt-20261016222031-854x4"
+      ],
+      "usage": [
+        {
+          "completion_tokens": 324900,
+          "total_tokens": 324900
+        },
+        {
+          "completion_tokens": 324900,
+          "total_tokens": 324900
+        }
+      ],
+      "file": "mv-07-seedance-2-0-30s.mp4",
+      "fileBytes": 33804657
+    },
+    {
+      "index": 8,
+      "id": "05195ee8-a684-4216-a359-4f20086f393b",
+      "provider": "Volcengine Ark",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "modelName": "Seedance 2.0 Fast",
+      "durationRequestedSeconds": 30,
+      "durationActualSeconds": 30.04,
+      "resolutionRequested": "720p",
+      "dimensions": "2400×1486",
+      "frameRate": "25/1",
+      "codec": "h264",
+      "parts": [
+        15,
+        15
+      ],
+      "calls": 2,
+      "submittedCalls": 2,
+      "cost": "费用无法准确预估，按供应商实际扣费；本次不包含额外重试。",
+      "createdAt": "2026/10/16 22:26:27",
+      "confirmedAt": "2026/10/16 22:26:41",
+      "completedAt": "2026/10/16 22:34:29",
+      "elapsedSeconds": 468,
+      "status": "ready",
+      "loopReview": "首尾接缝待人工评分",
+      "prompt": "歌曲主题：金属质感的童趣涂鸦小动物们结伴探险的快乐日常。音乐氛围：动感欢快的摇滚风，透着探险的热闹劲。循环短片：金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "idea": "金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。",
+      "taskId": "05195ee8-a684-4216-a359-4f20086f393b",
+      "planId": "209a73d8-cee8-4858-9317-1f9c8d44e6d4",
+      "remoteTaskIds": [
+        "cgt-20261016222646-qsqwl",
+        "cgt-20261016222956-gdqj9"
+      ],
+      "usage": [
+        {
+          "completion_tokens": 324900,
+          "total_tokens": 324900
+        },
+        {
+          "completion_tokens": 324900,
+          "total_tokens": 324900
+        }
+      ],
+      "file": "mv-08-seedance-2-0-fast-30s.mp4",
+      "fileBytes": 43647694
+    },
+    {
+      "index": 9,
+      "id": "5702e73b-2407-4b19-837d-f694777fdf63",
+      "provider": "MiniMax",
+      "model": "MiniMax-H3",
+      "modelName": "MiniMax H3",
+      "durationRequestedSeconds": 30,
+      "durationActualSeconds": 30.12,
+      "resolutionRequested": "768P",
+      "dimensions": "2400×1486",
+      "frameRate": "25/1",
+      "codec": "h264",
+      "parts": [
+        15,
+        15
+      ],
+      "calls": 2,
+      "submittedCalls": 2,
+      "cost": "费用无法准确预估，按供应商实际扣费；本次不包含额外重试。",
+      "createdAt": "2026/10/16 22:36:22",
+      "confirmedAt": "2026/10/16 22:36:25",
+      "completedAt": "2026/10/16 22:46:59",
+      "elapsedSeconds": 635,
+      "status": "ready",
+      "loopReview": "首尾接缝待人工评分",
+      "prompt": "歌曲主题：金属质感的童趣涂鸦小动物们结伴探险的快乐日常。音乐氛围：动感欢快的摇滚风，透着探险的热闹劲。循环短片：金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "idea": "金属小螃蟹举着紫花，和伙伴们追着流星跑过金属小树，小鲸鱼吐着小泡泡，一起在金属乐园里转圈圈玩耍。",
+      "taskId": "5702e73b-2407-4b19-837d-f694777fdf63",
+      "planId": "06b27a39-09e6-4fa8-babd-a81a6bcc582b",
+      "remoteTaskIds": [
+        "453051129004471",
+        "453053911494917"
+      ],
+      "usage": [
+        {
+          "total_seconds": 15,
+          "input_seconds": 0,
+          "output_seconds": 15,
+          "input_image_count": 2,
+          "total_tokens": 514275,
+          "prompt_tokens": 26040,
+          "completion_tokens": 488235
+        },
+        {
+          "total_seconds": 15,
+          "input_seconds": 0,
+          "output_seconds": 15,
+          "input_image_count": 2,
+          "total_tokens": 514275,
+          "prompt_tokens": 26040,
+          "completion_tokens": 488235
+        }
+      ],
+      "file": "mv-09-minimax-h3-30s.mp4",
+      "fileBytes": 26788291
+    }
+  ],
+  "totalVideos": 9,
+  "totalProviderCalls": 12,
+  "billing": {
+    "verified": false,
+    "note": "未从供应商账户账单核对实际扣费；任务 usage 不能直接换算为金额。"
+  },
+  "scopeNote": "根据本机保存的作品数据整理。视频文件为应用保存的最终成片，不含供应商原始分段文件；不含 API Key。"
+}

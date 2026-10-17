@@ -1,0 +1,232 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>《欢迎小怪兽的校园派对》MV模型验证报告</title><style>*{box-sizing:border-box}body{overflow-wrap:anywhere;margin:0;background:#f6f4ef;color:#25212b;font:16px/1.7 system-ui,sans-serif}main{max-width:1180px;margin:auto;padding:40px 22px}h1{font-size:clamp(26px,4vw,44px);line-height:1.3}small,p{color:#756b7b}.stats,.notice,article,.inputs{padding:24px;border:1px solid #e4ded5;background:#fff;border-radius:22px;margin:20px 0}.stats{background:#fff7c8}.inputs{display:flex;gap:20px;flex-wrap:wrap}.inputs img{width:180px;height:180px;object-fit:contain}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.grid article{margin:0;min-width:0}h2{font-size:20px;overflow-wrap:anywhere}video{width:100%;max-height:420px;background:#17151d;border-radius:14px}pre{white-space:pre-wrap;word-break:break-word;background:#f5f3f0;padding:16px;border-radius:12px;font-size:13px}summary{cursor:pointer;margin-top:16px}.error{color:#a33525}.player{position:sticky;top:0;z-index:4;background:#fffdf1ed;padding:12px;border-radius:18px;border:1px solid #ddcd8c;backdrop-filter:blur(12px)}audio{width:100%}#compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}#compare>div{min-width:0}audio{max-width:100%}#compare video{max-height:320px}a{color:#6555a0}label{display:block;margin-top:12px}@media(max-width:680px){.grid{grid-template-columns:1fr}main{padding:22px 14px}.inputs img{width:120px;height:120px}}</style><main><small>画语成歌 · 模型验证记录 · 2026/10/15 13:09:10 北京时间</small><h1>《欢迎小怪兽的校园派对》MV模型验证报告</h1><div class="stats">14次记录 / 10次完成 / 4次未完成 / 6个模型<br>当前采用结果M。没有新模型调用。<br><a href="报告.md">完整Markdown报告</a> · <a href="records.json">脱敏结构化记录</a></div><div class="inputs"><figure><img src="media/before.png" alt="用户原画"><figcaption>Before · 原画</figcaption></figure><figure><img src="media/after.png" alt="生成效果图"><figcaption>After · 视频首尾帧参考</figcaption></figure></div><div class="notice"><strong>比较时请注意</strong><p>两组创意不同；Seedance720p与H3 768P不同；30秒既有单段也有两段拼接。总耗时包含排队、下载和合成，不能直接当作模型速度排名。尚无画质评分，费用以实际账单为准。</p><p>Mini最新错误为模型未开通；H3 Max30秒任务在第一段完成后余额不足，部分原片已保留。</p></div><section class="player"><strong>统一歌曲试听与双画面对比</strong><audio controls preload="metadata" src="media/song.mp3"></audio><div id="compare"></div><small>歌曲是唯一音轨；勾选两个结果后，画面随歌曲进度循环。各卡片也可静音单独播放。</small></section><div class="grid"><article id="A"><header><span>结果 A</span><h2>doubao-seedance-2-5-260628</h2><p>创意组1 · 10秒 · 720p · 197秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/A-doubao-seedance-2-5-260628-10s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/A-doubao-seedance-2-5-260628-10s.mp4" data-label="A">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 10:59:07；完成：2026/10/15 11:02:24</p><p>任务ID：065bb589-3273-49de-b849-67140f7813d1</p><h3>第1段</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · cgt-20261015105909-k3tkp</p><pre>{
+  &quot;duration&quot;: 10.041667,
+  &quot;bytes&quot;: 38453794,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 960,
+      &quot;height&quot;: 960,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    }
+  ]
+}
+usage: {&quot;completion_tokens&quot;:216900,&quot;total_tokens&quot;:216900}</pre></details></article><article id="B"><header><span>结果 B</span><h2>doubao-seedance-2-0-260128</h2><p>创意组1 · 10秒 · 720p · 253秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/B-doubao-seedance-2-0-260128-10s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/B-doubao-seedance-2-0-260128-10s.mp4" data-label="B">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 11:04:21；完成：2026/10/15 11:08:34</p><p>任务ID：0a373688-568e-43b5-b308-748339d32b81</p><h3>第1段</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · cgt-20261015110425-rjq2z</p><pre>{
+  &quot;duration&quot;: 10.041667,
+  &quot;bytes&quot;: 14299570,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 960,
+      &quot;height&quot;: 960,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    }
+  ]
+}
+usage: {&quot;completion_tokens&quot;:216900,&quot;total_tokens&quot;:216900}</pre></details></article><article id="C"><header><span>结果 C</span><h2>doubao-seedance-2-0-fast-260128</h2><p>创意组1 · 10秒 · 720p · 182秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/C-doubao-seedance-2-0-fast-260128-10s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/C-doubao-seedance-2-0-fast-260128-10s.mp4" data-label="C">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 11:18:38；完成：2026/10/15 11:21:39</p><p>任务ID：90ec972e-ce33-48b3-8908-ab4818992ef1</p><h3>第1段</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · cgt-20261015111840-5flpm</p><pre>{
+  &quot;duration&quot;: 10.041667,
+  &quot;bytes&quot;: 13400904,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 960,
+      &quot;height&quot;: 960,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    }
+  ]
+}
+usage: {&quot;completion_tokens&quot;:216900,&quot;total_tokens&quot;:216900}</pre></details></article><article id="D"><header><span>结果 D</span><h2>doubao-seedance-2-0-mini-260615</h2><p>创意组1 · 10秒 · 720p · 未完成</p></header><p class="error">提交结果未知，请检查账户记录。</p><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 11:22:47；完成：—</p><p>任务ID：6bd168cb-1670-48e6-a9d8-82ac042fb736</p><h3>第1段</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre></details></article><article id="E"><header><span>结果 E</span><h2>doubao-seedance-2-0-mini-260615</h2><p>创意组1 · 10秒 · 720p · 未完成</p></header><p class="error">提交结果未知，请检查账户记录。</p><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 11:31:57；完成：—</p><p>任务ID：42d3de63-53ba-434a-9763-a930e4bb67fd</p><h3>第1段</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre></details></article><article id="F"><header><span>结果 F</span><h2>MiniMax-H3</h2><p>创意组1 · 10秒 · 768P · 599秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/F-MiniMax-H3-10s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/F-MiniMax-H3-10s.mp4" data-label="F">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 11:53:00；完成：2026/10/15 12:02:59</p><p>任务ID：cafc3542-6e41-4982-8703-f1fd0cb24eb7</p><h3>第1段</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · 452540520513804</p><pre>{
+  &quot;duration&quot;: 10.125,
+  &quot;bytes&quot;: 6793388,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 768,
+      &quot;height&quot;: 768,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    },
+    {
+      &quot;codec_name&quot;: &quot;aac&quot;,
+      &quot;codec_type&quot;: &quot;audio&quot;,
+      &quot;r_frame_rate&quot;: &quot;0/0&quot;
+    }
+  ]
+}
+usage: {&quot;total_seconds&quot;:10,&quot;input_seconds&quot;:0,&quot;output_seconds&quot;:10,&quot;input_image_count&quot;:2,&quot;total_tokens&quot;:351530,&quot;prompt_tokens&quot;:26040,&quot;completion_tokens&quot;:325490}</pre></details></article><article id="G"><header><span>结果 G</span><h2>MiniMax-H3-Max</h2><p>创意组2 · 10秒 · 768P · 37秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/G-MiniMax-H3-Max-10s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/G-MiniMax-H3-Max-10s.mp4" data-label="G">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 12:04:43；完成：2026/10/15 12:05:20</p><p>任务ID：8d5a62c0-7e20-408a-920f-9e09fdaedb7b</p><h3>第1段</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · 452542166946237</p><pre>{
+  &quot;duration&quot;: 10.144,
+  &quot;bytes&quot;: 21272791,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 768,
+      &quot;height&quot;: 768,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    },
+    {
+      &quot;codec_name&quot;: &quot;aac&quot;,
+      &quot;codec_type&quot;: &quot;audio&quot;,
+      &quot;r_frame_rate&quot;: &quot;0/0&quot;
+    }
+  ]
+}
+usage: {&quot;total_seconds&quot;:10,&quot;input_seconds&quot;:0,&quot;output_seconds&quot;:10,&quot;input_image_count&quot;:2}</pre></details></article><article id="H"><header><span>结果 H</span><h2>MiniMax-H3</h2><p>创意组2 · 10秒 · 768P · 150秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/H-MiniMax-H3-10s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/H-MiniMax-H3-10s.mp4" data-label="H">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 12:10:29；完成：2026/10/15 12:12:58</p><p>任务ID：3e61fe9e-df48-4422-8b52-1e85e0c1ea3f</p><h3>第1段</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · 452544333394194</p><pre>{
+  &quot;duration&quot;: 10.125,
+  &quot;bytes&quot;: 5016458,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 768,
+      &quot;height&quot;: 768,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    },
+    {
+      &quot;codec_name&quot;: &quot;aac&quot;,
+      &quot;codec_type&quot;: &quot;audio&quot;,
+      &quot;r_frame_rate&quot;: &quot;0/0&quot;
+    }
+  ]
+}
+usage: {&quot;total_seconds&quot;:10,&quot;input_seconds&quot;:0,&quot;output_seconds&quot;:10,&quot;input_image_count&quot;:2,&quot;total_tokens&quot;:351530,&quot;prompt_tokens&quot;:26040,&quot;completion_tokens&quot;:325490}</pre></details></article><article id="I"><header><span>结果 I</span><h2>doubao-seedance-2-5-260628</h2><p>创意组2 · 30秒 · 720p · 345秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/I-doubao-seedance-2-5-260628-30s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/I-doubao-seedance-2-5-260628-30s.mp4" data-label="I">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 12:16:17；完成：2026/10/15 12:22:02</p><p>任务ID：51036876-cf0d-480a-ae73-04b0ddd5a1cd</p><h3>第1段</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/1 段；本段 30 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · cgt-20261015121621-fotnj</p><pre>{
+  &quot;duration&quot;: 30.041667,
+  &quot;bytes&quot;: 75921191,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 960,
+      &quot;height&quot;: 960,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    }
+  ]
+}
+usage: {&quot;completion_tokens&quot;:648900,&quot;total_tokens&quot;:648900}</pre></details></article><article id="J"><header><span>结果 J</span><h2>doubao-seedance-2-0-260128</h2><p>创意组2 · 30秒 · 720p · 572秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/J-doubao-seedance-2-0-260128-30s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/J-doubao-seedance-2-0-260128-30s.mp4" data-label="J">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 12:24:38；完成：2026/10/15 12:34:10</p><p>任务ID：28df6b42-cda1-405f-a091-a5b4812e61be</p><h3>第1段</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><h3>第2段</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 2/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · cgt-20261015122441-snjfh</p><pre>{
+  &quot;duration&quot;: 15.041667,
+  &quot;bytes&quot;: 19513780,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 960,
+      &quot;height&quot;: 960,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    }
+  ]
+}
+usage: {&quot;completion_tokens&quot;:324900,&quot;total_tokens&quot;:324900}</pre><p>片段2 · cgt-20261015122816-s8q89</p><pre>{
+  &quot;duration&quot;: 15.041667,
+  &quot;bytes&quot;: 18641138,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 960,
+      &quot;height&quot;: 960,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    }
+  ]
+}
+usage: {&quot;completion_tokens&quot;:324900,&quot;total_tokens&quot;:324900}</pre></details></article><article id="K"><header><span>结果 K</span><h2>doubao-seedance-2-0-fast-260128</h2><p>创意组2 · 30秒 · 720p · 385秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/K-doubao-seedance-2-0-fast-260128-30s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/K-doubao-seedance-2-0-fast-260128-30s.mp4" data-label="K">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 12:38:04；完成：2026/10/15 12:44:29</p><p>任务ID：a8ef3cda-fa3e-468c-99ad-19941a327b21</p><h3>第1段</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><h3>第2段</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 2/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · cgt-20261015123811-j5cs6</p><pre>{
+  &quot;duration&quot;: 15.041667,
+  &quot;bytes&quot;: 17695818,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 960,
+      &quot;height&quot;: 960,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    }
+  ]
+}
+usage: {&quot;completion_tokens&quot;:324900,&quot;total_tokens&quot;:324900}</pre><p>片段2 · cgt-20261015124111-bzkn5</p><pre>{
+  &quot;duration&quot;: 15.041667,
+  &quot;bytes&quot;: 17083157,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 960,
+      &quot;height&quot;: 960,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    }
+  ]
+}
+usage: {&quot;completion_tokens&quot;:324900,&quot;total_tokens&quot;:324900}</pre></details></article><article id="L"><header><span>结果 L</span><h2>doubao-seedance-2-0-mini-260615</h2><p>创意组2 · 30秒 · 720p · 未完成</p></header><p class="error">视频提交被拒绝（404 / ModelNotOpen）：Your account [已隐藏] has not activated the model doubao-seedance-2-0-mini-260615. Please activate the model service in the Ark Console. Request id: 02179203965558717602b7b13af2fe2da186d5f4d107a0743d566</p><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 12:47:31；完成：—</p><p>任务ID：ab20fb23-1fc1-4b89-ae64-620db1d13263</p><h3>第1段</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><h3>第2段（未提交）</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 2/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre></details></article><article id="M"><header><span>结果 M · 已采用</span><h2>MiniMax-H3</h2><p>创意组2 · 30秒 · 768P · 439秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/M-MiniMax-H3-30s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/M-MiniMax-H3-30s.mp4" data-label="M">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 12:48:29；完成：2026/10/15 12:55:48</p><p>任务ID：800dd9f2-42e6-4149-bfb3-81bd2a516394</p><h3>第1段</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><h3>第2段</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 2/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · 452553149837591</p><pre>{
+  &quot;duration&quot;: 15.083333,
+  &quot;bytes&quot;: 10299174,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 768,
+      &quot;height&quot;: 768,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    },
+    {
+      &quot;codec_name&quot;: &quot;aac&quot;,
+      &quot;codec_type&quot;: &quot;audio&quot;,
+      &quot;r_frame_rate&quot;: &quot;0/0&quot;
+    }
+  ]
+}
+usage: {&quot;total_seconds&quot;:15,&quot;input_seconds&quot;:0,&quot;output_seconds&quot;:15,&quot;input_image_count&quot;:2,&quot;total_tokens&quot;:514275,&quot;prompt_tokens&quot;:26040,&quot;completion_tokens&quot;:488235}</pre><p>片段2 · 452553231483178</p><pre>{
+  &quot;duration&quot;: 15.083333,
+  &quot;bytes&quot;: 7410338,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 768,
+      &quot;height&quot;: 768,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    },
+    {
+      &quot;codec_name&quot;: &quot;aac&quot;,
+      &quot;codec_type&quot;: &quot;audio&quot;,
+      &quot;r_frame_rate&quot;: &quot;0/0&quot;
+    }
+  ]
+}
+usage: {&quot;total_seconds&quot;:15,&quot;input_seconds&quot;:0,&quot;output_seconds&quot;:15,&quot;input_image_count&quot;:2,&quot;total_tokens&quot;:514275,&quot;prompt_tokens&quot;:26040,&quot;completion_tokens&quot;:488235}</pre></details></article><article id="N"><header><span>结果 N</span><h2>MiniMax-H3-Max</h2><p>创意组2 · 30秒 · 768P · 未完成</p></header><p class="error">视频提交被拒绝（402 / insufficient_balance_error）：insufficient balance (1008)</p><p>已保存的部分片段：</p><video muted controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-4/media/N-segment-1.mp4"></video><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 13:01:46；完成：—</p><p>任务ID：c574f5e5-7a95-49df-90dd-5ba8978a7bb7</p><h3>第1段</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><h3>第2段</h3><pre>歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 2/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · 452556621136279</p><pre>{
+  &quot;duration&quot;: 15.104,
+  &quot;bytes&quot;: 25222171,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 768,
+      &quot;height&quot;: 768,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    },
+    {
+      &quot;codec_name&quot;: &quot;aac&quot;,
+      &quot;codec_type&quot;: &quot;audio&quot;,
+      &quot;r_frame_rate&quot;: &quot;0/0&quot;
+    }
+  ]
+}
+usage: {&quot;total_seconds&quot;:15,&quot;input_seconds&quot;:0,&quot;output_seconds&quot;:15,&quot;input_image_count&quot;:2}</pre></details></article></div></main><script>const audio=document.querySelector('audio'),box=document.querySelector('#compare');document.querySelectorAll('.compare').forEach(c=>c.onchange=()=>{const selected=[...document.querySelectorAll('.compare:checked')];if(selected.length>2){c.checked=false;return}box.replaceChildren(...selected.map(c=>{const d=document.createElement('div'),v=document.createElement('video'),label=document.createElement('small');v.src=c.dataset.src;v.muted=true;v.loop=true;v.playsInline=true;label.textContent='结果 '+c.dataset.label;d.append(v,label);return d}))});let last=0;function sync(t){if(t-last>150){last=t;box.querySelectorAll('video').forEach(v=>{if(Number.isFinite(v.duration)&&v.duration>0){const target=audio.currentTime%v.duration;if(Math.abs(v.currentTime-target)>.35)v.currentTime=target;if(audio.paused)v.pause();else if(v.paused)v.play().catch(()=>{})}})}requestAnimationFrame(sync)}requestAnimationFrame(sync);</script></html>

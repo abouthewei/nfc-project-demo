@@ -1,0 +1,192 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>《云间的小航班》MV模型验证报告</title><style>*{box-sizing:border-box}body{overflow-wrap:anywhere;margin:0;background:#f6f4ef;color:#25212b;font:16px/1.7 system-ui,sans-serif}main{max-width:1180px;margin:auto;padding:40px 22px}h1{font-size:clamp(26px,4vw,44px);line-height:1.3}small,p{color:#756b7b}.stats,.notice,article,.inputs{padding:24px;border:1px solid #e4ded5;background:#fff;border-radius:22px;margin:20px 0}.stats{background:#fff7c8}.inputs{display:flex;gap:20px;flex-wrap:wrap}.inputs img{width:180px;height:180px;object-fit:contain}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.grid article{margin:0;min-width:0}h2{font-size:20px;overflow-wrap:anywhere}video{width:100%;max-height:420px;background:#17151d;border-radius:14px}pre{white-space:pre-wrap;word-break:break-word;background:#f5f3f0;padding:16px;border-radius:12px;font-size:13px}summary{cursor:pointer;margin-top:16px}.error{color:#a33525}.player{position:sticky;top:0;z-index:4;background:#fffdf1ed;padding:12px;border-radius:18px;border:1px solid #ddcd8c;backdrop-filter:blur(12px)}audio{width:100%}#compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}#compare>div{min-width:0}audio{max-width:100%}#compare video{max-height:320px}a{color:#6555a0}label{display:block;margin-top:12px}@media(max-width:680px){.grid{grid-template-columns:1fr}main{padding:22px 14px}.inputs img{width:120px;height:120px}}</style><main><small>画语成歌 · 模型验证记录 · 2026/10/15 16:00:31 北京时间</small><h1>《云间的小航班》MV模型验证报告</h1><div class="stats">11次记录 / 9次完成 / 2次未完成 / 6个模型<br>当前采用结果K。没有新模型调用。<br><a href="报告.md">完整Markdown报告</a> · <a href="records.json">脱敏结构化记录</a></div><div class="inputs"><figure><img src="media/before.png" alt="用户原画"><figcaption>Before · 原画</figcaption></figure><figure><img src="media/after.png" alt="生成效果图"><figcaption>After · 视频首尾帧参考</figcaption></figure></div><div class="notice"><strong>比较时请注意</strong><p>全部记录采用同一创意与图片；Seedance720p与H3 768P不同；30秒既有单段也有两段拼接。总耗时包含排队、下载和合成，不能直接当作模型速度排名。尚无画质评分，费用以实际账单为准。</p><p>Mini的10秒和30秒任务均因模型未开通而被拒绝。本作品暂无H3 Max30秒记录，其他作品数据不混入本报告。</p></div><section class="player"><strong>统一歌曲试听与双画面对比</strong><audio controls preload="metadata" src="media/song.mp3"></audio><div id="compare"></div><small>歌曲是唯一音轨；勾选两个结果后，画面随歌曲进度循环。各卡片也可静音单独播放。</small></section><div class="grid"><article id="A"><header><span>结果 A</span><h2>doubao-seedance-2-5-260628</h2><p>创意组1 · 10秒 · 720p · 267秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-3/media/A-doubao-seedance-2-5-260628-10s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-3/media/A-doubao-seedance-2-5-260628-10s.mp4" data-label="A">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 14:04:38；完成：2026/10/15 14:09:05</p><p>任务ID：8c7cd1a5-e541-4a1e-96df-ec8423566066</p><h3>第1段</h3><pre>歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · cgt-20261015140442-0fowp</p><pre>{
+  &quot;duration&quot;: 10.041667,
+  &quot;bytes&quot;: 10351149,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 1130,
+      &quot;height&quot;: 820,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    }
+  ]
+}
+usage: {&quot;completion_tokens&quot;:218076,&quot;total_tokens&quot;:218076}</pre></details></article><article id="B"><header><span>结果 B</span><h2>doubao-seedance-2-0-260128</h2><p>创意组1 · 10秒 · 720p · 169秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-3/media/B-doubao-seedance-2-0-260128-10s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-3/media/B-doubao-seedance-2-0-260128-10s.mp4" data-label="B">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 14:11:15；完成：2026/10/15 14:14:05</p><p>任务ID：f2519453-985d-4069-b04d-4888cacdfdf9</p><h3>第1段</h3><pre>歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · cgt-20261015141117-798q7</p><pre>{
+  &quot;duration&quot;: 10.041667,
+  &quot;bytes&quot;: 6120767,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 1112,
+      &quot;height&quot;: 834,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    }
+  ]
+}
+usage: {&quot;completion_tokens&quot;:218266,&quot;total_tokens&quot;:218266}</pre></details></article><article id="C"><header><span>结果 C</span><h2>doubao-seedance-2-0-fast-260128</h2><p>创意组1 · 10秒 · 720p · 181秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-3/media/C-doubao-seedance-2-0-fast-260128-10s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-3/media/C-doubao-seedance-2-0-fast-260128-10s.mp4" data-label="C">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 14:14:54；完成：2026/10/15 14:17:55</p><p>任务ID：7d4aad62-1f67-4331-8401-8f0f9e0d87c5</p><h3>第1段</h3><pre>歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · cgt-20261015141457-wfrpj</p><pre>{
+  &quot;duration&quot;: 10.041667,
+  &quot;bytes&quot;: 5961687,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 1112,
+      &quot;height&quot;: 834,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    }
+  ]
+}
+usage: {&quot;completion_tokens&quot;:218266,&quot;total_tokens&quot;:218266}</pre></details></article><article id="D"><header><span>结果 D</span><h2>doubao-seedance-2-0-mini-260615</h2><p>创意组1 · 10秒 · 720p · 未完成</p></header><p class="error">视频提交被拒绝（404 / ModelNotOpen）：Your account [已隐藏] has not activated the model doubao-seedance-2-0-mini-260615. Please activate the model service in the Ark Console. Request id: 0217920451418903d36ed5cbc04d4422f43e960f0b7897e4325d9</p><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 14:18:58；完成：—</p><p>任务ID：e5e31ee1-f0d7-4f16-ac15-f42142dbbe7c</p><h3>第1段</h3><pre>歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre></details></article><article id="E"><header><span>结果 E</span><h2>MiniMax-H3</h2><p>创意组1 · 10秒 · 768P · 239秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-3/media/E-MiniMax-H3-10s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-3/media/E-MiniMax-H3-10s.mp4" data-label="E">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 14:20:55；完成：2026/10/15 14:24:54</p><p>任务ID：22c5b114-4672-4e80-84f6-007f82d5bed4</p><h3>第1段</h3><pre>歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · 452576154849569</p><pre>{
+  &quot;duration&quot;: 10.125,
+  &quot;bytes&quot;: 2185112,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 1056,
+      &quot;height&quot;: 768,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    },
+    {
+      &quot;codec_name&quot;: &quot;aac&quot;,
+      &quot;codec_type&quot;: &quot;audio&quot;,
+      &quot;r_frame_rate&quot;: &quot;0/0&quot;
+    }
+  ]
+}
+usage: {&quot;total_seconds&quot;:10,&quot;input_seconds&quot;:0,&quot;output_seconds&quot;:10,&quot;input_image_count&quot;:2,&quot;total_tokens&quot;:351530,&quot;prompt_tokens&quot;:26040,&quot;completion_tokens&quot;:325490}</pre></details></article><article id="F"><header><span>结果 F</span><h2>MiniMax-H3-Max</h2><p>创意组1 · 10秒 · 768P · 30秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-3/media/F-MiniMax-H3-Max-10s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-3/media/F-MiniMax-H3-Max-10s.mp4" data-label="F">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 14:25:55；完成：2026/10/15 14:26:25</p><p>任务ID：fdd9292a-a0e4-4585-8097-91c83e709fc9</p><h3>第1段</h3><pre>歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · 452578259255555</p><pre>{
+  &quot;duration&quot;: 10.144,
+  &quot;bytes&quot;: 12105224,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 1056,
+      &quot;height&quot;: 768,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    },
+    {
+      &quot;codec_name&quot;: &quot;aac&quot;,
+      &quot;codec_type&quot;: &quot;audio&quot;,
+      &quot;r_frame_rate&quot;: &quot;0/0&quot;
+    }
+  ]
+}
+usage: {&quot;total_seconds&quot;:10,&quot;input_seconds&quot;:0,&quot;output_seconds&quot;:10,&quot;input_image_count&quot;:2}</pre></details></article><article id="G"><header><span>结果 G</span><h2>doubao-seedance-2-5-260628</h2><p>创意组1 · 30秒 · 720p · 356秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-3/media/G-doubao-seedance-2-5-260628-30s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-3/media/G-doubao-seedance-2-5-260628-30s.mp4" data-label="G">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 14:33:56；完成：2026/10/15 14:39:52</p><p>任务ID：0c6dfd11-576e-4bf2-a35a-ff54e62c626c</p><h3>第1段</h3><pre>歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/1 段；本段 30 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · cgt-20261015143402-3rw62</p><pre>{
+  &quot;duration&quot;: 30.041667,
+  &quot;bytes&quot;: 30911412,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 1130,
+      &quot;height&quot;: 820,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    }
+  ]
+}
+usage: {&quot;completion_tokens&quot;:652420,&quot;total_tokens&quot;:652420}</pre></details></article><article id="H"><header><span>结果 H</span><h2>doubao-seedance-2-0-260128</h2><p>创意组1 · 30秒 · 720p · 600秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-3/media/H-doubao-seedance-2-0-260128-30s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-3/media/H-doubao-seedance-2-0-260128-30s.mp4" data-label="H">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 15:02:33；完成：2026/10/15 15:12:33</p><p>任务ID：64ea3207-451a-4401-851d-7416fdc4f8d4</p><h3>第1段</h3><pre>歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><h3>第2段</h3><pre>歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 2/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · cgt-20261015150237-2p5dz</p><pre>{
+  &quot;duration&quot;: 15.041667,
+  &quot;bytes&quot;: 7700674,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 1112,
+      &quot;height&quot;: 834,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    }
+  ]
+}
+usage: {&quot;completion_tokens&quot;:326947,&quot;total_tokens&quot;:326947}</pre><p>片段2 · cgt-20261015150748-ld2j6</p><pre>{
+  &quot;duration&quot;: 15.041667,
+  &quot;bytes&quot;: 8815817,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 1112,
+      &quot;height&quot;: 834,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    }
+  ]
+}
+usage: {&quot;completion_tokens&quot;:326947,&quot;total_tokens&quot;:326947}</pre></details></article><article id="I"><header><span>结果 I</span><h2>doubao-seedance-2-0-fast-260128</h2><p>创意组1 · 30秒 · 720p · 379秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-3/media/I-doubao-seedance-2-0-fast-260128-30s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-3/media/I-doubao-seedance-2-0-fast-260128-30s.mp4" data-label="I">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 15:14:34；完成：2026/10/15 15:20:53</p><p>任务ID：f898518c-defd-4fa1-be88-cbcf78fd8ac1</p><h3>第1段</h3><pre>歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><h3>第2段</h3><pre>歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 2/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · cgt-20261015151438-pmpxk</p><pre>{
+  &quot;duration&quot;: 15.041667,
+  &quot;bytes&quot;: 9303167,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 1112,
+      &quot;height&quot;: 834,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    }
+  ]
+}
+usage: {&quot;completion_tokens&quot;:326947,&quot;total_tokens&quot;:326947}</pre><p>片段2 · cgt-20261015151733-mqg5s</p><pre>{
+  &quot;duration&quot;: 15.041667,
+  &quot;bytes&quot;: 8665652,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 1112,
+      &quot;height&quot;: 834,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    }
+  ]
+}
+usage: {&quot;completion_tokens&quot;:326947,&quot;total_tokens&quot;:326947}</pre></details></article><article id="J"><header><span>结果 J</span><h2>doubao-seedance-2-0-mini-260615</h2><p>创意组1 · 30秒 · 720p · 未完成</p></header><p class="error">视频提交被拒绝（404 / ModelNotOpen）：Your account [已隐藏] has not activated the model doubao-seedance-2-0-mini-260615. Please activate the model service in the Ark Console. Request id: 0217920489926259436a70d8fd44afb73ab39bbb6df35bafce636</p><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 15:23:11；完成：—</p><p>任务ID：cae67bff-cdd9-457c-9ac2-66220ae4c522</p><h3>第1段</h3><pre>歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><h3>第2段（未提交）</h3><pre>歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 2/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre></details></article><article id="K"><header><span>结果 K · 已采用</span><h2>MiniMax-H3</h2><p>创意组1 · 30秒 · 768P · 906秒总耗时</p></header><video muted loop playsinline controls preload="none" src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-3/media/K-MiniMax-H3-30s.mp4"></video><label><input type="checkbox" class="compare" data-src="https://raw.githubusercontent.com/abouthewei/nfc-project-demo/main/MVtest/MVtest-3/media/K-MiniMax-H3-30s.mp4" data-label="K">加入同步对比（最多两个）</label><details><summary>提示词、原片和技术记录</summary><p>确认：2026/10/15 15:24:46；完成：2026/10/15 15:39:52</p><p>任务ID：e6d3d1cf-6c81-4523-82ed-1dca006e34f8</p><h3>第1段</h3><pre>歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 1/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><h3>第2段</h3><pre>歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。
+第 2/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。</pre><p>片段1 · 452592473596170</p><pre>{
+  &quot;duration&quot;: 15.083333,
+  &quot;bytes&quot;: 4171726,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 1056,
+      &quot;height&quot;: 768,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    },
+    {
+      &quot;codec_name&quot;: &quot;aac&quot;,
+      &quot;codec_type&quot;: &quot;audio&quot;,
+      &quot;r_frame_rate&quot;: &quot;0/0&quot;
+    }
+  ]
+}
+usage: {&quot;total_seconds&quot;:15,&quot;input_seconds&quot;:0,&quot;output_seconds&quot;:15,&quot;input_image_count&quot;:2,&quot;total_tokens&quot;:514275,&quot;prompt_tokens&quot;:26040,&quot;completion_tokens&quot;:488235}</pre><p>片段2 · 452594608943379</p><pre>{
+  &quot;duration&quot;: 15.083333,
+  &quot;bytes&quot;: 3014152,
+  &quot;streams&quot;: [
+    {
+      &quot;codec_name&quot;: &quot;h264&quot;,
+      &quot;codec_type&quot;: &quot;video&quot;,
+      &quot;width&quot;: 1056,
+      &quot;height&quot;: 768,
+      &quot;r_frame_rate&quot;: &quot;24/1&quot;
+    },
+    {
+      &quot;codec_name&quot;: &quot;aac&quot;,
+      &quot;codec_type&quot;: &quot;audio&quot;,
+      &quot;r_frame_rate&quot;: &quot;0/0&quot;
+    }
+  ]
+}
+usage: {&quot;total_seconds&quot;:15,&quot;input_seconds&quot;:0,&quot;output_seconds&quot;:15,&quot;input_image_count&quot;:2,&quot;total_tokens&quot;:514275,&quot;prompt_tokens&quot;:26040,&quot;completion_tokens&quot;:488235}</pre></details></article></div></main><script>const audio=document.querySelector('audio'),box=document.querySelector('#compare');document.querySelectorAll('.compare').forEach(c=>c.onchange=()=>{const selected=[...document.querySelectorAll('.compare:checked')];if(selected.length>2){c.checked=false;return}box.replaceChildren(...selected.map(c=>{const d=document.createElement('div'),v=document.createElement('video'),label=document.createElement('small');v.src=c.dataset.src;v.muted=true;v.loop=true;v.playsInline=true;label.textContent='结果 '+c.dataset.label;d.append(v,label);return d}))});let last=0;function sync(t){if(t-last>150){last=t;box.querySelectorAll('video').forEach(v=>{if(Number.isFinite(v.duration)&&v.duration>0){const target=audio.currentTime%v.duration;if(Math.abs(v.currentTime-target)>.35)v.currentTime=target;if(audio.paused)v.pause();else if(v.paused)v.play().catch(()=>{})}})}requestAnimationFrame(sync)}requestAnimationFrame(sync);</script></html>
