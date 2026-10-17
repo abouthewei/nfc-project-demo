@@ -1,0 +1,1010 @@
+{
+  "reportTime": "2026-10-15T05:09:10.664Z",
+  "timezone": "Asia/Shanghai",
+  "projectId": "45ea3559-e0a4-4e64-8c00-05031ae9c85b",
+  "title": "《欢迎小怪兽的校园派对》",
+  "author": "小小创作者",
+  "song": {
+    "id": "fdb0339b-fbba-4f5c-9c07-fb0decc9e169",
+    "duration": 110.236735,
+    "model": "music-3.0",
+    "file": "media/song.mp3"
+  },
+  "inputs": {
+    "before": "media/before.png",
+    "after": "media/after.png"
+  },
+  "totals": {
+    "records": 14,
+    "ready": 10,
+    "failed": 4,
+    "submittedAttempts": 18,
+    "savedSegments": 14,
+    "models": 6
+  },
+  "notes": [
+    "本报告为本地存储快照，不发起新的模型调用。",
+    "请求分辨率、供应商原片分辨率与本地成片分辨率分别记录。",
+    "耗时含排队、轮询、下载及合成，不等同纯模型推理时长。",
+    "完整HTTP请求没有独立存档；逐段提示词由已保存prompt和提交模板还原。",
+    "费用没有账单金额，usage不能直接等同实际费用。",
+    "尚无人工评分，不根据耗时推断画质。"
+  ],
+  "jobs": [
+    {
+      "label": "A",
+      "id": "065bb589-3273-49de-b849-67140f7813d1",
+      "model": "doubao-seedance-2-5-260628",
+      "status": "ready",
+      "group": 1,
+      "idea": "文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。",
+      "prompt": "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 10,
+      "parts": [
+        10
+      ],
+      "resolution": "720p",
+      "dimensions": {
+        "width": 1924,
+        "height": 1924
+      },
+      "confirmedAt": "2026-10-15T02:59:07.602Z",
+      "completedAt": "2026-10-15T03:02:24.760Z",
+      "elapsedSeconds": 197,
+      "submittedCalls": 1,
+      "consentedCalls": 1,
+      "final": {
+        "file": "media/A-doubao-seedance-2-5-260628-10s.mp4",
+        "probe": {
+          "duration": 10,
+          "bytes": 19333830,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1924,
+              "height": 1924,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "cgt-20261015105909-k3tkp",
+          "file": "media/A-segment-1.mp4",
+          "usage": {
+            "completion_tokens": 216900,
+            "total_tokens": 216900
+          },
+          "probe": {
+            "duration": 10.041667,
+            "bytes": 38453794,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 960,
+                "height": 960,
+                "r_frame_rate": "24/1"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "B",
+      "id": "0a373688-568e-43b5-b308-748339d32b81",
+      "model": "doubao-seedance-2-0-260128",
+      "status": "ready",
+      "group": 1,
+      "idea": "文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。",
+      "prompt": "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 10,
+      "parts": [
+        10
+      ],
+      "resolution": "720p",
+      "dimensions": {
+        "width": 1924,
+        "height": 1924
+      },
+      "confirmedAt": "2026-10-15T03:04:21.227Z",
+      "completedAt": "2026-10-15T03:08:34.673Z",
+      "elapsedSeconds": 253,
+      "submittedCalls": 1,
+      "consentedCalls": 1,
+      "final": {
+        "file": "media/B-doubao-seedance-2-0-260128-10s.mp4",
+        "probe": {
+          "duration": 10,
+          "bytes": 23584820,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1924,
+              "height": 1924,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "cgt-20261015110425-rjq2z",
+          "file": "media/B-segment-1.mp4",
+          "usage": {
+            "completion_tokens": 216900,
+            "total_tokens": 216900
+          },
+          "probe": {
+            "duration": 10.041667,
+            "bytes": 14299570,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 960,
+                "height": 960,
+                "r_frame_rate": "24/1"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "C",
+      "id": "90ec972e-ce33-48b3-8908-ab4818992ef1",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "status": "ready",
+      "group": 1,
+      "idea": "文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。",
+      "prompt": "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 10,
+      "parts": [
+        10
+      ],
+      "resolution": "720p",
+      "dimensions": {
+        "width": 1924,
+        "height": 1924
+      },
+      "confirmedAt": "2026-10-15T03:18:38.205Z",
+      "completedAt": "2026-10-15T03:21:39.864Z",
+      "elapsedSeconds": 182,
+      "submittedCalls": 1,
+      "consentedCalls": 1,
+      "final": {
+        "file": "media/C-doubao-seedance-2-0-fast-260128-10s.mp4",
+        "probe": {
+          "duration": 10,
+          "bytes": 21165032,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1924,
+              "height": 1924,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "cgt-20261015111840-5flpm",
+          "file": "media/C-segment-1.mp4",
+          "usage": {
+            "completion_tokens": 216900,
+            "total_tokens": 216900
+          },
+          "probe": {
+            "duration": 10.041667,
+            "bytes": 13400904,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 960,
+                "height": 960,
+                "r_frame_rate": "24/1"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "D",
+      "id": "6bd168cb-1670-48e6-a9d8-82ac042fb736",
+      "model": "doubao-seedance-2-0-mini-260615",
+      "status": "failed",
+      "group": 1,
+      "idea": "文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。",
+      "prompt": "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 10,
+      "parts": [
+        10
+      ],
+      "resolution": "720p",
+      "dimensions": {
+        "width": 1924,
+        "height": 1924
+      },
+      "confirmedAt": "2026-10-15T03:22:47.479Z",
+      "submittedCalls": 1,
+      "consentedCalls": 1,
+      "final": null,
+      "clips": [],
+      "error": "提交结果未知，请检查账户记录。",
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "E",
+      "id": "42d3de63-53ba-434a-9763-a930e4bb67fd",
+      "model": "doubao-seedance-2-0-mini-260615",
+      "status": "failed",
+      "group": 1,
+      "idea": "文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。",
+      "prompt": "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 10,
+      "parts": [
+        10
+      ],
+      "resolution": "720p",
+      "dimensions": {
+        "width": 1924,
+        "height": 1924
+      },
+      "confirmedAt": "2026-10-15T03:31:57.199Z",
+      "submittedCalls": 1,
+      "consentedCalls": 1,
+      "final": null,
+      "clips": [],
+      "error": "提交结果未知，请检查账户记录。",
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "F",
+      "id": "cafc3542-6e41-4982-8703-f1fd0cb24eb7",
+      "model": "MiniMax-H3",
+      "status": "ready",
+      "group": 1,
+      "idea": "文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。",
+      "prompt": "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 10,
+      "parts": [
+        10
+      ],
+      "resolution": "768P",
+      "dimensions": {
+        "width": 1924,
+        "height": 1924
+      },
+      "confirmedAt": "2026-10-15T03:53:00.670Z",
+      "completedAt": "2026-10-15T04:02:59.870Z",
+      "elapsedSeconds": 599,
+      "submittedCalls": 1,
+      "consentedCalls": 1,
+      "final": {
+        "file": "media/F-MiniMax-H3-10s.mp4",
+        "probe": {
+          "duration": 10.08,
+          "bytes": 21458606,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1924,
+              "height": 1924,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "452540520513804",
+          "file": "media/F-segment-1.mp4",
+          "usage": {
+            "total_seconds": 10,
+            "input_seconds": 0,
+            "output_seconds": 10,
+            "input_image_count": 2,
+            "total_tokens": 351530,
+            "prompt_tokens": 26040,
+            "completion_tokens": 325490
+          },
+          "probe": {
+            "duration": 10.125,
+            "bytes": 6793388,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 768,
+                "height": 768,
+                "r_frame_rate": "24/1"
+              },
+              {
+                "codec_name": "aac",
+                "codec_type": "audio",
+                "r_frame_rate": "0/0"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着红校车和彩铅笔，蹦蹦跳跳等着小朋友来学校，一起开启热闹的新一天。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "G",
+      "id": "8d5a62c0-7e20-408a-920f-9e09fdaedb7b",
+      "model": "MiniMax-H3-Max",
+      "status": "ready",
+      "group": 2,
+      "idea": "文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。",
+      "prompt": "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 10,
+      "parts": [
+        10
+      ],
+      "resolution": "768P",
+      "dimensions": {
+        "width": 1924,
+        "height": 1924
+      },
+      "confirmedAt": "2026-10-15T04:04:43.062Z",
+      "completedAt": "2026-10-15T04:05:20.358Z",
+      "elapsedSeconds": 37,
+      "submittedCalls": 1,
+      "consentedCalls": 1,
+      "final": {
+        "file": "media/G-MiniMax-H3-Max-10s.mp4",
+        "probe": {
+          "duration": 10.08,
+          "bytes": 20580230,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1924,
+              "height": 1924,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "452542166946237",
+          "file": "media/G-segment-1.mp4",
+          "usage": {
+            "total_seconds": 10,
+            "input_seconds": 0,
+            "output_seconds": 10,
+            "input_image_count": 2
+          },
+          "probe": {
+            "duration": 10.144,
+            "bytes": 21272791,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 768,
+                "height": 768,
+                "r_frame_rate": "24/1"
+              },
+              {
+                "codec_name": "aac",
+                "codec_type": "audio",
+                "r_frame_rate": "0/0"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "H",
+      "id": "3e61fe9e-df48-4422-8b52-1e85e0c1ea3f",
+      "model": "MiniMax-H3",
+      "status": "ready",
+      "group": 2,
+      "idea": "文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。",
+      "prompt": "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 10,
+      "parts": [
+        10
+      ],
+      "resolution": "768P",
+      "dimensions": {
+        "width": 1924,
+        "height": 1924
+      },
+      "confirmedAt": "2026-10-15T04:10:29.044Z",
+      "completedAt": "2026-10-15T04:12:58.934Z",
+      "elapsedSeconds": 150,
+      "submittedCalls": 1,
+      "consentedCalls": 1,
+      "final": {
+        "file": "media/H-MiniMax-H3-10s.mp4",
+        "probe": {
+          "duration": 10.08,
+          "bytes": 15611165,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1924,
+              "height": 1924,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "452544333394194",
+          "file": "media/H-segment-1.mp4",
+          "usage": {
+            "total_seconds": 10,
+            "input_seconds": 0,
+            "output_seconds": 10,
+            "input_image_count": 2,
+            "total_tokens": 351530,
+            "prompt_tokens": 26040,
+            "completion_tokens": 325490
+          },
+          "probe": {
+            "duration": 10.125,
+            "bytes": 5016458,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 768,
+                "height": 768,
+                "r_frame_rate": "24/1"
+              },
+              {
+                "codec_name": "aac",
+                "codec_type": "audio",
+                "r_frame_rate": "0/0"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "I",
+      "id": "51036876-cf0d-480a-ae73-04b0ddd5a1cd",
+      "model": "doubao-seedance-2-5-260628",
+      "status": "ready",
+      "group": 2,
+      "idea": "文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。",
+      "prompt": "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 30,
+      "parts": [
+        30
+      ],
+      "resolution": "720p",
+      "dimensions": {
+        "width": 1924,
+        "height": 1924
+      },
+      "confirmedAt": "2026-10-15T04:16:17.527Z",
+      "completedAt": "2026-10-15T04:22:02.328Z",
+      "elapsedSeconds": 345,
+      "submittedCalls": 1,
+      "consentedCalls": 1,
+      "final": {
+        "file": "media/I-doubao-seedance-2-5-260628-30s.mp4",
+        "probe": {
+          "duration": 30,
+          "bytes": 40662074,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1924,
+              "height": 1924,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "cgt-20261015121621-fotnj",
+          "file": "media/I-segment-1.mp4",
+          "usage": {
+            "completion_tokens": 648900,
+            "total_tokens": 648900
+          },
+          "probe": {
+            "duration": 30.041667,
+            "bytes": 75921191,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 960,
+                "height": 960,
+                "r_frame_rate": "24/1"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/1 段；本段 30 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "J",
+      "id": "28df6b42-cda1-405f-a091-a5b4812e61be",
+      "model": "doubao-seedance-2-0-260128",
+      "status": "ready",
+      "group": 2,
+      "idea": "文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。",
+      "prompt": "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 30,
+      "parts": [
+        15,
+        15
+      ],
+      "resolution": "720p",
+      "dimensions": {
+        "width": 1924,
+        "height": 1924
+      },
+      "confirmedAt": "2026-10-15T04:24:38.969Z",
+      "completedAt": "2026-10-15T04:34:10.772Z",
+      "elapsedSeconds": 572,
+      "submittedCalls": 2,
+      "consentedCalls": 2,
+      "final": {
+        "file": "media/J-doubao-seedance-2-0-260128-30s.mp4",
+        "probe": {
+          "duration": 30.04,
+          "bytes": 62735878,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1924,
+              "height": 1924,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "cgt-20261015122441-snjfh",
+          "file": "media/J-segment-1.mp4",
+          "usage": {
+            "completion_tokens": 324900,
+            "total_tokens": 324900
+          },
+          "probe": {
+            "duration": 15.041667,
+            "bytes": 19513780,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 960,
+                "height": 960,
+                "r_frame_rate": "24/1"
+              }
+            ]
+          }
+        },
+        {
+          "index": 2,
+          "remoteId": "cgt-20261015122816-s8q89",
+          "file": "media/J-segment-2.mp4",
+          "usage": {
+            "completion_tokens": 324900,
+            "total_tokens": 324900
+          },
+          "probe": {
+            "duration": 15.041667,
+            "bytes": 18641138,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 960,
+                "height": 960,
+                "r_frame_rate": "24/1"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。",
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 2/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "K",
+      "id": "a8ef3cda-fa3e-468c-99ad-19941a327b21",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "status": "ready",
+      "group": 2,
+      "idea": "文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。",
+      "prompt": "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 30,
+      "parts": [
+        15,
+        15
+      ],
+      "resolution": "720p",
+      "dimensions": {
+        "width": 1924,
+        "height": 1924
+      },
+      "confirmedAt": "2026-10-15T04:38:04.512Z",
+      "completedAt": "2026-10-15T04:44:29.169Z",
+      "elapsedSeconds": 385,
+      "submittedCalls": 2,
+      "consentedCalls": 2,
+      "final": {
+        "file": "media/K-doubao-seedance-2-0-fast-260128-30s.mp4",
+        "probe": {
+          "duration": 30.04,
+          "bytes": 54159184,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1924,
+              "height": 1924,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "cgt-20261015123811-j5cs6",
+          "file": "media/K-segment-1.mp4",
+          "usage": {
+            "completion_tokens": 324900,
+            "total_tokens": 324900
+          },
+          "probe": {
+            "duration": 15.041667,
+            "bytes": 17695818,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 960,
+                "height": 960,
+                "r_frame_rate": "24/1"
+              }
+            ]
+          }
+        },
+        {
+          "index": 2,
+          "remoteId": "cgt-20261015124111-bzkn5",
+          "file": "media/K-segment-2.mp4",
+          "usage": {
+            "completion_tokens": 324900,
+            "total_tokens": 324900
+          },
+          "probe": {
+            "duration": 15.041667,
+            "bytes": 17083157,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 960,
+                "height": 960,
+                "r_frame_rate": "24/1"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。",
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 2/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "L",
+      "id": "ab20fb23-1fc1-4b89-ae64-620db1d13263",
+      "model": "doubao-seedance-2-0-mini-260615",
+      "status": "failed",
+      "group": 2,
+      "idea": "文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。",
+      "prompt": "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 30,
+      "parts": [
+        15,
+        15
+      ],
+      "resolution": "720p",
+      "dimensions": {
+        "width": 1924,
+        "height": 1924
+      },
+      "confirmedAt": "2026-10-15T04:47:31.402Z",
+      "submittedCalls": 1,
+      "consentedCalls": 2,
+      "final": null,
+      "clips": [],
+      "error": "视频提交被拒绝（404 / ModelNotOpen）：Your account [已隐藏] has not activated the model doubao-seedance-2-0-mini-260615. Please activate the model service in the Ark Console. Request id: 02179203965558717602b7b13af2fe2da186d5f4d107a0743d566",
+      "providerError": {
+        "httpStatus": 404,
+        "code": "ModelNotOpen",
+        "message": "Your account [已隐藏] has not activated the model doubao-seedance-2-0-mini-260615. Please activate the model service in the Ark Console. Request id: 02179203965558717602b7b13af2fe2da186d5f4d107a0743d566",
+        "requestId": "02179203965558717602b7b13af2fe2da186d5f4d107a0743d566"
+      },
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。",
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 2/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "M",
+      "id": "800dd9f2-42e6-4149-bfb3-81bd2a516394",
+      "model": "MiniMax-H3",
+      "status": "ready",
+      "group": 2,
+      "idea": "文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。",
+      "prompt": "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 30,
+      "parts": [
+        15,
+        15
+      ],
+      "resolution": "768P",
+      "dimensions": {
+        "width": 1924,
+        "height": 1924
+      },
+      "confirmedAt": "2026-10-15T04:48:29.934Z",
+      "completedAt": "2026-10-15T04:55:48.708Z",
+      "elapsedSeconds": 439,
+      "submittedCalls": 2,
+      "consentedCalls": 2,
+      "final": {
+        "file": "media/M-MiniMax-H3-30s.mp4",
+        "probe": {
+          "duration": 30.12,
+          "bytes": 55432631,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1924,
+              "height": 1924,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "452553149837591",
+          "file": "media/M-segment-1.mp4",
+          "usage": {
+            "total_seconds": 15,
+            "input_seconds": 0,
+            "output_seconds": 15,
+            "input_image_count": 2,
+            "total_tokens": 514275,
+            "prompt_tokens": 26040,
+            "completion_tokens": 488235
+          },
+          "probe": {
+            "duration": 15.083333,
+            "bytes": 10299174,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 768,
+                "height": 768,
+                "r_frame_rate": "24/1"
+              },
+              {
+                "codec_name": "aac",
+                "codec_type": "audio",
+                "r_frame_rate": "0/0"
+              }
+            ]
+          }
+        },
+        {
+          "index": 2,
+          "remoteId": "452553231483178",
+          "file": "media/M-segment-2.mp4",
+          "usage": {
+            "total_seconds": 15,
+            "input_seconds": 0,
+            "output_seconds": 15,
+            "input_image_count": 2,
+            "total_tokens": 514275,
+            "prompt_tokens": 26040,
+            "completion_tokens": 488235
+          },
+          "probe": {
+            "duration": 15.083333,
+            "bytes": 7410338,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 768,
+                "height": 768,
+                "r_frame_rate": "24/1"
+              },
+              {
+                "codec_name": "aac",
+                "codec_type": "audio",
+                "r_frame_rate": "0/0"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": true,
+      "reconstructedPrompts": [
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。",
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 2/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "N",
+      "id": "c574f5e5-7a95-49df-90dd-5ba8978a7bb7",
+      "model": "MiniMax-H3-Max",
+      "status": "failed",
+      "group": 2,
+      "idea": "文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。",
+      "prompt": "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 30,
+      "parts": [
+        15,
+        15
+      ],
+      "resolution": "768P",
+      "dimensions": {
+        "width": 1924,
+        "height": 1924
+      },
+      "confirmedAt": "2026-10-15T05:01:46.316Z",
+      "submittedCalls": 2,
+      "consentedCalls": 2,
+      "final": null,
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "452556621136279",
+          "file": "media/N-segment-1.mp4",
+          "usage": {
+            "total_seconds": 15,
+            "input_seconds": 0,
+            "output_seconds": 15,
+            "input_image_count": 2
+          },
+          "probe": {
+            "duration": 15.104,
+            "bytes": 25222171,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 768,
+                "height": 768,
+                "r_frame_rate": "24/1"
+              },
+              {
+                "codec_name": "aac",
+                "codec_type": "audio",
+                "r_frame_rate": "0/0"
+              }
+            ]
+          }
+        }
+      ],
+      "error": "视频提交被拒绝（402 / insufficient_balance_error）：insufficient balance (1008)",
+      "providerError": {
+        "httpStatus": 402,
+        "code": "insufficient_balance_error",
+        "message": "insufficient balance (1008)",
+        "requestId": "071f9162c1c645b8dfabdafd45b0eae2"
+      },
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。",
+        "歌曲主题：文具和卡通小怪兽们围着WELCOME标识，陪大家开启温馨校园日常。音乐氛围：复古搞怪的卡通摇滚风，带着涂鸦的俏皮活力感。循环短片：文具小怪兽们举着WELCOME小黑板，围着彩铅笔和小苹果，蹦蹦跳跳等着小朋友来学校，一起分享甜甜的校园小零食。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 2/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    }
+  ]
+}

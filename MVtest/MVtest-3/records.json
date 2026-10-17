@@ -1,0 +1,839 @@
+{
+  "reportTime": "2026-10-15T08:00:31.703Z",
+  "timezone": "Asia/Shanghai",
+  "projectId": "8dc10237-1769-4032-8b2b-a7d2b25fa61b",
+  "title": "云间的小航班",
+  "author": "小小创作者",
+  "song": {
+    "id": "08c70f73-3050-477f-99fe-e378da0a70ff",
+    "duration": 129.253878,
+    "model": "music-3.0",
+    "file": "media/song.mp3"
+  },
+  "inputs": {
+    "before": "media/before.png",
+    "after": "media/after.png"
+  },
+  "totals": {
+    "records": 11,
+    "ready": 9,
+    "failed": 2,
+    "submittedAttempts": 14,
+    "savedSegments": 12,
+    "models": 6
+  },
+  "notes": [
+    "本报告为本地存储快照，不发起新的模型调用。",
+    "请求分辨率、供应商原片分辨率与本地成片分辨率分别记录。",
+    "耗时含排队、轮询、下载及合成，不等同纯模型推理时长。",
+    "完整HTTP请求没有独立存档；逐段提示词由已保存prompt和提交模板还原。",
+    "费用没有账单金额，usage不能直接等同实际费用。",
+    "尚无人工评分，不根据耗时推断画质。"
+  ],
+  "jobs": [
+    {
+      "label": "A",
+      "id": "8c7cd1a5-e541-4a1e-96df-ec8423566066",
+      "model": "doubao-seedance-2-5-260628",
+      "status": "ready",
+      "group": 1,
+      "idea": "一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。",
+      "prompt": "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 10,
+      "parts": [
+        10
+      ],
+      "resolution": "720p",
+      "dimensions": {
+        "width": 2256,
+        "height": 1636
+      },
+      "confirmedAt": "2026-10-15T06:04:38.518Z",
+      "completedAt": "2026-10-15T06:09:05.050Z",
+      "elapsedSeconds": 267,
+      "submittedCalls": 1,
+      "consentedCalls": 1,
+      "final": {
+        "file": "media/A-doubao-seedance-2-5-260628-10s.mp4",
+        "probe": {
+          "duration": 10,
+          "bytes": 5347334,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 2256,
+              "height": 1636,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "cgt-20261015140442-0fowp",
+          "file": "media/A-segment-1.mp4",
+          "usage": {
+            "completion_tokens": 218076,
+            "total_tokens": 218076
+          },
+          "probe": {
+            "duration": 10.041667,
+            "bytes": 10351149,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 1130,
+                "height": 820,
+                "r_frame_rate": "24/1"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "B",
+      "id": "f2519453-985d-4069-b04d-4888cacdfdf9",
+      "model": "doubao-seedance-2-0-260128",
+      "status": "ready",
+      "group": 1,
+      "idea": "一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。",
+      "prompt": "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 10,
+      "parts": [
+        10
+      ],
+      "resolution": "720p",
+      "dimensions": {
+        "width": 2256,
+        "height": 1636
+      },
+      "confirmedAt": "2026-10-15T06:11:15.933Z",
+      "completedAt": "2026-10-15T06:14:05.407Z",
+      "elapsedSeconds": 169,
+      "submittedCalls": 1,
+      "consentedCalls": 1,
+      "final": {
+        "file": "media/B-doubao-seedance-2-0-260128-10s.mp4",
+        "probe": {
+          "duration": 10,
+          "bytes": 7216745,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 2256,
+              "height": 1636,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "cgt-20261015141117-798q7",
+          "file": "media/B-segment-1.mp4",
+          "usage": {
+            "completion_tokens": 218266,
+            "total_tokens": 218266
+          },
+          "probe": {
+            "duration": 10.041667,
+            "bytes": 6120767,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 1112,
+                "height": 834,
+                "r_frame_rate": "24/1"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "C",
+      "id": "7d4aad62-1f67-4331-8401-8f0f9e0d87c5",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "status": "ready",
+      "group": 1,
+      "idea": "一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。",
+      "prompt": "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 10,
+      "parts": [
+        10
+      ],
+      "resolution": "720p",
+      "dimensions": {
+        "width": 2256,
+        "height": 1636
+      },
+      "confirmedAt": "2026-10-15T06:14:54.748Z",
+      "completedAt": "2026-10-15T06:17:55.481Z",
+      "elapsedSeconds": 181,
+      "submittedCalls": 1,
+      "consentedCalls": 1,
+      "final": {
+        "file": "media/C-doubao-seedance-2-0-fast-260128-10s.mp4",
+        "probe": {
+          "duration": 10,
+          "bytes": 8125230,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 2256,
+              "height": 1636,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "cgt-20261015141457-wfrpj",
+          "file": "media/C-segment-1.mp4",
+          "usage": {
+            "completion_tokens": 218266,
+            "total_tokens": 218266
+          },
+          "probe": {
+            "duration": 10.041667,
+            "bytes": 5961687,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 1112,
+                "height": 834,
+                "r_frame_rate": "24/1"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "D",
+      "id": "e5e31ee1-f0d7-4f16-ac15-f42142dbbe7c",
+      "model": "doubao-seedance-2-0-mini-260615",
+      "status": "failed",
+      "group": 1,
+      "idea": "一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。",
+      "prompt": "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 10,
+      "parts": [
+        10
+      ],
+      "resolution": "720p",
+      "dimensions": {
+        "width": 2256,
+        "height": 1636
+      },
+      "confirmedAt": "2026-10-15T06:18:58.465Z",
+      "submittedCalls": 1,
+      "consentedCalls": 1,
+      "final": null,
+      "clips": [],
+      "error": "视频提交被拒绝（404 / ModelNotOpen）：Your account [已隐藏] has not activated the model doubao-seedance-2-0-mini-260615. Please activate the model service in the Ark Console. Request id: 0217920451418903d36ed5cbc04d4422f43e960f0b7897e4325d9",
+      "providerError": {
+        "httpStatus": 404,
+        "code": "ModelNotOpen",
+        "message": "Your account [已隐藏] has not activated the model doubao-seedance-2-0-mini-260615. Please activate the model service in the Ark Console. Request id: 0217920451418903d36ed5cbc04d4422f43e960f0b7897e4325d9",
+        "requestId": "0217920451418903d36ed5cbc04d4422f43e960f0b7897e4325d9"
+      },
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "E",
+      "id": "22c5b114-4672-4e80-84f6-007f82d5bed4",
+      "model": "MiniMax-H3",
+      "status": "ready",
+      "group": 1,
+      "idea": "一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。",
+      "prompt": "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 10,
+      "parts": [
+        10
+      ],
+      "resolution": "768P",
+      "dimensions": {
+        "width": 2256,
+        "height": 1636
+      },
+      "confirmedAt": "2026-10-15T06:20:55.987Z",
+      "completedAt": "2026-10-15T06:24:54.784Z",
+      "elapsedSeconds": 239,
+      "submittedCalls": 1,
+      "consentedCalls": 1,
+      "final": {
+        "file": "media/E-MiniMax-H3-10s.mp4",
+        "probe": {
+          "duration": 10.08,
+          "bytes": 6084105,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 2256,
+              "height": 1636,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "452576154849569",
+          "file": "media/E-segment-1.mp4",
+          "usage": {
+            "total_seconds": 10,
+            "input_seconds": 0,
+            "output_seconds": 10,
+            "input_image_count": 2,
+            "total_tokens": 351530,
+            "prompt_tokens": 26040,
+            "completion_tokens": 325490
+          },
+          "probe": {
+            "duration": 10.125,
+            "bytes": 2185112,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 1056,
+                "height": 768,
+                "r_frame_rate": "24/1"
+              },
+              {
+                "codec_name": "aac",
+                "codec_type": "audio",
+                "r_frame_rate": "0/0"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "F",
+      "id": "fdd9292a-a0e4-4585-8097-91c83e709fc9",
+      "model": "MiniMax-H3-Max",
+      "status": "ready",
+      "group": 1,
+      "idea": "一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。",
+      "prompt": "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 10,
+      "parts": [
+        10
+      ],
+      "resolution": "768P",
+      "dimensions": {
+        "width": 2256,
+        "height": 1636
+      },
+      "confirmedAt": "2026-10-15T06:25:55.630Z",
+      "completedAt": "2026-10-15T06:26:25.888Z",
+      "elapsedSeconds": 30,
+      "submittedCalls": 1,
+      "consentedCalls": 1,
+      "final": {
+        "file": "media/F-MiniMax-H3-Max-10s.mp4",
+        "probe": {
+          "duration": 10.08,
+          "bytes": 9310948,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 2256,
+              "height": 1636,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "452578259255555",
+          "file": "media/F-segment-1.mp4",
+          "usage": {
+            "total_seconds": 10,
+            "input_seconds": 0,
+            "output_seconds": 10,
+            "input_image_count": 2
+          },
+          "probe": {
+            "duration": 10.144,
+            "bytes": 12105224,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 1056,
+                "height": 768,
+                "r_frame_rate": "24/1"
+              },
+              {
+                "codec_name": "aac",
+                "codec_type": "audio",
+                "r_frame_rate": "0/0"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/1 段；本段 10 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "G",
+      "id": "0c6dfd11-576e-4bf2-a35a-ff54e62c626c",
+      "model": "doubao-seedance-2-5-260628",
+      "status": "ready",
+      "group": 1,
+      "idea": "一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。",
+      "prompt": "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 30,
+      "parts": [
+        30
+      ],
+      "resolution": "720p",
+      "dimensions": {
+        "width": 2256,
+        "height": 1636
+      },
+      "confirmedAt": "2026-10-15T06:33:56.925Z",
+      "completedAt": "2026-10-15T06:39:52.793Z",
+      "elapsedSeconds": 356,
+      "submittedCalls": 1,
+      "consentedCalls": 1,
+      "final": {
+        "file": "media/G-doubao-seedance-2-5-260628-30s.mp4",
+        "probe": {
+          "duration": 30,
+          "bytes": 17540536,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 2256,
+              "height": 1636,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "cgt-20261015143402-3rw62",
+          "file": "media/G-segment-1.mp4",
+          "usage": {
+            "completion_tokens": 652420,
+            "total_tokens": 652420
+          },
+          "probe": {
+            "duration": 30.041667,
+            "bytes": 30911412,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 1130,
+                "height": 820,
+                "r_frame_rate": "24/1"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/1 段；本段 30 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "H",
+      "id": "64ea3207-451a-4401-851d-7416fdc4f8d4",
+      "model": "doubao-seedance-2-0-260128",
+      "status": "ready",
+      "group": 1,
+      "idea": "一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。",
+      "prompt": "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 30,
+      "parts": [
+        15,
+        15
+      ],
+      "resolution": "720p",
+      "dimensions": {
+        "width": 2256,
+        "height": 1636
+      },
+      "confirmedAt": "2026-10-15T07:02:33.584Z",
+      "completedAt": "2026-10-15T07:12:33.826Z",
+      "elapsedSeconds": 600,
+      "submittedCalls": 2,
+      "consentedCalls": 2,
+      "final": {
+        "file": "media/H-doubao-seedance-2-0-260128-30s.mp4",
+        "probe": {
+          "duration": 30.04,
+          "bytes": 22050514,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 2256,
+              "height": 1636,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "cgt-20261015150237-2p5dz",
+          "file": "media/H-segment-1.mp4",
+          "usage": {
+            "completion_tokens": 326947,
+            "total_tokens": 326947
+          },
+          "probe": {
+            "duration": 15.041667,
+            "bytes": 7700674,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 1112,
+                "height": 834,
+                "r_frame_rate": "24/1"
+              }
+            ]
+          }
+        },
+        {
+          "index": 2,
+          "remoteId": "cgt-20261015150748-ld2j6",
+          "file": "media/H-segment-2.mp4",
+          "usage": {
+            "completion_tokens": 326947,
+            "total_tokens": 326947
+          },
+          "probe": {
+            "duration": 15.041667,
+            "bytes": 8815817,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 1112,
+                "height": 834,
+                "r_frame_rate": "24/1"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。",
+        "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 2/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "I",
+      "id": "f898518c-defd-4fa1-be88-cbcf78fd8ac1",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "status": "ready",
+      "group": 1,
+      "idea": "一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。",
+      "prompt": "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 30,
+      "parts": [
+        15,
+        15
+      ],
+      "resolution": "720p",
+      "dimensions": {
+        "width": 2256,
+        "height": 1636
+      },
+      "confirmedAt": "2026-10-15T07:14:34.346Z",
+      "completedAt": "2026-10-15T07:20:53.640Z",
+      "elapsedSeconds": 379,
+      "submittedCalls": 2,
+      "consentedCalls": 2,
+      "final": {
+        "file": "media/I-doubao-seedance-2-0-fast-260128-30s.mp4",
+        "probe": {
+          "duration": 30.04,
+          "bytes": 23212423,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 2256,
+              "height": 1636,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "cgt-20261015151438-pmpxk",
+          "file": "media/I-segment-1.mp4",
+          "usage": {
+            "completion_tokens": 326947,
+            "total_tokens": 326947
+          },
+          "probe": {
+            "duration": 15.041667,
+            "bytes": 9303167,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 1112,
+                "height": 834,
+                "r_frame_rate": "24/1"
+              }
+            ]
+          }
+        },
+        {
+          "index": 2,
+          "remoteId": "cgt-20261015151733-mqg5s",
+          "file": "media/I-segment-2.mp4",
+          "usage": {
+            "completion_tokens": 326947,
+            "total_tokens": 326947
+          },
+          "probe": {
+            "duration": 15.041667,
+            "bytes": 8665652,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 1112,
+                "height": 834,
+                "r_frame_rate": "24/1"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。",
+        "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 2/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "J",
+      "id": "cae67bff-cdd9-457c-9ac2-66220ae4c522",
+      "model": "doubao-seedance-2-0-mini-260615",
+      "status": "failed",
+      "group": 1,
+      "idea": "一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。",
+      "prompt": "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 30,
+      "parts": [
+        15,
+        15
+      ],
+      "resolution": "720p",
+      "dimensions": {
+        "width": 2256,
+        "height": 1636
+      },
+      "confirmedAt": "2026-10-15T07:23:11.129Z",
+      "submittedCalls": 1,
+      "consentedCalls": 2,
+      "final": null,
+      "clips": [],
+      "error": "视频提交被拒绝（404 / ModelNotOpen）：Your account [已隐藏] has not activated the model doubao-seedance-2-0-mini-260615. Please activate the model service in the Ark Console. Request id: 0217920489926259436a70d8fd44afb73ab39bbb6df35bafce636",
+      "providerError": {
+        "httpStatus": 404,
+        "code": "ModelNotOpen",
+        "message": "Your account [已隐藏] has not activated the model doubao-seedance-2-0-mini-260615. Please activate the model service in the Ark Console. Request id: 0217920489926259436a70d8fd44afb73ab39bbb6df35bafce636",
+        "requestId": "0217920489926259436a70d8fd44afb73ab39bbb6df35bafce636"
+      },
+      "scores": null,
+      "note": "",
+      "adopted": false,
+      "reconstructedPrompts": [
+        "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。",
+        "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 2/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    },
+    {
+      "label": "K",
+      "id": "e6d3d1cf-6c81-4523-82ed-1dca006e34f8",
+      "model": "MiniMax-H3",
+      "status": "ready",
+      "group": 1,
+      "idea": "一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。",
+      "prompt": "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "requestedDuration": 30,
+      "parts": [
+        15,
+        15
+      ],
+      "resolution": "768P",
+      "dimensions": {
+        "width": 2256,
+        "height": 1636
+      },
+      "confirmedAt": "2026-10-15T07:24:46.907Z",
+      "completedAt": "2026-10-15T07:39:52.960Z",
+      "elapsedSeconds": 906,
+      "submittedCalls": 2,
+      "consentedCalls": 2,
+      "final": {
+        "file": "media/K-MiniMax-H3-30s.mp4",
+        "probe": {
+          "duration": 30.12,
+          "bytes": 20247525,
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 2256,
+              "height": 1636,
+              "r_frame_rate": "25/1"
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "452592473596170",
+          "file": "media/K-segment-1.mp4",
+          "usage": {
+            "total_seconds": 15,
+            "input_seconds": 0,
+            "output_seconds": 15,
+            "input_image_count": 2,
+            "total_tokens": 514275,
+            "prompt_tokens": 26040,
+            "completion_tokens": 488235
+          },
+          "probe": {
+            "duration": 15.083333,
+            "bytes": 4171726,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 1056,
+                "height": 768,
+                "r_frame_rate": "24/1"
+              },
+              {
+                "codec_name": "aac",
+                "codec_type": "audio",
+                "r_frame_rate": "0/0"
+              }
+            ]
+          }
+        },
+        {
+          "index": 2,
+          "remoteId": "452594608943379",
+          "file": "media/K-segment-2.mp4",
+          "usage": {
+            "total_seconds": 15,
+            "input_seconds": 0,
+            "output_seconds": 15,
+            "input_image_count": 2,
+            "total_tokens": 514275,
+            "prompt_tokens": 26040,
+            "completion_tokens": 488235
+          },
+          "probe": {
+            "duration": 15.083333,
+            "bytes": 3014152,
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 1056,
+                "height": 768,
+                "r_frame_rate": "24/1"
+              },
+              {
+                "codec_name": "aac",
+                "codec_type": "audio",
+                "r_frame_rate": "0/0"
+              }
+            ]
+          }
+        }
+      ],
+      "scores": null,
+      "note": "",
+      "adopted": true,
+      "reconstructedPrompts": [
+        "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 1/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。",
+        "歌曲主题：飞鸟以第一人称视角，讲述在云朵下偶遇带建筑的车辆的奇妙旅程。音乐氛围：温馨治愈的轻民谣，柔和舒缓带着软乎乎的暖意。循环短片：一群彩色小飞鸟飘在云间，瞧见地上的建筑小车，扑棱着翅膀绕着它们转圈圈，叽叽喳喳聊起这新奇的小发现。。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。\n第 2/2 段；本段 15 秒。保持参考图角色与风格，首尾回到相近位置，避免文字和字幕。"
+      ]
+    }
+  ]
+}

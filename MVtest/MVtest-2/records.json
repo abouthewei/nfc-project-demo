@@ -1,0 +1,500 @@
+{
+  "projectId": "17cda1a8-9163-48c0-84c2-b6ab0733caf4",
+  "title": "《追光飞鸟》",
+  "songId": "4d208f22-093b-4fa2-99d6-3367f58daa6b",
+  "songTitle": "《追光飞鸟》",
+  "songDuration": 158.249796,
+  "songModel": "music-3.0",
+  "songProvider": "MiniMax",
+  "createdAt": "2026-10-16T01:40:00.332Z",
+  "style": "赛博朋克毛绒风格",
+  "theme": "讲孩童结伴追逐飞鸟的冒险趣事",
+  "voice": "以领头孩童的第一人称，讲述和伙伴追飞鸟的快乐",
+  "genre": "轻松灵动的民谣小调，透着伙伴相伴的软萌暖意",
+  "arrangement": "软萌童声合唱搭配木吉他轻拨，副段加入铃铛点缀",
+  "sourceDimensions": {
+    "width": 1076,
+    "height": 828
+  },
+  "videoDimensions": {
+    "mime": "image/jpeg",
+    "size": 650286
+  },
+  "sourceDescription": "黑白线稿涂鸦，五名孩童在草地上欢快活动，上方有弧形线条，空中有飞鸟，地面生杂草与小花。",
+  "files": {
+    "before": "media/before-original.jpg",
+    "after": "media/after-effect.jpg",
+    "song": "media/song.mp3"
+  },
+  "records": [
+    {
+      "index": 1,
+      "id": "8d49a1f0-9793-4add-b1fd-a12cb478805c",
+      "songId": "4d208f22-093b-4fa2-99d6-3367f58daa6b",
+      "model": "doubao-seedance-2-5-260628",
+      "modelName": "Seedance 2.5",
+      "family": "Seedance",
+      "durationRequested": 10,
+      "durationActual": 10.0,
+      "resolutionRequested": "720p",
+      "width": 2152,
+      "height": 1656,
+      "fps": "25/1",
+      "codec": "h264",
+      "file": "media/mv-01-doubao_seedance_2_5_260628-10s.mp4",
+      "sizeBytes": 9315519,
+      "createdAt": "2026-10-16T06:25:24.264Z",
+      "confirmedAt": "2026-10-16T06:25:27.357Z",
+      "completedAt": "2026-10-16T06:29:27.281Z",
+      "elapsedSeconds": 240,
+      "calls": 1,
+      "parts": [
+        10
+      ],
+      "idea": "五个毛绒娃娃手拉手追着发光的飞鸟，一起在粉紫草地上蹦跳欢笑，追着那道霓虹光带跑向远方",
+      "prompt": "歌曲主题：五个毛绒感孩童结伴追逐发光飞鸟的快乐冒险。音乐氛围：轻松灵动的民谣小调，透着伙伴相伴的软萌暖意。循环短片：五个毛绒娃娃手拉手追着发光的飞鸟，一起在粉紫草地上蹦跳欢笑，追着那道霓虹光带跑向远方。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "planId": "0ebcce29-d769-4723-90f6-3c57e07935bf",
+      "remoteIds": [
+        "cgt-20261016142528-3nr25"
+      ],
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "cgt-20261016142528-3nr25",
+          "sizeBytes": 17818771,
+          "usage": {
+            "completion_tokens": 218103,
+            "total_tokens": 218103
+          }
+        }
+      ],
+      "usage": [
+        {
+          "completion_tokens": 218103,
+          "total_tokens": 218103
+        }
+      ],
+      "adopted": false,
+      "userConfirmed": true,
+      "costNote": "费用无法准确预估，按供应商实际扣费；本次不包含额外重试。",
+      "loopReview": "首尾接缝待人工评分"
+    },
+    {
+      "index": 2,
+      "id": "5db0b8bb-769e-4a21-ae38-85d20e4078f8",
+      "songId": "4d208f22-093b-4fa2-99d6-3367f58daa6b",
+      "model": "doubao-seedance-2-0-260128",
+      "modelName": "Seedance 2.0",
+      "family": "Seedance",
+      "durationRequested": 10,
+      "durationActual": 10.0,
+      "resolutionRequested": "720p",
+      "width": 2152,
+      "height": 1656,
+      "fps": "25/1",
+      "codec": "h264",
+      "file": "media/mv-02-doubao_seedance_2_0_260128-10s.mp4",
+      "sizeBytes": 12326793,
+      "createdAt": "2026-10-16T06:30:13.736Z",
+      "confirmedAt": "2026-10-16T06:30:16.601Z",
+      "completedAt": "2026-10-16T06:35:17.338Z",
+      "elapsedSeconds": 301,
+      "calls": 1,
+      "parts": [
+        10
+      ],
+      "idea": "五个毛绒娃娃手拉手追着发光的飞鸟，一起在粉紫草地上蹦跳欢笑，追着那道霓虹光带跑向远方",
+      "prompt": "歌曲主题：五个毛绒感孩童结伴追逐发光飞鸟的快乐冒险。音乐氛围：轻松灵动的民谣小调，透着伙伴相伴的软萌暖意。循环短片：五个毛绒娃娃手拉手追着发光的飞鸟，一起在粉紫草地上蹦跳欢笑，追着那道霓虹光带跑向远方。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "planId": "effb729c-9bc9-48e0-8ae8-612c746a9258",
+      "remoteIds": [
+        "cgt-20261016143018-5s5jh"
+      ],
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "cgt-20261016143018-5s5jh",
+          "sizeBytes": 8882336,
+          "usage": {
+            "completion_tokens": 218266,
+            "total_tokens": 218266
+          }
+        }
+      ],
+      "usage": [
+        {
+          "completion_tokens": 218266,
+          "total_tokens": 218266
+        }
+      ],
+      "adopted": false,
+      "userConfirmed": true,
+      "costNote": "费用无法准确预估，按供应商实际扣费；本次不包含额外重试。",
+      "loopReview": "首尾接缝待人工评分"
+    },
+    {
+      "index": 3,
+      "id": "fec1976f-66b2-4d9e-8c8d-48b2f6082ff2",
+      "songId": "4d208f22-093b-4fa2-99d6-3367f58daa6b",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "modelName": "Seedance 2.0 Fast",
+      "family": "Seedance",
+      "durationRequested": 10,
+      "durationActual": 10.0,
+      "resolutionRequested": "720p",
+      "width": 2152,
+      "height": 1656,
+      "fps": "25/1",
+      "codec": "h264",
+      "file": "media/mv-03-doubao_seedance_2_0_fast_260128-10s.mp4",
+      "sizeBytes": 12766959,
+      "createdAt": "2026-10-16T06:38:49.291Z",
+      "confirmedAt": "2026-10-16T06:38:52.823Z",
+      "completedAt": "2026-10-16T06:41:17.158Z",
+      "elapsedSeconds": 144,
+      "calls": 1,
+      "parts": [
+        10
+      ],
+      "idea": "五个毛绒娃娃手拉手追着发光的飞鸟，一起在粉紫草地上蹦跳欢笑，追着那道霓虹光带跑向远方",
+      "prompt": "歌曲主题：五个毛绒感孩童结伴追逐发光飞鸟的快乐冒险。音乐氛围：轻松灵动的民谣小调，透着伙伴相伴的软萌暖意。循环短片：五个毛绒娃娃手拉手追着发光的飞鸟，一起在粉紫草地上蹦跳欢笑，追着那道霓虹光带跑向远方。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "planId": "a90badad-08d6-44f3-861d-3e327475e9b9",
+      "remoteIds": [
+        "cgt-20261016143858-l79fm"
+      ],
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "cgt-20261016143858-l79fm",
+          "sizeBytes": 9585256,
+          "usage": {
+            "completion_tokens": 218266,
+            "total_tokens": 218266
+          }
+        }
+      ],
+      "usage": [
+        {
+          "completion_tokens": 218266,
+          "total_tokens": 218266
+        }
+      ],
+      "adopted": false,
+      "userConfirmed": true,
+      "costNote": "费用无法准确预估，按供应商实际扣费；本次不包含额外重试。",
+      "loopReview": "首尾接缝待人工评分"
+    },
+    {
+      "index": 4,
+      "id": "814e1aae-7fbd-4090-a9f7-4f9a771de379",
+      "songId": "4d208f22-093b-4fa2-99d6-3367f58daa6b",
+      "model": "MiniMax-H3",
+      "modelName": "MiniMax H3",
+      "family": "MiniMax",
+      "durationRequested": 10,
+      "durationActual": 10.08,
+      "resolutionRequested": "768P",
+      "width": 2152,
+      "height": 1656,
+      "fps": "25/1",
+      "codec": "h264",
+      "file": "media/mv-04-minimax_h3-10s.mp4",
+      "sizeBytes": 9407538,
+      "createdAt": "2026-10-16T08:48:34.985Z",
+      "confirmedAt": "2026-10-16T08:48:37.653Z",
+      "completedAt": "2026-10-16T08:52:38.182Z",
+      "elapsedSeconds": 241,
+      "calls": 1,
+      "parts": [
+        10
+      ],
+      "idea": "五个毛绒娃娃手拉手追着发光的飞鸟，一起在粉紫草地上蹦跳欢笑，追着那道霓虹光带跑向远方",
+      "prompt": "歌曲主题：五个毛绒感孩童结伴追逐发光飞鸟的快乐冒险。音乐氛围：轻松灵动的民谣小调，透着伙伴相伴的软萌暖意。循环短片：五个毛绒娃娃手拉手追着发光的飞鸟，一起在粉紫草地上蹦跳欢笑，追着那道霓虹光带跑向远方。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "planId": "fd5d9fa8-dc48-40ac-bd71-bf998b795aac",
+      "remoteIds": [
+        "452966502666546"
+      ],
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "452966502666546",
+          "sizeBytes": 3382475,
+          "usage": {
+            "total_seconds": 10,
+            "input_seconds": 0,
+            "output_seconds": 10,
+            "input_image_count": 2,
+            "total_tokens": 351530,
+            "prompt_tokens": 26040,
+            "completion_tokens": 325490
+          }
+        }
+      ],
+      "usage": [
+        {
+          "total_seconds": 10,
+          "input_seconds": 0,
+          "output_seconds": 10,
+          "input_image_count": 2,
+          "total_tokens": 351530,
+          "prompt_tokens": 26040,
+          "completion_tokens": 325490
+        }
+      ],
+      "adopted": false,
+      "userConfirmed": true,
+      "costNote": "费用无法准确预估，按供应商实际扣费；本次不包含额外重试。",
+      "loopReview": "首尾接缝待人工评分"
+    },
+    {
+      "index": 5,
+      "id": "b9d373e1-aa0e-4ec0-b608-ec14dd9a03b9",
+      "songId": "4d208f22-093b-4fa2-99d6-3367f58daa6b",
+      "model": "MiniMax-H3-Max",
+      "modelName": "MiniMax H3 Max",
+      "family": "MiniMax",
+      "durationRequested": 10,
+      "durationActual": 10.08,
+      "resolutionRequested": "768P",
+      "width": 2152,
+      "height": 1656,
+      "fps": "25/1",
+      "codec": "h264",
+      "file": "media/mv-05-minimax_h3_max-10s.mp4",
+      "sizeBytes": 13570273,
+      "createdAt": "2026-10-16T08:53:53.996Z",
+      "confirmedAt": "2026-10-16T08:53:57.364Z",
+      "completedAt": "2026-10-16T08:54:29.391Z",
+      "elapsedSeconds": 32,
+      "calls": 1,
+      "parts": [
+        10
+      ],
+      "idea": "五个毛绒娃娃手拉手追着发光的飞鸟，一起在粉紫草地上蹦跳欢笑，追着那道霓虹光带跑向远方",
+      "prompt": "歌曲主题：五个毛绒感孩童结伴追逐发光飞鸟的快乐冒险。音乐氛围：轻松灵动的民谣小调，透着伙伴相伴的软萌暖意。循环短片：五个毛绒娃娃手拉手追着发光的飞鸟，一起在粉紫草地上蹦跳欢笑，追着那道霓虹光带跑向远方。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "planId": "fed13510-1046-4cd9-972b-043ad64aa170",
+      "remoteIds": [
+        "452968139161874"
+      ],
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "452968139161874",
+          "sizeBytes": 15385109,
+          "usage": {
+            "total_seconds": 10,
+            "input_seconds": 0,
+            "output_seconds": 10,
+            "input_image_count": 2
+          }
+        }
+      ],
+      "usage": [
+        {
+          "total_seconds": 10,
+          "input_seconds": 0,
+          "output_seconds": 10,
+          "input_image_count": 2
+        }
+      ],
+      "adopted": false,
+      "userConfirmed": true,
+      "costNote": "费用无法准确预估，按供应商实际扣费；本次不包含额外重试。",
+      "loopReview": "首尾接缝待人工评分"
+    },
+    {
+      "index": 6,
+      "id": "ec2d39c8-adb4-4267-99a9-cac2366adb40",
+      "songId": "4d208f22-093b-4fa2-99d6-3367f58daa6b",
+      "model": "doubao-seedance-2-5-260628",
+      "modelName": "Seedance 2.5",
+      "family": "Seedance",
+      "durationRequested": 30,
+      "durationActual": 30.0,
+      "resolutionRequested": "720p",
+      "width": 2152,
+      "height": 1656,
+      "fps": "25/1",
+      "codec": "h264",
+      "file": "media/mv-06-doubao_seedance_2_5_260628-30s.mp4",
+      "sizeBytes": 25822392,
+      "createdAt": "2026-10-16T08:56:05.017Z",
+      "confirmedAt": "2026-10-16T08:56:09.000Z",
+      "completedAt": "2026-10-16T09:03:46.336Z",
+      "elapsedSeconds": 457,
+      "calls": 1,
+      "parts": [
+        30
+      ],
+      "idea": "五个毛绒娃娃手拉手追着发光的飞鸟，一起在粉紫草地上蹦跳欢笑，追着那道霓虹光带跑向远方",
+      "prompt": "歌曲主题：五个毛绒感孩童结伴追逐发光飞鸟的快乐冒险。音乐氛围：轻松灵动的民谣小调，透着伙伴相伴的软萌暖意。循环短片：五个毛绒娃娃手拉手追着发光的飞鸟，一起在粉紫草地上蹦跳欢笑，追着那道霓虹光带跑向远方。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "planId": "c709c3f7-9ad6-4603-8634-fd781503985b",
+      "remoteIds": [
+        "cgt-20261016165609-8m5k4"
+      ],
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "cgt-20261016165609-8m5k4",
+          "sizeBytes": 49591008,
+          "usage": {
+            "completion_tokens": 652499,
+            "total_tokens": 652499
+          }
+        }
+      ],
+      "usage": [
+        {
+          "completion_tokens": 652499,
+          "total_tokens": 652499
+        }
+      ],
+      "adopted": false,
+      "userConfirmed": true,
+      "costNote": "费用无法准确预估，按供应商实际扣费；本次不包含额外重试。",
+      "loopReview": "首尾接缝待人工评分"
+    },
+    {
+      "index": 7,
+      "id": "3019014e-a040-4bd9-b140-e0cd47360302",
+      "songId": "4d208f22-093b-4fa2-99d6-3367f58daa6b",
+      "model": "doubao-seedance-2-0-260128",
+      "modelName": "Seedance 2.0",
+      "family": "Seedance",
+      "durationRequested": 30,
+      "durationActual": 30.04,
+      "resolutionRequested": "720p",
+      "width": 2152,
+      "height": 1656,
+      "fps": "25/1",
+      "codec": "h264",
+      "file": "media/mv-07-doubao_seedance_2_0_260128-30s.mp4",
+      "sizeBytes": 35925419,
+      "createdAt": "2026-10-16T09:24:24.638Z",
+      "confirmedAt": "2026-10-16T09:24:28.279Z",
+      "completedAt": "2026-10-16T09:32:47.881Z",
+      "elapsedSeconds": 500,
+      "calls": 2,
+      "parts": [
+        15,
+        15
+      ],
+      "idea": "五个毛绒娃娃手拉手追着发光的飞鸟，一起在粉紫草地上蹦跳欢笑，追着那道霓虹光带跑向远方",
+      "prompt": "歌曲主题：五个毛绒感孩童结伴追逐发光飞鸟的快乐冒险。音乐氛围：轻松灵动的民谣小调，透着伙伴相伴的软萌暖意。循环短片：五个毛绒娃娃手拉手追着发光的飞鸟，一起在粉紫草地上蹦跳欢笑，追着那道霓虹光带跑向远方。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "planId": "157a3c9e-c03b-4149-9907-9518abef5817",
+      "remoteIds": [
+        "cgt-20261016172430-ts5dc",
+        "cgt-20261016172740-4b54f"
+      ],
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "cgt-20261016172430-ts5dc",
+          "sizeBytes": 11502054,
+          "usage": {
+            "completion_tokens": 326947,
+            "total_tokens": 326947
+          }
+        },
+        {
+          "index": 2,
+          "remoteId": "cgt-20261016172740-4b54f",
+          "sizeBytes": 13190231,
+          "usage": {
+            "completion_tokens": 326947,
+            "total_tokens": 326947
+          }
+        }
+      ],
+      "usage": [
+        {
+          "completion_tokens": 326947,
+          "total_tokens": 326947
+        },
+        {
+          "completion_tokens": 326947,
+          "total_tokens": 326947
+        }
+      ],
+      "adopted": false,
+      "userConfirmed": true,
+      "costNote": "费用无法准确预估，按供应商实际扣费；本次不包含额外重试。",
+      "loopReview": "首尾接缝待人工评分"
+    },
+    {
+      "index": 8,
+      "id": "850bf624-7465-4ae5-b446-3e6c37fb3e1e",
+      "songId": "4d208f22-093b-4fa2-99d6-3367f58daa6b",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "modelName": "Seedance 2.0 Fast",
+      "family": "Seedance",
+      "durationRequested": 30,
+      "durationActual": 30.04,
+      "resolutionRequested": "720p",
+      "width": 2152,
+      "height": 1656,
+      "fps": "25/1",
+      "codec": "h264",
+      "file": "media/mv-08-doubao_seedance_2_0_fast_260128-30s.mp4",
+      "sizeBytes": 38161741,
+      "createdAt": "2026-10-16T10:10:05.824Z",
+      "confirmedAt": "2026-10-16T10:10:09.058Z",
+      "completedAt": "2026-10-16T10:15:55.989Z",
+      "elapsedSeconds": 347,
+      "calls": 2,
+      "parts": [
+        15,
+        15
+      ],
+      "idea": "五个毛绒娃娃手拉手追着发光的飞鸟，一起在粉紫草地上蹦跳欢笑，追着那道霓虹光带跑向远方",
+      "prompt": "歌曲主题：五个毛绒感孩童结伴追逐发光飞鸟的快乐冒险。音乐氛围：轻松灵动的民谣小调，透着伙伴相伴的软萌暖意。循环短片：五个毛绒娃娃手拉手追着发光的飞鸟，一起在粉紫草地上蹦跳欢笑，追着那道霓虹光带跑向远方。保留参考图中的角色数量、轮廓、材质和构图关系。动作自然、柔和，首尾相接。",
+      "planId": "6c7c9eb2-7e76-41c6-8602-ee6313a65fb5",
+      "remoteIds": [
+        "cgt-20261016181011-dgx2n",
+        "cgt-20261016181246-rvnjh"
+      ],
+      "clips": [
+        {
+          "index": 1,
+          "remoteId": "cgt-20261016181011-dgx2n",
+          "sizeBytes": 12988657,
+          "usage": {
+            "completion_tokens": 326947,
+            "total_tokens": 326947
+          }
+        },
+        {
+          "index": 2,
+          "remoteId": "cgt-20261016181246-rvnjh",
+          "sizeBytes": 15160773,
+          "usage": {
+            "completion_tokens": 326947,
+            "total_tokens": 326947
+          }
+        }
+      ],
+      "usage": [
+        {
+          "completion_tokens": 326947,
+          "total_tokens": 326947
+        },
+        {
+          "completion_tokens": 326947,
+          "total_tokens": 326947
+        }
+      ],
+      "adopted": true,
+      "userConfirmed": true,
+      "costNote": "费用无法准确预估，按供应商实际扣费；本次不包含额外重试。",
+      "loopReview": "首尾接缝待人工评分"
+    }
+  ],
+  "limitations": [
+    "所有模型使用同一效果图、同一条 MV 创意和相同主提示词；这是同素材下的横向对照。",
+    "Seedance 请求 720p、H3 请求 768P；成片经过本地合成并按原图画幅重编码，报告同时列出成片实际像素尺寸。",
+    "30 秒 Seedance 2.0 与 2.0 Fast 由两段 15 秒供应商片段拼接；Seedance 2.5 为单段 30 秒。",
+    "成片均为静音视频，歌曲作为独立音轨。处理耗时包含队列、轮询、下载和本地合成，不代表纯模型推理时间。",
+    "账单金额未从供应商账户核对；usage 为供应商任务响应记录，不能直接换算为实际费用。",
+    "首尾循环接缝尚未完成人工评分，因此本报告记录生成事实，不对画面质量作优劣结论。",
+    "供应商原始分段视频继续保留在本机项目记录；报告包只包含可直接播放的最终合成视频。"
+  ]
+}
