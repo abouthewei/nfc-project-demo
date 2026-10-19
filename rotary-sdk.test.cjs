@@ -11,12 +11,13 @@ class KeyboardEvent extends Event {
   }
 }
 
-function page() {
+function page(deferFrames = false) {
   const document = new EventTarget();
   const window = new EventTarget();
   const events = [];
   let backCount = 0;
   const replacements = [];
+  const frames = [];
   const location = { href: 'https://example.test/demo/index.html', origin: 'https://example.test', pathname: '/demo/index.html', search: '', hash: '' };
   const element = tagName => ({
     tagName,
@@ -47,7 +48,7 @@ function page() {
   window.scrollTo = () => {};
   vm.runInNewContext(fs.readFileSync(`${__dirname}/rotary-sdk.js`, 'utf8'), {
     document, window, KeyboardEvent, location, URL,
-    requestAnimationFrame: callback => callback(),
+    requestAnimationFrame: callback => deferFrames ? frames.push(callback) : callback(),
     getComputedStyle: () => ({ display: 'block', visibility: 'visible', opacity: '1' }),
     history: {
       back() { backCount++; },
@@ -59,7 +60,7 @@ function page() {
       }
     }
   });
-  return { document, window, links, events, element, location, replacements, backCount: () => backCount };
+  return { document, window, links, events, element, location, replacements, frames, backCount: () => backCount };
 }
 
 const mapping = {
@@ -169,6 +170,37 @@ player.window.RotarySDK.init({ beforeMove: () => player.links[0] });
 player.window.onClockwiseRoll();
 assert.equal(player.document.activeElement, player.links[1], 'device navigation restores the video origin');
 async function checkPlaybackToggle() {
+  for (const input of ['keyboard', 'device']) {
+    for (const mode of ['supported', 'unsupported', 'rejected', 'throws', 'already-fullscreen']) {
+      const p = page(true);
+      const poster = p.links[0];
+      const scope = p.element('FIGURE');
+      const player = p.element('IFRAME');
+      let mounted = false;
+      let entered = 0;
+      poster.matches = selector => selector.includes('[data-rotary-play]');
+      poster.closest = () => scope;
+      poster.click = () => { mounted = true; };
+      scope.querySelector = () => mounted ? player : null;
+      if (mode !== 'unsupported') player.requestFullscreen = () => {
+        entered++;
+        if (mode === 'throws') throw new Error('Fullscreen denied');
+        if (mode === 'rejected') return Promise.reject(new Error('Fullscreen denied'));
+        p.document.fullscreenElement = player;
+        return Promise.resolve();
+      };
+      if (mode === 'already-fullscreen') p.document.fullscreenElement = scope;
+      p.document.activeElement = poster;
+      p.window.RotarySDK.init();
+      if (input === 'device') p.window.onPlayBtnPressed();
+      else poster.dispatchEvent(new KeyboardEvent('keydown', { key: 'MediaPlayPause', bubbles: true, cancelable: true }));
+      assert(mounted, 'start playback before requesting fullscreen');
+      assert.equal(entered, 0, 'wait for the player to render');
+      p.frames.splice(0).forEach(callback => callback());
+      assert.equal(entered, ['unsupported', 'already-fullscreen'].includes(mode) ? 0 : 1, `${input}: ${mode}`);
+      await Promise.resolve();
+    }
+  }
   for (const className of ['.tribute-video', '.video-poster', '.lebron-poster', '.timeline-video-trigger', '.work-video-trigger', '#playVideo', '#gallery-dialog-video-toggle', '.video-frame[role="button"]']) {
     const p = page();
     const poster = p.links[0];
@@ -215,12 +247,16 @@ async function checkPlaybackToggle() {
   video.paused = true;
   video.play = () => { video.paused = false; };
   video.load = () => { video.paused = true; };
+  let entered = 0;
+  video.requestFullscreen = () => { entered++; };
   p.document.activeElement = video;
   p.window.RotarySDK.init();
   p.window.onPlayBtnPressed();
   assert(!video.paused);
+  assert.equal(entered, 1, 'native video enters fullscreen when playback starts');
   p.window.onPlayBtnPressed();
   assert(video.paused);
+  assert.equal(entered, 1, 'restoring the poster must not request fullscreen');
 }
 checkPlaybackToggle().then(() => {
   console.log('Device/keyboard mappings, fullscreen, playback/poster toggle and navigation passed.');

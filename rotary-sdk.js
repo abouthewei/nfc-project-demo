@@ -15,6 +15,12 @@
     typeof value === 'string' && normalizeKey(value) === normalizeKey(eventKey)
   );
 
+  function enterFullscreen(target) {
+    if (document.fullscreenElement || !target?.requestFullscreen) return;
+    try { target.requestFullscreen()?.catch(() => {}); }
+    catch { /* Playback remains available if the host refuses fullscreen. */ }
+  }
+
   function init(options = {}) {
     const keys = { ...defaults, ...options.keys };
     const wrap = options.wrap !== false;
@@ -194,15 +200,23 @@
           : target === document.body ? rotaryScope?.querySelector('video') : null;
         if (video) {
           event.preventDefault();
-          if (video.paused) video.play()?.catch(() => {});
+          if (video.paused) {
+            video.play()?.catch(() => {});
+            enterFullscreen(video);
+          }
           else video.load();
           return;
         }
         if (typeof target?.click === 'function' && (!videoOnly || target.matches?.(playSelector))) {
           event.preventDefault();
           const scope = target.closest('[data-rotary-highlight],figure') || target.parentElement;
+          const isPlay = target.matches(playSelector);
           target.click();
           rotaryScope = scope;
+          if (isPlay) {
+            // React replaces the poster with the player after the click handler returns.
+            requestAnimationFrame(() => enterFullscreen(scope?.querySelector?.(fullscreenSelector)));
+          }
         }
         return;
       }
