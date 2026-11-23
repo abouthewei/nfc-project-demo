@@ -6,10 +6,71 @@
     <meta name="theme-color" content="#f4eee3" />
     <meta name="description" content="沿着火的足迹，走进石湾龙窑。Explore Nanfeng Kiln through its history, wood-firing craft and Lingnan culture." />
     <title>南风古灶｜沿着火的足迹</title>
-    <script type="module" crossorigin src="./assets/index-BBIvEhxS.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BtIQ4h6B.css">
+    <script defer src="./assets/index-BBIvEhxS.js"></script>
+    <link rel="stylesheet" href="./assets/index-BtIQ4h6B.css">
   </head>
   <body>
     <div id="root"></div>
+    <script src="../rotary-sdk.js?v=20261014-play-fix"></script>
+    <script>
+(() => {
+  const root = document.querySelector('#root, #app') || document.body;
+  const mark = node => {
+    if (!(node instanceof Element)) return;
+    if (node.matches('img')) node.setAttribute('data-rotary-skip', '');
+    node.querySelectorAll('img').forEach(image => image.setAttribute('data-rotary-skip', ''));
+    if (node.matches('article,figure')) node.setAttribute('data-rotary-highlight', '');
+    if (node.matches('nav')) node.setAttribute('data-rotary-nav', '');
+    node.querySelectorAll('article,figure').forEach(card => card.setAttribute('data-rotary-highlight', ''));
+    node.querySelectorAll('nav').forEach(nav => nav.setAttribute('data-rotary-nav', ''));
+    if (node.matches('iframe')) node.setAttribute('data-rotary-target', '');
+    node.querySelectorAll('iframe').forEach(frame => frame.setAttribute('data-rotary-target', ''));
+  };
+  const syncActivePage = () => {
+    const activePage = root.querySelector('.story-flow')?.dataset.activePage;
+    if (!activePage) return;
+    root.querySelectorAll('.story-screen').forEach(screen => {
+      if (screen.id !== activePage && !screen.hasAttribute('data-rotary-skip')) {
+        screen.setAttribute('data-rotary-skip', '');
+        screen.setAttribute('data-rotary-page-skip', '');
+      } else if (screen.id === activePage && screen.hasAttribute('data-rotary-page-skip')) {
+        screen.removeAttribute('data-rotary-page-skip');
+        screen.removeAttribute('data-rotary-skip');
+      }
+    });
+  };
+  const linkPageDestinations = () => {
+    const screens = [...root.querySelectorAll('.story-screen')];
+    if (!screens.length) return;
+    screens.forEach((screen, index) => {
+      const next = screens[(index + 1) % screens.length];
+      const previous = screens[(index - 1 + screens.length) % screens.length];
+      screen.querySelectorAll('.screen-cta').forEach(button => button.setAttribute('data-rotary-destination', `#${next.id}`));
+      screen.querySelectorAll('.page-controls .previous-page').forEach(button => button.setAttribute('data-rotary-destination', `#${previous.id}`));
+    });
+    root.querySelectorAll('.wheel-art').forEach(button => button.setAttribute('data-rotary-destination', '#visit'));
+    root.querySelectorAll('.visitor-cards button:not([aria-pressed])').forEach(button => button.setAttribute('data-rotary-destination', '#map'));
+  };
+  mark(root);
+  syncActivePage();
+  linkPageDestinations();
+  document.addEventListener('keydown', event => {
+    if (event.key.toLowerCase() !== 'b' || event.repeat || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (event.target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(event.target.tagName)) return;
+    const flow = root.querySelector('.story-flow[data-active-page]');
+    const previous = flow && document.getElementById(flow.dataset.activePage)?.querySelector('.page-controls .previous-page');
+    if (!previous) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    previous.click();
+  }, true);
+  new MutationObserver(records => {
+    records.forEach(record => record.addedNodes.forEach(mark));
+    syncActivePage();
+    linkPageDestinations();
+  }).observe(root, { childList: true, subtree: true, attributes: true, attributeFilter: ['data-active-page'] });
+  RotarySDK.init({ highlightStyle: { outline: '3px solid #b83321', boxShadow: '0 0 0 8px rgba(184,51,33,.24)' } });
+})();
+</script>
   </body>
 </html>

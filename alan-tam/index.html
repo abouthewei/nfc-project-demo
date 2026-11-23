@@ -58,7 +58,7 @@ body.lang-en{font-family:var(--font-sans-en),var(--font-sans-zh)}
   border-bottom:1px solid var(--border);
   transition:transform .4s ease,background .3s ease;
 }
-.navbar.hide-nav{transform:translateY(-100%)}
+.navbar[data-rotary-hidden]{transform:translateY(-100%)}
 .nav-logo{
   font-family:var(--font-display);
   font-size:1.3rem;letter-spacing:.12em;
@@ -482,7 +482,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
 <body class="lang-zh">
 
 <!-- ============ NAVIGATION ============ -->
-<nav class="navbar" id="navbar">
+<nav class="navbar" id="navbar" data-rotary-nav>
   <div class="nav-logo">
     <span class="zh">譚詠麟</span>
     <span class="en">ALAN TAM</span>
@@ -572,7 +572,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
       </div>
     </div>
     <div class="fade-in visible">
-      <div class="intro-image">
+      <div class="intro-image" data-rotary-highlight>
         <img src="images/alan-stage-silhouette.jpg" alt="譚詠麟舞台側影真實照片，燈光如雨中傾灑 Alan Tam" loading="lazy">
       </div>
       <p class="media-caption">
@@ -599,7 +599,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <div class="timeline-item fade-in visible">
       <div class="timeline-dot"></div>
       <div class="timeline-card">
-        <div class="timeline-card-image">
+        <div class="timeline-card-image" data-rotary-highlight>
           <img src="images/loosers-band.jpg" alt="1960年代末Loosers失敗者樂隊合影，前排中為少年譚詠麟" loading="lazy">
         </div>
         <p class="media-caption">
@@ -622,7 +622,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
         <span class="en">The Wynners took shape in 1973—five members splitting earnings equally, chasing dreams together, and catching each other through the lows. Honoring a pact to reunite every five years, a half-century of unwavering devotion, their pure bond never fading.</span></p>
         <blockquote><span class="zh">「溫拿的日子，是我這輩子最乾淨、最沒有功利心的時光。」</span><span class="en">"The Wynners days were the cleanest, least utilitarian time of my life."</span></blockquote>
         <div class="timeline-video">
-          <div class="video-embed">
+          <div class="video-embed" data-rotary-highlight>
             <img referrerpolicy="no-referrer" class="video-poster" src="https://i0.hdslb.com/bfs/archive/ac1775b0c6ed3e8229a251bc1d360c060ce26e58.jpg" alt="溫拿樂隊《朋友》演出視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1FK4y1k7Fx&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
           </div>
           <p class="media-caption">
@@ -641,7 +641,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
         <p><span class="zh">1984–1986年，《霧之戀》《愛的根源》《愛情陷阱》三張神專問世，定義港樂黃金時代。1985年紅館20場、1989年38場巡演，刷新樂壇紀錄，場場萬人合唱，「校長」之名由此沉澱。</span>
         <span class="en">From 1984 to 1986, three landmark albums—"Mist of Love," "Root of Love," and "Love Trap"—defined the golden age of Cantopop. 20 Coliseum shows in 1985, 38 in 1989—shattering industry records, every night a sing-along of tens of thousands. The title "Principal" was forged in those moments.</span></p>
         <div class="timeline-video">
-          <div class="video-embed">
+          <div class="video-embed" data-rotary-highlight>
             <img referrerpolicy="no-referrer" class="video-poster" src="https://i2.hdslb.com/bfs/archive/cf30cd0b3f050063f2dd4f27b16bc8904e386c5a.jpg" alt="譚詠麟1984演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1odNgzpE8P&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
           </div>
           <p class="media-caption">
@@ -655,7 +655,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <div class="timeline-item fade-in visible">
       <div class="timeline-dot"></div>
       <div class="timeline-card">
-        <div class="timeline-card-image">
+        <div class="timeline-card-image" data-rotary-highlight>
           <img referrerpolicy="no-referrer" src="https://y.gtimg.cn/music/photo_new/T002R800x800M000002FBcIb3sA7x3.jpg" alt="譚詠麟專輯《第一滴淚》真實唱片封面" loading="lazy">
         </div>
         <p class="media-caption">
@@ -678,7 +678,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
         <p><span class="zh">1991年央視春晚，一曲《水中花》唱響全國，讓粵語旋律走入大眾視野。廣州越秀山露天演唱會，以無華舞台、純粹歌聲，定格數萬人共聽金曲的國民經典場面。</span>
         <span class="en">At the 1991 CCTV Spring Festival Gala, "Flower in Water" resonated across the nation, bringing Cantonese melodies into the mainstream. At the Yuexiu Hill open-air concert in Guangzhou, with an unadorned stage and pure vocals, he captured a national moment—tens of thousands sharing in the golden classics.</span></p>
         <div class="timeline-video">
-          <div class="video-embed">
+          <div class="video-embed" data-rotary-highlight>
             <img referrerpolicy="no-referrer" class="video-poster" src="https://i0.hdslb.com/bfs/archive/4f7ebaf3a9747ea9dc9167826f6d1369e8dcc0f3.jpg" alt="《水中花》MV視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV17FKgzREQ9&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
           </div>
           <p class="media-caption">
@@ -697,7 +697,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
         <p><span class="zh">深耕樂壇數十載，斬獲香港樂壇最高榮譽金針獎。褪去所有競賽浮華，以終身作品與行業底蘊，坐穩港樂殿堂級席位。</span>
         <span class="en">After decades of dedication to the music industry, he received the Golden Needle Award—Hong Kong's highest musical honor. Stripped of all competitive glamour, his lifetime body of work and industry standing secured his place in the Cantopop hall of fame.</span></p>
         <div class="timeline-video">
-          <div class="video-embed">
+          <div class="video-embed" data-rotary-highlight>
             <img referrerpolicy="no-referrer" class="video-poster" src="https://i0.hdslb.com/bfs/archive/4fe16fe8484aab8985c4594322a95e1eacf259bc.jpg" alt="1996金針獎頒獎禮視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1Hv411e7k4&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
           </div>
           <p class="media-caption">
@@ -717,7 +717,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
         <span class="en">Partnering with junior artist Hacken Lee, they formed the "Alan &amp; Hacken" duo, pioneering a new model of cross-generational musical partnership. 12 consecutive shows from the start, with added dates and sold-out nights—a hundred-date tour spanning the globe, becoming the most successful template for Cantopop's legacy.</span></p>
         <blockquote><span class="zh">「港樂不是一個人的盛世，是一代代人的接力。」</span><span class="en">"Cantopop isn't one person's golden age—it's a relay across generations."</span></blockquote>
         <div class="timeline-video">
-          <div class="video-embed">
+          <div class="video-embed" data-rotary-highlight>
             <img referrerpolicy="no-referrer" class="video-poster" src="https://i1.hdslb.com/bfs/archive/b9a15eded76b91d134ecaaf8bf599f25aa095c79.jpg" alt="左麟右李2003演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1xNDxBkEZq&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
           </div>
           <p class="media-caption">
@@ -732,7 +732,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <div class="timeline-item fade-in visible">
       <div class="timeline-dot"></div>
       <div class="timeline-card">
-        <div class="timeline-card-image">
+        <div class="timeline-card-image" data-rotary-highlight>
           <img referrerpolicy="no-referrer" src="https://i0.hdslb.com/bfs/archive/208cb2ce72bef8d8f6b9511679a776197e7742d3.jpg" alt="左麟右李十周年演唱會官方海報" loading="lazy">
         </div>
         <p class="media-caption">
@@ -744,7 +744,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
         <p><span class="zh">左麟右李組合十週年，紅館連開13場紀念演唱會。十年雙向成全、彼此成就，用舞台紀實港樂的生生不息。</span>
         <span class="en">The 10th anniversary of Alan &amp; Hacken—13 consecutive commemorative shows at the Coliseum. Ten years of mutual fulfillment and shared achievement, using the stage to document Cantopop's enduring vitality.</span></p>
         <div class="timeline-video">
-          <div class="video-embed">
+          <div class="video-embed" data-rotary-highlight>
             <img referrerpolicy="no-referrer" class="video-poster" src="https://i0.hdslb.com/bfs/archive/208cb2ce72bef8d8f6b9511679a776197e7742d3.jpg" alt="左麟右李十周年演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1cu9uYTEt4&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
           </div>
           <p class="media-caption">
@@ -758,7 +758,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <div class="timeline-item fade-in visible">
       <div class="timeline-dot"></div>
       <div class="timeline-card">
-        <div class="timeline-card-image">
+        <div class="timeline-card-image" data-rotary-highlight>
           <img referrerpolicy="no-referrer" src="https://i0.hdslb.com/bfs/archive/704d01cbe33db7470dc51583834d5083104dad72.jpg" alt="2010年紅館再度感動演唱會現場真實照片" loading="lazy">
         </div>
         <p class="media-caption">
@@ -775,7 +775,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <div class="timeline-item fade-in visible">
       <div class="timeline-dot"></div>
       <div class="timeline-card">
-        <div class="timeline-card-image">
+        <div class="timeline-card-image" data-rotary-highlight>
           <img referrerpolicy="no-referrer" src="https://i2.hdslb.com/bfs/archive/a670cdff6abd7ab9dee205d209cae756e49fc6cd.jpg" alt="譚詠麟2024年上海虹口足球場演唱會現場照片" loading="lazy">
         </div>
         <p class="media-caption">
@@ -805,7 +805,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <div class="song-card fade-in visible">
       <h3><span class="zh">無言感激，半生答謝</span><span class="en">Silent Gratitude, A Lifetime of Thanks</span></h3>
       <div class="song-video">
-        <div class="video-embed">
+        <div class="video-embed" data-rotary-highlight>
           <img referrerpolicy="no-referrer" class="video-poster" src="https://i1.hdslb.com/bfs/archive/36241da447fc9cc4816ef02372a1bc64f3105889.jpg" alt="《無言感激》2010再度感動演唱會現場視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1XN41167Aa&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
       </div>
@@ -818,7 +818,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <div class="song-card fade-in visible">
       <h3><span class="zh">朋友，一生底色</span><span class="en">Friends, The Color of a Lifetime</span></h3>
       <div class="song-video">
-        <div class="video-embed">
+        <div class="video-embed" data-rotary-highlight>
           <img referrerpolicy="no-referrer" class="video-poster" src="https://i0.hdslb.com/bfs/archive/8a8a8897d334cb3d393be50d63d1fb16a77607cd.jpg" alt="溫拿《朋友》LIVE視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1cG411f7px&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
       </div>
@@ -849,21 +849,21 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
       <div class="song-sublist">
         <div class="song-sub-item">
           <h4>《講不出再見》<br><span style="font-size:.75rem;color:var(--text-muted)">Can't Say Goodbye</span></h4>
-          <div class="video-embed">
+          <div class="video-embed" data-rotary-highlight>
             <img referrerpolicy="no-referrer" class="video-poster" src="https://i2.hdslb.com/bfs/archive/f298c3b464ffaa1deb448b2e40eb4ac46f2bff3e.jpg" alt="《講不出再見》94演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1uU4y1U7Kc&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
           </div>
           <p><span class="zh">貫穿華人世代的離別主題曲，每一場終場大合唱，都是歲月的集體動容。</span><span class="en">The parting anthem spanning generations of Chinese communities—every closing sing-along, a collective moment of being moved by time.</span></p>
         </div>
         <div class="song-sub-item">
           <h4>《愛在深秋》<br><span style="font-size:.75rem;color:var(--text-muted)">Love in Deep Autumn</span></h4>
-          <div class="video-embed">
+          <div class="video-embed" data-rotary-highlight>
             <img referrerpolicy="no-referrer" class="video-poster" src="https://i1.hdslb.com/bfs/archive/21e509e03f3d43ecfa9ac1f6c29310d80b153dd4.jpg" alt="《愛在深秋》MV視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1j84y1t7BT&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
           </div>
           <p><span class="zh">東方意境港樂典範，隱忍溫柔，道盡成年人的遺憾與釋然。</span><span class="en">The model of Eastern-aesthetic Cantopop—restrained and tender, voicing the regrets and acceptance of adulthood.</span></p>
         </div>
         <div class="song-sub-item">
           <h4>《難捨難分》<br><span style="font-size:.75rem;color:var(--text-muted)">Hard to Part</span></h4>
-          <div class="video-embed" style="padding-bottom:0;height:auto;background:var(--bg-dark)">
+          <div class="video-embed" data-rotary-highlight style="padding-bottom:0;height:auto;background:var(--bg-dark)">
             <a href="https://y.qq.com/n/ryqq/albumDetail/003zMSAb1ckQdw" target="_blank" rel="noopener" class="album-cover">
               <img referrerpolicy="no-referrer" src="https://y.gtimg.cn/music/photo_new/T002R800x800M000003zMSAb1ckQdw.jpg" alt="《難捨難分》真實唱片封面，1990" loading="lazy">
               <span class="album-cover-hint"><span class="zh">《難捨難分》專輯 · QQ音樂 ↗</span><span class="en">Album "Hard to Part" · QQ Music ↗</span></span>
@@ -881,7 +881,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
       <div class="song-sublist">
         <div class="song-sub-item">
           <h4>《卡拉永遠OK》<br><span style="font-size:.75rem;color:var(--text-muted)">Karaoke Forever OK</span></h4>
-          <div class="video-embed" style="padding-bottom:0;height:auto;background:var(--bg-dark)">
+          <div class="video-embed" data-rotary-highlight style="padding-bottom:0;height:auto;background:var(--bg-dark)">
             <a href="https://y.qq.com/n/ryqq/albumDetail/0046SvA41Mh5co" target="_blank" rel="noopener" class="album-cover">
               <img referrerpolicy="no-referrer" src="https://y.gtimg.cn/music/photo_new/T002R800x800M0000046SvA41Mh5co.jpg" alt="《夢幻舞台》真實唱片封面，收錄《卡拉永遠OK》，1990" loading="lazy">
               <span class="album-cover-hint"><span class="zh">《夢幻舞台》專輯 · QQ音樂 ↗</span><span class="en">Album "Dream Stage" · QQ Music ↗</span></span>
@@ -891,14 +891,14 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
         </div>
         <div class="song-sub-item">
           <h4>《一生中最愛》<br><span style="font-size:.75rem;color:var(--text-muted)">The Love of My Life</span></h4>
-          <div class="video-embed">
+          <div class="video-embed" data-rotary-highlight>
             <img referrerpolicy="no-referrer" class="video-poster" src="https://i1.hdslb.com/bfs/archive/a5de135683cd16c14ca899bd437b2c716e4403cb.jpg" alt="《一生中最愛》MV視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV11E421N7iz&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
           </div>
           <p><span class="zh">依託《雙城故事》劇情，詮釋成年人克制隱忍、溫柔成全的情感觀。</span><span class="en">Set against the film "Comrades: Almost a Love Story," interpreting the restrained, tender, and selfless love of adults.</span></p>
         </div>
         <div class="song-sub-item">
           <h4>《忘不了您》<br><span style="font-size:.75rem;color:var(--text-muted)">Can't Forget You</span></h4>
-          <div class="video-embed" style="padding-bottom:0;height:auto;background:var(--bg-dark)">
+          <div class="video-embed" data-rotary-highlight style="padding-bottom:0;height:auto;background:var(--bg-dark)">
             <a href="https://y.qq.com/n/ryqq/albumDetail/00149Lqt3vL7qH" target="_blank" rel="noopener" class="album-cover">
               <img referrerpolicy="no-referrer" src="https://y.gtimg.cn/music/photo_new/T002R800x800M00000149Lqt3vL7qH.jpg" alt="《忘不了您》真實唱片封面，1981" loading="lazy">
               <span class="album-cover-hint"><span class="zh">《忘不了您》專輯 · QQ音樂 ↗</span><span class="en">Album "Can't Forget You" · QQ Music ↗</span></span>
@@ -937,7 +937,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
 
     <div class="theme-card fade-in visible">
       <div class="theme-media">
-        <div class="video-embed">
+        <div class="video-embed" data-rotary-highlight>
           <img referrerpolicy="no-referrer" class="video-poster" src="https://i0.hdslb.com/bfs/archive/08bfeb30445c86a1e3ff556526c51ad66577600e.jpg" alt="《珍惜的珍惜》2013演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1sp4y1M7aj&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
@@ -952,7 +952,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
 
     <div class="theme-card fade-in visible">
       <div class="theme-media">
-        <div class="video-embed">
+        <div class="video-embed" data-rotary-highlight>
           <img referrerpolicy="no-referrer" class="video-poster" src="https://i2.hdslb.com/bfs/archive/c10d5fce46f6d564b5537f8d4ea1950f5142f576.jpg" alt="《一生何求》聲生不息舞台視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1ECBLYVEQY&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
@@ -967,7 +967,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
 
     <div class="theme-card fade-in visible">
       <div class="theme-media">
-        <div class="video-embed">
+        <div class="video-embed" data-rotary-highlight>
           <img referrerpolicy="no-referrer" class="video-poster" src="https://i0.hdslb.com/bfs/archive/42f55dfe771c2fb44f6aedcfae9aff9eca3eb97e.jpg" alt="《披著羊皮的狼》慈善演出視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1T34y197cQ&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
@@ -982,7 +982,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
 
     <div class="theme-card fade-in visible">
       <div class="theme-media">
-        <div class="video-embed">
+        <div class="video-embed" data-rotary-highlight>
           <img referrerpolicy="no-referrer" class="video-poster" src="https://i0.hdslb.com/bfs/archive/bc55fef3ddd042f5fc5aea15fddfd49bda1bec4a.jpg" alt="聲生不息大灣區季節目視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1KUz1YLETN&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
@@ -1023,7 +1023,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
   <div class="themes-grid">
     <div class="theme-card fade-in visible">
       <div class="theme-media">
-        <div class="video-embed">
+        <div class="video-embed" data-rotary-highlight>
           <img referrerpolicy="no-referrer" class="video-poster" src="https://i2.hdslb.com/bfs/archive/18321be50c362878c143a27146397f6f0a565772.jpg" alt="譚詠麟足球比賽視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1HZ4y1z7rM&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
@@ -1038,7 +1038,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
 
     <div class="theme-card fade-in visible">
       <div class="theme-media">
-        <div class="video-embed">
+        <div class="video-embed" data-rotary-highlight>
           <img referrerpolicy="no-referrer" class="video-poster" src="https://i1.hdslb.com/bfs/archive/8c164cba44347099e9e31ef6612dde8c2fc5ad19.jpg" alt="《講不出再見》跨時空混剪視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1yKsjegEkv&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
@@ -1053,7 +1053,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
 
     <div class="theme-card fade-in visible">
       <div class="theme-media">
-        <div class="video-embed">
+        <div class="video-embed" data-rotary-highlight>
           <img referrerpolicy="no-referrer" class="video-poster" src="https://i1.hdslb.com/bfs/archive/b18ac6ac2fab9ab80d61d6eb19b02866ca38c927.jpg" alt="2023蓉港公益足球賽視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1Ps4y1F7Qa&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
@@ -1067,7 +1067,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
 
     <div class="theme-card fade-in visible">
       <div class="theme-media">
-        <div class="video-embed">
+        <div class="video-embed" data-rotary-highlight>
           <img referrerpolicy="no-referrer" class="video-poster" src="https://i2.hdslb.com/bfs/archive/a7dd7f90f866db3bfb407cf407e091fd3b088dbd.jpg" alt="譚詠麟谷村新司《Born Free》演出視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1nX4y1s7Z2&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
@@ -1082,7 +1082,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
 
     <div class="theme-card fade-in visible">
       <div class="theme-media">
-        <div class="video-embed">
+        <div class="video-embed" data-rotary-highlight>
           <img referrerpolicy="no-referrer" class="video-poster" src="https://i0.hdslb.com/bfs/archive/704d01cbe33db7470dc51583834d5083104dad72.jpg" alt="譚詠麟2010《再度感動》演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1yT421S7qs&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
@@ -1096,7 +1096,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
 
     <div class="theme-card fade-in visible">
       <div class="theme-media">
-        <div class="video-embed">
+        <div class="video-embed" data-rotary-highlight>
           <img referrerpolicy="no-referrer" class="video-poster" src="https://i1.hdslb.com/bfs/archive/3bf2268330964cdc174fa546160086de08e00844.jpg" alt="譚詠麟慈善演唱會《80歲後》視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1uSdMB7EfP&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
         </div>
         <p class="media-caption">
@@ -1138,7 +1138,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
       <span class="en">One song, "Can't Say Goodbye," holding within it a lifetime of meetings and partings. The songs never end. The passion burns forever. The heart remains as it was.</span>
     </p>
     <div class="closing-video">
-      <div class="video-embed">
+      <div class="video-embed" data-rotary-highlight>
         <img referrerpolicy="no-referrer" class="video-poster" src="https://i2.hdslb.com/bfs/archive/f298c3b464ffaa1deb448b2e40eb4ac46f2bff3e.jpg" alt="《講不出再見》94演唱會視頻封面" loading="lazy" data-src="https://player.bilibili.com/player.html?bvid=BV1uU4y1U7Kc&amp;page=1&amp;high_quality=1&amp;autoplay=1&amp;danmaku=0"><span class="video-play-btn" aria-hidden="true"></span>
       </div>
     </div>
@@ -1155,7 +1155,7 @@ body.lang-zh .closing-footer{font-family:var(--font-serif-zh);font-weight:700}
     <span class="zh">致敬譚詠麟｜無言感激，歲歲如歌　·　本頁為粉絲致敬頁面，非官方網站</span>
     <span class="en">A Tribute to Alan Tam | Silent Gratitude, Songs Through the Years · This is a fan tribute page, not an official website</span>
   </p>
-  <p class="footer-credit">
+  <p class="footer-credit" data-rotary-skip>
     <span class="zh">媒體來源聲明：本頁影像均為 <a href="https://www.bilibili.com" target="_blank" rel="noopener">Bilibili</a>（哔哩哔哩）公開之真實演出及活動視頻，照片包括 Bilibili 公開視頻之真實畫面、唱片封面來自 <a href="https://y.qq.com" target="_blank" rel="noopener">QQ音樂</a> 公開專輯資料、Loosers及溫拿歷史合影來自 <a href="https://m.sohu.com/a/220417313_775101/" target="_blank" rel="noopener">搜狐網</a> 公開報道，另有歌迷提供之舞台攝影作品（Alan Tang Photography），媒體下方均附來源說明，可點擊查證。</span>
     <span class="en">Media Credits: All videos are real performance and event footage publicly available on <a href="https://www.bilibili.com" target="_blank" rel="noopener">Bilibili</a>. Photos include authentic stills from Bilibili videos, album covers from public album data on <a href="https://y.qq.com" target="_blank" rel="noopener">QQ Music</a>, historical group photos of the Loosers and the Wynners from a public <a href="https://m.sohu.com/a/220417313_775101/" target="_blank" rel="noopener">Sohu</a> report, and fan-contributed stage photography (Alan Tang Photography). Sources are credited beneath each media item.</span>
   </p>
@@ -1182,9 +1182,9 @@ const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   const scroll = window.pageYOffset;
   if (scroll > lastScroll && scroll > 200) {
-    navbar.classList.add('hide-nav');
+    navbar.setAttribute('data-rotary-hidden', '');
   } else {
-    navbar.classList.remove('hide-nav');
+    navbar.removeAttribute('data-rotary-hidden');
   }
   lastScroll = scroll;
 }, { passive: true });
@@ -1235,7 +1235,14 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 });
 
 // ============ VIDEO POSTER CLICK-TO-PLAY ============
+let activeVideoEmbed = null;
+let activeVideoPoster = null;
+let restoreActiveVideo = null;
+
 document.querySelectorAll('.video-poster').forEach(poster => {
+  poster.tabIndex = 0;
+  poster.setAttribute('role', 'button');
+  poster.setAttribute('data-rotary-play', '');
   poster.addEventListener('click', () => {
     const embed = poster.closest('.video-embed');
     const src = poster.getAttribute('data-src');
@@ -1254,6 +1261,7 @@ document.querySelectorAll('.video-poster').forEach(poster => {
     iframe.referrerPolicy = 'strict-origin-when-cross-origin';
     iframe.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
     iframe.allowFullscreen = true;
+    iframe.setAttribute('data-rotary-fullscreen', '');
 
     const help = document.createElement('div');
     help.className = 'video-help';
@@ -1272,14 +1280,55 @@ document.querySelectorAll('.video-poster').forEach(poster => {
         </button>
       </span>`;
 
-    help.querySelector('.video-back').addEventListener('click', () => {
+    const restorePoster = () => {
       embed.replaceChildren(...posterContent);
       help.remove();
-    });
+      if (activeVideoEmbed === embed) {
+        activeVideoEmbed = null;
+        activeVideoPoster = null;
+        restoreActiveVideo = null;
+      }
+    };
+    help.querySelector('.video-back').addEventListener('click', restorePoster);
 
     embed.replaceChildren(iframe);
+    activeVideoEmbed = embed;
+    activeVideoPoster = poster;
+    restoreActiveVideo = restorePoster;
     embed.insertAdjacentElement('afterend', help);
   });
+});
+
+</script>
+
+<script src="../rotary-sdk.js?v=20261014-play-fix"></script>
+<script>
+RotarySDK.init({
+  keys: {
+    previous: 'ArrowLeft',
+    next: 'ArrowRight',
+    confirm: ['Enter', 'Space'],
+    back: 'b',
+    fullscreen: 'f'
+  },
+  highlightStyle: {
+    outline: '3px solid var(--gold-bright)',
+    outlineOffset: '5px',
+    boxShadow: '0 0 0 8px rgba(229,180,84,.18)'
+  },
+  beforeMove: () => {
+    if (!activeVideoEmbed) return null;
+    const poster = activeVideoPoster;
+    restoreActiveVideo?.();
+    return poster;
+  },
+  beforeConfirm: () => {
+    if (!activeVideoEmbed) return null;
+    const poster = activeVideoPoster;
+    restoreActiveVideo?.();
+    return poster;
+  },
+  beforeBack: () => restoreActiveVideo?.()
 });
 </script>
 

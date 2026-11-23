@@ -4,10 +4,228 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>在现场，看见建筑 · Babu Art</title>
-    <script type="module" crossorigin src="./assets/index-D-Ckzykt.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-pkuuDalf.css">
+    <script defer src="./assets/index-D-Ckzykt.js"></script>
+    <link rel="stylesheet" href="./assets/index-pkuuDalf.css" />
   </head>
   <body>
     <div id="root"></div>
+    <script src="../rotary-sdk.js?v=20261014-play-fix"></script>
+    <script>
+      (() => {
+        const root = document.querySelector("#root, #app") || document.body;
+        const mark = (node) => {
+          if (!(node instanceof Element)) return;
+          if (node.matches(".brand")) node.setAttribute("data-rotary-skip", "");
+          node
+            .querySelectorAll(".brand")
+            .forEach((brand) => brand.setAttribute("data-rotary-skip", ""));
+          if (node.matches("article,figure"))
+            node.setAttribute("data-rotary-highlight", "");
+          if (node.matches(".video-controls"))
+            node.setAttribute("data-rotary-skip", "");
+          if (node.matches("nav")) node.setAttribute("data-rotary-nav", "");
+          if (node.matches(".video-frame")) node.setAttribute("data-rotary-play", "");
+          node.querySelectorAll(".video-frame").forEach(frame => frame.setAttribute("data-rotary-play", ""));
+          node
+            .querySelectorAll("article,figure")
+            .forEach((card) => card.setAttribute("data-rotary-highlight", ""));
+          node
+            .querySelectorAll(".video-controls")
+            .forEach((controls) =>
+              controls.setAttribute("data-rotary-skip", ""),
+            );
+          node
+            .querySelectorAll("nav")
+            .forEach((nav) => nav.setAttribute("data-rotary-nav", ""));
+          const destinations = root.querySelectorAll('[id^="section-"]');
+          [
+            ".chapter-tab",
+            ".ribbon-item",
+            ".menu-links button:not(.menu-archive-link)",
+          ].forEach((selector) => {
+            root.querySelectorAll(selector).forEach((button, index) => {
+              const destination = destinations[index];
+              if (destination)
+                button.dataset.rotaryDestination = `#${destination.id}`;
+            });
+          });
+          root
+            .querySelectorAll(
+              ".hero-bottom-cta, .film-more, .menu-archive-link",
+            )
+            .forEach((button) => {
+              button.dataset.rotaryDestination = "#archive-grid";
+            });
+          if (node.matches("iframe"))
+            node.setAttribute("data-rotary-target", "");
+          node
+            .querySelectorAll("iframe")
+            .forEach((frame) => frame.setAttribute("data-rotary-target", ""));
+        };
+        const syncDialogScope = () => {
+          root.querySelectorAll("[data-rotary-page-skip]").forEach((node) => {
+            node.removeAttribute("data-rotary-page-skip");
+            node.removeAttribute("data-rotary-skip");
+          });
+          const dialog = root.querySelector(
+            'dialog[open], [role="dialog"][aria-modal="true"]',
+          );
+          for (let branch = dialog; branch && branch !== root; ) {
+            const parent = branch.parentElement;
+            if (!parent) break;
+            [...parent.children].forEach((sibling) => {
+              if (
+                sibling === branch ||
+                sibling.contains(dialog) ||
+                sibling.hasAttribute("data-rotary-skip")
+              )
+                return;
+              sibling.setAttribute("data-rotary-skip", "");
+              sibling.setAttribute("data-rotary-page-skip", "");
+            });
+            branch = parent;
+          }
+        };
+        mark(root);
+        syncDialogScope();
+        new MutationObserver((records) => {
+          records.forEach((record) => record.addedNodes.forEach(mark));
+          syncDialogScope();
+        }).observe(root, {
+          childList: true,
+          subtree: true,
+          attributes: true,
+          attributeFilter: ["open"],
+        });
+        // shortcut: Archive ships only a compiled app bundle; move the scroll lock into source if source is restored.
+        let navigationUnlockTimer;
+        const unlockNavigation = () => {
+          clearTimeout(navigationUnlockTimer);
+          window.__archiveNavScrollLock = false;
+        };
+        document.addEventListener(
+          "click",
+          (event) => {
+            if (
+              !(event.target instanceof Element) ||
+              !event.target.closest(".chapter-tab")
+            )
+              return;
+            window.__archiveNavScrollLock = true;
+            clearTimeout(navigationUnlockTimer);
+            navigationUnlockTimer = setTimeout(unlockNavigation, 2200);
+          },
+          true,
+        );
+        document.addEventListener("scrollend", unlockNavigation);
+
+        // In-page jumps (navbar chapters, ribbon items, menu links, archive CTAs) do not change the
+        // URL, so the SDK cannot remember where they started. Keep that memory here so B restores
+        // the scroll position and focus, and reopens the hamburger menu for menu jumps.
+        const navigationHistory = [];
+        const recordNavigation = (destination) => {
+          const entry = destination.closest(".menu-links")
+            ? {
+                menuIndex: [
+                  ...root.querySelectorAll(".menu-links button"),
+                ].indexOf(destination),
+                scrollY: window.scrollY,
+              }
+            : { focus: destination, scrollY: window.scrollY };
+          const last = navigationHistory[navigationHistory.length - 1];
+          if (
+            last &&
+            last.focus === entry.focus &&
+            last.menuIndex === entry.menuIndex &&
+            Math.abs(last.scrollY - entry.scrollY) < 2
+          )
+            return;
+          navigationHistory.push(entry);
+        };
+        document.addEventListener(
+          "click",
+          (event) => {
+            if (!(event.target instanceof Element)) return;
+            const destination = event.target.closest(
+              "[data-rotary-destination]",
+            );
+            if (destination) recordNavigation(destination);
+          },
+          true,
+        );
+        const focusMenuItem = (index) => {
+          const attempt = (tries) => {
+            const item = root.querySelectorAll(".menu-links button")[index];
+            if (item) {
+              archiveRotary?.focus(item, false);
+              return;
+            }
+            if (tries > 0) requestAnimationFrame(() => attempt(tries - 1));
+          };
+          attempt(8);
+        };
+        document.addEventListener(
+          "keydown",
+          (event) => {
+            if (
+              event.key.toLowerCase() !== "b" ||
+              event.repeat ||
+              event.altKey ||
+              event.ctrlKey ||
+              event.metaKey ||
+              event.shiftKey
+            )
+              return;
+            if (
+              event.target.isContentEditable ||
+              /^(INPUT|TEXTAREA|SELECT)$/.test(event.target.tagName)
+            )
+              return;
+            const close = root.querySelector(
+              ".preview-shell .preview-topbar button",
+            );
+            if (close) {
+              event.preventDefault();
+              event.stopImmediatePropagation();
+              close.click();
+              return;
+            }
+            const openMenu = root.querySelector(".menu-button.is-open");
+            if (openMenu) {
+              event.preventDefault();
+              event.stopImmediatePropagation();
+              openMenu.click();
+              return;
+            }
+            if (navigationHistory.length) {
+              const pending = navigationHistory.pop();
+              event.preventDefault();
+              event.stopImmediatePropagation();
+              unlockNavigation();
+              window.scrollTo({ top: pending.scrollY, behavior: "instant" });
+              if (pending.menuIndex !== undefined) {
+                const menuButton = root.querySelector(".menu-button");
+                if (menuButton && !menuButton.classList.contains("is-open"))
+                  menuButton.click();
+                focusMenuItem(pending.menuIndex);
+              } else if (pending.focus?.isConnected) {
+                archiveRotary?.focus(pending.focus, false);
+              }
+            }
+          },
+          true,
+        );
+        const archiveRotary = RotarySDK.init({
+          beforeMove: ({ activeElement }) => {
+            const videoFrame = activeElement.closest(".video-frame");
+            if (videoFrame) videoFrame.querySelector("video")?.pause();
+          },
+          highlightStyle: {
+            outline: "3px solid #de4268",
+            boxShadow: "0 0 0 8px rgba(222,66,104,.24)",
+          },
+        });
+      })();
+    </script>
   </body>
 </html>

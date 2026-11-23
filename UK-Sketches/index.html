@@ -4,10 +4,85 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prototype</title>
-    <script type="module" crossorigin src="./assets/index-BQEJ_jkC.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-S-aXl6WD.css">
+    <script defer src="./assets/index-BQEJ_jkC.js"></script>
+    <link rel="stylesheet" href="./assets/index-S-aXl6WD.css">
   </head>
   <body>
     <div id="root"></div>
+    <script src="../rotary-sdk.js?v=20261014-play-fix"></script>
+    <script>
+(() => {
+  const root = document.querySelector('#root, #app') || document.body;
+  const skipSelector = '.wordmark';
+  const mark = node => {
+    if (!(node instanceof Element)) return;
+    if (node.matches('article,figure')) node.setAttribute('data-rotary-highlight', '');
+    if (node.matches('figure')) node.setAttribute('data-rotary-center', '');
+    if (node.matches('.prelude')) {
+      node.setAttribute('data-rotary-target', '');
+      node.setAttribute('data-rotary-center', '');
+    }
+    if (node.matches('.chapter__intro')) {
+      node.setAttribute('data-rotary-target', '');
+      node.setAttribute('data-rotary-center', '');
+    }
+    if (node.matches('nav')) node.setAttribute('data-rotary-nav', '');
+    if (node.matches(skipSelector)) node.setAttribute('data-rotary-skip', '');
+    node.querySelectorAll('article,figure').forEach(card => card.setAttribute('data-rotary-highlight', ''));
+    node.querySelectorAll('figure').forEach(figure => figure.setAttribute('data-rotary-center', ''));
+    node.querySelectorAll('.prelude').forEach(section => {
+      section.setAttribute('data-rotary-target', '');
+      section.setAttribute('data-rotary-center', '');
+    });
+    node.querySelectorAll('.chapter__intro').forEach(section => {
+      section.setAttribute('data-rotary-target', '');
+      section.setAttribute('data-rotary-center', '');
+    });
+    node.querySelectorAll('nav').forEach(nav => nav.setAttribute('data-rotary-nav', ''));
+    node.querySelectorAll(skipSelector).forEach(item => item.setAttribute('data-rotary-skip', ''));
+    if (node.matches('iframe')) node.setAttribute('data-rotary-target', '');
+    node.querySelectorAll('iframe').forEach(frame => frame.setAttribute('data-rotary-target', ''));
+  };
+  const syncDialogScope = () => {
+    root.querySelectorAll('[data-rotary-page-skip]').forEach(node => {
+      node.removeAttribute('data-rotary-page-skip');
+      node.removeAttribute('data-rotary-skip');
+    });
+    const dialog = root.querySelector('dialog[open], [role="dialog"][aria-modal="true"]');
+    for (let branch = dialog; branch && branch !== root;) {
+      const parent = branch.parentElement;
+      if (!parent) break;
+      [...parent.children].forEach(sibling => {
+        if (sibling === branch || sibling.contains(dialog) || sibling.hasAttribute('data-rotary-skip')) return;
+        sibling.setAttribute('data-rotary-skip', '');
+        sibling.setAttribute('data-rotary-page-skip', '');
+      });
+      branch = parent;
+    }
+  };
+  mark(root);
+  syncDialogScope();
+  new MutationObserver(records => {
+    records.forEach(record => record.addedNodes.forEach(mark));
+    syncDialogScope();
+  }).observe(root, { childList: true, subtree: true, attributes: true, attributeFilter: ['open'] });
+  document.addEventListener('keydown', event => {
+    if (event.key.toLowerCase() !== 'b' || event.repeat || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (event.target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(event.target.tagName)) return;
+    const close = root.querySelector('.lightbox__close');
+    if (!close) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    close.click();
+  }, true);
+  RotarySDK.init({
+    wrap: false,
+    highlightStyle: {
+      outline: '3px solid #3d7881',
+      boxShadow: '0 0 0 8px rgba(61,120,129,.25)'
+    }
+  });
+})();
+</script>
   </body>
 </html>
